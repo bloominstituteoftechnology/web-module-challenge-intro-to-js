@@ -1,24 +1,39 @@
-/* Task 1: Warm-up!
-Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-Task b: declare a variable and then use a conditional to change the value of that variable (no function required)
-Task c: Convert string ("1999") to integer (1999)  (no function required)
-Task d: Write a function to multiply a*b */
+/************************************************************** Task 1: Warm-up! **************************************************************/
+//Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
 
 
 
 
-/*Task 2
-Age in Dog years
-write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years*/ 
+//Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
 
 
 
 
-/*Task 3
-Dog feeder 
-takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day. */
+//Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+
+
+
+
+
+//Task d: Write a function to multiply a*b 
+
+
+
+
+
+/************************************************************** Task 2 **************************************************************/
+//Age in Dog years
+//write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
+
+
+
+
+
+/************************************************************** Task 3 **************************************************************/
+//Dog feeder 
+//takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
 
 //feeding requirements
 // adult dogs at least 1 year 
@@ -38,8 +53,8 @@ takes weight in pounds and age in years (note if the dog is a puppy the age will
 
 
 
-/*Task 4
-Rock, Paper, Sissors */
+/************************************************************** Task 4 **************************************************************/
+// Rock, Paper, Sissors
 // Your function should take a string (either rock paper or sissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
@@ -48,8 +63,8 @@ Rock, Paper, Sissors */
   
   
 
-/*Task 5
-Metric Converter */
+/************************************************************** Task 5 **************************************************************/
+//Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
 
@@ -62,17 +77,17 @@ Metric Converter */
 
 
 
-/* Task 6
-99 bottles of soda on the wall */
+/************************************************************** Task 6 **************************************************************/
+// 99 bottles of soda on the wall
 // create a function called annoyingSong
-//the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+// the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 
 
 
 
-/*Task 7 
-Grade Calculator */
+/************************************************************** Task 7 **************************************************************/
+//Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
 //90s should be A 
 //80s should be B 
@@ -84,8 +99,8 @@ Grade Calculator */
   
   
 
-/*Stretch
-Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.*/
+/************************************************************** Stretch **************************************************************/
+//Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
@@ -93,9 +108,9 @@ Create a function that counts the number of vowels within a string. It should ha
 
 
 
-/* Stretch
-Take Rock, Paper, Sissors further*/ 
-// update your rock papers sissors code below to take a prompt from a user using the window object
+/************************************************************** Stretch **************************************************************/
+//Take Rock, Paper, Sissors further
+//update your rock papers sissors code below to take a prompt from a user using the window object
 
 
 
