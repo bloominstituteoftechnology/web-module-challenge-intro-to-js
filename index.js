@@ -1,35 +1,47 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+const votingAge = 18
 
-
-
+if (votingAge >= 18) {
+    console.log ('true');
+}
+else { 
+    console.log ('false');
+}
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let dogName = 'Carlos'
+dogName = 'Terrabyte'
 
-
+if (dogName = 'Terrabyte') {
+    console.log (dogName);
+}
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
-
+console.log ("task c",parseInt("1999"));  
 
 
 //Task d: Write a function to multiply a*b 
 
-
-
+function addNumber (a,b) {
+console.log(a + b);
+}
+addNumber(2,2)
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function dogYears (humanYears) {
+    console.log (humanYears * 7);
+}
 
-
-
+dogYears (10)
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
@@ -42,13 +54,40 @@
 // 11 - 15 lbs - 3% of their body weight 
 // > 15lbs - 2% of their body weight 
 
+function AdultdogFeeder (weight){
+    if (weight <= 5) {
+        return weight * .05 
+    } else if (weight >= 6 && weight <= 10){
+        return weight * .04
+    } else if (weight >= 11 && weight <= 15){
+        return weight * .03;
+    } else if (weight > 15){
+        return weight * .02;
+    }
+}
+    console.log(AdultdogFeeder (5))
+
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
 // 4 - 7 months 5% of their body weight 
 // 7 - 12 months 4% of their body weight
 
+function PuppyFeeder (months){
+    if (months >= 2 && months <= 4 ) {
+        return weight * .05 
+    } else if (weight >= 6 || weight <= 10){
+        return weight * .04
+    } else if (weight >= 11 || weight <= 15){
+        return weight * .03;
+    } else if (weight > 15){
+        return weight * .02;
+    }
+}
+    console.log(AdultdogFeeder (5))
+
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+
 
 
 
