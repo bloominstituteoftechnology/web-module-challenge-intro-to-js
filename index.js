@@ -95,11 +95,42 @@ const playRPS = (move) => {
   const paper = 2;
   const sissors = 3;
 
-  cpuMove = Math.floor(Math.random()) * 1 + 3;
+  const cpuMove = Math.floor(Math.random() * 3) + 1;
+
+  console.log(`CPU Move was: ${cpuMove} and Yours was ${move}`);
+  // ROck
+  if (move == rock && cpuMove == sissors) {
+    console.log('You win');
+  }
+  if (move == rock && cpuMove == paper) {
+    console.log('You Lose');
+  }
+  if (move == rock && cpuMove == rock) {
+    console.log('Tie!');
+  }
+  // Paper
+  if (move == paper && cpuMove == sissors) {
+    console.log('You Lost');
+  }
+  if (move == paper && cpuMove == paper) {
+    console.log('Tie!');
+  }
+  if (move == paper && cpuMove == rock) {
+    console.log('You win');
+  }
+  // Scissors
+  if (move == sissors && cpuMove == sissors) {
+    console.log('Tie!');
+  }
+  if (move == sissors && cpuMove == paper) {
+    console.log('Win!');
+  }
+  if (move == sissors && cpuMove == rock) {
+    console.log('Lost!');
+  }
 };
 
-console.log((cpuMove = Math.floor(Math.random() * 3) + 1));
-
+playRPS(3);
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
