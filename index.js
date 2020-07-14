@@ -125,6 +125,7 @@ console.log("User Choice: " + userChoice);
 console.log("Computer Choice: " + computerChoice);
 compare(userChoice, computerChoice);
   
+
   
 
 /************************************************************** Task 5 **************************************************************/
