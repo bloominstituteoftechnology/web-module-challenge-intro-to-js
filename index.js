@@ -57,12 +57,10 @@ dogAge(27);
 const dogFeeder = (weight, age) => {
   if (age >= 1) {
     if (weight < 6) {
-      console.log(`Amount to feed is ${weight * 0.05}`);
-    }
-    if (weight >= 6 && weight <= 10) {
+      console.log('Amount to feed is ' + weight * 0.05);
+    } else if (weight < 11) {
       console.log(`Amount to feed is this ${weight * 0.04}`);
-    }
-    if (weight > 11 && weight <= 15) {
+    } else if (weight <= 15) {
       console.log(`Amount to feed is this ${weight * 0.03}`);
     } else {
       console.log(`Amount to feed is this ${weight * 0.02}`);
@@ -81,7 +79,7 @@ const dogFeeder = (weight, age) => {
   }
 };
 
-dogFeeder(15, 0.4);
+dogFeeder(5, 1);
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -97,7 +95,8 @@ const playRPS = (move) => {
 
   const cpuMove = Math.floor(Math.random() * 3) + 1;
 
-  console.log(`CPU Move was: ${cpuMove} and Yours was ${move}`);
+  console.log('CPU Move was: ' + cpuMove + ' and Yours was ' + move);
+
   // ROck
   if (move == rock && cpuMove == sissors) {
     console.log('You win');
@@ -130,13 +129,13 @@ const playRPS = (move) => {
   }
 };
 
-playRPS(3);
+playRPS(1);
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
 const kmToMiles = (km) => {
-  console.log(km * 0.621371);
+  console.log(km * 1.60934);
 };
 
 kmToMiles(5);
@@ -156,9 +155,7 @@ feetToCM(6.5);
 
 const annoyingSong = (bottles) => {
   for (let bottle = bottles; bottle > 0; bottle--) {
-    console.log(
-      `${bottles} bottles of soda, take one down pass it around ${bottle} bottles of soda on the wall`,
-    );
+    console.log(`${bottle} bottles of soda, take one down pass it around ${bottle - 1} bottles of soda on the wall`);
   }
 };
 
@@ -197,48 +194,62 @@ grades(59);
 // Hint - you may need to study tomorrow's traning kit on arrays
 // try looking up the .includes() method
 
+const checkVowels = (checkString) => {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  let count = 0;
+  for (let letters of checkString.toLowerCase()) {
+    if (vowels.includes(letters)) {
+      count++;
+    }
+  }
+
+  console.log(count);
+};
+
+checkVowels('AEIOU');
+
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
-const playRPS1 = (move = prompt('Pick your move')) => {
-  const rock = 1;
-  const paper = 2;
-  const sissors = 3;
+// const playRPS1 = (move = prompt('Pick your move')) => {
+//   const rock = 1;
+//   const paper = 2;
+//   const sissors = 3;
 
-  const cpuMove = Math.floor(Math.random() * 3) + 1;
+//   const cpuMove = Math.floor(Math.random() * 3) + 1;
 
-  console.log(`CPU Move was: ${cpuMove} and Yours was ${move}`);
-  // ROck
-  if (move == rock && cpuMove == sissors) {
-    console.log('You win');
-  }
-  if (move == rock && cpuMove == paper) {
-    console.log('You Lose');
-  }
-  if (move == rock && cpuMove == rock) {
-    console.log('Tie!');
-  }
-  // Paper
-  if (move == paper && cpuMove == sissors) {
-    console.log('You Lost');
-  }
-  if (move == paper && cpuMove == paper) {
-    console.log('Tie!');
-  }
-  if (move == paper && cpuMove == rock) {
-    console.log('You win');
-  }
-  // Scissors
-  if (move == sissors && cpuMove == sissors) {
-    console.log('Tie!');
-  }
-  if (move == sissors && cpuMove == paper) {
-    console.log('Win!');
-  }
-  if (move == sissors && cpuMove == rock) {
-    console.log('Lost!');
-  }
-};
+//   console.log(`CPU Move was: ${cpuMove} and Yours was ${move}`);
+//   // ROck
+//   if (move == rock && cpuMove == sissors) {
+//     console.log('You win');
+//   }
+//   if (move == rock && cpuMove == paper) {
+//     console.log('You Lose');
+//   }
+//   if (move == rock && cpuMove == rock) {
+//     console.log('Tie!');
+//   }
+//   // Paper
+//   if (move == paper && cpuMove == sissors) {
+//     console.log('You Lost');
+//   }
+//   if (move == paper && cpuMove == paper) {
+//     console.log('Tie!');
+//   }
+//   if (move == paper && cpuMove == rock) {
+//     console.log('You win');
+//   }
+//   // Scissors
+//   if (move == sissors && cpuMove == sissors) {
+//     console.log('Tie!');
+//   }
+//   if (move == sissors && cpuMove == paper) {
+//     console.log('Win!');
+//   }
+//   if (move == sissors && cpuMove == rock) {
+//     console.log('Lost!');
+//   }
+// };
 
-playRPS1();
+// playRPS1();
