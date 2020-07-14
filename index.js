@@ -22,20 +22,20 @@ console.log(typeof +year);
 //Task d: Write a function to multiply a*b
 
 const multiply = (a, b) => {
-  return a * b;
+  console.log(a * b);
 };
 
-console.log(multiply(7, 99));
-
+multiply(7, 99);
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years
 
 const dogAge = (myAge) => {
-  return myAge * 7;
+  console.log(myAge * 7);
 };
 
-console.log(dogAge(27));
+dogAge(27);
+
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
@@ -53,6 +53,29 @@ console.log(dogAge(27));
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
+
+const dogFeeder = (weight, age) => {
+  if (age >= 1) {
+    if (weight < 6) {
+      console.log(`Amount to feed is ${weight * 0.05}`);
+    }
+    if (weight >= 6 && weight <= 10) {
+      console.log(`Amount to feed is this ${weight * 0.04}`);
+    }
+    if (weight > 11) {
+      console.log(`Amount to feed is this ${weight * 0.03}`);
+    } else {
+      console.log(`Amount to feed is this ${weight * 0.02}`);
+    }
+  }
+  if (age < 1) {
+    if (weight < 0.5) {
+      console.log(`Amount to feed is ${weight * 0.1}`);
+    }
+  }
+};
+
+dogFeeder(5, 0.2);
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
