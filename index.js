@@ -154,6 +154,15 @@ feetToCM(6.5);
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
+const annoyingSong = (bottles) => {
+  for (let bottle = bottles; bottle > 0; bottle--) {
+    console.log(
+      `${bottles} bottles of soda, take one down pass it around ${bottle} bottles of soda on the wall`,
+    );
+  }
+};
+
+annoyingSong(5);
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade
@@ -162,6 +171,26 @@ feetToCM(6.5);
 //70s should be Cs
 //60s should be D
 //and anything below 60 should be F
+
+const grades = (grade) => {
+  if (grade < 60) {
+    console.log('You got a F');
+  }
+  if (grade >= 60 && grade <= 69) {
+    console.log('You got a D');
+  }
+  if (grade >= 70 && grade <= 79) {
+    console.log('You got a C');
+  }
+  if (grade >= 80 && grade <= 89) {
+    console.log('You got a B');
+  }
+  if (grade >= 90) {
+    console.log('You got a A');
+  }
+};
+
+grades(59);
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
