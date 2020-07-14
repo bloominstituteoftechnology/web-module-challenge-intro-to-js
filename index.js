@@ -90,6 +90,16 @@ dogFeeder(15, 0.4);
 // use math.random to determine the computers choice
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
 
+const playRPS = (move) => {
+  const rock = 1;
+  const paper = 2;
+  const sissors = 3;
+
+  cpuMove = Math.floor(Math.random()) * 1 + 3;
+};
+
+console.log((cpuMove = Math.floor(Math.random() * 3) + 1));
+
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
