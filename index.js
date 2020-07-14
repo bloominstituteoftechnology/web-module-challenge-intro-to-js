@@ -62,20 +62,26 @@ const dogFeeder = (weight, age) => {
     if (weight >= 6 && weight <= 10) {
       console.log(`Amount to feed is this ${weight * 0.04}`);
     }
-    if (weight > 11) {
+    if (weight > 11 && weight <= 15) {
       console.log(`Amount to feed is this ${weight * 0.03}`);
     } else {
       console.log(`Amount to feed is this ${weight * 0.02}`);
     }
   }
   if (age < 1) {
-    if (weight < 0.5) {
+    if (age < 0.5) {
       console.log(`Amount to feed is ${weight * 0.1}`);
+    }
+    if (age >= 0.5 && age <= 0.7) {
+      console.log(`Amount to feed is ${weight * 0.05}`);
+    }
+    if (age >= 0.8 && age <= 0.11) {
+      console.log(`Amount to feed is ${weight * 0.05}`);
     }
   }
 };
 
-dogFeeder(5, 0.2);
+dogFeeder(15, 0.4);
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
