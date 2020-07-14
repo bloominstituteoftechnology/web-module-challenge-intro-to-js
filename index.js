@@ -200,3 +200,45 @@ grades(59);
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
+
+const playRPS1 = (move = prompt('Pick your move')) => {
+  const rock = 1;
+  const paper = 2;
+  const sissors = 3;
+
+  const cpuMove = Math.floor(Math.random() * 3) + 1;
+
+  console.log(`CPU Move was: ${cpuMove} and Yours was ${move}`);
+  // ROck
+  if (move == rock && cpuMove == sissors) {
+    console.log('You win');
+  }
+  if (move == rock && cpuMove == paper) {
+    console.log('You Lose');
+  }
+  if (move == rock && cpuMove == rock) {
+    console.log('Tie!');
+  }
+  // Paper
+  if (move == paper && cpuMove == sissors) {
+    console.log('You Lost');
+  }
+  if (move == paper && cpuMove == paper) {
+    console.log('Tie!');
+  }
+  if (move == paper && cpuMove == rock) {
+    console.log('You win');
+  }
+  // Scissors
+  if (move == sissors && cpuMove == sissors) {
+    console.log('Tie!');
+  }
+  if (move == sissors && cpuMove == paper) {
+    console.log('Win!');
+  }
+  if (move == sissors && cpuMove == rock) {
+    console.log('Lost!');
+  }
+};
+
+playRPS1();
