@@ -53,7 +53,7 @@ console.log(age(24, 7));
 // adult dogs at least 1 year 
 // up to 5 lbs - 5% of their body weight
 // 6 - 10 lbs - 4% of their body weight 
-// 11 - 15 lbs - 3% of their body weight 
+// 11 - 15 lbs - 3% of their body weight
 // > 15lbs - 2% of their body weight 
 
 // Puppies less than 1 year
@@ -63,7 +63,6 @@ console.log(age(24, 7));
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
-
 
 
 
