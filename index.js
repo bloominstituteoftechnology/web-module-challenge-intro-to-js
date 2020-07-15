@@ -34,6 +34,7 @@ console.log(add(2,6));
 
 
 
+
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
