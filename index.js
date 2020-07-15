@@ -88,38 +88,51 @@ function dogFeeder (age, weight){
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-
-function rockPaperScissors(){
-    let computerChoice = Math.floor(Math.random()*3)
-    if (computerChoice === 0){
-        console.log = 'rock';
-    } else if (computerChoice === 1){
-        console.log = 'paper';
-    } else if (computerChoice === 2){
-        console.log = 'scissors';
-    }    
+let computerChoice = Math.random()
+if (computerChoice <= .333){
+    computerChoice = 'rock';
+}   else if (computerChoice <= .66){
+    computerChoice = 'paper';
+}   else if (computerChoice <= 1) {
+    computerChoice = 'scissors';
 }
 
-rockPaperScissors ()
+function rockPaperScissors(user,computerChoice){
+    if (computerChoice === user){
+        return 'try again'
+    } else if (computerChoice === 'rock' && user === 'paper'){
+        return ' you win'
+    } else if (computerChoice === "paper" && user === 'scissors'){
+        return 'you win';
+    } else if (computerChoice === 'scissors' && user === 'rock'){
+        return 'you win';
+    }  else { 
+        return 'you lost'}
+    
+}
+
+console.log(rockPaperScissors('rock',computerChoice))
+
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-//function mileConverter (km) {
-//    console.log (km * .62137119223);
-//}
+function mileConverter (km) {
+   console.log (km * .62137119223);
+}
 
-//mileConverter (5)
+mileConverter (5)
 
 
-//b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
+// b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-//function cmConverter (feet) {
-//    console.log (feet / 0.033);
-//}
+function cmConverter (feet) {
+   console.log (feet / 0.033);
+}
 
-//cmConverter (2)
+cmConverter (2)
 
 
 
@@ -129,17 +142,12 @@ rockPaperScissors ()
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 function annoyingSong () {
-   for (let i = 99; i > 1; i--) {
-       console.log (i + 'bottles of soda on the wall, take one down pass it around', i + 'number of sodas')
-   }
+  for (let i = 99; i > 1; i--) {
+      console.log (`${i} bottles of soda on the wall, take one down pass it around, ${i-1} number of sodas`)
+  }
 }
 
 annoyingSong ()
-
-
-
-
-
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -151,11 +159,21 @@ annoyingSong ()
 //and anything below 60 should be F
 
 function gradeScale (gradeValue) {
-    if (gradeValue <= 100 && gradeValue > 90);
+    if (gradeValue <= 100 && gradeValue >= 90){
     console.log ('you get an A')
+}else if (gradeValue <= 89 && gradeValue >= 80){
+    console.log ('you get a B')
+}else if (gradeValue <= 79 && gradeValue >= 70){
+    console.log ('you get a C')
+}else if (gradeValue <= 69 && gradeValue >= 60){
+    console.log ('you get a D')
+}else if (gradeValue < 60){
+    console.log ('you get an F')
+} else { console.log ('you cheated try again')
+}
 }
   
-gradeScale(95)
+gradeScale(110)
 
   
   
