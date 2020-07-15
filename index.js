@@ -47,7 +47,7 @@ console.log(dogYears(1));
 // 4 - 7 months 5% of their body weight
 // 7 - 12 months 4% of their body weight
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-//math is wrong
+
 function dogFeeder(age, weight) {
   if (
     (age >= 1 && weight === 1) ||
@@ -59,15 +59,6 @@ function dogFeeder(age, weight) {
     return weight * 0.05;
   } else if (
     age >= 1 ||
-    weight === 6 ||
-    weight === 7 ||
-    weight === 8 ||
-    weight === 9 ||
-    weight === 10
-  ) {
-    return weight * 0.03;
-  } else if (
-    age >= 1 ||
     weight === 11 ||
     weight === 12 ||
     weight === 13 ||
@@ -75,6 +66,15 @@ function dogFeeder(age, weight) {
     weight === 15
   ) {
     return weight * 0.03;
+  } else if (
+    age >= 1 ||
+    weight === 6 ||
+    weight === 7 ||
+    weight === 8 ||
+    weight === 9 ||
+    weight === 10
+  ) {
+    return weight * 0.04;
   } else if (age >= 1 || weight > 15) {
     return weight * 0.02;
   } else if (age === 0.16 || 0.25 || 0.33) {
