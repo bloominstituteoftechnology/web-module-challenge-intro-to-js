@@ -73,6 +73,15 @@ console.log(rps("paper"));
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
+function metricConverter(km) {
+  return km * 0.62137;
+}
+console.log(metricConverter(5));
+
+function metricConverter(ft) {
+  return ft * 30.48;
+}
+console.log(metricConverter(5));
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
