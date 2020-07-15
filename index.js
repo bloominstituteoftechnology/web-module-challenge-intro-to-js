@@ -1,8 +1,11 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 const votingAge = "age > 18";
-console.log(votingAge);
-
+if (votingAge === "age > 18") {
+  console.log(true);
+} else {
+  console.log(false);
+}
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 let animal = "cat";
 let behavior = "shy";
@@ -25,10 +28,10 @@ console.log(myFunction(2, 3));
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years
-function dogYears(myAge, years) {
-  return myAge * years;
+function dogYears(myAge) {
+  return myAge * 7;
 }
-console.log(dogYears(1, 7));
+console.log(dogYears(1));
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
@@ -43,9 +46,46 @@ console.log(dogYears(1, 7));
 // 2 - 4 months 10% of their body weight
 // 4 - 7 months 5% of their body weight
 // 7 - 12 months 4% of their body weight
-
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-
+//math is wrong
+function dogFeeder(age, weight) {
+  if (
+    (age >= 1 && weight === 1) ||
+    weight === 2 ||
+    weight === 3 ||
+    weight === 4 ||
+    weight === 5
+  ) {
+    return weight * 0.05;
+  } else if (
+    age >= 1 ||
+    weight === 6 ||
+    weight === 7 ||
+    weight === 8 ||
+    weight === 9 ||
+    weight === 10
+  ) {
+    return weight * 0.03;
+  } else if (
+    age >= 1 ||
+    weight === 11 ||
+    weight === 12 ||
+    weight === 13 ||
+    weight === 14 ||
+    weight === 15
+  ) {
+    return weight * 0.03;
+  } else if (age >= 1 || weight > 15) {
+    return weight * 0.02;
+  } else if (age === 0.16 || 0.25 || 0.33) {
+    return age * 0.1;
+  } else if (age === 0.33 || age === 0.41 || age === 0.5 || age === 0.58) {
+    return age * 0.05;
+  } else if (age === 0.66 || age === 0.75 || age === 0.83 || age === 0.91) {
+    return age * 0.04;
+  }
+}
+console.log(dogFeeder(1, 15));
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
 // Your function should take a string (either rock paper or sissors)
@@ -74,10 +114,11 @@ console.log(rps("paper"));
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
 function metricConverter(km) {
+  //km to ml
   return km * 0.62137;
 }
 console.log(metricConverter(5));
-
+//ft to cm
 function metricConverter(ft) {
   return ft * 30.48;
 }
