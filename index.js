@@ -1,22 +1,37 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-const votingAge = age > 18;
+const votingAge = "age > 18";
 console.log(votingAge);
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+let animal = "cat";
+let behavior = "shy";
+
+if (behavior === "shy") {
+  behavior = animal;
+  console.log(behavior);
+} else {
+  console.log("somthing else");
+}
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
+var a = parseInt("1999");
+console.log(a);
 //Task d: Write a function to multiply a*b
-
+function myFunction(num1, num2) {
+  return num1 * num2;
+}
+console.log(myFunction(2, 3));
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years
-
+function dogYears(myAge, years) {
+  return myAge * years;
+}
+console.log(dogYears(1, 7));
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
-
 //feeding requirements
 // adult dogs at least 1 year
 // up to 5 lbs - 5% of their body weight
@@ -37,7 +52,22 @@ console.log(votingAge);
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
-
+function rps(hand) {
+  let npc = Math.random();
+  //Rock
+  if (npc < 0.3) {
+    return "you tied";
+  }
+  //Paper
+  if (npc > 0.3 && npc < 0.6) {
+    return "you lost";
+  }
+  //Scissors
+  if (npc > 0.6) {
+    return "you won";
+  }
+}
+console.log(rps("paper"));
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
@@ -48,6 +78,18 @@ console.log(votingAge);
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+function annoyingSong(num) {
+  for (i = num; i > 0; i--)
+    console.log(
+      i +
+        " bottles of soda on the wall, " +
+        i +
+        " bottles of soda, take one down pass it around " +
+        (i - 1) +
+        " bottles of soda on the wall"
+    );
+}
+annoyingSong(5);
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -57,6 +99,21 @@ console.log(votingAge);
 //70s should be Cs
 //60s should be D
 //and anything below 60 should be F
+
+function myFunction(num1) {
+  if (num1 >= 90) {
+    return "A";
+  } else if (num1 >= 80) {
+    return "B";
+  } else if (num1 >= 70) {
+    return "C";
+  } else if (num1 >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
+console.log(myFunction(50));
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
