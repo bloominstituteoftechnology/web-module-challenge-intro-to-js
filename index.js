@@ -1,39 +1,43 @@
-/************************************************************** Task 1: Warm-up! **************************************************************/
-//Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
+// /************************************************************** Task 1: Warm-up! **************************************************************/
+// //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-const votingAge = 18
-if (votingAge > 18) {
-    console.log(true)
-} else {
-    console.log(false)
-}
-
-
-
-//Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required
-
-let name = "Jill"
+// const votingAge = 18
+// if (votingAge > 18) {
+//     console.log(true)
+// } else {
+//     console.log(false)
+// }
 
 
 
-//Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+// //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required
+
+// let numberStudents = 25
+// let numberStudents2 = 50
+// if (numberStudents === 25) {
+//     numberStudents = numberStudents2
+// }
+
+// console.log
 
 
 
+// //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+let string = "1999"
+let integer = Number(string)
+console.log(integer)
 
 
-//Task d: Write a function to multiply a*b 
-
-
-
+// //Task d: Write a function to multiply a*b 
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function dogYears() {
 
-
+}
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -65,6 +69,47 @@ let name = "Jill"
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+// var userChoice = prompt("Do you choose rock, paper or scissors?");
+// var computerChoice = Math.random();
+// if (computerChoice < 0.34) {
+//     computerChoice = "rock";
+// } else if (computerChoice <= 0.67) {
+//     computerChoice = "paper";
+// } else {
+//     computerChoice = "scissors";
+// }
+// var compare = function (choice1, choice2) {
+//     if (choice1 === choice2) {
+//         return "The result is a tie!";
+//     }
+//     else if (choice1 === "rock") {
+//         if (choice2 === "scissors") {
+//             return "rock wins"
+//         }
+//         else if (choice2 === "paper") {
+//             return "paper wins";
+//         }
+//     }
+//     else if (choice1 === "paper") {
+//         if (choice2 === "scissors") {
+//             return "scissors win"
+//         }
+//         else if (choice2 === "rock") {
+//             return "paper wins";
+//         }
+//     }
+//     else if (choice1 === "scissors") {
+//         if (choice2 === "paper") {
+//             return "scissors win"
+//         }
+//         else if (choice2 === "rock") {
+//             return "rock wins";
+//         }
+//     }
+
+// }
+// console.log(compare(userChoice, computerChoice));
+
 
 
 
@@ -91,18 +136,15 @@ let name = "Jill"
 // // 99 bottles of soda on the wall
 // // create a function called annoyingSong
 // // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-// while (num >= 0) {
-//     let newNum = num - 1
-//     if (num > 1) {
-//         console.log(num + "" + newNum)
-//     } else if (num === 1) {
-//         console.log
-//     } else (
-//         num--
+// // }
+
+// function annoyingSong() {
+//     for (let i = 99; i >= 0; i--) {
+//         console.log(i);
+//     }
 // }
 
-
-
+// console.log(annoyingSong(10))
 
 // /************************************************************** Task 7 **************************************************************/
 // //Grade Calculator
@@ -129,7 +171,6 @@ let name = "Jill"
 // /************************************************************** Stretch **************************************************************/
 // //Take Rock, Paper, Sissors further
 // //update your rock papers sissors code below to take a prompt from a user using the window object
-
 
 
 
