@@ -9,13 +9,15 @@ if (votingAge > 18) {
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-let voterAge = 17;
-if (voterAge > 18){
+let voterAge = prompt ("How old are you?");
+
+if (voterAge >= 18){
 console.log("you are old enough to vote!")
 }
 else {
 console.log("you are not old enough to vote :'(")
 }
+console.log(voterAge);
 
 
 
@@ -41,9 +43,12 @@ console.log(product);
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
+function DogYears(a, b){
+    return a * b;
+}
 
-
-
+let myAge = DogYears(25, 7);
+console.log(myAge);
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -74,20 +79,34 @@ console.log(product);
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+let userChoice = prompt ("Do you choose rock, paper or scissors?");
+console.log(userChoice);
 
-  
-  
+let botChoice = Math.random();
+
+if (botChoice <= 0.33) {
+    console.log("rock");
+} else if (botChoice <= 0.66) {
+    console.log("paper");
+} else {
+    console.log("scissors");
+}
+
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
-
+let kilometers = parseInt(prompt("Please enter kilometers:"));
+let miles = kilometers / 1.6;
+console.log(miles + " Miles");
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
+let feet = parseInt(prompt("Please enter feet:"));
+let centimeters = feet * 30.48;
+console.log(centimeters + " centimeters");
 
 
 
@@ -96,7 +115,26 @@ console.log(product);
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
+let bottles;
+for (counter = 99; counter >= 1; counter = counter - 1) 
+{
+    if (counter == 1) {
+        bottles = 'bottle';
+    } else {
+        bottles = 'bottles';
+    }
+    console.log(counter+" "+bottles+" of beer on the wall.");
+    if (counter < 99) {
+        console.log("");
+        console.log(counter+" "+bottles+" of beer on the wall.");
+    }
+    console.log(counter+" "+bottles+" of beer.");
+    console.log("Take one down.");
+    console.log("Pass it around.");
+    if (counter == 1) {
+        console.log("No bottles of beer on the wall.");
+    }
+}
 
 
 
