@@ -1,17 +1,29 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+let votingAge 
 
+if (votingAge > 18) {
+    console.log("true")
+  }
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let variable = 1
 
+if {}
+
+
+//review
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+
+let year = "1999";
+Number(year);
 
 
 
@@ -19,6 +31,11 @@
 
 //Task d: Write a function to multiply a*b 
 
+function multiply (a,b){
+    const product= a*b;
+    return product;
+}
+multiply(a,b);
 
 
 
@@ -28,6 +45,11 @@
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
 
+function dogYears (a){
+    const product= a*7;
+    return product;
+}
+dogYears(a);
 
 
 
@@ -67,13 +89,23 @@
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function kilometers (a){
+    const product= (.621371*a) + " miles";
+    return product;
+}
+kilometers(a);
+
 
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+function feet (a){
+    const product= (a*30.48) + " cm";
+    return product;
+}
+feet(a);
 
 
 
