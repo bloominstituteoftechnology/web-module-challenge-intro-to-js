@@ -47,11 +47,12 @@ console.log(c)
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+var age = 22;
 var dogAge;
 
 dogAge = age*7;
 
-
+console.log(dogAge)
 
 
 
@@ -59,17 +60,80 @@ dogAge = age*7;
 //Dog feeder 
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
 
+
+
 //feeding requirements
 // adult dogs at least 1 year 
 // up to 5 lbs - 5% of their body weight
 // 6 - 10 lbs - 4% of their body weight 
 // 11 - 15 lbs - 3% of their body weight 
 // > 15lbs - 2% of their body weight 
+var weight = 15;
+var age =1;
+var food;
+
+if (weight <= 5 && age>=1) 
+{
+    food = weight*0.05;
+}else
+    {
+        if (weight <=10 && weight>= 6 && age>=1) 
+        {
+          food = weight*0.04;   
+        }else
+        {
+            if (weight <=15 && weight>= 11 && age>=1) 
+            
+            {
+              food = weight*0.03;  
+            }else
+            {
+                if (15 < weight && age>=1) 
+                
+                {
+                  food = weight*0.02;  
+                }
+            }
+        }
+    }
+
+console.log(food)
+/*
+*/
+/*{
+       
+    }*/
+
+
 
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
 // 4 - 7 months 5% of their body weight 
 // 7 - 12 months 4% of their body weight
+
+var puppyWeight = 12;
+var puppyAge =5;
+var puppyFood;
+
+if (puppyAge >= 2 && puppyAge <=4) 
+{
+    puppyFood = puppyWeight*0.1;
+}else
+    {
+        if (puppyAge >=5 && puppyAge<= 7) 
+        {
+          puppyFood = puppyWeight*0.05;   
+        }else
+        {
+            if (puppyAge >=8 && puppyAge <= 12) 
+            
+            {
+              puppyFood = puppyWeight*0.04;  
+            }
+        }
+    }
+
+console.log(puppyFood)
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
@@ -101,11 +165,22 @@ dogAge = age*7;
 
 
 
-/************************************************************** Task 6 **************************************************************/
+/************************************************************** Task 6(UNCOMMENT) **************************************************************/
+
+
+
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+//const annoyingSong = (N) => 
+//{    
+ //  for (i=N; i>0; i-- )
+//   {
+ //      console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, Take one down pass it around, ${i-1} bottles of soda on the wall`)
+//   }
+//}
+//annoyingSong(99)
 
 
 
@@ -118,11 +193,37 @@ dogAge = age*7;
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
+/*  
+const calculator = (char = G) =>
+{
+    if (G > 90)
+    {
+        G = A;
+    }else
+    {
+        if (90 > G > 80) 
+        {
+            G = B;
+        }else
+        {
+            if (80 > G > 70) 
+            {
+                G = C;
+            }else
+            {
+                if (60 > G > 50) 
+                {
+                    G = D;
+                }
+            }
+        }
+    }
   
-
   
-  
-
+}
+calculator(90)
+console.log(`${G}`)
+*/
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
