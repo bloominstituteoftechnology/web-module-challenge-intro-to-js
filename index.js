@@ -17,7 +17,7 @@ console.log(y+1)
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-parseInt('1999');
+Number(parseInt('1999'));
 
 
 
@@ -142,7 +142,7 @@ if (grade >= 90){
     console.log("Grade C");
 }else if (grade >= 60){
     console.log("Grade D");
-}else if (grade < 60){
+}else{
     console.log("Grade F");
 }
 
