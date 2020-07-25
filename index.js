@@ -1,13 +1,18 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
-
-
+const votingAge = 21;
+if(votingAge >= 18) {
+    console.log('True!'); 
+}
+else {
+    console.log('False!');
+}
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-
+let y = 17
+console.log(y+1)
 
 
 
