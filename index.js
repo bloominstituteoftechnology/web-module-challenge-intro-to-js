@@ -19,7 +19,9 @@ if (drinkingAge > 20) {
 console.log("taskB", agetovote)
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
+let string = "1999";
+integer = Number(string)
+console.log(integer)
 
 
 
