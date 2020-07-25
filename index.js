@@ -11,9 +11,8 @@ else {
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-let y = 17
+const y = 17
 console.log(y+1)
-
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
@@ -24,7 +23,9 @@ console.log(y+1)
 
 //Task d: Write a function to multiply a*b 
 
-
+let a = 5;
+let b = 4;
+console.log(a*b);
 
 
 
