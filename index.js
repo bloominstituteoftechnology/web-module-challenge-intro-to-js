@@ -17,7 +17,8 @@ console.log(y+1)
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+let f = "1999";
+parseInt(f, 10)
 
 
 
@@ -55,14 +56,33 @@ console.log(humanAge*7)
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
 
+let dogAge = 12;
+let weight = 15;
+
+if (dogAge >= 12, weight <=5){
+    console.log(weight*.05);
+}else if (dogAge >=12, weight<=10){
+    console.log(weight*.04);
+}else if (dogAge >=12, weight<=15){
+    console.log(weight*.03);
+}else if (dogAge >=12, weight>15){
+    console.log(weight*.02);
+}
+
+if (dogAge <= 11) {
+    console.log(weight*.02);
+}else if (dogAge <= 7){
+    console.log(weight*.04);
+}else if (dogAge <= 4){
+    console.log(weight*.04);
+}
 
 
 
 /************************************************************** Task 4 **************************************************************/
-// Rock, Paper, Sissors
-// Your function should take a string (either rock paper or sissors)
+// Rock, Paper, Scissors
+// Your function should take a string (either rock paper or scissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
@@ -116,8 +136,8 @@ console.log(humanAge*7)
 
 
 /************************************************************** Stretch **************************************************************/
-//Take Rock, Paper, Sissors further
-//update your rock papers sissors code below to take a prompt from a user using the window object
+//Take Rock, Paper, Scissors further
+//update your rock papers scissors code below to take a prompt from a user using the window object
 
 
 
