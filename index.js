@@ -86,9 +86,51 @@ if (dogAge <= 11) {
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-function rockPaperScissors() {
-
+let userChoice = prompt("Do you choose rock, paper or scissors?");
+let computerChoice = Math.random();
+if (computerChoice < 0.34) {
+    computerChoice = "rock";
+} else if(computerChoice <= 0.67) {
+    computerChoice = "paper";
+} else {
+    computerChoice = "scissors";
 }
+
+let compare = function(choice1, choice2) {
+    if(choice1 === choice2) {
+    console.log("The result is a tie!");
+}
+if(choice1 === "rock") {
+    if(choice2 === "scissors") {
+        console.log("You win!");
+    } else {
+        console.log("You lose.");
+    }
+}
+if(choice1 === "paper") {
+    if(choice2 === "rock") {
+        console.log("You win!");
+    } else {
+        if(choice2 === "scissors") {
+           console.log("You lose.");
+    }
+}
+if(choice1 === "scissors") {
+    if(choice2 === "rock") {
+        console.log("You lose.");
+    } else {
+        if(choice2 === "paper") {
+            console.log("You win!");
+        }
+    }
+}
+}
+};
+console.log("User Choice: " + userChoice);
+console.log("Computer Choice: " + computerChoice);
+compare(userChoice, computerChoice);
+
+
 
   
 
@@ -162,7 +204,7 @@ if (grade >= 90){
 //Take Rock, Paper, Scissors further
 //update your rock papers scissors code below to take a prompt from a user using the window object
 
-
+// See prompt. It does ask for user prior to win or lose.
 
 
 
