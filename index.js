@@ -17,8 +17,8 @@ console.log(y+1)
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-let f = "1999";
-parseInt(f, 10)
+
+
 
 
 
@@ -109,20 +109,32 @@ if (dogAge <= 11) {
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-for (let i = 99; i >= 0; i--) {
+for (let i = 99; i >= 90; i--) {
         console.log(i + "bottles of soda on the wall.");
     }
 
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
-//write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
+//write a javaScript program that takes a mark out of 100 and returns a corresponding letter grade 
 //90s should be A 
 //80s should be B 
-//70s should be Cs 
+//70s should be C 
 //60s should be D 
 //and anything below 60 should be F
   
+let grade = 55;
+if (grade >= 90){
+    console.log("Grade A");
+}else if (grade >= 80){
+    console.log("Grade B");
+}else if (grade >= 70){
+    console.log("Grade C");
+}else if (grade >= 60){
+    console.log("Grade D");
+}else if (grade < 60){
+    console.log("Grade F");
+}
 
   
   
