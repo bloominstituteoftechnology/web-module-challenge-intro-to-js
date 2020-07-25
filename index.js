@@ -17,8 +17,7 @@ console.log(y+1)
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-Number("1999")
-
+parseInt('1999');
 
 
 
@@ -87,6 +86,9 @@ if (dogAge <= 11) {
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+function rockPaperScissors() {
+
+}
 
   
 
@@ -94,13 +96,21 @@ if (dogAge <= 11) {
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
+function inMiles(KM){
+    let amount = KM /  1.609;
+    return amount;
+}
+console.log('1KM is:' + inMiles(1) + ' Miles');
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+function inCM(Feet){
+    let amount = Feet * 30.48;
+    return amount;
+}
+console.log('1 foot is ' + inCM(1) + ' CM');
 
 
 
