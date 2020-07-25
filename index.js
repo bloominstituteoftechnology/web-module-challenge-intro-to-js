@@ -17,7 +17,7 @@ console.log(y+1)
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+Number("1999")
 
 
 
@@ -87,7 +87,7 @@ if (dogAge <= 11) {
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+
   
 
 /************************************************************** Task 5 **************************************************************/
