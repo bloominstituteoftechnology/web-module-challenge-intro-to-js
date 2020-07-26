@@ -131,7 +131,7 @@ function game(choice1){
 
 }
 
-game("scissors");
+game();
   
   
 
@@ -164,8 +164,12 @@ feet(ft);
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+function annoyingSong (a) {
+    return (a) + " bottles of soda on the wall," + (a) +  " bottles of soda, take one down pass it around " + (a-1) + " bottles of soda on the wall";
+}
 
-
+annoyingSong(99);
+  
 
 
 /************************************************************** Task 7 **************************************************************/
