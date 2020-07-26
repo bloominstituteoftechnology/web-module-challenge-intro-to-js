@@ -56,7 +56,8 @@ console.log(inDogYears());
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
-//takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
+//takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of 
+// raw food to feed in a day.
 
 //feeding requirements
 // adult dogs at least 1 year 
@@ -70,10 +71,42 @@ console.log(inDogYears());
 // 4 - 7 months 5% of their body weight 
 // 7 - 12 months 4% of their body weight
 
-// when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
+// when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your 
+// result should be 0.44999999999999996
+  //  5  =  EET   w * p / 100
+  //  100   w
+function dogFeeder(w,a){
+    let food2EET = 0;
+    if(a >= 1){
+        if(a <= 5){
+            food2EET = (w * 5) /100;
+            return food2EET;
+        } else if(a <= 10 && a >= 6){
+            food2EET = (w * 4) /100;
+            return food2EET;
+        } else if(a <= 15 && a >= 11){
+            food2EET = (w * 3) /100;
+            return food2EET;
+        } else if(a >= 15 ) {
+            food2EET = (w * 2) /100;
+            return food2EET;
+        }
+    } else{
+        let months  = prompt("How many months old is your puppy");
+        if(months <= 4 && months >= 2){
+            food2EET = (w * 10) /100;
+            return food2EET;
+        }else if(months <= 7 && months >= 4){
+            food2EET = (w * 5) /100;
+            return food2EET; 
+        } else if(months <= 12 && months >= 7){
+            food2EET = (w * 4) /100;
+            return food2EET;
+        }
+    }
+}
 
-
+console.log(dogFeeder(15,1));
 
 
 /************************************************************** Task 4 **************************************************************/
