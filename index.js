@@ -27,7 +27,20 @@ console.log(integer)
 
 
 //Task d: Write a function to multiply a*b 
+const multiply = (a, b) => {
+    return a * b
+}
+console.log(multiply(1, 7))
 
+const add = (d, f) => {
+    return d + f
+}
+console.log(add(8, 9))
+
+const subtract = (b, c) => {
+    return b - c
+}
+console.log(subtract(5, 4))
 
 
 
@@ -35,7 +48,10 @@ console.log(integer)
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
+const multiply2 = (age) => {
+    return age * 7
+}
+console.log(multiply2(42))
 
 
 
