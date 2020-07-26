@@ -21,13 +21,16 @@ console.log(newVar);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
-
-
-
+let strInt = parseInt("1999");
+console.log("string to int conversion " + strInt);
 //Task d: Write a function to multiply a*b 
 
+function multiAb(a,b){
+    return a*b;
+}
+console.log("task D" + multiAb(3,2));
 
+let simple = (a,b) => a*b;
 
 
 
@@ -35,9 +38,21 @@ console.log(newVar);
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function inDogYears(){
+    print("Enter Age");
+    let age = prompt("What is your age?");
+    let formula = age * 7;
+    if(formula === null){
+        return 'error';
+    }
+    return formula;
+}
 
 
+console.log("Whats your age");
+//console.readline("age");
 
+console.log(inDogYears());
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
