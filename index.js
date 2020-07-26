@@ -82,6 +82,56 @@ dogYears(a);
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+let choice2 = Math.random();
+if (choice2 < .34) {
+    choice2 = "rock";
+}
+else if (choice2 <= .67) {
+    choice2 = "paper";
+}
+else {
+    choice2 = "scissors";
+} 
+
+
+function game(choice1){
+    if (choice1 === choice2){
+        return "Tie";
+    }
+    if (choice1 === "paper"){
+        if (choice2 === "rock"){
+            return "paper wins";
+        }
+        else{
+            if (choice2 === "scissors"){
+                return "scissors wins"
+            }
+        }
+    }
+    if (choice1 === "rock"){
+        if (choice2 === "scissors"){
+            return "rock wins";
+        }
+        else{
+            if (choice2 === "paper"){
+                return "paper wins"
+            }
+        }
+    }
+    if (choice1 === "scissors"){
+        if (choice2 === "paper"){
+            return "scissors wins";
+        }
+        else{
+            if (choice2 === "rock"){
+                return "rock wins"
+            }
+        }
+    }
+
+}
+
+game("scissors");
   
   
 
@@ -89,11 +139,11 @@ dogYears(a);
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-function kilometers (a){
+function kilometers (km){
     const product= (.621371*a) + " miles";
     return product;
 }
-kilometers(a);
+kilometers(km);
 
 
 
@@ -101,11 +151,11 @@ kilometers(a);
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-function feet (a){
+function feet (ft){
     const product= (a*30.48) + " cm";
     return product;
 }
-feet(a);
+feet(ft);
 
 
 
