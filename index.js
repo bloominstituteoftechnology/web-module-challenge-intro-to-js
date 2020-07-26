@@ -72,6 +72,35 @@ dogYears(a);
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
 
+function dogFeeder(lbs,age){
+    if (age >= 1); {
+}
+  if (lbs <= 5)
+    return (lbs * .05); 
+    
+     else if (lbs <= 10) {
+        return (lbs * .04);
+    }
+    else if (lbs <= 15){
+        return (lbs * .03);
+    }
+    else if (lbs > 16){
+        return (lbs * .02);
+    } 
+    else if (age <= .33){
+        return (lbs * .10);
+    } 
+    else if (age <= .583){
+        return (lbs * .05);
+    } 
+    else if (age < .99){
+        return (lbs * .04);
+    } 
+
+
+}
+
+dogFeeder(15,1);
 
 
 
@@ -104,7 +133,7 @@ function game(choice1){
         }
         else{
             if (choice2 === "scissors"){
-                return "scissors wins"
+                return "scissors wins";
             }
         }
     }
@@ -114,7 +143,7 @@ function game(choice1){
         }
         else{
             if (choice2 === "paper"){
-                return "paper wins"
+                return "paper wins";
             }
         }
     }
@@ -124,7 +153,7 @@ function game(choice1){
         }
         else{
             if (choice2 === "rock"){
-                return "rock wins"
+                return "rock wins";
             }
         }
     }
