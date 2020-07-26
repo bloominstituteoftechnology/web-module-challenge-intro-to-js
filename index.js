@@ -73,8 +73,31 @@ console.log(multiply2(42))
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-
-
+// const dogs one year or older
+const dogfeeder = (weight, age) => {
+    let food = 0;
+    if (age >= 1) {
+        if (weight <= 5) {
+            food = weight * .05
+        } else if (weight > 5 && weight < 10) {
+            food = weight * .04
+        } else if (weight > 11 && weight <= 15) {
+            food = weight * .03
+        } else {
+            food = weight * .02
+        }
+    } else {
+        if (weight < .33) {
+            food = weight * .1
+        } else if (weight > .34 && weight < .6) {
+            food = weight * .05
+        } else {
+            food = weight * .04
+        }
+    }
+    console.log("the dog needs " + food + " pounds of food.")
+}
+dogfeeder(15, 1)
 
 
 
@@ -84,9 +107,13 @@ console.log(multiply2(42))
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+const RPC = (myRPC) => {
+    let randomseed = Math.random();
+    let computornumber = Math.ceil(randomseed * 3);
+    console.log(computornumber)
+}
 
-
-
+RPC("rock")
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
