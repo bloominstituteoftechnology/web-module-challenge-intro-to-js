@@ -102,15 +102,38 @@ dogfeeder(15, 1)
 
 
 /************************************************************** Task 4 **************************************************************/
-// Rock, Paper, Sissors
-// Your function should take a string (either rock paper or sissors)
+// Rock, Paper, Scissors
+// Your function should take a string (either rock paper or scissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 const RPC = (myRPC) => {
     let randomseed = Math.random();
     let computornumber = Math.ceil(randomseed * 3);
-    console.log(computornumber)
+    // rock = 1, paper = 2, scissors = 3
+    let playerchoice = 0
+    if (myRPC.toLowerCase() === "rock") {
+        playerchoice = 1
+    } else if (myRPC.toLowerCase() === "paper") {
+        playerchoice = 2
+    } else {
+        playerchoice = 3
+    }
+    if (playerchoice === computornumber) {
+        console.log("tie game")
+    } else if (playerchoice === 1 && computornumber === 2) {
+        console.log("player choose rock and computer choose paper. computer wins")
+    } else if (playerchoice === 1 && computornumber === 3) {
+        console.log("player choose rock and computer choose scissors player wins")
+    } else if (playerchoice === 2 && computornumber === 1) {
+        console.log("player wins")
+    } else if (playerchoice === 2 && computornumber === 3) {
+        console.log("computer wins")
+    } else if (playerchoice === 3 && computornumber === 1) {
+        console.log("computer wins")
+    } else {
+        console.log("computer wins")
+    }
 }
 
 RPC("rock")
@@ -118,15 +141,22 @@ RPC("rock")
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+// const kilometers = (miles * 1.6)
 
-
-
+const kmtomiles = (km) => {
+    let miles = km / 1.6;
+    console.log(km + " km equals " + miles + " miles")
+}
+kmtomiles(3.2)
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
+const feettocm = (feet) => {
+    let cm = feet * 30.48;
+    console.log(cm + " cm equals" + feet + " feet")
+}
 
-
-
+feettocm(3)
 
 
 /************************************************************** Task 6 **************************************************************/
