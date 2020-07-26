@@ -83,6 +83,7 @@ console.log(myAge);
 let userChoice = prompt ("Do you choose rock, paper or scissors?");
 console.log(userChoice);
 
+
 let botChoice = Math.random();
 
 if (botChoice <= 0.33) {
@@ -92,6 +93,28 @@ if (botChoice <= 0.33) {
 } else {
     console.log("scissors");
 }
+  if (userChoice === botChoice){
+    console.log("you tied")
+  } 
+  else if (userChoice === "rock" && botChoice <= 0.66) { //paper
+    console.log("you lose")
+  }
+  else if (userChoice === "rock" && botChoice >= 0.67) { //scissors
+    console.log("you win")
+  }
+  else if (userChoice === "paper" && botChoice <= 0.33) { //rock
+    console.log("you win")  
+  } 
+  else if (userChoice === "paper" && botChoice >= 0.67) { //scissors
+    console.log("you lose")
+  }
+  else if (userChoice === "scissors" && botChoice <= 0.33) { //rock
+    console.log("you lose")
+  }
+  else if (userChoice === "scissors" && botChoice <= 0.66) { //paper
+    console.log("you win")
+  }
+
 
 
 
@@ -148,7 +171,18 @@ console.log(centimeters + " centimeters");
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
+function gradeCalc(input){
+    if (input >= 90)
+     console.log("You have received an A")
+     if (input >= 80 && input <= 89)
+     console.log("You have received a B")
+     if (input >= 70 && input <= 79)
+     console.log("You have received a C")
+     if (input >= 60 && input <= 69)
+     console.log("You have received a D")
+     if (input <= 59)
+      console.log("You have received an F")
+  }
 
   
   
