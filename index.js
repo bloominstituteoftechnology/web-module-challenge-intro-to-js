@@ -1,38 +1,42 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-var votingAge = 50;
+let votingAge = 50;
+
 if (votingAge > 18) {
-    console.log("True");
+    console.log("votingAge" , true );
+} else {
+    console.log("votingAge", false )
 }
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-var age = 50;
-if (age < 21) {
-	console.log("Stop");
+let variable1 = 15;
+let variable2 = 25;
+if (variable1 < 21) {
+	let = variable2;
 } else {
 	console.log("Enter");
 }
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-var a = 1999 
-Number(a);
+let string = "1999";
+console.log("String to Number", Number(string)); 
 
 //Task d: Write a function to multiply a*b 
 
-var x = 5;
-var y = 10;
-var z = x * y;
-console.log(z);
+let a = 5;
+let b = 10;
+let c = a * b;
+console.log(c);
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-var myAge = 50;
-var dogYears = myAge / 7;
+let myAge = 50;
+let dogYears = myAge / 7;
 console.log(dogYears);
 
 /************************************************************** Task 3 **************************************************************/
@@ -53,23 +57,22 @@ console.log(dogYears);
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
-var months = 12
-var weight = 15 
+let months = 12;
+let weight = 15;
 
 if (months >= 12) {
     else if (weight >= 15){
-        return weight * 0.02 ;
+        return weight * 0.02;
     }
     else if (weight <= 15 , > 11){
-        return weight * 0.03 ;
+        return weight * 0.03;
     }
     else if (weight < 11 , > 5){
-        return weight * 0.04 ;
+        return weight * 0.04;
     }
     else if (weight <= 5){
-        return weight * 0.05 ;
+        return weight * 0.05;
     }
-
 
 
 
@@ -178,7 +181,21 @@ console.log(centimeters + " Centimeters");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
+
+var word = parseInt(prompt("How many bottles?(1-99)");
+var count = prompt();
+while (count > 0) {
+    console.log(count + " " + word + " of soda");
+    console.log("Take one down, pass it around,");
+    count = count - 1;
+    if (count > 0) {
+        console.log(count + " " + word + " of soda on the wall.");
+    } else {
+        console.log("No more " + word + " of soda on the wall.");
+    }
+}
+
+//old world
 var word = "bottles";
 var count = 99;
 while (count > 0) {
