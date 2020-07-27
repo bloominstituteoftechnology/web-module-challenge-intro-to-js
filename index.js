@@ -163,9 +163,25 @@ feettocm(3)
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+const annoyingSong = (bottle) => {
+    let bottles;
+    let bottlesLeft;
+    for (i = 99; i >= 1; i--) {
+        if (i === 1) {
+            bottles = "bottle";
+            bottlesLeft = "no bottles of soda on the wall";
+        } else {
+            bottles = "bottles";
+            bottlesLeft = i - 1 + " bottles of soda on the wall";
+        }
+        console.log(i + " " + bottles + " of soda on the wall,");
+        console.log(i + " " + bottles + " of soda,");
+        console.log("take one down, pass it around,");
+        console.log(bottlesLeft);
+    }
+}
 
-
-
+console.log(annoyingSong());
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -178,15 +194,10 @@ feettocm(3)
 //and anything below 60 should be F
 
 
-
-
-
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
-
-
 
 
 
