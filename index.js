@@ -80,6 +80,7 @@ console.log(myAge);
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+function rps(input){
 let userChoice = prompt ("Do you choose rock, paper or scissors?");
 console.log(userChoice);
 
@@ -114,7 +115,7 @@ if (botChoice <= 0.33) {
   else if (userChoice === "scissors" && botChoice <= 0.66) { //paper
     console.log("you win")
   }
-
+}
 
 
 
@@ -139,7 +140,9 @@ console.log(centimeters + " centimeters");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  let bottles;
+function annoyingSong(input){
+
+let bottles;
  for (counter = 99; counter >= 1; counter = counter - 1) 
 {
      if (counter == 1) {
@@ -159,7 +162,7 @@ console.log(centimeters + " centimeters");
         console.log("No bottles of soda on the wall.");
     }
 } 
-
+}
 
 
 
@@ -199,6 +202,40 @@ function gradeCalc(input){
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
+// let userChoice = prompt ("Do you choose rock, paper or scissors?");
+// console.log(userChoice);
+
+
+// let botChoice = Math.random();
+
+// if (botChoice <= 0.33) {
+//     console.log("rock");
+// } else if (botChoice <= 0.66) {
+//     console.log("paper");
+// } else {
+//     console.log("scissors");
+// }
+//   if (userChoice === botChoice){
+//     console.log("you tied")
+//   } 
+//   else if (userChoice === "rock" && botChoice <= 0.66) { //paper
+//     console.log("you lose")
+//   }
+//   else if (userChoice === "rock" && botChoice >= 0.67) { //scissors
+//     console.log("you win")
+//   }
+//   else if (userChoice === "paper" && botChoice <= 0.33) { //rock
+//     console.log("you win")  
+//   } 
+//   else if (userChoice === "paper" && botChoice >= 0.67) { //scissors
+//     console.log("you lose")
+//   }
+//   else if (userChoice === "scissors" && botChoice <= 0.33) { //rock
+//     console.log("you lose")
+//   }
+//   else if (userChoice === "scissors" && botChoice <= 0.66) { //paper
+//     console.log("you win")
+//   }
 
 
 
