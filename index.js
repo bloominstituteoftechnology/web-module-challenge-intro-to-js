@@ -11,12 +11,12 @@ if (votingAge > 18) {
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-let variable = 1
+let  variable = a
+if a = a + b;
+log.console(a)
 
-if {}
 
 
-//review
 
 
 
