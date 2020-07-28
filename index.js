@@ -71,7 +71,29 @@ console.log(ageInDogYears(40));
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(weight, age) {
+    if (age >=1) {
+        if (weight <= 5) {
+            return weight * .05;
+        } else if (weight <= 10) {
+            return weight * .04; 
+        } else if (weight <= 15) {
+            return weight * .03;
+        } else {
+            return weight * .02;
+        }
+    } else {
+        if (age <= ((1/12) * 4)) {
+            return weight * .10;
+        } else if (age <= ((1/12) * 7)) {
+            return weight * .05;
+        } else {
+            return weight * .04;
+        }
+    }
+}
 
+console.log(dogFeeder(15, 1));
 
 
 
@@ -82,7 +104,40 @@ console.log(ageInDogYears(40));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+let number;
+if(input = "rock"){
+    number = 0;
+}
+if(input = "paper"){
+    number = 1;
+}
+if(input = "scissors"){
+    number = 2;
+} 
+
+let comp = Math.floor(Math.random()*3);
+
+/*Log computer choice to console */
+console.log(comp);
+
+if(number === comp){
+    return("Tie");
+} else if(number === 0,comp === 2){
+    return("Win");
+} else if(number === 0,comp === 1){
+    return("Lose");
+} else if(number === 1,comp === 0){
+    return("Win");
+} else if(number === 1,comp === 2){
+    return("Lose");
+} else if(number === 2,comp === 1){
+    return("Win");
+} else if(number === 2,comp === 0){
+    return("Lose");
+}
+
+}
+console.log(rockPaperScissors("scissors"))
   
 
 /************************************************************** Task 5 **************************************************************/
