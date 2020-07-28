@@ -3,22 +3,25 @@
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 let votingAge = 19;
 if (votingAge > 18) {
-    console.log("true")
+    console.log(true)
+} else {
+  console.log(false)
 }
 
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-let voterAge = prompt ("How old are you?");
+let firstVariable = 20;
 
-if (voterAge >= 18){
-console.log("you are old enough to vote!")
+let otherVariable = "change";
+
+if (otherVariable === "change");{
+  firstVariable = 100;
+  console.log("the first variable has now changed to " + firstVariable);
 }
-else {
-console.log("you are not old enough to vote :'(")
-}
-console.log(voterAge);
+
+
 
 
 
