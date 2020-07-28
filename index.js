@@ -35,7 +35,10 @@ console.log(typeof(numberTest));
 
 //Task d: Write a function to multiply a*b 
 
-
+function multiply(a,b) {
+    return a * b;
+}
+console.log(multiply(2,8));
 
 
 
