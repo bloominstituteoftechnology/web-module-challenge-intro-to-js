@@ -132,28 +132,41 @@ function getRandomInt(max) {
         return result;
       }
   }
-  
+  console.log(rockPS(0));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
-
-
-
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function km2mi(k){
+    return k * 0.6214;
+}
+function f2cm(f){
+    return f * 30.48;
+}
 
-
-
+function howmany(){
+    let miles = prompt("How many miles to convert to km");
+    let feet = prompt("How many feet to convert to cm");
+    console.log(km2mi(miles));
+    console.log(f2cm(feet));
+}
+howmany();
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
-// the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+// the function should take a starting number as an argument and count down - at each iteration it should log (number) 
+// bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
+function annoyingSong(num){
+    let nleft = num -1;
+    for (let n = num; n > 0; n--){
+console.log("bottles of soda on the wall "+ n+" bottles of soda, take one down pass it around"+ nleft +" bottles of soda on the wall");
+    }
+}
 
 
 
@@ -166,7 +179,23 @@ function getRandomInt(max) {
 //60s should be D 
 //and anything below 60 should be F
   
-
+function gradeCalc(grade){
+    if(grade === 100){
+        return 'A+';
+    }else if(grade >= 90 && grade < 100){
+        return 'A';
+    } else if(grade >= 80 && grade < 90 ){
+        return 'B';
+    } else if(grade >= 70 && grade < 80){
+        return 'C';
+    } else if(grade >= 60 && grade < 70){
+        return 'D';
+    } else if(grade <= 50){
+        return 'F';
+    }
+}
+let grad = 91;
+console.log('Your grade of ' + grad + ' is ' + gradeCalc(grad));
   
   
 
