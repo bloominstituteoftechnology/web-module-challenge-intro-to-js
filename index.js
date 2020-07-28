@@ -11,7 +11,6 @@ if (votingAge > 18) {
      
 
 
-
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
 
@@ -43,6 +42,7 @@ console.log(c)
 
 
 
+
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
@@ -54,6 +54,7 @@ dogAge = age*7;
 
 console.log(dogAge)
 
+/* explore how to do an arrow function*/
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -71,6 +72,7 @@ console.log(dogAge)
 var weight = 15;
 var age =1;
 var food;
+
 
 if (weight <= 5 && age>=1) 
 {
@@ -97,12 +99,9 @@ if (weight <= 5 && age>=1)
         }
     }
 
+
 console.log(food)
-/*
-*/
-/*{
-       
-    }*/
+
 
 
 
@@ -142,6 +141,71 @@ console.log(puppyFood)
 
 
 /************************************************************** Task 4 **************************************************************/
+
+function game (rock,paper,sissors)
+{
+    var person = prompt("choose rock, paper, or sissors")
+
+    
+   var computer = math.random ()
+
+    if (computer > 0.33)
+    {
+        computer = rock;
+        console.log("The computer chose rock!")
+    } else
+    if (0.33 <= computer <= 0.66) 
+    {    
+        computer = paper;
+        console.log("The computer chose paper!")
+    }else
+    if (computer > 0.66) 
+    {
+        computer = sissors;
+        console.log("The computer chose sissors!")    
+    }
+
+    var compare = function (option1, option2)
+    {
+
+    
+    if (option1 === option2)
+    {
+    
+        {
+            return "It's a tie!"
+        }
+    }
+
+    if (option1 === "rock")
+    {
+        if (option2 === "scissors") {
+            return "rock wins";
+            
+        }else{
+            return "paper wins";
+        }
+    }
+    if (option1 === "sissors") {
+        if (option2 === "rock") {
+
+            return "rock wins!";
+            
+        }else
+        {
+            return "sissors wins!";
+        }
+        
+    }
+
+}
+
+}
+
+
+/*list options*/
+
+
 // Rock, Paper, Sissors
 // Your function should take a string (either rock paper or sissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
@@ -155,15 +219,28 @@ console.log(puppyFood)
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+//function Converter (number)
 
 
 
+function converter (KM,miles)
+{
+     miles = KM*(0.621);
+    return miles;
+}
+converter(0,2)
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
 
 
+function converter (feet,CM)
+{
+    feet = CM*(30.48);
+   return feet;
+}
 
+converter(0,2)
 
 /************************************************************** Task 6(UNCOMMENT) **************************************************************/
 
@@ -173,14 +250,14 @@ console.log(puppyFood)
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-//const annoyingSong = (N) => 
-//{    
- //  for (i=N; i>0; i-- )
-//   {
- //      console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, Take one down pass it around, ${i-1} bottles of soda on the wall`)
-//   }
-//}
-//annoyingSong(99)
+const annoyingSong = (N) => 
+{    
+  for (i=N; i>0; i-- )
+ {
+      console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, Take one down pass it around, ${i-1} bottles of soda on the wall`)
+  }
+}
+annoyingSong(99)
 
 
 
@@ -193,27 +270,27 @@ console.log(puppyFood)
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-/*  
-const calculator = (char = G) =>
+ 
+const calculator = (G) =>
 {
-    if (G > 90)
+    if (G >= 90)
     {
-        G = A;
+        console.log("your grade is an A");
     }else
     {
-        if (90 > G > 80) 
+        if (90 > G >= 80) 
         {
-            G = B;
+            console.log("your grade is an B");
         }else
         {
-            if (80 > G > 70) 
+            if (80 > G >= 70) 
             {
-                G = C;
+                console.log("your grade is an C");
             }else
             {
-                if (60 > G > 50) 
+                if (70 > G >= 60) 
                 {
-                    G = D;
+                    console.log("your grade is an D");
                 }
             }
         }
@@ -221,9 +298,8 @@ const calculator = (char = G) =>
   
   
 }
-calculator(90)
-console.log(`${G}`)
-*/
+calculator(85)
+
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
@@ -236,8 +312,6 @@ console.log(`${G}`)
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-
 
 
 
