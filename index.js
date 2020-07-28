@@ -144,12 +144,18 @@ console.log(rockPaperScissors("scissors"))
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
-
-
+function converterKMtoMI(input){
+    return(input * 0.621371 + " miles");
+}
+console.log(converterKMtoMI(5));
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function converterFTtoCM(input){
+    return(input * 30.48 + " centimeters");
+}
+console.log(converterFTtoCM(5));
+
 
 
 
@@ -159,6 +165,13 @@ console.log(rockPaperScissors("scissors"))
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+function annoyingSong(start) {
+    for (let i = start; i >= 1; i--){
+        console.log( i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " +  (i - 1) + " bottles of soda on the wall");
+    }
+}
+
+console.log(annoyingSong(99));
 
 
 
@@ -174,22 +187,21 @@ console.log(rockPaperScissors("scissors"))
   
 
   
+function gradeCalculator(input){
+    if((input >= 90) && (input <=100)) {
+        return("A");
+    } else if((input >= 80) && (input <90)) {
+        return("B");
+    } else if((input >= 70) && (input <80)) {
+        return("C");
+    } else if((input >= 60) && (input <70)) {
+        return("D");
+    } else if((input >= 0) && (input < 60)) {
+        return("F");
+    } else {
+        console.log("input value must be between 1 and 100");
+    }
+    
+}
+console.log(gradeCalculator(101));
   
-
-/************************************************************** Stretch **************************************************************/
-//Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
-// Hint - you may need to study tomorrow's traning kit on arrays 
-// try looking up the .includes() method
-
-
-
-
-
-/************************************************************** Stretch **************************************************************/
-//Take Rock, Paper, Sissors further
-//update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
-
