@@ -24,7 +24,12 @@ if (var1 > var2) {
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+let numberTest = "1999";
+console.log(numberTest);
+console.log(typeof(numberTest));
+numberTest = Number(numberTest);
+console.log(numberTest);
+console.log(typeof(numberTest));
 
 
 
