@@ -132,7 +132,7 @@ function getRandomInt(max) {
         return result;
       }
   }
-  console.log(rockPS(0));
+  //console.log(rockPS(0));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
@@ -212,7 +212,10 @@ console.log('Your grade of ' + grad + ' is ' + gradeCalc(grad));
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
+function rPsBeta(){
+    let g = window.prompt("0- Rock, 1- Paper, 2- Sissors");
+    console.log(rockPS(g));
+}
 
-
-
+rPsBeta();
 
