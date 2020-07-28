@@ -181,7 +181,7 @@ const annoyingSong = (bottle) => {
     }
 }
 
-console.log(annoyingSong());
+annoyingSong()
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -193,11 +193,26 @@ console.log(annoyingSong());
 //60s should be D 
 //and anything below 60 should be F
 
+const GradeCalculator = (number) => {
+    let numb;
+    if (numb >= 90 && numb <= 100) {
+        return ("A");
+    } else if (numb >= 80 && numb <= 89) {
+        return ("B");
+    } else if (numb >= 70 && numb <= 79) {
+        return ("C");
+    } else if (numb >= 60 && numb <= 69) {
+        return ("D");
+    } else(numb >= 0 && numb <= 59)
+    return ("F");
+}
 
-/************************************************************** Stretch **************************************************************/
-//Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
-// Hint - you may need to study tomorrow's traning kit on arrays 
-// try looking up the .includes() method
+
+console.log(GradeCalculator(55))
+    /************************************************************** Stretch **************************************************************/
+    //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
+    // Hint - you may need to study tomorrow's traning kit on arrays 
+    // try looking up the .includes() method
 
 
 
