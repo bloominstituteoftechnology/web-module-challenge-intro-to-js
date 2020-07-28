@@ -9,7 +9,16 @@ if (age >= votingAge) {
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+et var1 = 10;
+let var2 = 11;
 
+if (var1 > var2) {
+    var1++;
+    console.log(var1);
+} else {
+    var1--;
+    console.log(var1);
+}
 
 
 
