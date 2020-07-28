@@ -1,19 +1,26 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-let votingAge 
+let votingAge = 18;
 
 if (votingAge > 18) {
     console.log("true")
-  }
+  } else{
+      console.log("votingAge",false)
+  } // Should print true
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-let  variable = a
-if a = a + b;
-log.console(a)
+let  variableA =10
+let variableB = 9
+if (variableB === variableA){
+    variableA = 12;
+}
+
+console.log(variableA)
+
 
 
 
@@ -194,7 +201,10 @@ feet(ft);
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 function annoyingSong (a) {
-    return (a) + " bottles of soda on the wall," + (a) +  " bottles of soda, take one down pass it around " + (a-1) + " bottles of soda on the wall";
+    bottles = a
+    for (let i = 0; i < a; i++){
+    console.log( '${bottles} bottles of soda on the wall, ${bottles}  bottles of soda, take one down pass it around  + ${bottles}+  bottles of soda on the wall')
+    bottles -= 1
 }
 
 annoyingSong(99);
@@ -235,15 +245,70 @@ grades(mark);
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
+vowels = ["a", "e", "i", "o", "u"];
 
+function count(string){
+    count = 0 
 
+}
 
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
+let myChoice = prompt("Lets play Rock,Paper, Scissors")
+console.log(game(myChoice))
 
 
+let choice2 = Math.random();
+if (choice2 < .34) {
+    choice2 = "rock";
+}
+else if (choice2 <= .67) {
+    choice2 = "paper";
+}
+else {
+    choice2 = "scissors";
+} 
 
 
+function game(choice1){
+    if (choice1 === choice2){
+        return "Tie";
+    }
+    if (choice1 === "paper"){
+        if (choice2 === "rock"){
+            return "paper wins";
+        }
+        else{
+            if (choice2 === "scissors"){
+                return "scissors wins";
+            }
+        }
+    }
+    if (choice1 === "rock"){
+        if (choice2 === "scissors"){
+            return "rock wins";
+        }
+        else{
+            if (choice2 === "paper"){
+                return "paper wins";
+            }
+        }
+    }
+    if (choice1 === "scissors"){
+        if (choice2 === "paper"){
+            return "scissors wins";
+        }
+        else{
+            if (choice2 === "rock"){
+                return "rock wins";
+            }
+        }
+    }
+
+}
+
+game();
+  
