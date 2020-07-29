@@ -14,14 +14,18 @@ if (votingAge > 18) {
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
 
-var age = 15
+var age = 21;
+var canDrink;
 {
-    if (age =15)
+    if (age >=20)
     {
-        age = age +1;
+        canDrink = true;
+    }else 
+    {
+        canDrink=false;
     }
 }
- console.log(age)
+ console.log(`${canDrink}`)
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
@@ -32,13 +36,13 @@ console.log(Number("1999"))
 
 //Task d: Write a function to multiply a*b 
 
-var a = 5;
+function multiply(a, b) 
+{
+   return a*b; 
+}
 
-var b = 4;
+multiply(3,5)
 
-c = a*b;
-
-console.log(c)
 
 
 
@@ -47,12 +51,12 @@ console.log(c)
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-var age = 22;
-var dogAge;
+cont Dyears = (humanYears) => 
+{
+   return humanYears*7; 
+}
 
-dogAge = age*7;
-
-console.log(dogAge)
+Dyears(1)
 
 /* explore how to do an arrow function*/
 
@@ -72,6 +76,7 @@ console.log(dogAge)
 var weight = 15;
 var age =1;
 var food;
+
 
 
 if (weight <= 5 && age>=1) 
