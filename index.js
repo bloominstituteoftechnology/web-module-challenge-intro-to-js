@@ -122,16 +122,22 @@ console.log(comp);
 
 if(number === comp){
     return("Tie");
+
 } else if(number === 0,comp === 2){
     return("Win");
+
 } else if(number === 0,comp === 1){
     return("Lose");
+
 } else if(number === 1,comp === 0){
     return("Win");
+
 } else if(number === 1,comp === 2){
     return("Lose");
+
 } else if(number === 2,comp === 1){
     return("Win");
+
 } else if(number === 2,comp === 0){
     return("Lose");
 }
@@ -144,18 +150,7 @@ console.log(rockPaperScissors("scissors"))
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-function converterKMtoMI(input){
-    return(input * 0.621371 + " miles");
-}
-console.log(converterKMtoMI(5));
-
-//b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
-function converterFTtoCM(input){
-    return(input * 30.48 + " centimeters");
-}
-console.log(converterFTtoCM(5));
-
+//help !!!!!
 
 
 
