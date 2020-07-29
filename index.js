@@ -39,7 +39,7 @@ let simple = (a,b) => a*b;
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
 function inDogYears(){
-    print("Enter Age");
+    console.log("Enter Age");
     let age = prompt("What is your age?");
     let formula = age * 7;
     if(formula === null){
@@ -78,35 +78,33 @@ console.log(inDogYears());
 function dogFeeder(w,a){
     let food2EET = 0;
     if(a >= 1){
-        if(a <= 5){
-            food2EET = (w * 5) /100;
+        if(w <= 5){
+            food2EET = (w * .05) ;
             return food2EET;
-        } else if(a <= 10 && a >= 6){
-            food2EET = (w * 4) /100;
+        } else if(w <= 10 && w >= 6){
+            food2EET = (w * .04) ;
             return food2EET;
-        } else if(a <= 15 && a >= 11){
-            food2EET = (w * 3) /100;
+        } else if(w <= 15 && w >= 11){
+            food2EET = (w * .03) ;
             return food2EET;
-        } else if(a >= 15 ) {
-            food2EET = (w * 2) /100;
+        } else if(w > 15 ) {
+            food2EET =  (w * .02);
             return food2EET;
         }
     } else{
-        let months  = prompt("How many months old is your puppy");
-        if(months <= 4 && months >= 2){
-            food2EET = (w * 10) /100;
-            return food2EET;
-        }else if(months <= 7 && months >= 4){
-            food2EET = (w * 5) /100;
-            return food2EET; 
-        } else if(months <= 12 && months >= 7){
-            food2EET = (w * 4) /100;
-            return food2EET;
+        if (a < 1 && a >= 7 / 12) {
+            return w * 0.04;
+        } else if (a < 7 / 12 && a >= 4 / 12) {
+            return w * 0.05;
+        } else if (a < 4 / 12 && a >= 2 / 12) {
+            return w * 0.1;
+        } else if (a <= 1 / 12) {
+            return 'mother';
         }
     }
 }
 
-console.log(dogFeeder(15,1));
+console.log(dogFeeder(1,1/12));
 
 
 /************************************************************** Task 4 **************************************************************/
@@ -150,8 +148,8 @@ function f2cm(f){
 function howmany(){
     let miles = prompt("How many miles to convert to km");
     let feet = prompt("How many feet to convert to cm");
-    console.log(km2mi(miles));
-    console.log(f2cm(feet));
+    console.log('Km '+km2mi(miles));
+    console.log('CM '+f2cm(feet));
 }
 howmany();
 
