@@ -5,9 +5,8 @@ let votingAge = 19;
 if (votingAge > 18) {
     console.log(true)
 } else {
-  console.log(false)
+    console.log(false)
 }
-
 
 
 
@@ -235,7 +234,8 @@ function gradeCalc(input){
 //update your rock papers sissors code below to take a prompt from a user using the window object
 // let userChoice = prompt ("Do you choose rock, paper or scissors?");
 // console.log(userChoice);
-
+// let userChoice = prompt ("Do you choose rock, paper or scissors?");
+// console.log(userChoice);
 
 // let botChoice = Math.random();
 
@@ -267,6 +267,7 @@ function gradeCalc(input){
 //   else if (userChoice === "scissors" && botChoice <= 0.66) { //paper
 //     console.log("you win")
 //   }
+
 
 
 
