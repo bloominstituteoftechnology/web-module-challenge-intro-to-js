@@ -12,7 +12,17 @@ let votingAge = 20;
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-  
+  let age = 19;
+  let canDrink = false;
+
+    if (age < 21) {
+        canDrink = false
+    } else {
+        canDrink = true
+    }
+
+    console.log(canDrink);
+
 
 
 
@@ -219,7 +229,7 @@ function letter(grade) {
         return 'F'
     }
 
-}
+}  console.log(letter(46));
 
 
   
