@@ -10,18 +10,16 @@ let votingAge = 18;
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-let hot = 70;
-let cold = 69;
-let message = 'message';
-let temp = 70;
 
-if (temp <= cold) {
-  message = 'it is cold';
-} 
-else if (temp >= hot) {
-  message = 'it is hot';
-}
-console.log(message)
+let age = 7;
+let kindergartenEligible;
+
+if (age > 5) {
+  kindergartenEligible = "Yes!";
+  }
+  else {
+  kindergartenEligible = "No they are too young :(";
+  }
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 Number('1999');
@@ -170,13 +168,28 @@ function metricConverterFt (feet) {
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
-for (let i = 99; i > 0; i--){
-    console.log(`${i} bottles on the wall`)
-  }
 
+function annoyingSong(soda) {  
+  let bottles;
+  let bottlesLeft;
 
+  for (i = soda; i >= 1; i--) {
+    if (i == 1) {
+      bottles = "bottle";
+      bottlesLeft = "No bottles of soda on the wall!";
+    } 
+    else {
+      bottles = "bottles";
+      bottlesLeft = i - 1 + " bottles of soda on the wall!";
+    } 
+    console.log(i+ " " + bottles + " of soda on the wall,");
+    console.log(i+ " " + bottles + " of soda,");
+    console.log("Take one down, pass it around,");
+    console.log(bottlesLeft);
+    } 
+}
 
+annoyingSong(5);
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -211,17 +224,26 @@ for (let i = 99; i > 0; i--){
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
-// try looking up the .includes() method
 
+const vowels = ["a", "e", "i", "o", "u"]
 
+function countVowels(text) {
+  let counter = 0;
 
+  for (let letter of text.toLowerCase()){
+      if (vowels.includes(letter)) {
+        counter++
+      }
+  }
+  console.log(`The text contains ${counter} vowel(s)`)
+  return counter
+}
 
+countVowels('Hi my name is Prince Buduru and I am a developer!');
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
-// DONE SON!!
-// expect a prompt!!
-
+// Completed
 
