@@ -59,8 +59,16 @@ console.log(dogYears(10))
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(weight) {
+    if (weight <= 5) {
+       return (weight * .05)
+    }
+    else if (weight <= 10) {
+        return (weight * .04)
+    }
 
-
+}
+    console.log(dogFeeder(7))
 
 
 /************************************************************** Task 4 **************************************************************/
