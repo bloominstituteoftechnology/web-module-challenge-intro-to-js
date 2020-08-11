@@ -1,11 +1,26 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+const votingAge = 18;
+if(votingAge > 18) {
+    console.log('true');
+}
 
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+
+let color = 'blue';
+let mindset = 'negative';
+
+if(mindset === 'positive'){
+    color = 'blue';
+
+}else if(mindset === 'negative'){
+    color = 'yellow';
+}
+console.log(color);
 
 
 
@@ -14,20 +29,27 @@
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
 
-
+Number(1999);
 
 
 //Task d: Write a function to multiply a*b 
 
 
-
+function multiplier(a * b){
+    console.log('results');
+}
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+//multiplying your age by 7
 
+var age = '26';
+function dogyears(age * 7) {
+    console.log('your age in dog years');
+}
 
 
 
@@ -37,20 +59,66 @@
 
 //feeding requirements
 // adult dogs at least 1 year 
+
+//Part I
+if(age>=1) {
+    
+    console.log('adults dogs at least 1 year');
+}else if(age<1){
+    console.log('puppy less than 1 year');
+}
+
 // up to 5 lbs - 5% of their body weight
+
+//Part II
+if(weight<=5) {
+    function bodyone(weight * 0.05);
+    console.log(poundsOfRawFood);
+}else if(weight=<10) {
+    function bodytwo(weight * 0.04);
+    console.log(poundsOfRawFood);
+}else if(weight=<15) {
+    function bodythree (weight * 0.03);
+    console.log(poundsOfRawFood);
+}else if(weight>15) {
+    function bodyfour (weight *0.02);
+    console.log(poundsOfRawFood);
+}
 // 6 - 10 lbs - 4% of their body weight 
 // 11 - 15 lbs - 3% of their body weight 
 // > 15lbs - 2% of their body weight 
 
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
+if(age<(4/12)) {
+    function puppyone(weight * 0.10) {
+        console.log(poundsOfRawFood);
+    }
+}else if(age<(7/12)) {
+    function puppytwo(weight * 0.05) {
+        console.log(poundsOfRawFood);
+    }
+}else if(age<(1)) {
+    function puppythree(weight * 0.04) {
+        console.log(poundsOfRawFood);
+    }
+}
 // 4 - 7 months 5% of their body weight 
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+var weight = '15';
+var age = '1';
+
+function DoggyFunction(weight, age){
 
 
+    const poundsOfRawFood = 0;
+    poundsOfRawFood = (age/weight);
+    console.log(poundsOfRawFood);
+    return poundsOfRawFood;
+  }  
 
 
 /************************************************************** Task 4 **************************************************************/
@@ -82,7 +150,7 @@
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
+//count down with a loop
 
 
 
