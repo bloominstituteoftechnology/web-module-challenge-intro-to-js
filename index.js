@@ -59,23 +59,55 @@ console.log(dogYears(10))
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
-function dogFeeder(weight) {
-    if (weight <= 5) {
+function dogFeeder(weight, age) {
+    if (weight <= 5 && age >= 1) {
        return (weight * .05)
     }
-    else if (weight <= 10) {
+    else if (weight > 5 && weight <= 10 && age >= 1) {
         return (weight * .04)
     }
-    else if (weight <= 15) {
+    else if (weight >= 6 && weight <= 15 && age >= 1) {
         return (weight * .03)
     }
-    else if  (weight > 15) {
+    else if  (weight > 15 && age >= 1) {
         return (weight * .02)
     }
-    
-
+    //puppy
+    else if (age > .16 && age <= .33) {
+        return (weight * .10)
+    }
+    else if (age > .33 && age <= .58) {
+        return (weight * .05)
+    }
+    else if (age > .58 && age < 1) {
+        return (weight * .04)
+    }
 }
-    console.log(dogFeeder(7))
+    console.log(dogFeeder(15,1))
+
+
+// function dogFeeder(weightOrAge) {
+//     if (weightOrAge <= 5) {
+//        return (weightOrAge * .05)
+//     }
+//     else if (weightOrAge <= 10) {
+//         return (weightOrAge * .04)
+//     }
+//     else if (weightOrAge <= 15) {
+//         return (weightOrAge * .03)
+//     }
+//     else if  (weightOrAge > 15) {
+//         return (weightOrAge * .02)
+//     }
+//     else if (weightOrAge <= .25) {
+//         return (weightOrAge * .10)
+//     }
+//     else if (weightOrAge <= .58) {
+//         return (weightOrAge * .05)
+//     }
+// }
+//     console.log(dogFeeder(7))
+
 
 
 /************************************************************** Task 4 **************************************************************/
