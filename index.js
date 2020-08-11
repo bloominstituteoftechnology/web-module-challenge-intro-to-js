@@ -66,6 +66,13 @@ function dogFeeder(weight) {
     else if (weight <= 10) {
         return (weight * .04)
     }
+    else if (weight <= 15) {
+        return (weight * .03)
+    }
+    else if  (weight > 15) {
+        return (weight * .02)
+    }
+    
 
 }
     console.log(dogFeeder(7))
