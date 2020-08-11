@@ -23,6 +23,8 @@ if (birthday === "yes"){
         console.log(`Current age is ${age}`)
     }
 
+
+
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
 const theString = "1999";
@@ -125,8 +127,20 @@ function dogFeeder(weight, age) {
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
-  
+function theGame() {
+    const gameNumber = Math.random()
+     
+     if (gameNumber <= .33) {
+        console.log('rock') 
+     }
+     else if (gameNumber >= .34 && gameNumber <= .69) {
+        console.log('paper') 
+     }
+     else if (gameNumber >= .70) {
+        console.log('scissors') 
+     }
+    }
+    console.log(theGame())
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
