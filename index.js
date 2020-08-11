@@ -145,8 +145,11 @@ function theGame() {
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
-
+ 
+function convert(km) {
+    return km * .62137
+}
+    console.log(convert(5))
 
 
 
