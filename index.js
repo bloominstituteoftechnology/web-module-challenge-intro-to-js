@@ -13,7 +13,15 @@ else {
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let age = 20
+let birthday = "yes"
 
+if (birthday === "yes"){
+    age = 21
+    console.log(`Happy Birthday.. you just turned ${age}`)
+}   else {
+        console.log(`Current age is ${age}`)
+    }
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
