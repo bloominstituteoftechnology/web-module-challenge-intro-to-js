@@ -8,22 +8,24 @@ var votingAge = 'i >18'
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-var a = dog;
-var z = a;
+//var a = dog;
+//var z = a;
 
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-Number('1999')
+Number('1999');
 
 
 
 //Task d: Write a function to multiply a*b 
 
-var taskD = a * b;
-
+function taskD (a, b) {
+   var taskD = a * b;
+}
+console.log(4 * 5);
 
 
 /************************************************************** Task 2 **************************************************************/
@@ -57,27 +59,27 @@ function dogYears(age) {
   function rawFood(dogAge, dogWeight) {
       let poundsFood = 0;
       if (dogAge < 1) {
-          if (dogAge >- .17 && dogAge <- .33) {
-              poundsFood - dogWeight * .1;
-          } else if (dogAge >- .34 && dogAge <- .58) {
+          if (dogAge >= .17 && dogAge <= .33) {
+              poundsFood - dogWeight * 0.1;
+          } else if (dogAge >= .34 && dogAge <= 0.58) {
               poundsFood- dogWeight * .5;
-          } else if (dogAge >- .59) {
+          } else if (dogAge >= .59) {
               poundsFood = dogWeight * .4;
           }
       } else {
-          if (dogWeight <-5) {
-              rawFood - dogWeight * .5;
-          } else if (dogWeight >- 6 && dogWeight <- 10) {
-              rawFood - dogWeight * .4;
+          if (dogWeight <= 5) {
+              poundsFood- dogWeight * 0.5;
+          } else if (dogWeight >= 6 && dogWeight <= 10) {
+              poundsFood - dogWeight * 0.84;
           } else if (dogWeight >= 11 && dogWeight <= 15) {
-              rawFood = dogWeight * .3;
+              poundsFood = dogWeight * 0.03;
           } else if (dogWeight < 15) {
-              rawFood - dogWeight * .2;
+            poundsFood - dogWeight * 0.02;
           }
       }
       return poundsFood;
     }
-    console.log(feedDog(1, 15))
+    console.log(rawFood(1, 15))
   
     
   
