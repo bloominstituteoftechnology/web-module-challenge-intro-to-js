@@ -219,7 +219,7 @@ console.log(letterGrade(72))
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
-var userChoice = prompt("Do you choose rock, paper, or scissors");
+var userChoice = promt("Do you choose rock, paper or scissors?");
 var computerChoice = Math.random();
 if (computerChoice < .34) {
 	computerChoice = "rock";
