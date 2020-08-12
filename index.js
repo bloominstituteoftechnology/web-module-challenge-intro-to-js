@@ -203,16 +203,28 @@ function gradeCalc(num) {
         console.log("F")
     }
 }
-  console.log(gradeCalc(55))
+  console.log(gradeCalc(97))
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
+function numberOfVowels(vowels) {
+    if (vowels.includes("a", "e", "i", "o", "u") === true) {
+        return vowels.length
+    }
+    else {
+        return false
+    }
+}
+ //   console.log(numberOfVowels("pppaeiou"))
+//the above keeps returning the number of characters instead of number of vowels
 
-
-
+function countOfVowels(theVowels) {
+    return theVowels.match(/[aeiou]/gi).length
+}
+    console.log(countOfVowels("yay this works"))
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
