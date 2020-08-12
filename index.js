@@ -61,48 +61,49 @@ function dogyears(age * 7) {
 // adult dogs at least 1 year 
 
 //Part I
-if(age>=1) {
-    
-    console.log('adults dogs at least 1 year');
-}else if(age<1){
-    console.log('puppy less than 1 year');
-}
+
+// if(age>=1) {
+//     console.log('adults dogs at least 1 year');
+// }else if(age<1){
+//     console.log('puppy less than 1 year');
+// }
 
 // up to 5 lbs - 5% of their body weight
 
 //Part II
-if(weight<=5) {
-    function bodyone(weight * 0.05);
-    console.log(poundsOfRawFood);
-}else if(weight=<10) {
-    function bodytwo(weight * 0.04);
-    console.log(poundsOfRawFood);
-}else if(weight=<15) {
-    function bodythree (weight * 0.03);
-    console.log(poundsOfRawFood);
-}else if(weight>15) {
-    function bodyfour (weight *0.02);
-    console.log(poundsOfRawFood);
-}
+
+// if(weight<=5) {
+//     function bodyone(weight * 0.05);
+//     console.log(poundsOfRawFood);
+// }else if(weight=<10) {
+//     function bodytwo(weight * 0.04);
+//     console.log(poundsOfRawFood);
+// }else if(weight=<15) {
+//     function bodythree (weight * 0.03);
+//     console.log(poundsOfRawFood);
+// }else if(weight>15) {
+//     function bodyfour (weight *0.02);
+//     console.log(poundsOfRawFood);
+// }
 // 6 - 10 lbs - 4% of their body weight 
 // 11 - 15 lbs - 3% of their body weight 
 // > 15lbs - 2% of their body weight 
 
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
-if(age<(4/12)) {
-    function puppyone(weight * 0.10) {
-        console.log(poundsOfRawFood);
-    }
-}else if(age<(7/12)) {
-    function puppytwo(weight * 0.05) {
-        console.log(poundsOfRawFood);
-    }
-}else if(age<(1)) {
-    function puppythree(weight * 0.04) {
-        console.log(poundsOfRawFood);
-    }
-}
+// if(age<(4/12)) {
+//     function puppyone(weight * 0.10) {
+//         console.log(poundsOfRawFood);
+//     }
+// }else if(age<(7/12)) {
+//     function puppytwo(weight * 0.05) {
+//         console.log(poundsOfRawFood);
+//     }
+// }else if(age<(1)) {
+//     function puppythree(weight * 0.04) {
+//         console.log(poundsOfRawFood);
+//     }
+// }
 // 4 - 7 months 5% of their body weight 
 // 7 - 12 months 4% of their body weight
 
@@ -112,11 +113,36 @@ var weight = '15';
 var age = '1';
 
 function DoggyFunction(weight, age){
-
-
-    const poundsOfRawFood = 0;
-    poundsOfRawFood = (age/weight);
-    console.log(poundsOfRawFood);
+    if(age>=1) {
+        console.log('adults dogs at least 1 year');
+    }else if(age<1){
+        console.log('puppy less than 1 year');
+    }
+    if(weight<=5) {
+        function bodyone(weight * .05);
+        console.log(poundsOfRawFood);
+    }else if(weight<=10) {
+        function bodytwo(weight * .04);
+        console.log(poundsOfRawFood);
+    }else if(weight<=15) {
+        function bodythree (weight * .03);
+        console.log(poundsOfRawFood);
+    }else if(weight>15) {
+        function bodyfour (weight * .02);
+        console.log(poundsOfRawFood);
+    }
+    if(age<(4/12)) {
+        function puppyone(weight * .10) {
+            console.log(poundsOfRawFood);
+        }
+    }else if(age<(7/12)) {
+        function puppytwo(weight * .05) {
+            console.log(poundsOfRawFood);
+        }
+    }else if(age<(1)) {
+        function puppythree(weight * .04) {
+            console.log(poundsOfRawFood);
+        }
     return poundsOfRawFood;
   }  
 
@@ -128,6 +154,28 @@ function DoggyFunction(weight, age){
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+function rockpaperscissors(random) {
+    let machine = Math.random()
+    
+    if(machine<=0.30) {
+        machine = "rock"
+    } else if (computer <=0.60) {
+        computer = "paper"
+    } else if (computer > 0.60) {
+        computer = "scissors"
+    }
+
+    let result = null;
+
+    if (random === "rock" && machine === "rock" || random === "paper" && machine === "paper" || random === "scissors" && machine === "scissors") {
+    result = "draw"
+} else if (random === "rock" && machine === "scissors" || random === "paper" && machine === "rock" || random === "scissors" && machine === "paper") {
+    result = "win"
+} else if (random === "scissors" && machine === "rock" || random === "rock" && machine === "paper" || random === "scissors" && machine === "paper") {
+    result = "lose"
+} 
+
+
   
   
 
@@ -135,13 +183,16 @@ function DoggyFunction(weight, age){
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
-
+var kilometers = parseInt(prompt("Please enter kilometers:"));
+var miles = kilometers / 1.6;
+console.log(miles + " Miles");
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
 
+var feet = parseInt(prompt("Please enter feet:"));
+var centimeters = feet * 30.48;
+console.log(centimeters + "CM");
 
 
 
@@ -151,6 +202,14 @@ function DoggyFunction(weight, age){
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 //count down with a loop
+
+function annoyingSong(number){
+    let = number
+    for (let i = number; i > 0; i--) {
+        return(i)
+    }
+}
+console.log(annoyingSong(10));
 
 
 
@@ -162,7 +221,24 @@ function DoggyFunction(weight, age){
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
+
+function grading() {
+
+let grade = Math.random()
+
+if(grade<0.60) {
+    grade = "F"
+}else if (grade<=0.69) {
+    grade = "D"
+} else if (grade<=0.79) {
+    grade = "C"
+} else if (grade<=0.89) {
+    grade = "B"
+} else if (grade<=1.00) {
+    grade = "A"
+}
+}
+console.log(grade + "This is your final grade")
 
   
   
