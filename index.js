@@ -137,7 +137,7 @@ function FtoM (feet) {
 
 function annoyingSong(num) {
 	for (i = num; i > 0; i--) {
-		console.log(i + ' Bottles of Soda on the Wall, ' + i + ' Bottles of Soda, take one down pass it around ' + (i - 1) + ' Bottles of Doda on the Wall!');
+		console.log(i + ' Bottles of Soda on the Wall, ' + i + ' Bottles of Soda, take one down pass it around ' + (i - 1) + ' Bottles of Soda on the Wall!');
 	}
 }
 
