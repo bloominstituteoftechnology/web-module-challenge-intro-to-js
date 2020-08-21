@@ -22,6 +22,7 @@ var myVariable = 'False';
    myVariable = 'True';
  }
 
+ console.log(myVariable === myVariable)
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
@@ -87,11 +88,11 @@ function foodAmount(age, weight){
       console.log(weight * .10);
     } else if(age >= .33333333 && age <= .58333333){
       console.log(weight * .05);
-    } else if(age >= .58333333 && age < 1){
+    } else{
       console.log(weight * .04);
     }
-    
-    foodAmount(1, 15)
+}    
+    foodAmount(.59, 15);
 
 
 
@@ -268,8 +269,4 @@ countVowelsIterative('');
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
 
