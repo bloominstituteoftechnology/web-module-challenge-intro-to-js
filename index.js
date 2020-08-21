@@ -231,45 +231,8 @@ console.log(countVowels("SteveJessicaAlex"))
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
-function rps(){
-    let player = window.prompt("Enter your command")
-    player = player.toUpperCase();
-    computerResult = ""
-    let computer = Math.floor(Math.random() * 3);
 
-    if(computer === 0){
-        computerResult = "ROCK";
-    } else if(computer === 1){
-        computerResult = "PAPER";
-    } else if(computer === 2){
-        computerResult = "SCISSORS";
-    }
-    console.log(computerResult)
-    if(player === computerResult){
-        return("TIE");
-    } else {
-        if(computerResult === "ROCK"){
-            if(player === "PAPER"){
-                return("WIN");
-            } else {
-                return("LOSE");
-            }
-        } else if(computerResult === "PAPER"){
-            if(player === "SCISSORS"){
-                return ("WIN");
-            } else {
-                return ("LOSE")
-            }
-        } else {
-            if(player === "ROCK"){
-                return("WIN");
-            } else {
-                return("LOSE")
-            }
-        }
-    }
-}
-console.log(rps("ROCK"))
+// SEE HTML
 
 
 
