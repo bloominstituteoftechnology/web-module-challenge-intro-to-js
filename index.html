@@ -6,6 +6,44 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="index.js"></script>
+    <script>function rps(){
+        let player = prompt("Enter ROCK, PAPER, or SCISSORS")
+        player = player.toUpperCase();
+        computerResult = ""
+        let computer = Math.floor(Math.random() * 3);
+    
+        if(computer === 0){
+            computerResult = "ROCK";
+        } else if(computer === 1){
+            computerResult = "PAPER";
+        } else if(computer === 2){
+            computerResult = "SCISSORS";
+        }
+        console.log(computerResult)
+        if(player === computerResult){
+            return("TIE");
+        } else {
+            if(computerResult === "ROCK"){
+                if(player === "PAPER"){
+                    return("WIN");
+                } else {
+                    return("LOSE");
+                }
+            } else if(computerResult === "PAPER"){
+                if(player === "SCISSORS"){
+                    return ("WIN");
+                } else {
+                    return ("LOSE")
+                }
+            } else {
+                if(player === "ROCK"){
+                    return("WIN");
+                } else {
+                    return("LOSE")
+                }
+            }
+        }
+    }
+    alert(rps())</script>
 </body>
 </html>
