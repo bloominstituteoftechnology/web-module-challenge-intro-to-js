@@ -114,64 +114,54 @@ dogFeeder(); //call
 
 //prompt user to guess. This is case sensitive
 userGuess = prompt("Rock, Paper, or Sissors?");
-//generates a number between 1-3 for computer 
+//generates a number between 1-3 for computer
 computerNumber = Math.ceil(Math.random() + Math.random() + Math.random());
 //saves computer's guess as a string value after running function
-computerGuess = 0
+computerGuess = 0;
 
 //calls all our functions
-player()
-computer()
-whoWon()
+player();
+computer();
+whoWon();
 
 //Shows user's guess in Console
 function player() {
-  
- if (userGuess === "Rock") {
+  if (userGuess === "Rock") {
     console.log("You guessed Rock");
-  }
-  else if (userGuess === "Paper") {
+  } else if (userGuess === "Paper") {
     console.log("You guessed Paper");
-  }
-  else if (userGuess === "Sissors") {
+  } else if (userGuess === "Sissors") {
     console.log("You guessed Sissors");
-  }
-  else {
+  } else {
     console.log("That is not a valid input. You lose");
   }
 }
 
 //Convert's computer's number guess into a string value and output's the computer's guess
 function computer() {
- 
   if (computerNumber === 1) {
     computerGuess = "Rock";
-    console.log("The computer guessed Rock")
-  }
-  else if (computerNumber === 2) {
+    console.log("The computer guessed Rock");
+  } else if (computerNumber === 2) {
     computerGuess = "Paper";
     console.log("The computer guessed Paper");
-  }
-  else {
+  } else {
     computerGuess = "Sissors";
-    console.log("The coputer guessed Sissors")
+    console.log("The coputer guessed Sissors");
   }
 }
 
-// function that compares the string values and determines the winner 
+// function that compares the string values and determines the winner
 function whoWon() {
-if (userGuess === "Paper" && computerGuess === "Rock") {
-  console.log ("You Won!");
-}
-else if (userGuess === "Rock" && computerGuess === "Sissors") {
-  console.log ("You Won!");
-}
-else if (userGuess === "Sissors" && computerGuess === "Paper") {
-  console.log ("You Won!");
-}
-else {
-  console.log("The Computer Wins!");
-}
+  if (userGuess === "Paper" && computerGuess === "Rock") {
+    console.log("You Won!");
+  } else if (userGuess === "Rock" && computerGuess === "Sissors") {
+    console.log("You Won!");
+  } else if (userGuess === "Sissors" && computerGuess === "Paper") {
+    console.log("You Won!");
+  } else {
+    console.log("The Computer Wins!");
+  }
 }
 
 /************************************************************** Task 5 **************************************************************/
@@ -182,21 +172,21 @@ else {
 
 // Metric system :(
 
-    var feet = prompt("how many feet?");
-    var kilometers = prompt("how many Kilometers?");
-    
-    feetToCM();
-    kmToMiles();
-    
-    function feetToCM() {
-      let cm = feet * 30.48;
-      console.log((feet) +  " feet is " + (cm) + " centemeters");
-    }
-    
-    function kmToMiles() {
-      let miles = kilometers * 0.621371;
-      console.log((kilometers) + " kilometers is " + (miles) + " miles");
-    }
+var feet = prompt("how many feet?");
+var kilometers = prompt("how many Kilometers?");
+
+feetToCM();
+kmToMiles();
+
+function feetToCM() {
+  let cm = feet * 30.48;
+  console.log(feet + " feet is " + cm + " centemeters");
+}
+
+function kmToMiles() {
+  let miles = kilometers * 0.621371;
+  console.log(kilometers + " kilometers is " + miles + " miles");
+}
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
@@ -207,12 +197,12 @@ else {
 var bottles = prompt("how many bottles should we start with?");
 
 //calls our function
-annoying()
+annoying();
 
 //function takes user's input and counts down to 0 logging the result
 function annoying() {
-for (let j = 0; bottles >= j; bottles--)
-  console.log(bottles + " bottles of soda on the wall")
+  for (let j = 0; bottles >= j; bottles--)
+    console.log(bottles + " bottles of soda on the wall");
 }
 
 /************************************************************** Task 7 **************************************************************/
@@ -231,21 +221,17 @@ var grade = prompt("How many questions did you get right?");
 letterGrade();
 
 function letterGrade() {
-if (grade >= 90) {
-  console.log("Amazing! You got an A!");
-}
-else if (grade >= 80) {
-  console.log("Congrats! You got a B!");
-}
-else if (grade >= 70) {
-  console.log("You got a C.");
-}
-else if (grade >= 60) {
-  console.log("You got a D. Don't forget to study");
-}
-else {
-  console.log("You got an F. You will do better next time");
-}
+  if (grade >= 90) {
+    console.log("Amazing! You got an A!");
+  } else if (grade >= 80) {
+    console.log("Congrats! You got a B!");
+  } else if (grade >= 70) {
+    console.log("You got a C.");
+  } else if (grade >= 60) {
+    console.log("You got a D. Don't forget to study");
+  } else {
+    console.log("You got an F. You will do better next time");
+  }
 }
 
 /************************************************************** Stretch **************************************************************/
@@ -255,14 +241,56 @@ else {
 
 //I am not sure about this one. Here is a function that works but only finds one value at a time
 var ar = ["a", "A", "b", "E", "f", "u", "a", "o"];
-var elementToFind="a";
-var result = ar.reduce(function (elementToFind, total, number){
-    return total += number==elementToFind;
-}.bind(this, elementToFind), 0);
+var elementToFind = "a";
+var result = ar.reduce(
+  function (elementToFind, total, number) {
+    return (total += number == elementToFind);
+  }.bind(this, elementToFind),
+  0
+);
 
 console.log(result);
+
+// Here is a function that DOES NOT work but should be able to find multiple values
+const letters = [a, A, b, B, e, E, i, I, h, O, l, S, u, U, z];
+let vowels = 0;
+
+for (let i = letters.length; s > 0; s--)
+  if (numbers.includes(a, s)) {
+    vowels++;
+    letters.splice(s, 1);
+  } else if (numbers.includes(A, s)) {
+    vowels++;
+    letters.splice(s, 1);
+  } else if (numbers.includes(e, s)) {
+    vowels++;
+    letters.splice(s, 1);
+  } else if (numbers.includes(E, s)) {
+    vowels++;
+    letters.splice(s, 1);
+  } else if (numbers.includes(i, s)) {
+    vowels++;
+    letters.splice(s, 1);
+  } else if (numbers.includes(I, s)) {
+    vowels++;
+    letters.splice(s, 1);
+  } else if (numbers.includes(o, s)) {
+    vowels++;
+    letters.splice(s, 1);
+  } else if (numbers.includes(O, s)) {
+    vowels++;
+    letters.splice(s, 1);
+  } else if (numbers.includes(u, s)) {
+    vowels++;
+    letters.splice(s, 1);
+  } else if (numbers.includes(U, s)) {
+    vowels++;
+    letters.splice(s, 1);
+  }
+
+console.log(vowels);
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
-//please see above program. Functionality is already added. 
+//please see above program. Functionality is already added.
