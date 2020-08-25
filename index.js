@@ -12,6 +12,13 @@ if (votingAge > 18) {
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+car = "off"
+if (car === "on"){
+  console.log("This car is on")
+} else if (car === "off") {
+  console.log("This car is off")
+}
+
 
 
 
@@ -110,16 +117,6 @@ let paper = Math.random();
 let rock = Math.random();
 let sissor = Math.random();
 console.log(game(paper,paper));
-
-
-
-
-
-
-
-
-
-
 
 
 
