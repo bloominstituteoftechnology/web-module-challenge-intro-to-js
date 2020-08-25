@@ -26,6 +26,7 @@ function temperature(weather) {
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
 
+let year = 1999
 
 
 
@@ -64,7 +65,31 @@ console.log(multiply(50,7))
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
-
+function dogFeeder (weight , age){
+  if( age => 1 ){
+    if(weight <= 5){
+      return .05 * weight
+    }
+    else if (6 <= weight <= 10){
+      return .04 * weight
+    }
+   else if (11 <= weight <= 15){
+      return .03 * weight
+    }
+  else {
+      return .02 * weight
+    }
+  if( age < 1 ){
+    if (2 <= weight < 4 ){
+      return .1 * weight
+    }
+    else if(4 < weight < 6){
+      return .05 * weight
+    }
+    else {
+      return .04 * weight
+    }
+  }
 
 
 
@@ -75,20 +100,47 @@ console.log(multiply(50,7))
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+function rockPaperScissor(hand){
+  let options = ['rock', 'paper', 'scissors']
+  let computerChoice = options[getRandomNumber]
+
+  if(computerChoice === 'rock'){
+    console.log("rock")
+  }
+  else if(computerChoice === 'paper'){
+    console.log("paper")
+  }
+  else(computerChoice === 'scissors')
+    console.log ('scissors')
+}
+
+function getRandomNumber(){
+ 
+  let randomNumber = 3
+  while(randomNumber > 2 )
+    randomNumber = Math.floor(10* Math.random())
+  return randomNumber
+}
+
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
+function milageConverter(miles , kilometers){
+  let miles = 1
+  miles = math.floor(kilometers * 0.621371()) 
+}
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+function feetConverter(inches , centimeters){
+  let inches = 1
+  inches = math.floor(centimeters * 0.621371()) 
+}
 
 
 
@@ -98,7 +150,7 @@ console.log(multiply(50,7))
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 
-for(let i = 99; i >0; i--){
+for(let i = 99; i > 0; i--){
     console.log(i)
 }
 
@@ -114,15 +166,15 @@ for(let i = 99; i >0; i--){
   
 
 function assignments(schoolGrades){
-    if (schoolGrades => '90'){
-        console.log ('A');
-    }else if(schoolGrades < 90 || => 80){
-        console.log ('B');
-    }else if(schoolGrades < 80 || => 70){
-        console.log ('C');
-    }else if(schoolGrades < 70 || => 60){
-        console.log ('D');
-    }else if(schoolGrades < 60){
+    if (90 <= schoolGrades ){
+        console.log ('A');}
+      else if(80 <= schoolGrades <=90){
+        console.log ('B');}
+      else if(70 <= schoolGrades <= 80){
+        console.log ('C');}
+      else if(60 <= schoolGrades <= 70){
+        console.log ('D');}
+      else{
         console.log ('F');
     }
     
