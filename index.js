@@ -1,12 +1,24 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-let votingAge = 18
-console.log (if votingAge > 18)
+let votingAge = 25;
+console.log(votingAge > 18);
+
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+function temperature(weather) {
+    if (weather === "snow") {
+      console.log("wear a winter jacket");
+    } else if (weather === "rain") {
+      console.log("pack an umbrella");
+    } else if (weather === "sunny") {
+      console.log("wear shorts");
+    } else {
+      console.log("prepare for anything");
+    }
+  }
 
 
 
@@ -18,17 +30,20 @@ console.log (if votingAge > 18)
 
 
 //Task d: Write a function to multiply a*b 
-
-
+function multiply(num1, num2) {
+return num1*num2;    
+}
+console.log(multiply(5,7))
 
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
-
-
+function multiply(humanAge, dogAge){
+return humanAge * dogAge;
+}
+console.log(multiply(50,7))
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -83,7 +98,9 @@ console.log (if votingAge > 18)
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 
-
+for(let i = 99; i >0; i--){
+    console.log(i)
+}
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -96,7 +113,19 @@ console.log (if votingAge > 18)
 //and anything below 60 should be F
   
 
-  
+function assignments(schoolGrades){
+    if (schoolGrades => '90'){
+        console.log ('A');
+    }else if(schoolGrades < 90 || => 80){
+        console.log ('B');
+    }else if(schoolGrades < 80 || => 70){
+        console.log ('C');
+    }else if(schoolGrades < 70 || => 60){
+        console.log ('D');
+    }else if(schoolGrades < 60){
+        console.log ('F');
+    }
+    
   
 
 /************************************************************** Stretch **************************************************************/
@@ -111,8 +140,3 @@ console.log (if votingAge > 18)
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
-
