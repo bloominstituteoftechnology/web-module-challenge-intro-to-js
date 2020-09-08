@@ -1,36 +1,66 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-const myName = "rees Harper"
+const votingAge = 20;
 
-console.log(myName)
-
+if(votingAge >= 18){
+    console.log("true");
+} else {
+    console.log("false")
+}
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+var variable1 = 20
+var variable2 = 5
 
+if(variable1 = 20){
+    console.log(variable1 + variable2)
+}
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
 
+var value1 = "23"
 
+parseInt(value1);
+
+console.log(value1)
 
 
 //Task d: Write a function to multiply a*b 
 
+const a = 2
+const b = 4
 
+function multiply(a, b) {
+    
+    const product = a * b;
 
+    return product
 
+}
+console.log(multiply(a, b));
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+const myAge = 20
+const dogAge = 7
 
+function dogYears (myAge, dogAge) {
 
+    const newAge = myAge * dogAge;
+
+    return newAge
+
+}
+
+console.log(dogYears(myAge, dogAge));
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -50,7 +80,8 @@ console.log(myName)
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
+
+
 
 
 
