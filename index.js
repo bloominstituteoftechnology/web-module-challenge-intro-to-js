@@ -95,8 +95,15 @@ function feeder(dogweight, age) {
     else if ((dogweight >= 11) && (dogweight <= 15) ){
         return dogweight * 0.03;
 
+    } else {
+        return dogweight * 0.02;
+    }
+    else if (age <= .33) {
+        
     }
 }
+
+
 
 
 
