@@ -1,16 +1,25 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 let votingAge = 19;
-    if (votingAge > 18) {
-    console.log(true);
+    if (votingAge >= 18) {
+        console.log(true);
+    } else {
+        console.log(false);
     }
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-for(let i = 5; i < 10; i++) {
-    console.log(i)
-  }
+let plant = "phragmities";
+let isInvasive = "Yes";
+
+if(isInvasive === "Yes"){
+  plant = "Invasive";
+}else {
+  plant = "Native";
+}
+
+console.log(plant);
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
@@ -48,7 +57,7 @@ console.log(dogYears(31));
 // up to 5 lbs - 5% of their body weight
 // 6 - 10 lbs - 4% of their body weight 
 // 11 - 15 lbs - 3% of their body weight 
-// > 15lbs - 2% of their body weight 
+// > 15lbs - 2% of their body weight vc 
 
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
@@ -60,13 +69,22 @@ const dogFeeder = (weightLB,ageYr) => {
     if (weightLB <= 5 && ageYr >= 1){
         return weightLB*.05;
     } else if ( weightLB >= 6 && weightLB <= 10 && ageYr >= 1){
-              return weightLB*.04;
-    }else if (weightLB >= 11 && weightLB <= 15 && ageYr >=1){
+        return weightLB*.04;
+    } else if (weightLB >= 11 && weightLB <= 15 && ageYr >=1){
         return weightLB*.3;
+    } else if (weightLB > 15 && ageYr >= 1){
+        return weightLB*.02;
+    } else if (ageYr >= .166 && ageYr <= .33){
+        return weightLB*.1;
+    } else if (ageYr > .33 && ageYr <= .583){
+        return weightLB*.05;
+    } else if (ageYr > .583 && ageYr < 1){
+        return weightLB*.04;
+    } else {
+        console.log("I don't know how much to feed this dog")
     }
-} 
-  
-  console.log(dogFeeder(7,2));
+}
+  console.log(dogFeeder(15,1));
 
 
 
@@ -99,7 +117,7 @@ const dogFeeder = (weightLB,ageYr) => {
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
+// Hint hint -- because song counts down, not ++
 
 
 
