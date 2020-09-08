@@ -1,6 +1,10 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-
+let votingAge = {
+    if Age > 18 {
+    console.log(true)
+    }
+}
 
 
 
