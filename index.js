@@ -81,6 +81,8 @@ function feedDog() {
   };
 };
 
+
+
 //feeding requirements
 // adult dogs at least 1 year 
 // up to 5 lbs - 5% of their body weight
@@ -139,6 +141,7 @@ function game() {
 
   //NEED TO RETURN TO THIS PART LATER TO FIGURE OUT
 
+  //debug below portion
   // if (answer == 1 && randomize == 2) {
   //   prompt('paper beats rock, you lose');
   // } else if (answer = 2 && randomize = 3) {
