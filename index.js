@@ -1,17 +1,69 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+//var votingAge = 18 
+//console.log(votingAge);
+//if(votingAge = 18);
+//console.log(votingAge);
+//if(votingAge > 18);
+//console.log(true){
+    //if (votingAge < 18){
+
+    //}
+     //console.log(false);
 
 
-
+     //“If” statements: where if a condition is true it is //used to specify execution for a block of code.
+    // “Else” statements: where if the same condition is false it specifies the execution for a block of code.
+    // “Else if” statements: this specifies a new test if the first condition is false.
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+//var weightDivideHeightSquare = 
+//var HealthyBMI = 18 through 24
+//console.log(HealthyBMI);
 
+//if (HealthyBMI < 18);{ 
+//console.log(UnderWeight);{
+    //}
+////}
+
+//else (HealthyBMI > 24); {
+//console.log(OverWeight);
+
+//elseif (HealthyBMI === 18-24);{
+
+//}
+//console.log(HealthyWeight);
+
+//var varTen = [10, 1] 
+ //if (varTen < 10)
+ //return (varTen)
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+//var x = "1999";
+//Number("1999");
+//console.log(Number);
+
+//Number('123');{
+    //return Number
+///}
+  // returns the number 123
+///Number('123') === 123 
+ // true
+
+ //var x = "1999";
+ //x.toString();  
+ //console.log(x);          
+ //(1999).toString();         
+ //(1999 + 100).toString();  
+
+//var x = "1999";
+///Number();
+//console.log(x);
+
 
 
 
@@ -19,7 +71,18 @@
 
 //Task d: Write a function to multiply a*b 
 
+//function multiplyer() {
+ //multiplyer(10, 10);
+//return a*b;
+//}
+//function multiplyNumbers(6, 7)
+    //console.log(multiplyNumbers)
 
+function multiplyer(a,b) {
+    return a*b;
+}
+var x = multiplyer (777666,55510);
+//console.log(x);
 
 
 
@@ -27,6 +90,11 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function changeAge(age,b) {
+    return (age * 7);
+}
+var age = changeAge (7);
+//console.log(age);
 
 
 
@@ -49,6 +117,13 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(x,y) {
+ return (x * .1);
+}
+var x = dogfeeder(7);
+    console.log(x);
+
+
 
 
 
