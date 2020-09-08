@@ -28,7 +28,6 @@ console.log(Number("1999"));
 
 
 //Task d: Write a function to multiply a*b 
-//:)//
 
 const mult = function(a,b) {
     return a*b;
@@ -71,7 +70,7 @@ const dogFeeder = (weightLB,ageYr) => {
     } else if ( weightLB >= 6 && weightLB <= 10 && ageYr >= 1){
         return weightLB*.04;
     } else if (weightLB >= 11 && weightLB <= 15 && ageYr >=1){
-        return weightLB*.3;
+        return weightLB*.03;
     } else if (weightLB > 15 && ageYr >= 1){
         return weightLB*.02;
     } else if (ageYr >= .166 && ageYr <= .33){
