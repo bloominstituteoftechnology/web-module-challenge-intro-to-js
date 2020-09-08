@@ -94,9 +94,20 @@ const dogFeeder = (weightLB,ageYr) => {
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+  function game(choice) {
+      let item = Math.floor(Math.random() * 2)  //multiply random number by 2 then round down. Set this value to item. Results should be 0, 1, or 2.
+     //computer choices: rock=0 paper=1 scissors=2
+      if (choice === 'rock' && item === 0){
+          return 'You Tied!';
+      } else if (choice === 'rock' && item === 1){
+          return 'You Lost!'
+      } else if (choice === 'rock' && item === 2){
+          return 'You Won!'
+      } else if (choice === 'paper' && item === 0){
+        return 'You Won!'
+  }
   
-  
-
+ 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
