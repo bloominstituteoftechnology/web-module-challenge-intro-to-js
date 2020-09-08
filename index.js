@@ -1,25 +1,37 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
+votingAge = 17 ;
+console.log(false);
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-
+var taskB = 15;
+if (taskB = 15){
+    taskB = 10
+};
+console.log(taskB)
 
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+var text = '1999';
+var integer = parseInt(text, 10) ;
+console.log(text)
 
 
 
 //Task d: Write a function to multiply a*b 
 
-
+multiply = function(a,b) {
+Answer = a * b
+return Answer;
+}
+multiply("5", "6")
+console.log(Answer)
 
 
 
@@ -27,6 +39,12 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function meDog(myAge) {
+meDog = myAge * 7;
+return meDog;
+};
+meDog('20');
+console.log(meDog)
 
 
 
@@ -49,8 +67,35 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(age, weight){
+    if (age >= 1 && weight >= 5){
+        return weight * 0.05 + "lbs";
+        
+    } else if (age >= 1 && weight >=6 && weight <=10){
+        return weight * 0.04 + "lbs";
+        
+    } else if (age >= 1 && weight <=11 && weight <=15){
+        return weight * 0.03 + "lbs";
+        
+    }
+        else(age <= 1)
+        return weight * 0.02 + "lbs";
+            
+}
+dogFeeder(2, 15);
+console.log(dogFeeder(1, 9))
 
+        
+        
+    
 
+// dogFeeder(2, 3);
+// console.log(dogFeeder);
+
+// function greet(name) {
+//     console.log('Hello World ' + name);
+// }
+// greet('John');
 
 
 /************************************************************** Task 4 **************************************************************/
@@ -59,8 +104,49 @@
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+const computerOptions = ["rock", "paper", "scissors"];
+const computerNumber = Math.floor(Math.random() * 3);
+const computerChoice = computerOptions[computerNumber];
+console.log(computerChoice);
+  const comparehands = (playerChoice, computerChoice) => {
+      if(playerChoice === computerChoice){
+          console.log('Tie!')
+      }
+      if(playerChoice === 'rock'){
+          if(computerChoice === 'scissors'){
+              console.log('Player Wins')
+              return;
+          }
+          else {
+              console.log('Computer Wins')
+          return; 
+             }
+     }
+     if(playerChoice === 'paper'){
+        if(computerChoice === 'rock'){
+            console.log('Player Wins')
+            return;
+        }
+        else {
+            console.log('Computer Wins')
+        return; 
+           }
+    }
+    
+    if(playerChoice === 'scissors'){
+        if(computerChoice === 'paper'){
+            console.log('Player Wins')
+            return;
+        }
+        else {
+            console.log('Computer Wins')
+        return; 
+           }
+    }
+  }
+  console.log(comparehands('rock', computerChoice))
+ 
 
-  
   
 
 /************************************************************** Task 5 **************************************************************/
