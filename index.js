@@ -82,7 +82,7 @@ console.log(multiply);
 
 
 
-function adultDog(weight, age){
+function feeder(weight, age){
     if(age >= 1 && weight <=5){
         return weight * .05
     }else if(age >= 1 && weight >= 6 && weight <= 10){
@@ -91,9 +91,27 @@ function adultDog(weight, age){
         return weight * .03
     }else if(age >=1 && weight >=15)
         return weight * .02
-    }else if((2/12) < age && age < (4/12)){
-
-    }
+    else if(age < 2 / 12) {
+          return weight ‘0’
+        } else if ( age < 4 / 12 ) {
+          return weight * .1;
+        } else if ( age < 7 / 12 ) {
+          return weight * .05;
+        } else if ( age < 1 ) {
+          return weight * .04;
+        } else {
+          if ( weight <= 5 ) {
+            return weight * .05;
+          } else if ( weight <= 10 ) {
+            return weight * .04;
+          } else if ( weight <= 15 ) {
+            return weight * .03;
+          } else {
+            return weight * .02;
+          }
+        }
+      }
+      console.log(feeder(1, 15) + ” pounds of raw food a day”);
 
 
 
@@ -106,7 +124,7 @@ function adultDog(weight, age){
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-
+let rpc = function
   
   
 
@@ -153,7 +171,7 @@ const numbers = []
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  function grader(grade, letter){
+  function grader(grade){
 if(grade >= 90){
     return "A";
 }else if(grade >= 80){
