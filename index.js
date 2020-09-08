@@ -1,11 +1,21 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+let votingAge = 21;
+
+if(votingAge => 18){
+    console.log(true);
+}
+
+
 
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+
+let speed = 10;
+const speed=5;
 
 
 
@@ -13,11 +23,17 @@
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+let "1999" = 1999
 
 
 
 //Task d: Write a function to multiply a*b 
+let a = 10;
+let b = 8;
+
+function multiply(a , b){
+return a * b;
+};
 
 
 
@@ -27,7 +43,11 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
+let myAge = 21;
+const dogYears = 7;
+function multiply(myAge,dogYears){
+    return myAge * dogYears;
+}
 
 
 
@@ -50,6 +70,15 @@
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
 
+const Adult = 1;
+let puppy = .09;
+let uptoFivepounds = 5;
+let sixtoTenpounds = 4;
+let eleventoFifteenpounds =  3;
+let morethanFifteenpounds =  2;
+funtion multiply()
+
+
 
 
 
@@ -60,12 +89,20 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+  let rock = 1
+  let paper = 2
+  let scissors = 3
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+const mile = 1.609;
+let km = 5;
+function multiply(km,mile){
+    return km * mile;
+}
+
 
 
 
@@ -73,7 +110,11 @@
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+let feet = 1
+const cm = 30.48
+function multiply(foot,cm){
+    return feet * cm;
+}
 
 
 
@@ -82,7 +123,7 @@
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
+const numbers = []
 
 
 
