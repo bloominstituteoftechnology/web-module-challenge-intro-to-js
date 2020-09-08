@@ -1,7 +1,14 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+const votingage = 5
 
+if(votingage >=18) {
+    console.log(true)
+}
+else {
+    console.log(false)
+}
 
 
 
@@ -13,13 +20,18 @@
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
-
+var date = 1999;
+Number(date);
+console.log(date);
 
 
 //Task d: Write a function to multiply a*b 
 
+var multiply (4, 3);
 
+function multiply(a, b) {
+    return a * b;
+}
 
 
 
