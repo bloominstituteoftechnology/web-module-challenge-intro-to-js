@@ -82,6 +82,30 @@ console.log(dogYears(myAge, dogAge));
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
 
 
+function dogFeeder (age, weight) {
+
+    if(age >= 1 && weight <= 5) {
+        return weight * .05
+    }
+
+    /* if (this first condition is met) {
+        if (this second condition is also met) {
+            then run this code
+        }
+        else if (this condition is also met) {
+            run this code
+        }
+
+    }
+    else if (another condition is met) {
+        if (this condition is also met) {
+            run this code
+        } else if (this condition is met) {
+            run this code
+        }
+    } */
+
+}
 
 
 
@@ -93,31 +117,45 @@ console.log(dogYears(myAge, dogAge));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
-  
+
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function kiloConverter (kilo) {
+    console.log (kilo * 0.621372);
+}
 
-
+kiloConverter(5);
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function feetConverter (feet) {
+    console.log (feet * 30.48);
+}
 
-
-
+feetConverter(5);
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+function annoyingSong (startingNumber) {
+    var i = 0;
+    var bottles = startingNumber;
 
+    while (i != startingNumber) {
+        console.log(bottles, "bottles of soda on the wall");
+        i++;
+        bottles--;
+    }
+}
 
-
+annoyingSong(99)
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -127,10 +165,22 @@ console.log(dogYears(myAge, dogAge));
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
 
-  
-  
+function gradeCalculator (grade) {
+    if (grade >= 90){
+        console.log("A");
+    } else if (grade >= 80 && grade < 89) {
+        console.log("B");
+    } else if (grade >= 70 && grade < 79) {
+        console.log("C")
+    } else if (grade >= 60 && grade < 69) {
+        console.log("D")
+    } else {
+        console.log("F")
+    }
+}
+
+gradeCalculator(76);
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
