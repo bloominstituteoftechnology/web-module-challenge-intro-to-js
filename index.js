@@ -85,10 +85,10 @@ function dogfeeder (weight, age){
             return weight * 0.1
         }
         if(age <= 0.66){
-            return weight * 0.1
+            return weight * 0.05
         }
         if(age < 1){
-            return weight * 0.1
+            return weight * 0.04
         }
     }
 }
@@ -104,20 +104,45 @@ console.log(dogfeeder(15, 1));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
-  
+function RPS(choice) {
+    if (choice == enemy){
+        return "tie"
+    }
+    else if (choice > enemy){
+        return "win"
+    }
+    else if (choice < enemy){
+        return "lose"
+    }
+}
+
+RPS(Rock)
+var Rock == 0;
+var Paper = 1;
+var scissors = 2;
+var enemy =  (Math.floor(Math.random() * 3);
+console.log(RPS(choice));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+kmtomiles(60)
+
+function kmtomiles(KM){
+    console.log(KM * 0.621371)
+}
 
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+feettocm(60)
 
+function feettocm(feet){
+    console.log(feet * 30.48)
+}
 
 
 
@@ -125,9 +150,18 @@ console.log(dogfeeder(15, 1));
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
+
+const length = firstnum => {
+
+    for(let i = firstnum; i > 0; i--){
+
+        console.log(i + "number of bottles of beer on the wall," + i + " bottles of beer, take on down pass it around " + i)
+        console.log(i - 1 + "beer on the wall")
+    }
+}
 
 
+length(1)
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -140,7 +174,25 @@ console.log(dogfeeder(15, 1));
 //and anything below 60 should be F
   
 
+function grades(number) {
+    if(number >= 90) {
+      console.log("A")
+    }
+    if(number < 90 && number >= 80) {
+        console.log("B")
+      }
+      if(number < 80 && number >= 70) {
+        console.log("C")
+      }
+      if(number < 70 && number >= 60) {
+        console.log("D")
+      }
+      if(number < 60) {
+        console.log("F")
+      }
+  }
   
+grades(85)
   
 
 /************************************************************** Stretch **************************************************************/
