@@ -26,7 +26,7 @@ if (y = "monkey") {
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+1234123412341234
 
 
 
