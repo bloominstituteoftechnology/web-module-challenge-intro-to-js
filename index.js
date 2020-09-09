@@ -124,8 +124,20 @@ function feeder(weight, age){
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-let rpc = function
-  
+    const getUserChoice = userInput =>{
+    userInput = userInput.toLowerCase();
+    if(userInput === "rock" === "paper"
+ === "scissors"){
+     return userInput;}
+     else{
+         console.log('Not a valid option!');
+     }
+ };
+ function getCpuChoice(){
+     switch(Math.floor(Math.random()*3)){
+         case
+     }
+ }
   
 
 /************************************************************** Task 5 **************************************************************/
@@ -159,8 +171,6 @@ console.log(multiply(5));
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-const numbers = []
-
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -184,7 +194,7 @@ if(grade >= 90){
     return "F";
 }
   }
-  console.log(grader)
+  console.log(grader(70))
   
 
   
