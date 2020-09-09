@@ -25,9 +25,9 @@ if (y = "monkey") {
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
-1234123412341234
-
+/*
+number('1999')
+*/
 
 
 //Task d: Write a function to multiply a*b 
@@ -117,8 +117,11 @@ var user = "scissors"
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function kilometers(km) {
+    console.log(km / 1.609)
+}
 
-
+console.log(10 = km; km / 1.609)
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
@@ -141,7 +144,7 @@ var user = "scissors"
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
 //90s should be A 
 //80s should be B 
-//70s should be Cs 
+//70s should be C 
 //60s should be D 
 //and anything below 60 should be F
   
