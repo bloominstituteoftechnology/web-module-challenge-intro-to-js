@@ -143,8 +143,11 @@ function FtToCm(feet){
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 // Hint hint -- because song counts down, not ++
-
-
+function annoyingSong(number){
+    for(let i = 99; i >= 0; i--){
+    console.log(i +' bottles of soda on the wall, ' + i + ' bottles of soda, take one down pass it around '+ (i-1) + ' bottles of soda on the wall');
+}
+}
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -155,7 +158,23 @@ function FtToCm(feet){
 //60s should be D 
 //and anything below 60 should be F
   
-
+function grade(score) {
+  
+    if (score < 60) {
+        return 'F';
+    } else if( score >= 60 && score < 70) {
+        return 'D';
+    } else if( score >= 70 && score < 80) {
+        return 'C';
+    } else if( score >= 80 && score < 90) {
+        return 'B';
+    }else { // if nothing else is true - do this 
+        return 'A';
+    }
+    
+  }
+  
+  console.log(grade(88));
   
   
 
