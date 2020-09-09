@@ -117,8 +117,42 @@ function dogFeeder (age, weight) {
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+function computerChoice1() {
 
+    let computerSelection = (Math.floor(Math.random() * 3));
 
+        if (computerSelection === 0) {
+            return "rock";
+        } else if (computerSelection === 1) {
+            return "paper";
+        } else if (computerSelection === 2) {
+            return "scissors";
+        }
+
+}
+
+    function game (userChoice) {
+    const computerChoice = computerChoice1();
+      // console.log(computerChoice);
+      // console.log(userChoice);
+        if(userChoice === computerChoice) {
+            console.log ("Tie");
+        } else if (userChoice === "rock" && computerChoice === "paper") {
+            console.log ("loss! paper beats rock");
+        } else if (userChoice === "rock" && computerChoice === "scissors") {
+            console.log ("win! rock beats scissors");
+        } else if (userChoice === "paper" && computerChoice === "rock") {
+            console.log ("win! paper beats rock");
+        } else if (userChoice === "paper" && computerChoice === "scissors") {
+            console.log ("loss! scissors beat paper");
+        } else if (userChoice === "scissors" && computerChoice === "rock") {
+            console.log ("loss! rock beats scissors");
+        } else if (userChoice === "scissors" && computerChoice === "paper") {
+            console.log ("win! scissors beat paper");
+        }
+    }
+
+game("paper");
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
