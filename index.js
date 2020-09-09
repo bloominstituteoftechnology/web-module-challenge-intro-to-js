@@ -1,7 +1,7 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-const votingage = 5
+const votingage = 19
 
 if(votingage >=18) {
     console.log(true)
@@ -20,19 +20,17 @@ else {
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-var date = 1999;
-Number(date);
-console.log(date);
+let date = "1999";
+console.log(Number(date));
+
 
 
 //Task d: Write a function to multiply a*b 
+var x = multi(2, 4);
 
-var multiply (4, 3);
-
-function multiply(a, b) {
-    return a * b;
+function multi(a, b){
+    console.log(a * b)
 }
-
 
 
 /************************************************************** Task 2 **************************************************************/
@@ -40,6 +38,12 @@ function multiply(a, b) {
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
 
+
+function dogyears (humanyears, conversion){
+        return humanyears * conversion;
+}
+
+console.log(dogyears(30, 7));
 
 
 
@@ -61,7 +65,35 @@ function multiply(a, b) {
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogfeeder (weight, age){
+    if(age >= 1){
+        if(weight <= 5){
+            return weight * 0.05
+        }
+        if(weight <= 10){
+            return weight * 0.04
+        }
+        if(weight <= 15){
+            return weight * 0.03
+        }
+        if(weight > 5){
+            return weight * 0.02
+        }
+    }
+    else if(age <1){
+        if(age <= 0.33){
+            return weight * 0.1
+        }
+        if(age <= 0.66){
+            return weight * 0.1
+        }
+        if(age < 1){
+            return weight * 0.1
+        }
+    }
+}
 
+console.log(dogfeeder(15, 1));
 
 
 
