@@ -6,7 +6,7 @@ const votingAge = 20;
 if(votingAge >= 18){
     console.log("true");
 } else {
-    console.log("false")
+    console.log("false");
 }
 
 
@@ -49,14 +49,14 @@ console.log(multiply(a, b));
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-const myAge = 20
-const dogAge = 7
+const myAge = 20;
+const dogAge = 7;
 
 function dogYears (myAge, dogAge) {
 
     const newAge = myAge * dogAge;
 
-    return newAge
+    return newAge;
 
 }
 
@@ -85,29 +85,32 @@ console.log(dogYears(myAge, dogAge));
 function dogFeeder (age, weight) {
 
     if(age >= 1 && weight <= 5) {
-        return weight * .05
+        return weight * .05;
+    } 
+    else if (age >= 1){
+        if (weight >= 6 && weight <= 10) {
+            return weight * .04;
+        } 
+        else if (age >= 1) {
+            if (weight >= 11 && weight <= 15) {
+                return weight * .03;
+            } 
+            else if (age >= 1 && weight >= 15) {
+                return weight * .02;
+            }  
+        }
     }
 
-    /* if (this first condition is met) {
-        if (this second condition is also met) {
-            then run this code
-        }
-        else if (this condition is also met) {
-            run this code
-        }
-
+    if (age >= .2 && age < .4) {
+        return weight * .1;
+    } else if (age >= .4 && age < .7) {
+        return weight * .05;
+    } else if (age >= .7 && age < 1) {
+        return weight * .04;
     }
-    else if (another condition is met) {
-        if (this condition is also met) {
-            run this code
-        } else if (this condition is met) {
-            run this code
-        }
-    } */
-
 }
 
-
+console.log(dogFeeder(1,15));
 
 
 /************************************************************** Task 4 **************************************************************/
@@ -189,7 +192,7 @@ function annoyingSong (startingNumber) {
     }
 }
 
-annoyingSong(99)
+annoyingSong(99);
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
