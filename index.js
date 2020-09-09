@@ -98,8 +98,21 @@ function feeder(dogweight, age) {
     } else {
         return dogweight * 0.02;
     }
+
     else if (age <= .33) {
-        
+        return dogweight * 0.1
+    }
+
+    else if (age <= 0.58) {
+        return dogweight * 0.05
+    }
+
+    else if (age <= 1) {
+        return dogweight * 0.04
+    }
+
+    else {
+        return "Puppy is all grown up"
     }
 }
 
@@ -114,7 +127,29 @@ function feeder(dogweight, age) {
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+  var userChoice = rock;
+
+  var compChoice = Math.random();
   
+  if (compChoice <= 0.33 ) {
+      compChoice = rock;
+  } else if ((compChoice >= 0.34) && ( compChoice <= 0.64)) {
+      compChoice = paper;
+  } else if ((compChoice >= 0.67) && (compChoice <= 1)) {
+      compChoice = scissors;
+  } else if (compChoice = rock) {
+      console.log("Draw");
+  } else if (compChoice = scissors) {
+      console.log("You won!");
+  } else if (compChoice = paper) {
+        console.log ("You lost!")
+  } else {
+      return Unknown;
+  }
+
+  
+
+
   
 
 /************************************************************** Task 5 **************************************************************/
