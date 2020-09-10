@@ -33,17 +33,11 @@ Using VSCode and Command Line:
 3. `cd` into your newly cloned repository.
 4. Create a new branch by typing `git checkout -b <firstName-lastName>`.
 
-### Task 2: Complete MVP Requirements
+### Task 2: MVP
 
 Find the `index.js` file and complete the tasks as written. 
 
 As you work on your code you should make use of `console.log` to check your progress and debug.
-
-### Task 2b: Exit Ticket
-
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/pi7Q49mgrZbodiRzM/aXzit9h4ZRp3Si)
-
-The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
 
 ### Task 3: Stretch Goals
 
