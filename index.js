@@ -11,13 +11,13 @@ if (votingAge > 18) {
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-let changeThis = 'dog';
+let changeThis = "dog";
 let randNum = Math.round(Math.random() * 10);
 
 if (randNum > 5) {
-  changeThis = 'cat';
+  changeThis = "cat";
 } else {
-  changeThis = 'dog';
+  changeThis = "dog";
 }
 
 console.log(changeThis);
@@ -28,11 +28,11 @@ console.log(Number("1999"));
 
 //Task d: Write a function to multiply a*b 
 
-function multiplyTwoNum(a, b) {
+function multTwoNum(a, b) {
     return a * b;
   }
   
-  console.log(multiplyTwoNum(5,7));
+  console.log(multTwoNum(5,7));
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
@@ -62,7 +62,42 @@ function dogYears(num1) {
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
-
+function dogWeight(num2) {
+    return num2;
+  }
+  
+  function ageMonth(num1) {
+    return 1 / 12 * num1; 
+  }
+  
+  function foodWeight(ageMonth,dogWeight) {
+    if (ageMonth >= 1) {
+    
+      if (dogWeight > 15) {
+        return(dogWeight * .02);  
+      } else if (dogWeight > 11) {
+        return(dogWeight * .03);
+      } else if (dogWeight > 6) {
+        return(dogWeight * .04);
+      } else {
+        return(dogWeight * .05);
+      }
+    
+    } else {
+      if (ageMonth > 0.583) {
+        return(dogWeight * .04);
+      } else if (ageMonth > 0.333) {
+        return(dogWeight * .05);
+      } else {
+        return(dogWeight * .1);
+      }
+    }
+  }
+  
+  
+  
+  
+  console.log(foodWeight(12,15));
 
 
 
