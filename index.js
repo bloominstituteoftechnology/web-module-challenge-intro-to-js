@@ -24,9 +24,7 @@ console.log(changeThis);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
-
-
+console.log(Number("1999"));
 
 //Task d: Write a function to multiply a*b 
 
