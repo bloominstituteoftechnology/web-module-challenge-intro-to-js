@@ -209,8 +209,29 @@ annoyingSong(10);
 //60s should be D 
 //and anything below 60 should be F
   
+const gradeCalc = (score) => {
+    if (score >= 90) {
+        return "A";
+    }
 
+    if (score >= 80 && score < 90) {
+        return "B";
+    }
+
+    if (score >= 70 && score < 80) {
+        return "C";
+    }
+
+    if (score >= 60 && score < 70) {
+        return "D";
+    }
+
+    if (score < 60) {
+        return "F";
+    }
+}
   
+console.log(gradeCalc(86));
   
 
 /************************************************************** Stretch **************************************************************/
@@ -219,9 +240,78 @@ annoyingSong(10);
 // try looking up the .includes() method
 
 
+const vowelCounter = (word) => {
+    let vCounter = 0;
+    let vowels = ["a", "e", "i", "o", "u"];
 
+    for (let i = 0; i < word.length; i++) {
+        if (vowels.includes(word[i].toLowerCase())) {
+            vCounter++;
+        }
+    }
+
+    return vCounter;
+}
+
+console.log(vowelCounter("Alligator"));
 
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 // update your rock papers sissors code below to take a prompt from a user using the window object
+
+const rockPaperScissors = (move) => {
+
+    let computersMove = Math.floor(Math.random() * 3);
+
+    if (computersMove === 1) {
+        computersMove = "scissors";
+    }
+
+    if (computersMove === 2) {
+        computersMove = "rock";
+    }
+
+    if (computersMove === 0) {
+        computersMove = "paper";
+    }
+
+    console.log(computersMove);
+
+    if (move === "rock") {
+        if (computersMove === "rock") {
+            return "tie!";
+        } else if (computersMove === "paper") {
+            return "you lose!";
+        } else if (computersMove === "scissors") {
+            return "you win!";
+        }
+    } else if (move === "paper") {
+        if (computersMove === "rock") {
+            return "you win!";
+        } else if (computersMove === "paper") {
+            return "tie!";
+        } else if (computersMove === "scissors") {
+            return "you lose!";
+        }
+    } else if (move === "scissors") {
+        if (computersMove === "rock") {
+            return "you lose!";
+        } else if (computersMove === "paper") {
+            return "you win!";
+        } else if (computersMove === "scissors") {
+            return "tie!";
+        }
+    }
+
+  }
+
+
+let newTrick = window.prompt("Hello World!");
+console.log(newTrick);
+
+let gameStatus = document.getElementById('game-status');
+
+console.log(gameStatus.innerText = rockPaperScissors(newTrick));
+
+console.log(rockPaperScissors(newTrick));
