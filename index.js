@@ -130,37 +130,6 @@ function rockPaperScissors(userChoice){
     return 
 }
 
-// old work
-var userChoice = prompt("Do you choose rock, paper or scissors?");
-var computerChoice = Math.random();
-if (computerChoice < 0.33) {
-  computerChoice = "rock";
-} 
-
-else if (computerChoice <=0.67) {
-  computerChoice = "paper";
-} 
-
-else {
-  computerChoice = "scissors";
-}
-
-var compare = function(choice1, choice2) {
-  if choice1 === choice2) 
-    return "The result is a tie.";
-}
-
-if(choice1 === "rock") {
-  if(choice2 === "scissors") 
-       return "paper wins";      
-} 
-  
-else if(choice2 === "scissors") {
-         return "scissors wins";
-}
-console.log("User Choice:" userChoice);
-console.log("Computer Choice:" + computerChoice);
-compare(userChoice, computerChoice);
   
 
 /************************************************************** Task 5 **************************************************************/

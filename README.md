@@ -28,16 +28,16 @@ Exercises are outlined in the `index.js` file, please read the instructions care
 
 Using VSCode and Command Line:
 
-1. Fork repo and add TL as collaborator on Github.
-2. Clone your fork (not Lambda's repo by mistake!).
-3. `cd` into your newly cloned repository.
-4. Create a new branch by typing `git checkout -b <firstName-lastName>`.
+1. Fork repo and add TL as collaborator on Github. X
+2. Clone your fork (not Lambda's repo by mistake!). X
+3. `cd` into your newly cloned repository. X
+4. Create a new branch by typing `git checkout -b <firstName-lastName>`. X
 
 ### Task 2: Complete MVP Requirements
 
-Find the `index.js` file and complete the tasks as written. 
+Find the `index.js` file and complete the tasks as written. X
 
-As you work on your code you should make use of `console.log` to check your progress and debug.
+As you work on your code you should make use of `console.log` to check your progress and debug. X
 
 ### Task 2b: Exit Ticket
 
