@@ -28,9 +28,11 @@ console.log(Number("1999"));
 
 //Task d: Write a function to multiply a*b 
 
-
-
-
+function multiplyTwoNum(a, b) {
+    return a * b;
+  }
+  
+  console.log(multiplyTwoNum(5,7));
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
