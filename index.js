@@ -11,9 +11,16 @@ if (votingAge > 18) {
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let changeThis = 'dog';
+let randNum = Math.round(Math.random() * 10);
 
+if (randNum > 5) {
+  changeThis = 'cat';
+} else {
+  changeThis = 'dog';
+}
 
-
+console.log(changeThis);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
