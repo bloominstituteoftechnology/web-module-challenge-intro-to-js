@@ -38,9 +38,11 @@ function multiplyTwoNum(a, b) {
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
-
-
+function dogYears(num1) {
+    return num1 * 7;
+  }
+  
+  console.log(dogYears(41));
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
