@@ -115,15 +115,19 @@ function dogWeight(num2) {
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
-
-
+function miles(num1) {
+    return num1 * 0.621371;
+  }
+  
+  console.log(miles(5));
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
-
-
+function centimeters(num2) {
+    return num2 * 30.48;
+  }
+  
+  console.log(centimeters(8));
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
