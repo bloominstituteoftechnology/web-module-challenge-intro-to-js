@@ -1,23 +1,38 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
-
+var votingAge=17; 
+console.log(votingAge >18);
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+//var Var1;
+//var Var2;
+//if {
 
 
-
+//}
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+var a= parseInt("1999");
+console.log("I am an integer now: ", a);
 
 
 
 
 
 //Task d: Write a function to multiply a*b 
+//function MultiplyNumbers(){
+    
+//}
+
+function MultiplyNumbers(a,b){
+    return a*b;
+}
+
+console.log(MultiplyNumbers(5,10));
+
 
 
 
@@ -26,14 +41,26 @@
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
+function dogYears(x){
+    return (console.log("dog years: ",(x*7)));
+}
 
-
+console.log(dogYears(50));
 
 
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
+function DogFeeder(weight, age){
+    if (age>1){
+        
+        
+
+    }
+
+}
+
 
 //feeding requirements
 // adult dogs at least 1 year 
