@@ -1,24 +1,37 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
+const votingAge = 18;
+let age = 105;
+if( age >= 18){
+    console.log(true);
+} else {
+    console.log(false);
+}
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+let driverLicense;
+let driverAge = 21
 
-
-
+if (driverAge < 18){
+    driverLicense = 'Permit';
+    console.log(driverLicense);
+} else if(driverAge >= 18){
+    driverLicense = "Standard License";
+    console.log(driverLicense);
+}
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
+Number('1999');
 
 
 
 
 //Task d: Write a function to multiply a*b 
-
+const multiply = (a,b) => a * b;
 
 
 
@@ -26,9 +39,12 @@
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
+const dogYears = (humanAge) => {
+ return humanAge * 7;
 
+} 
 
-
+console.log(dogYears(25));
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -49,7 +65,27 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+const dogFeeder = (dogWeight, dogAge) => {
+    if(dogWeight <= 5 && dogAge >= 1){
+        return dogWeight * .05;
+    } else if((dogWeight >= 6 && dogWeight <= 10) && dogAge >= 1 ){
+        return dogWeight * .04;
+    } else if((dogWeight >= 11 && dogWeight <= 15) && dogAge >= 1 ){
+        return dogWeight * .03;
+    } else if(dogWeight > 15 && dogAge >= 1) {
+        return dogWeight * .02;
+    } else if(dogAge >= .2 && dogAge <= .4){
+        return dogWeight * .1;
+    } else if(dogAge > .4 && dogAge <= .7 ){
+        return dogWeight * .05;
+    } else if(dogAge > .7 && dogAge < 1 ){
+        return dogWeight * .04;
+    } 
 
+    
+}
+
+console.log(dogFeeder(15,1));
 
 
 
@@ -60,8 +96,48 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
-  
+  const game = (userInput) =>{
+        if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors'){
+            return userInput;
+        } else {
+            console.log('not valid');
+        }
+
+      let computerChoice = ['rock', 'paper', 'scissors'];
+      let randomNum = Math.floor(Math.random() * 3);
+      let computerInput =  computerChoice[randomNum]
+      
+      if(userInput === 'rock') {
+    if(computerInput ==='paper') {
+        console.log('The computer won!') 
+    } else {
+        console.log('You won!')
+    }
+  };
+
+  if(userInput === 'paper') {
+    if(computerInput ==='scissor') {
+        console.log('The computer won!') 
+    } else {
+        console.log('You won!')
+    }
+  };
+
+  if(userInput === 'scissor') {
+    if(computerInput ==='rock') {
+      console.log('The computer won!') 
+    } else {
+        console.log('You won!')
+    }
+  };
+
+  if(userInput === computerInput) {
+      console.log('Tie Game')
+  }
+
+  };
+
+  game('paper');
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
