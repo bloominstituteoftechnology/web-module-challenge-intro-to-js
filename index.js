@@ -147,7 +147,21 @@ function centimeters(num2) {
 //60s should be D 
 //and anything below 60 should be F
   
-
+function calculate(num1) {
+    if (num1 >= 90) {
+      return "A";
+    } else if (num1 >= 80) {
+      return "B";
+    } else if (num1 >= 70) {
+      return "C";
+    } else if (num1 >= 60) {
+      return "D";
+    } else {
+      return "F";
+    }
+  }
+  
+  console.log(calculate(55));
   
   
 
