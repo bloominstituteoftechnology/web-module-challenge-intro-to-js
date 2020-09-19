@@ -108,7 +108,32 @@ function dogWeight(num2) {
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+function playGame(playerOne) {  
   
+    let randNum = Math.random();
+    
+    if ((playerOne === "scissors") && (randNum >= 0.6667)) {
+      return "Scissors - Tie";
+    } else if ((playerOne === "scissors") && (randNum >= 0.3333)) {
+      return "Paper - You Win!";
+    } else if ((playerOne === "scissors") && (randNum < 0.3333)) {
+      return "Rock - You Lose";
+    } else if ((playerOne === "paper") && (randNum >= 0.6667)) {
+      return "Scissors - You Lose";
+    } else if ((playerOne === "paper") && (randNum >= 0.3333)) {
+      return "Paper - Tie";
+    } else if ((playerOne === "paper") && (randNum < 0.3333)) {
+      return "Rock - You Win!";
+    } else if ((playerOne ==="rock") && (randNum >= 0.6667)) {
+      return "Scissors - You Win!";
+    } else if ((playerOne === "rock") && (randNum >= 0.3333)) {
+      return "Paper - You Lose";
+    } else {
+      return "Rock - Tie";
+    }
+  }
+  
+  console.log(playGame("paper"));  
   
 
 /************************************************************** Task 5 **************************************************************/
