@@ -1,5 +1,6 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
+//Done!
 
 let votingAge = 50;
 
@@ -10,6 +11,7 @@ if (votingAge > 18) {
 }
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+//Done!
 
 let variable1 = 15;
 let variable2 = 25;
@@ -20,11 +22,13 @@ if (variable1 < 21) {
 }
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+//Done!
 
 let string = "1999";
 console.log("String to Number", Number(string)); 
 
 //Task d: Write a function to multiply a*b 
+//Done!
 
 let a = 5;
 let b = 10;
@@ -34,6 +38,7 @@ console.log(c);
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
+//Done!
 
 let myAge = 50;
 let dogYears = myAge / 7;
@@ -56,25 +61,28 @@ console.log(dogYears);
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
-let months = 12;
-let weight = 15;
+//Done!  
 
-if (months >= 12) {
-    else if (weight >= 15){
-        return weight * 0.02;
+function dogFeeder (age, weight) {
+    if (age >= 1) {
+        if (weight <= 5) {
+            return weight * 0.05;
+        } else if (weight >= 6 && weight <= 10) {
+            return weight * 0.04;
+        } else if (weight >= 11 && weight <= 15) {
+            return weight * 0.03;
+        } else if (weight > 15) {
+            return weight * 0.02;
     }
-    else if (weight <= 15 , > 11){
-        return weight * 0.03;
-    }
-    else if (weight < 11 , > 5){
+    } else if (age >= 0.1667 && age < 0.25) {
+        return weight * 0.10;
+    } else if (age >= 0.25 && age < 0.5833) {
+        return weight * 0.05;
+    } else if (age >= 0.5833 && age < 1) {
         return weight * 0.04;
     }
-    else if (weight <= 5){
-        return weight * 0.05;
-    }
-
-
+}
+console.log(dogFeeder(1, 15));
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -82,66 +90,41 @@ if (months >= 12) {
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+//Done!
 
-function rockPaperScissors(userChoice){
-    let choice = Math.floor(3 * Math.random())
-    console.log(choice)
-    if (userChoice === "rock") {
-        userChoice = 0
-    } else if (userChoice === "paper") 
-          userChoice = 1 
-        } else if (userChoice === "scissors")
-             userChoice = 2
-    }
+function rpcGame (userChoice) {
+    const rpc = Math.random();
 
-    rock = 0
-    paper = 1
-    scissors = 2
-
-    if (userChoice === choice){
-        console.log("You chose:" $(userChoice) )
-        console.log("Draw")
+if (rpc < 0.34) {
+    compChoice = "Rock";
+} else if (rpc < 0.67) {
+    compChoice = "Paper";
+} else {
+    compChoice = "Scissors";
+}
+    if (userChoice === "Rock" && compChoice === "Scissors" || userChoice === "Paper" && compChoice === "Rock" || userChoice === "Scissors" && compChoice === "Paper") {
+        return "you win!";
+    } else if (userChoice === "Rock" && compChoice === "Paper" || userChoice === "Scissors" && compChoice === "Rock" || userChoice === "Paper" && compChoiceq === "Scissors"){
+        return "You lose.";
+    } else if (userChoice === "Rock" && compChoice === "Rock" || userChoice === "Paper" && compChoice === "Paper" || userChoice === "Scissors" && compChoice === "Scissors") {
+        return "It's a tie.";
     }
-    else if (userChoice == 0 && choice === 1){
-        console.log("You chose:" $(userChoice) )
-        console.log("You lost")
-    }
-    else if (userChoice === 0 && choice === 2) {
-        console.log("You chose:" $(userChoice) )
-        console.log("You Win")
-    }
-    else if (userChoice === 1 && choice === 2){
-        console.log("You chose:" $(userChoice) )
-        console.log("You lost")
-    }
-    else if (userChoice === 1 && choice === 0) {
-        console.log("You chose:" $(userChoice) )
-        console.log("You Win")
-    }
-    else if (userChoice === 2 && choice === 0){
-        console.log("You chose:" $(userChoice) )
-        console.log("You lost")
-    }
-    else if (userChoice === 2 && choice === 1) {
-        console.log("You chose:" $(userChoice) )
-        console.log("You Win")
-    }
-
-    return 
 }
 
+console.log(rpcGame("Rock"));
   
-
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+//Done!
 
 var kilometers = parseInt(prompt("How many kilometers?"));
 var miles = kilometers / 1.60934;
 console.log(miles + " Miles");
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
+//Done!
+
 var feet = parseInt(prompt("How many feet?"));
 var centimeters = feet * 30.48;
 console.log(centimeters + " Centimeters");
@@ -150,33 +133,15 @@ console.log(centimeters + " Centimeters");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+//Done!
 
-var word = parseInt(prompt("How many bottles?(1-99)");
-var count = prompt();
-while (count > 0) {
-    console.log(count + " " + word + " of soda");
-    console.log("Take one down, pass it around,");
-    count = count - 1;
-    if (count > 0) {
-        console.log(count + " " + word + " of soda on the wall.");
-    } else {
-        console.log("No more " + word + " of soda on the wall.");
+function annoyingSong (bottles) {
+    for (let i = bottles; i > 0; i--) {
+        console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`)
     }
 }
 
-//old world
-var word = "bottles";
-var count = 99;
-while (count > 0) {
-    console.log(count + " " + word + " of soda");
-    console.log("Take one down, pass it around,");
-    count = count - 1;
-    if (count > 0) {
-        console.log(count + " " + word + " of soda on the wall.");
-    } else {
-        console.log("No more " + word + " of soda on the wall.");
-    }
-}
+annoyingSong(99);
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -186,42 +151,48 @@ while (count > 0) {
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
+// Done!
   
-var score = 95;
+function myGrade (grade) {
+    if (grade >= 90) {
+        console.log("Your grade is an A!");
+    } else if (grade < 90 && grade >= 80) {
+        console.log("Your grade is a B!");
+    } else if (grade < 80 && grade >= 70) {
+        console.log("Your grade is a C.");
+    } else if (grade < 70 && grade >= 60) {
+        console.log("Your grade is a D.");
+    } else {
+        console.log("Your grade is an F.")
+    }
+}
 
-function myScore(score);
-    if (score > 100){
-        return = "Your grade is an A++";
-    } 
-    if (score >= 90){
-        return = "Your grade is an A";
-    }
-    if (score >= 80){
-        return = "Your grade is a B";
-    } 
-    if (score >= 70){
-        return = "Your grade is a C";
-    }
-    if (score >= 60){
-        return = "Your grade is a D";
-    }
-    if (score <60){
-        return = "Your grade is an F";
-    }
+myGrade(99);
   
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
+//Done!
 
+const vowels = ['a','e','i','o','u','A','E','I','O','U'];
 
+function countVowels(sentence) {
+  let counts = 0;
+  for(let i = 0; i < vowels.length; i++) {
+    if(vowels.includes(sentence[i])) {
+      counts++;
+    }
+  }
+  return console.log(counts);
+}
 
-
+countVowels('Hello World!');
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
+//Done!
 
-console.log(rockPaperScissors(window.prompt("Choose")))
 
 
