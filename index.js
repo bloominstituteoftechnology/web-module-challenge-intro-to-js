@@ -1,25 +1,34 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
-
-
+var votingAge = age => {
+    if (age >= 18) {
+      console.log('True');
+    } 
+  }
+  console.log(votingAge(18))
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-
+var A = "blue";
+var B = (A =="red") ? "hot":"cool";
+console.log(B);
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
-
+var year = "1999";
+var intYear = Number(year);
+console.log(intYear)
 
 
 //Task d: Write a function to multiply a*b 
 
-
+function multiplyNums (a,b) {
+    return a * b;
+  }
+  console.log(multiplyNums(3,5));
 
 
 
@@ -27,6 +36,12 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function dogAge(age) {
+    var dogYears = 7*age;
+    console.log(dogYears);
+}
+
+dogAge(12);
 
 
 
@@ -48,10 +63,39 @@
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
 
+function dogFeeder (weight,ageDog){
+var foodAmount = 0
+  if (ageDog >= 1) {
+    if (weight < 5) {
+        foodAmount = (weight*.05)
+    }
+    if (weight >= 6 && weight <= 10) {
+        foodAmount = (weight*.04)
+    }
+    if (weight >= 11 && weight <= 15) {
+        foodAmount = (weight*.03)
+    }
+    else if (weight > 15) {
+        foodAmount = (weight*.02)
+    }
+}
 
+else {
+    if (ageDog >= 1.66 && ageDog <= 3.32) {
+        foodAmount = (weight*.1)
+    }
+    else if (ageDog > 3.32 && ageDog <= 5.832) {
+        foodAmount = (weight*.05)
+    }
+    else { 
+        foodAmount = (weight*.04)
+  }
+}
+return foodAmount
+}
 
+console.log(dogFeeder(15,1))
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -60,8 +104,63 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
-  
+let player1 = Math.floor(Math.random()*3);
+let player2 = Math.floor(Math.random()*3);
+ 
+if (player1 === 0){
+  player1 = "rock"
+} 
+else if (player1 === 1){
+  player1= "paper"
+}
+else if (player1 === 2){
+  player1 = "scissors"
+}
+if (player2 === 0){
+  player2 = "rock"
+} 
+else if (player2 === 1){
+  player2= "paper"
+}
+else if (player2 === 2){
+  player2 = "scissors"
+}
+if (player1 === player2){
+  console.log("Tie")
+}
+else if (player1 === "rock") {
+  if (player2 === "scissors") {
+    console.log("Player 1 wins with rock")
+  }
+  else if (player2 === "paper") {
+    console.log("Player 2 wins with paper")
+  }
+  else if (player2 === "rock") {
+    console.log("Tie rock vs rock")
+  }
+}
+else if (player1 === "paper") {
+  if (player2 === "scissors") {
+    console.log("Player 2 wins with scissors")
+  }
+  else if (player2 === "paper") { 
+    console.log("Tie paper vs paper")
+  }
+  else if (player2 === "rock"){
+    console.log("Player 1 wins with paper")
+  }
+}
+else if (player1 === "scissors") {
+  if (player2 === "paper") {
+    console.log ("Player 1 wins with scissors")
+  }
+  else if (player2 === "scissors") {
+    console.log("Tie scissors vs scissors")
+  }
+  else if (player2 === "rock") {
+    console.log("Player2 wins with rock")
+  }
+}
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
@@ -82,7 +181,22 @@
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
+var word = "bottles";
+var count = 99;
+while (count > 0) {
+  if (count == 1){
+    var word = "bottle"
+  }
+    console.log(count + " " + " bottles of soda on the wall");
+    console.log(count + " " + " bottles of soda,");
+    count = count - 1;
+    if (count > 0) {
+      if (count == 1){
+        var word = "bottle"
+      }
+        console.log("take one down, pass it around " + count + " bottles of soda on the wall.");
+    }
+}
 
 
 
@@ -96,8 +210,25 @@
 //and anything below 60 should be F
   
 
-  
-  
+var gradeLetter = gradeNumber => {
+    if (gradeNumber >= 90) {
+    return("A")
+    } 
+    if (gradeNumber >= 80) {
+    return("B")
+    } 
+    if (gradeNumber >= 70) {
+    return("C")  
+    }
+    if (gradeNumber >= 60) {
+    return("D")
+    }
+    if (gradeNumber <= 59) {
+    return("F") 
+    }
+  }
+  console.log(gradeLetter(95))
+
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
