@@ -1,25 +1,36 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+let votingAge = '18';
 
-
+if (age => 18) {
+    console.log("Submit Vote");
+}
+else {
+    console.log("Not Old Enough");
+}
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-
+let num1 = Math.round(Math.random() * 20);
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+Number("1999");
 
 
 
 //Task d: Write a function to multiply a*b 
 
+let a = '2'
+let b= '5';
 
+function timesTwoNumbs (a,b) {
+    return a*b;
+}
 
 
 
@@ -27,7 +38,12 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+let MyAge = '25'
+let dog = '7';
 
+function multiplyTwoNumbs (MyAge,dog) {
+    return MyAge*dog;
+}
 
 
 
@@ -48,7 +64,13 @@
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
+
+dog ='15'
+let ratio = '.03';
+function multiplyNumbers (dog,ratio) {
+    return dog*ratio;
+}
+console.log(multiplyNumbers(dog, ratio))
 
 
 
@@ -60,20 +82,48 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+
+let rock = 1;
+let paper = 2;
+let scissors = 3;
+
+function playRound(playerSelection) {
+    let computerSelection = Math.ceil(Math.random()*3)
+    if (playerSelection === computerSelection) {
+      return 'Draw!';
+    } else if ((playerSelection == rock) && (computerSelection == 3)) {
+      return "Player won!";
+    } else if ((playerSelection == paper) && (computerSelection == 1)) {
+      return "Player won!";
+    } else if ((playerSelection == scissors) && (computerSelection == 2)) {
+      return "Player won!";
+    } else if ((playerSelection == paper) && (computerSelection == 3)) {
+      return "Computer won!";
+    } else if ((playerSelection == scissors) && (computerSelection == 1)) {
+      return "Computer won!";
+    } else if ((playerSelection == rock) && (computerSelection == 2)) {
+      return "Computer won!";
+    }
+  }
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
-
-
+function kmToMiles(km) {
+    return km / 1.60934;
+}
+kmToMiles(3)
+console.log(kmToMiles(3))
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+function ftToCm(cm) {
+    return cm * 30.48;
+}
+ftToCm(200)
+console.log(ftToCm(200))
 
 
 
@@ -84,7 +134,12 @@
   
 
 
-
+function annoyingSong(startingNumber) {
+    while(startingNumber > 0) {
+        console.log(`${startingNumber} bottles of beer on the wall, ${startingNumber} bottles of beer, take one down pass it around ${startingNumber - 1} bottles of beer on the wall`)
+        startingNumber--
+    }
+}
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -95,7 +150,24 @@
 //60s should be D 
 //and anything below 60 should be F
   
-
+function grade(percent) {
+    if (percent >= 90){
+        return "A";
+    }
+    else if (percent >= 80) {
+        return "B";
+    }
+    else if (percent >= 70) {
+        return "C";
+    }
+    else if (percent >= 60) {
+        return "D";
+    }
+    else if (percent < 60) {
+        return "You Suck!";
+    } 
+}
+console.log(grade(50))
   
   
 
