@@ -6,12 +6,16 @@ console.log(votingAge >18);
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-//var Var1;
-//var Var2;
-//if {
+let  var1=5;
+let  var2=10;
+if (var1<var2){
+    var1=var2;
+
+}
+
+console.log("The new value is: ", var1);
 
 
-//}
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
@@ -31,7 +35,7 @@ function MultiplyNumbers(a,b){
     return a*b;
 }
 
-console.log(MultiplyNumbers(5,10));
+console.log("The result is = " , MultiplyNumbers(5,10));
 
 
 
@@ -52,14 +56,14 @@ console.log(dogYears(50));
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
-function DogFeeder(weight, age){
-    if (age>1){
+//f//unction DogFeeder(weight, age){
+    //if (age>1){
         
         
 
-    }
+   // }
 
-}
+//}
 
 
 //feeding requirements
@@ -87,20 +91,124 @@ function DogFeeder(weight, age){
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+
+//Genera un numero aleatorio entre un rango de enteros
+
+function myGame(){
+    function aleatorio(minimo, maximo)
+    {
+      var numero = Math.floor( Math.random() * (maximo - minimo + 1) + minimo);
+      return numero;
+    }
+  
+    var rock = 0;
+    var paper = 1;
+    var scissors = 2;
+  
+    var options = ["rock", "paper", "scissors"];
+  
+    var userOption;
+    var pcOption = aleatorio(0,2); 
+  
+    //userOption = prompt("¿What do you choose?:\n rock: 0\npaperl: 1\nscissors: 2",0 );
+    userOption=prompt("¿What do you choose?:\n 0. rock\n1. paper\n2. scissors" );
   
   
+    alert("The computer chose :" + options[pcOption]);
+  
+  
+    if(userOption == rock)
+    {
+      alert("You chose rock!");
+      if(pcOption == rock)
+      {
+        alert("Tie!");
+      }
+      
+      else if(pcOption == paper)
+      {
+        alert("You lose!");
+      }
+      
+      else if(pcOption == scissors)
+      {
+        alert("You won!");
+      }
+  
+    }
+      
+      
+    else if(pcOption == paper)
+    {
+      alert("Elegiste Papel!");
+      if(pcOption == rock)
+      {
+        alert("You won!");
+      }
+      
+      else if(pcOption == paper)
+      {
+        alert("Tie!");
+      }
+      
+      else if(pcOption == rock) 
+      {
+        alert("You lose!");
+      }
+      
+    }
+  
+  
+  
+    else if(pcOption == scissors)
+    {
+      alert("You chose scissors!");
+      if(pcOption == rock)
+        {
+          alert("You lose!");
+        }
+        
+        
+        else if(pcOption == paper)
+        {
+          alert("You won!");	
+        }
+  
+        else if(pcOption == scissors)
+        { 
+          alert("Tie!");
+        }
+  
+    }
+  
+    else
+  
+    {
+      alert("Keep trying, see you soon!");
+    }
+  
+  
+  }
+  console.log(myGame());
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+function KilometersToMiles(x){
+    return (console.log(" Kilometers into miles :",(x*0.6213)));
+}
 
-
+console.log(KilometersToMiles(30));
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
+function feetToCentimeters(feet){
+    return(console.log("The number of feet you entered, equals to: " + (feet*30.48) + " centimeters."));
+}
   
-
+console.log(feetToCentimeters(50));
 
 
 
@@ -121,6 +229,29 @@ function DogFeeder(weight, age){
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
+
+function score(points){
+    
+    
+    if(points>=90){
+        console.log(" Your grade is A");
+    }else if (points >=80 && points <= 89){
+        console.log("Your grade is B");
+    } else if (points>=70 && points <=79){
+        console.log("Your grade is C");
+    } else if( points>=60 && points <=69){
+        console.log("Your grade is D");
+    } else if(points<=59){
+        console.log("Your grade is F, you need to study more");
+    }
+
+}
+
+
+console.log(score(70));
+
+
+
   
 
   
@@ -130,6 +261,8 @@ function DogFeeder(weight, age){
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
+
+
 
 
 
