@@ -28,7 +28,7 @@ Exercises are outlined in the `index.js` file, please read the instructions care
 
 Using VSCode and Command Line:
 
-1. Fork repo and add TL as collaborator on Github.
+1. Fork repo
 2. Clone your fork (not Lambda's repo by mistake!).
 3. `cd` into your newly cloned repository.
 4. Create a new branch by typing `git checkout -b <firstName-lastName>`.
@@ -49,9 +49,7 @@ After you have completed the requirements, try any of the following challenges. 
 
 Follow these steps for completing your project.
 
-1. [ ] Submit a pull request to merge `<firstName-lastName>` branch into master. **Please don't merge your own pull request**
-2. [ ] Add your TL as a reviewer on the pull-request
-3. [ ] Your TL will count the project as complete by merging the branch back into master
+ [ ] Submit a pull request to merge `<firstName-lastName>` branch into master. **Please don't merge your own pull request**
 
 ## Resources
 
