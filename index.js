@@ -73,23 +73,31 @@ function dogYears(/*add your code here*/){
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-//Dog feeder 
-//takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal, one month = 1/12) and returns the number of pounds of raw food to feed in a day.
 
-//feeding requirements
-// adult dogs at least 1 year 
-// up to 5 lbs - 5% of their body weight
-// 6 - 10 lbs - 4% of their body weight 
-// 11 - 15 lbs - 3% of their body weight 
-// > 15lbs - 2% of their body weight 
-
-// Puppies less than 1 year
-// 2 - 4 months 10% of their body weight
-// 4 - 7 months 5% of their body weight 
-// 7 - 12 months 4% of their body weight
-
-// when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
+//Dog feeder - We need to know how many pounds of food to feed our dog each day!
+/*
+Use the hungryDog function and feeding requirements below to do the following:
+  1. Invoke the hungryDog function below and pass a weight value in pounds to it
+  2. Pass to hungryDog an age value in years as well (note: if the dog is a puppy, the age will be a decimal. For example: three months = 3/12 or .25)
+  3. Do the proper calculations and return the number of pounds of raw food to feed in a day
   
+  REMEMBER: This program should calculate correctly adult AND puppy ages and weights.  Also you can console log the invocation of hungryDog to see the answer.
+  
+  Feeding Requirements:
+
+  Adult Dogs 1 year and older 
+     up to 5 lbs - 5% of their body weight
+     6 - 10 lbs - 4% of their body weight 
+     11 - 15 lbs - 3% of their body weight 
+     > 15lbs - 2% of their body weight 
+
+  Puppies less than 1 year
+     2 - 4 months 10% of their body weight
+     4 - 7 months 5% of their body weight 
+     7 - 12 months 4% of their body weight
+    
+  NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
+*/  
 
 function hungryDog(/*add your code here*/){
     /*add your code here*/
