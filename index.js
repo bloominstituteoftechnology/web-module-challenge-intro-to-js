@@ -57,10 +57,7 @@ Task 1d - Multiply
 Do the following:   
    1. Invoke the multiply function below and pass it two numbers
    2. Receive the numbers in the parameters: a and b
-   3. Multiply a and b
-   4. Return and console log the answer
-   
-   HINT: if you want to see the answer console log the invocation of multiply
+   3. Multiply a and b and return the answer
 */
 
 function multiply(/*add your code here*/){
@@ -76,9 +73,7 @@ function multiply(/*add your code here*/){
 Do the following:
    1. Invoke the dogYears function below and pass an age value to it
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
-   3. Return and console log the newly calculated age
-   
-   HINT: if you want to see the answer console log the invocation of dogYears
+   3. Return the newly calculated age
 */
 
 function dogYears(/*add your code here*/){
@@ -92,11 +87,11 @@ function dogYears(/*add your code here*/){
 //Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
 /*
 Use the hungryDog function and feeding requirements below to do the following:
-  1. Invoke the hungryDog function below and pass a weight value in pounds to it
-  2. Pass to hungryDog an age value in years as well (note: if the dog is a puppy, the age will be a decimal. For example: three months = 3/12 or .25)
-  3. Do the proper calculations and return and console log the number of pounds of raw food to feed in a day
+  1. Invoke the hungryDog function below and pass it a weight value in pounds
+  2. Also, pass to hungryDog an age value in years (note: if the dog is a puppy, the age will be a decimal. For example: three months = 3/12 or .25)
+  3. Do the proper calculations and return the number of pounds of raw food to feed the dog/puppy in a day
   
-  REMEMBER: This program should handle correctly adult AND puppy ages and weights.  Also you can console log the invocation of hungryDog to see the answer.
+  REMEMBER: This program should handle correctly adult AND puppy ages and weights
   
   Feeding Requirements:
 
