@@ -236,6 +236,5 @@ export default{
     miles,
     feet,
     annoyingSong,
-    grade,
-    vowelCounter
+    grade
 }
