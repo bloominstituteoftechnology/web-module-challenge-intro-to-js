@@ -120,9 +120,9 @@ function hungryDog(/*add your code here*/){
 // Rock, Paper, Scissors - Let's play against the computer!
 /*
 Use the game function below to do the following:
-  1. Receive a string that represents the user's choice (either rock, paper, or scissors)
+  1. Receive a string that represents the user's choice (either "rock", "paper", or "scissors")
   2. Use Math.random to determine the computers choice (Math.random gives a random number between 0 and 1)
-  3. Return and console log whether the user won, lost, or tied based on these rules of the game
+  3. Return whether the user won, lost, or tied based on these rules of the game described below
   
   RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
   
@@ -143,7 +143,7 @@ function game(/*add your code here*/){
 Using the miles function below do the following:
   1. Receive a number of kilometers
   2. Convert the number of kiolmeters received to miles
-  3. Return and console log the number of miles
+  3. Return the number of miles
 */
 
 function miles(/*add your code here*/){
@@ -152,14 +152,12 @@ function miles(/*add your code here*/){
 
 
 
-
-
 //Task 5b - Feet to CM
 /*
 Using the feet function below do the following:
   1. Receive a number of feet
   2. Convert the number of feet to centimeters
-  3. Return and console log the number of centimeters
+  3. Return number of centimeters
 */
 
 function feet(/*add your code here*/){
@@ -170,11 +168,11 @@ function feet(/*add your code here*/){
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-// Let's Sing 99 Bottles of Soda on the Wall
+// Let's Sing 99 Bottles of Soda on the Wall!
 /*
 Using the annoyingSong function below do the following:
-  1. Receive a starting number and start to count down from there  
-  2. At each iteration, it should console log this string: 
+  1. Receive a starting number and start to count down from the number received 
+  2. At each iteration, it should return this string: 
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
@@ -189,7 +187,7 @@ function annoyingSong(/*add your code here*/){
 /*
 Using the grade function below do the following: 
   1. Receive a score out of 100 
-  2. Return and console log the corresponding letter grade following this grade scale:
+  2. Return the corresponding letter grade following this grade scale:
 
    90-100 = A 
    80-89 = B 
@@ -212,7 +210,7 @@ function grade(/*add your code here*/){
 /*
 Using the vowelCounter function below do the following:
   1. Receive a string as a parameter
-  2. Counts, returns, and console logs the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
+  2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
 
   HINT - you may need to study tomorrow's content on arrays 
   HINT - try looking up the .includes() method
