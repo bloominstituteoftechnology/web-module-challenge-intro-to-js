@@ -55,9 +55,5 @@ describe('gradeFunction', ()=>{
         expect(functions.grade(85)).toBe('you got a B');
     })
 });
-describe('vowelCounterFunction', ()=>{
-    it('return a string containing the number of vowels', ()=>{
-        expect(functions.vowelCounter('I am a world-class developer using iterations')).toBe(`The text contains ${16} vowel(s)`);
-    })
-});
+
 
