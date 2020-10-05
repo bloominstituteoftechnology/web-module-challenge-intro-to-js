@@ -1,10 +1,21 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
+
+/*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+
+/*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.
+
+This will usually entail console logging the answer directly or console logging the invocation (call) of the function so when it
+returns a value it will be logged to the console.  
+
+An example of this would be:  console.log(theFunction(3,4))*/
+*/
+
 /*
 Task 1a - Voting Age
 
 Do the following:   
-   1. Declare a variable called votingAge
-   2. Console log true if age >= 18
+   1. Make a variable called votingAge and give it a value
+   2. Return true if age is 18 or higher
 
    HINT: no function required
 */
@@ -17,7 +28,7 @@ Task 1b - Values
 Do the following:   
    1. Declare two variables and assign them values
    2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
-   3. Console log the new value of the 1st variable
+   3. Return the new value of the 1st variable
 
    HINT: no function required
 */
@@ -32,7 +43,7 @@ Task 1c - Convert Strings to Numbers
 Do the following:   
    1. Declare a string type variable with the value of "1999"
    2. Convert the string value of "1999" to a integer value of 1999
-   3. Console log the result
+   3. Return the result
 
    HINT: look up the Number method
 */
@@ -44,11 +55,10 @@ Do the following:
 Task 1d - Multiply
  
 Do the following:   
-   1. Invoke the multiply function below and pass two numbers as arguments to it
-   2. Receive the first number in a parameter called a
-   3. Receive the second number in a parameter called b
-   4. Multiply a and b
-   5. Return and console log the answer
+   1. Invoke the multiply function below and pass it two numbers
+   2. Receive the numbers in the parameters: a and b
+   3. Multiply a and b
+   4. Return and console log the answer
    
    HINT: if you want to see the answer console log the invocation of multiply
 */
@@ -86,7 +96,7 @@ Use the hungryDog function and feeding requirements below to do the following:
   2. Pass to hungryDog an age value in years as well (note: if the dog is a puppy, the age will be a decimal. For example: three months = 3/12 or .25)
   3. Do the proper calculations and return and console log the number of pounds of raw food to feed in a day
   
-  REMEMBER: This program should calculate correctly adult AND puppy ages and weights.  Also you can console log the invocation of hungryDog to see the answer.
+  REMEMBER: This program should handle correctly adult AND puppy ages and weights.  Also you can console log the invocation of hungryDog to see the answer.
   
   Feeding Requirements:
 
