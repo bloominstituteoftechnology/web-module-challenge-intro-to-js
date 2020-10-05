@@ -4,7 +4,7 @@ Task 1a - Voting Age
 
 Do the following:   
    1. Declare a variable called votingAge
-   2. console log true if age >= 18
+   2. Console log true if age >= 18
 
    HINT: no function required
 */
