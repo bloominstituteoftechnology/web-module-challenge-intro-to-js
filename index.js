@@ -164,7 +164,7 @@ function feet(/*add your code here*/){
 /*
 Using the annoyingSong function below do the following:
   1. Receive a starting number and start to count down from there  
-  2. At each iteration, it should return this string: 
+  2. At each iteration, it should return and console log this string: 
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
@@ -174,13 +174,19 @@ function annoyingSong(/*add your code here*/){
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
+
 //Grade Calculator
-//write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
-//90s should be A 
-//80s should be B 
-//70s should be Cs 
-//60s should be D 
-//and anything below 60 should be F
+/*
+Using the grade function below do the following: 
+  1. Receive a score out of 100 
+  2. Return and console log the corresponding letter grade following this grade scale:
+
+   90-100 = A 
+   80-89 = B 
+   70-79 = C 
+   60-69 =  D 
+   below 60 = F
+*/
   
 function grade(/*add your code here*/){
     /*add your code here*/
