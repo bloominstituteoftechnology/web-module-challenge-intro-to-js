@@ -1,9 +1,10 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 /*
-Task 1a: Do the following:
-   
+Task 1a - Voting Age
+
+Do the following:   
    1. Declare a variable called votingAge
-   2. console log true if age > 18
+   2. console log true if age >= 18
 
    HINT: no function required
 */
@@ -11,8 +12,9 @@ Task 1a: Do the following:
 
 
 /*
-Task 1b: Do the following:
-   
+Task 1b - Values
+
+Do the following:   
    1. Declare two variables and assign them values
    2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
    3. Console log the new value of the 1st variable
@@ -25,8 +27,9 @@ Task 1b: Do the following:
 
 
 /*
-Task 1c: Do the following:
-   
+Task 1c - Convert Strings to Numbers
+
+Do the following:   
    1. Declare a string type variable with the value of "1999"
    2. Convert the string value of "1999" to a integer value of 1999
    3. Console log the result
@@ -38,12 +41,14 @@ Task 1c: Do the following:
 
 
 /*
-Task 1d: Do the following:
-   
+Task 1d - Multiply
+ 
+Do the following:   
    1. Invoke the multiply function below and pass two numbers as arguments to it
    2. Receive the first number in a parameter called a
    3. Receive the second number in a parameter called b
-   4. Multiply a and b and return the answer
+   4. Multiply a and b
+   5. Return and console log the answer
    
    HINT: if you want to see the answer console log the invocation of multiply
 */
@@ -61,7 +66,7 @@ function multiply(/*add your code here*/){
 Do the following:
    1. Invoke the dogYears function below and pass an age value to it
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
-   3. Return the newly calculated age
+   3. Return and console log the newly calculated age
    
    HINT: if you want to see the answer console log the invocation of dogYears
 */
@@ -74,12 +79,12 @@ function dogYears(/*add your code here*/){
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Dog feeder - We need to know how many pounds of food to feed our dog each day!
+//Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
 /*
 Use the hungryDog function and feeding requirements below to do the following:
   1. Invoke the hungryDog function below and pass a weight value in pounds to it
   2. Pass to hungryDog an age value in years as well (note: if the dog is a puppy, the age will be a decimal. For example: three months = 3/12 or .25)
-  3. Do the proper calculations and return the number of pounds of raw food to feed in a day
+  3. Do the proper calculations and return and console log the number of pounds of raw food to feed in a day
   
   REMEMBER: This program should calculate correctly adult AND puppy ages and weights.  Also you can console log the invocation of hungryDog to see the answer.
   
@@ -160,11 +165,11 @@ function feet(/*add your code here*/){
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-// 99 bottles of soda on the wall
+// Let's Sing 99 Bottles of Soda on the Wall
 /*
 Using the annoyingSong function below do the following:
   1. Receive a starting number and start to count down from there  
-  2. At each iteration, it should return and console log this string: 
+  2. At each iteration, it should console log this string: 
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
