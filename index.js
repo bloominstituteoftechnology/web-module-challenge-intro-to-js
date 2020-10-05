@@ -159,10 +159,14 @@ function feet(/*add your code here*/){
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
+
 // 99 bottles of soda on the wall
-// create a function called annoyingSong
-// the function should take a starting number as an argument and count down - at each iteration it should return (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
+/*
+Using the annoyingSong function below do the following:
+  1. Receive a starting number and start to count down from there  
+  2. At each iteration, it should return this string: 
+      "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
+*/
 
 function annoyingSong(/*add your code here*/){
         /*add your code here*/
