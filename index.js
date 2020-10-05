@@ -55,8 +55,16 @@ function multiply(/*add your code here*/){
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
+
 //Age in Dog years
-//write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
+/*
+Do the following:
+   1. Invoke the dogYears function below and pass an age value to it
+   2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
+   3. Return the newly calculated age
+   
+   HINT: if you want to see the answer console log the invocation of dogYears
+*/
 
 function dogYears(/*add your code here*/){
     /*add your code here*/
