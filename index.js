@@ -126,8 +126,15 @@ function game(/*add your code here*/){
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-//Metric Converter
-//a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+
+//Metric Converter 
+//Task 5a - KM to Miles 
+/*
+Using the miles function below do the following:
+  1. Receive a number of kilometers
+  2. Convert the number of kiolmeters received to miles
+  3. Return and console log the number of miles
+*/
 
 function miles(/*add your code here*/){
     /*add your code here*/
@@ -137,8 +144,13 @@ function miles(/*add your code here*/){
 
 
 
-//b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
+//Task 5b - Feet to CM
+/*
+Using the feet function below do the following:
+  1. Receive a number of feet
+  2. Convert the number of feet to centimeters
+  3. Return and console log the number of centimeters
+*/
 
 function feet(/*add your code here*/){
     /*add your code here*/
