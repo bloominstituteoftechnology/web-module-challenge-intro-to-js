@@ -1,23 +1,52 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
-//Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
+/*
+Task 1a: Do the following:
+   
+   1. Declare a variable called votingAge
+   2. console log true if age > 18
+
+   HINT: no function required
+*/
+
+
+
+/*
+Task 1b: Do the following:
+   
+   1. Declare two variables and assign them values
+   2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
+   3. Console log the new value of the 1st variable
+
+   HINT: no function required
+*/
 
 
 
 
 
-//Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+/*
+Task 1c: Do the following:
+   
+   1. Declare a string type variable with the value of "1999"
+   2. Convert the string value of "1999" to a integer value of 1999
+   3. Console log the result
+
+   HINT: look up the Number method
+*/
 
 
 
 
-
-//Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
-
-
-
-
-//Task d: Write a function to multiply a*b 
+/*
+Task 1d: Do the following:
+   
+   1. Invoke the multiply function below and pass two numbers as arguments to it
+   2. Receive the first number in a parameter called a
+   3. Receive the second number in a parameter called b
+   4. Multiply a and b and return the answer
+   
+   HINT: if you want to see the answer console log the invocation of multiply
+*/
 
 function multiply(/*add your code here*/){
     /*add your code here*/
