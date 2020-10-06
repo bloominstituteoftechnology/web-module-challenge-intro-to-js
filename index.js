@@ -299,8 +299,17 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(wordInput) {
+    var vowelList = "aeiouAEIOU"
+    var vowelCount = 0;
+
+    for (let i = 0; i < wordInput.length; i++){
+      if (vowelList.indexOf(wordInput[i]) !== -1){
+        vowelCount+=1;
+      }
+
+    }
+    return vowelCount;
 }
 
 
