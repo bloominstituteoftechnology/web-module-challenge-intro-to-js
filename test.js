@@ -52,20 +52,46 @@
 
 // console.log(annoyingSong(99))
 
-function grade(score){
-    let letterGrade = ''
-    if(score >= 90){
-      letterGrade = 'A'
-    }else if(score >= 80 && score <= 89){
-      letterGrade = 'B'
-    }else if (score >= 70 && score <= 79){
-      letterGrade = 'C'
-    }else if (score >= 60 && score <= 69){
-      letterGrade = 'D'
-    }else{
-      letterGrade = 'F'
-    }
-    return letterGrade;
-  }
+// function grade(score){
+//     let letterGrade = ''
+//     if(score >= 90){
+//       letterGrade = 'A'
+//     }else if(score >= 80 && score <= 89){
+//       letterGrade = 'B'
+//     }else if (score >= 70 && score <= 79){
+//       letterGrade = 'C'
+//     }else if (score >= 60 && score <= 69){
+//       letterGrade = 'D'
+//     }else{
+//       letterGrade = 'F'
+//     }
+//     return letterGrade;
+//   }
 
-  console.log(grade(90))
+//   console.log(grade(90))
+
+function game(userChoice){
+    let computerChioce = '';
+    userChoice = userChoice.toLowerCase()
+    const randomNumber = Math.floor(Math.random() * 3) + 1 ;
+  
+    if (randomNumber === 1){
+      computerChioce = 'rock';
+    }else if (randomNumber === 2){
+      computerChioce = 'paper';
+    }else if (randomNumber === 3){
+      computerChioce = 'scissors'
+    }
+  
+    if(userChoice === 'scissors' && computerChioce === 'paper' || userChoice === 'paper'  && computerChioce === 'scissors'  ){
+      return 'Scissors beats Paper'
+    }else if (userChoice === 'paper' && computerChioce === 'rock' || userChoice === 'rock'  && computerChioce === 'paper'){
+      return 'Paper beats Rock';
+    }else if (userChoice === 'rock' && computerChioce === 'scissors' || userChoice === 'scissors' && computerChioce === 'rock' ){
+      return 'Rock beats Scissors'
+    }else{
+      return 'there\'s a tie'
+    }
+      
+}
+console.log(game('rock'))

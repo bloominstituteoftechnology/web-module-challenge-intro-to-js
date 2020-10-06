@@ -123,13 +123,13 @@ function hungryDog(weight_in_pounds, dog_years){
     console.log('This is adult')
 
     if(weight_in_pounds <= 5){
-        return `Feed it ${weight_in_pounds * .05}`;
+        return weight_in_pounds * .05;
     }else if(weight_in_pounds <= 10) {
-        return `Feed it ${weight_in_pounds * .04}`;
+        return weight_in_pounds * .04;
     }else if(weight_in_pounds <= 15) {
-        return `Feed it ${weight_in_pounds * .03}`;
+        return weight_in_pounds * .03;
     }else {
-        return `Feed it ${weight_in_pounds * .02}`;
+        return weight_in_pounds * .02;
     }
     
   }else if (dog_years < 1){
@@ -201,7 +201,7 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-    return km / 1.609344;
+    return km / 0.621371;
   }
 
 
@@ -232,7 +232,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(startingNumber){
         for (let i = startingNumber; i > 0;i--){
-          console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottle of soda on the wall `);
+          return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottle of soda on the wall `;
         }
   }
 
