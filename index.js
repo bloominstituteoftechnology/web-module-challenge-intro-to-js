@@ -17,7 +17,11 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 18;
 
+if(votingAge >= 18){
+  console.log('true');
+}
 
 
 /*
@@ -31,7 +35,14 @@ Do the following:
    HINT: no function required
 */
 
+let val1 = 5;
+let val2 = 10;
 
+if(val2 === 10){
+  val1+=1;
+  val2+=1;
+  console.log(val1);
+}
 
 
 
@@ -46,7 +57,11 @@ Do the following:
    HINT: look up the Number method
 */
 
+let sYear = "1999";
 
+sYear = Number(sYear);
+
+console.log(sYear);
 
 
 /*
@@ -58,11 +73,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
-
+console.log(multiply(5, 4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -73,9 +88,9 @@ Do the following:
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+let humanYears = 1;
+function dogYears(humanYears){
+    return humanYears * 7;
 }
 
 
@@ -105,11 +120,29 @@ Use the hungryDog function and feeding requirements below to do the following:
      7 - 12 months 4% of their body weight
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/ 
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+let weight = 15; 
+let age = 1;
+function hungryDog(weight, age){
+    if(age >= 1 && weight <= 5){
+      return weight * 0.05;
+    }else if(age >= 1 && weight > 5 && weight <= 10){
+      return weight * 0.04;
+    }else if (age >= 1 && weight > 10 && weight <= 15){
+      return weight * 0.03;
+    }else if(age >= 1 && weight > 15){
+      return weight * 0.02;
+    }
+
+    if(age >= 0.1666666666666667 && age < 0.3333333333333333){
+      return weight * 0.1;
+    }else if (age >= 0.3333333333333333 && age < 0.5833333333333333){
+      return weight * 0.05;
+    }else if (age >= 0.5833333333333333 && age < 1){
+      return weight * 0.04;
+    }
+}
 
 
 
@@ -127,10 +160,22 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+const scissors = 0;
+const paper = 1;
+const rock = 2;
+
+function game(playerChoice){
+  let computerChoice = Math.floor(Math.random() * 3);
+  if(playerChoice === computerChoice){
+    return "tie"
+  }else if(playerChoice === scissors && computerChoice === 1 || playerChoice === paper && computerChoice === 2 || playerChoice === rock && computerChoice === 0){
+    return "won"
+  }else if(playerChoice === scissors && computerChoice === 2 || playerChoice === paper && computerChoice === 0 || playerChoice === rock && computerChoice === 1){
+    return "lost"
+  }
 }
-  
+
+game(scissors);
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
