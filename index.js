@@ -307,9 +307,19 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+// I know there's a better way to check for a vowel! Researching...  :)
+function vowelCounter(someString) {
+  const newString = someString.toLowerCase();
+  let vowels = 0;
+  for (let i = 0; i < newString.length; i++){
+    if (newString[i] === 'a' || newString[i] === 'e' || newString[i] === 'i' || newString[i] === 'o' || newString[i] === 'u'){
+      vowels ++;
+    }
+  }
+  return vowels;
 }
+const string = 'BANANA'
+console.log(vowelCounter(string));
 
 
 
