@@ -17,8 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let votingAge = 19;
+if(votingAge > 19){
+  console.log(true);
+}
 
 /*
 Task 1b - Values
@@ -31,7 +33,24 @@ Do the following:
    HINT: no function required
 */
 
+// let x = 3;
+// let y = 4;
+//   if x === y{
+//     return true
+//   }else {
+//     x = y
+//     return false
+//   }
 
+
+let x = 3;
+let y = 4;
+  if (x === y) {
+   console.log(true);
+  } else{
+    x = y
+    console.log(false);
+  }
 
 
 
@@ -58,8 +77,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b;
   }
 
 
@@ -74,10 +93,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears){
+   return humanYears * 7;
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -94,21 +112,23 @@ Use the hungryDog function and feeding requirements below to do the following:
   Feeding Requirements:
 
   Adult Dogs 1 year and older 
-     up to 5 lbs - 5% of their body weight
-     6 - 10 lbs - 4% of their body weight 
+     up to 5 lbs - .05% of their body weight
+     6 - 10 lbs - .04% of their body weight 
      11 - 15 lbs - 3% of their body weight 
      > 15lbs - 2% of their body weight 
 
   Puppies less than 1 year
-     2 - 4 months 10% of their body weight
-     4 - 7 months 5% of their body weight 
-     7 - 12 months 4% of their body weight
+     2 - 4 months .10% of their body weight
+     4 - 7 months .05% of their body weight 
+     7 - 12 months .04% of their body weight
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+ function hungryDog(/*weight, age*/){
+  
+  
+  /*function here.. there are a ton of else if's maybe 7, weight and age are the para, logical opperators comparison &&*/
   }
 
 
@@ -125,10 +145,15 @@ Use the game function below to do the following:
   RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
+
+  THIS ONE IS NOT DONE-- 
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(){
+  const answer = Math.floor(Math.random() * 3 + 1);
+  var rules =['Scissors beats paper', 'Paper beats rock', 'Rock beats scissors', 'There/s a tie']
+  console.log(rules[answer])
+  
 }
   
   
@@ -144,8 +169,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.621371
   }
 
 
@@ -158,10 +183,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm/30.48;
   }
- 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -172,12 +196,15 @@ Using the annoyingSong function below do the following:
   1. Receive a starting number and start to count down from the number received 
   2. At each iteration, it should return this string: 
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
+
+      THIS HAS NOT PASSED YET
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+  for (let i = number; i > number.length; i--){
+    console.log(`${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`)
   }
-
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -192,10 +219,22 @@ Using the grade function below do the following:
    70-79 = C 
    60-69 =  D 
    below 60 = F
+
+   THIS HAS NOT PASSED YET
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(num){
+    if(num >= 90){
+      return 'You got an A';
+    }if (num >= 80){
+      return 'You got a B';
+    }if(num >= 70){
+      return 'You got a C';
+    }if(num >= 60){
+      return 'You got a D';
+    }else{
+      return 'try again';
+    }
   }
   
   
@@ -215,9 +254,9 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
+// function vowelCounter(/*add your code here*/) {
+//     /*add your code here*/
+// }
 
 
 
