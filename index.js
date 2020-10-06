@@ -17,7 +17,13 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 20;
 
+if(age >= 18){
+  console.log(true);
+} else{
+  console.log(false);
+}
 
 
 /*
@@ -30,6 +36,14 @@ Do the following:
 
    HINT: no function required
 */
+
+let city = 'Los Angeles';
+let state = 'California';
+
+if(state === 'California'){
+  city = 'San Francisco';
+  console.log(city);
+}
 
 
 
@@ -46,6 +60,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+let string = '1999';
+let num = parseInt(string);
+console.log(num);
 
 
 
@@ -58,9 +75,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b
   }
+  console.log(multiply(5, 4));
 
 
 
@@ -74,10 +92,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(human){
+    return human * 7
 }
-
+console.log(dogYears(1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,7 +125,7 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(weight, age){
     /*add your code here*/
   }
 
@@ -127,7 +145,7 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
+function game(rock, paper, scissors){
     /*add your code here*/
 }
   
@@ -144,9 +162,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    return kilometers * 0.62137
   }
+  console.log(miles(10));
 
 
 
@@ -158,9 +177,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48
   }
+  comsole.log(feet(1));
  
 
 
@@ -174,9 +194,12 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+    for(let i = 99; i >= 0; i--){
+        console.log(`${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall`)
+    }    
   }
+  annoyingSong(99);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -194,11 +217,21 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+    if(score >= 90){
+    return 'A'
+  } else if (score >= 80){
+    return 'B'
+  } else if (score >= 70){
+    return 'C'
+  } else if (score >=60){
+    return 'D'
+  } else {
+    return 'F'
   }
+}
   
-  
+  console.log(grade(100));
   
   
 
