@@ -153,9 +153,9 @@ function miles(/*add your code here*/){
 //Task 5b - Feet to CM
 /*
 Using the feet function below do the following:
-  1. Receive a number of feet
-  2. Convert the number of feet to centimeters
-  3. Return number of centimeters
+  1. Receive a number of cm
+  2. Convert the number of cm to feet
+  3. Return number of feet
 */
 
 function feet(/*add your code here*/){
