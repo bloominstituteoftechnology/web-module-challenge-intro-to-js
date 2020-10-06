@@ -18,7 +18,10 @@ Do the following:
    HINT: no function required
 */
 
-
+let votingAge = 21;
+if(votingAge > 18){
+  console.log(true)
+}
 
 /*
 Task 1b - Values
@@ -31,7 +34,13 @@ Do the following:
    HINT: no function required
 */
 
+let name = 'bob';
+let skill = 'eating';
 
+if(skill === 'eating'){
+  name = 'bobby'
+  console.log(name)
+}
 
 
 
@@ -46,7 +55,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let numb = '1999';
+let numb2 = Number(numb);
+console.log(numb2)
 
 
 /*
@@ -58,8 +69,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b;
   }
 
 
@@ -74,8 +85,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
 
 
@@ -107,9 +118,33 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight_in_pounds, dog_years){
+  if(dog_years >= 1){
+    console.log('This is adult')
+
+    if(weight_in_pounds <= 5){
+        return `Feed it ${weight_in_pounds * .05}`;
+    }else if(weight_in_pounds <= 10) {
+        return `Feed it ${weight_in_pounds * .04}`;
+    }else if(weight_in_pounds <= 15) {
+        return `Feed it ${weight_in_pounds * .03}`;
+    }else {
+        return `Feed it ${weight_in_pounds * .02}`;
+    }
+    
+  }else if (dog_years < 1){
+      console.log('This is baby')
+
+      if(dog_years <= 0.33){
+          return weight_in_pounds * 0.10;
+      }else if(dog_years <= 0.583){
+          return weight_in_pounds * 0.05;
+      }else{
+          return weight_in_pounds * .04;
+      }
   }
+
+}
 
 
 
@@ -127,8 +162,29 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(userChoice){
+  let computerChioce = '';
+  userChoice = userChoice.toLowerCase()
+  const randomNumber = Math.floor(Math.random() * 3) + 1 ;
+
+  if (randomNumber === 1){
+    computerChioce = 'rock';
+  }else if (randomNumber === 2){
+    computerChioce = 'paper';
+  }else if (randomNumber === 3){
+    computerChioce = 'scissors'
+  }
+
+  if(userChoice === 'scissors' && computerChioce === 'paper' || userChoice === 'paper'  && computerChioce === 'scissors'  ){
+    return 'Scissors beats Paper'
+  }else if (userChoice === 'paper' && computerChioce === 'rock' || userChoice === 'rock'  && computerChioce === 'paper'){
+    return 'Paper beats Rock';
+  }else if (userChoice === 'rock' && computerChioce === 'scissors' || userChoice === 'scissors' && computerChioce === 'rock' ){
+    return 'Rock beats Scissors'
+  }else{
+    return 'there\'s a tie'
+  }
+    
 }
   
   
@@ -144,8 +200,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km / 1.609344;
   }
 
 
@@ -158,8 +214,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48;
   }
  
 
@@ -174,8 +230,10 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(startingNumber){
+        for (let i = startingNumber; i > 0;i--){
+          console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottle of soda on the wall `);
+        }
   }
 
 
@@ -194,9 +252,21 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
-  }
+function grade(score){
+      let letterGrade = ''
+      if(score >= 90){
+        letterGrade = 'A'
+      }else if(score >= 80 && score <= 89){
+        letterGrade = 'B'
+      }else if (score >= 70 && score <= 79){
+        letterGrade = 'C'
+      }else if (score >= 60 && score <= 69){
+        letterGrade = 'D'
+      }else{
+        letterGrade = 'F'
+      }
+      return letterGrade;
+    }
   
   
   
