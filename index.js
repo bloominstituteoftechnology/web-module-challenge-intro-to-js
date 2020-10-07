@@ -165,36 +165,56 @@ Use the game function below to do the following:
   RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
-const robot = Math.floor(Math.random() * 3);
-/*
- 0=== rock
- 1 === paper
- 2 === scic
- */ 
 
-//Look at this tomorrow//
-function game(human, robot){
-  if (human === 'Rock'){
-    if (human === 'Rock' && robot === 0){
-      return 'this is a tie';
-      //human chose rock and robot chose rock
-    }else if(human === 'Paper' && robot === 1){
-      return 'this is a lose';
-      //human chose rock and robot chose paper
-    }else {
-      return 'this is a win';// human chose rock and robot chose scissors
-    }
-  }
-  if (human === 'Paper'){
-    if (human === 'Rock' && robot === 0){
-      return 'this is a tie';
-      //human chose paper
-    }
-  }
+let computer = Math.floor(Math.random() * 3);
+if(computer === 0){
+  computer = 'rock';
+} else if(computer === 1){
+  computer = 'paper';
+} else if(computer === 2){
+  computer = 'scissors';
 }
+function game(choice, computer){
+if (choice === computer){
+return 'it\'s a tie';
+} else if (choice === 'rock' && computer === 'paper'){
+return 'you lose!';
+} else if (choice === 'rock' && computer === 'scissors'){
+return 'you win!';
+} else if (choice === 'paper' && computer === 'rock'){
+return 'you lose!';
+} else if (choice === 'paper' &&  computer === 'scissors'){
+return 'you win!';
+} else if (choice === 'scissors' && computer === 'paper'){
+return 'you lose!';
+} else {
+return 'you win!';
+}
+}
+console.log(game('rock'))
+// game('Scissors', robot)
+// function game(human, robot){
+//   if (human === 'Rock'){
+//     if (human === 'Rock' && robot === 0){
+//       return 'this is a tie';
+//       //human chose rock and robot chose rock
+//     }else if(human === 'Paper' && robot === 1){
+//       return 'this is a lose';
+//       //human chose rock and robot chose paper
+//     }else {
+//       return 'this is a win';// human chose rock and robot chose scissors
+//     }
+//   }
+//   if (human === 'Paper'){
+//     if (human === 'Rock' && robot === 0){
+//       return 'this is a tie';
+//       //human chose paper
+//     }
+//   }
+// }
 
 
-game('Rock', robot)
+
   
  
 
