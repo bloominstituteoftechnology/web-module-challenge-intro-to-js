@@ -33,6 +33,21 @@ describe('gameFunction', ()=>{
     it('return win, lose or tie', ()=>{
         expect(functions.game('rock', 'rock')).toBe(`it's a tie`);
     })
+    it('return win, lose or tie', ()=>{
+        expect(functions.game('paper', 'rock')).toBe(`you win!`);
+    })
+    it('return win, lose or tie', ()=>{
+        expect(functions.game('paper', 'scissors')).toBe(`you lose!`);
+    })
+    it('return win, lose or tie', ()=>{
+        expect(functions.game('paper', 'paper')).toBe(`it's a tie`);
+    })
+    it('return win, lose or tie', ()=>{
+        expect(functions.game('scissors', 'paper')).toBe(`you win!`);
+    })
+    it('return win, lose or tie', ()=>{
+        expect(functions.game('scissors', 'rock')).toBe(`you lose!`);
+    })
 });
 describe('milesFunction', ()=>{
     it('return km * 0.621371', ()=>{
