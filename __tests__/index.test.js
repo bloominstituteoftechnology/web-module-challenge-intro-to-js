@@ -8,13 +8,13 @@ describe('fooFunction', ()=>{
 
 describe('multiplyFunction', ()=>{
     it('a * b', ()=>{
-        expect(functions.multiply(5, 7)).toBe(35);
+        expect(functions.multiplyFunction(5, 7)).toBe(35);
     })
 });
 
 describe('dogYearsFunction', ()=>{
     it('returns humanYears * 7', ()=>{
-        expect(functions.dogYears(5)).toBe(35);
+        expect(functions.dogYearsFuntion(5)).toBe(35);
     })
 });
 

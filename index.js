@@ -18,6 +18,12 @@ Do the following:
    HINT: no function required
 */
 
+var votingAge = 20;
+if(votingAge >= 18){
+  console.log(true)
+} else {
+  console.log(false)
+}
 
 
 /*
@@ -31,6 +37,12 @@ Do the following:
    HINT: no function required
 */
 
+var canYouVote  = false;
+var votingAge = 10;
+if(votingAge  >= 18){
+ canYouVote =  true
+} 
+console.log(canYouVote)
 
 
 
@@ -47,6 +59,9 @@ Do the following:
 */
 
 
+var moveUS =  Number("1999");
+console.log(moveUS)
+
 
 
 /*
@@ -58,9 +73,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+  function multiplyFunction(a, b) {
+  return a * b;
+}
+
 
 
 
@@ -74,8 +90,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYearsFunction(oldAge){
+  return oldAge * 7;
+  
 }
 
 
@@ -100,16 +117,53 @@ Use the hungryDog function and feeding requirements below to do the following:
      > 15lbs - 2% of their body weight 
 
   Puppies less than 1 year
-     2 - 4 months 10% of their body weight
+     2 - 4  10% of their body weight
      4 - 7 months 5% of their body weight 
      7 - 12 months 4% of their body weight
     
-  NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
+  NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 
+  0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  var food = 0 
+  //Adults
+  if(age >= 1){
+     if(weight <= 5){
+      // up to 5 lbs - 5% of their body weight
+          food = 0.05 * weight
+      } else if(weight <=10){
+      // 6 - 10 lbs - 4% of their body weight 
+       food = 0.04 * weight
+      } else if(weight <=15){
+      // 11 - 15 lbs - 3% of their body weight 
+      food = 0.03 * weight
+      } else {
+     // > 15lbs - 2% of their body weight 
+     food = 0.02 * weight
+      }
   }
+//Puppiies
+  if(age < 1){
+  var puppyAge = age * 12
+    if(puppyAge < 4){
+      // 2 - 4  10% of their body weight
+      food = 0.10 * weight
+    } else if(puppyAge < 7){
+      // 4 - 7 months 5% of their body weight 
+      food = 0.05 * weight
+    }else {
+    // 7 - 12 months 4% of their body weight
+    food = 0.04 * weight 
+    }
+  }
+
+    return food
+    
+  }
+
+console.log(hungryDog(.25, 1))
+  
 
 
 
@@ -226,15 +280,4 @@ function foo(){
     console.log('its working');
     return 'bar';
 }
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+
