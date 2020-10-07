@@ -65,7 +65,7 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let number ='1999';
 
 
 /*
@@ -118,45 +118,85 @@ Use the hungryDog function and feeding requirements below to do the following:
      > 15lbs - 2% of their body weight 
 
   Puppies less than 1 year
-     2 - 4 months .10% of their body weight
-     4 - 7 months .05% of their body weight 
-     7 - 12 months .04% of their body weight
+     2 - 4 months .10% of their body weight .16 .33
+     4 - 7 months .05% of their body weight .33 .58
+     7 - 12 months .04% of their body weight .58- 1
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
- function hungryDog(/*weight, age*/){
-  
-  
-  /*function here.. there are a ton of else if's maybe 7, weight and age are the para, logical opperators comparison &&*/
+ function hungryDog(weight, age){
+  //Adult Dogs
+  if (age >= 1 && weight <= 5){
+    return 0.05 * weight;
+  }else if (age >= 1 && weight > 5 && weight<=10 ){
+    return 0.04 * weight;
+  }else if (age >= 1 && weight > 10 && weight<=15 ){
+    return 0.03 * weight;
+  }else if (age >= 1 && weight > 15 ){
+  return 0.02 * weight;
+  }else if (age >= .16 && age <=.33){
+    return .10 * weight;
   }
+    
+    
+  }
+
+  hungryDog(15,1) // 0.2299999
+
+  // if (weight <= 5 && age >= 1){
+  //   return .05 * weight;
+  // }else if (weight <= 10 && age >= 1){
+  //   return .04 * weight;
+  // }else if (weight <= 15 && age >= 1){
+  //   return .03 * weight;
+  // }else if (weight > 15 && age >= 1)
 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
 // Rock, Paper, Scissors - Let's play against the computer!
 /*
+Create a global variable that randomly generates the computer's choice
+Use Math.random to determine the computers choice (Math.random gives a random number between 0 and 1)
 Use the game function below to do the following:
-  1. Receive a string that represents the user's choice (either "rock", "paper", or "scissors")
-  2. Use Math.random to determine the computers choice (Math.random gives a random number between 0 and 1)
-  3. Return whether the user won, lost, or tied based on these rules of the game described below
-  
+  1. Receive  2 parameters the user's choice and the computer's choice
+  2. Return whether the user won, lost, or tied based on these rules of the game described below
   RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
-  
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
-
-  THIS ONE IS NOT DONE-- 
 */
+const robot = Math.floor(Math.random() * 3);
+/*
+ 0=== rock
+ 1 === paper
+ 2 === scic
+ */ 
 
-function game(){
-  const answer = Math.floor(Math.random() * 3 + 1);
-  var rules =['Scissors beats paper', 'Paper beats rock', 'Rock beats scissors', 'There/s a tie']
-  console.log(rules[answer])
-  
+//Look at this tomorrow//
+function game(human, robot){
+  if (human === 'Rock'){
+    if (human === 'Rock' && robot === 0){
+      return 'this is a tie';
+      //human chose rock and robot chose rock
+    }else if(human === 'Paper' && robot === 1){
+      return 'this is a lose';
+      //human chose rock and robot chose paper
+    }else {
+      return 'this is a win';// human chose rock and robot chose scissors
+    }
+  }
+  if (human === 'Paper'){
+    if (human === 'Rock' && robot === 0){
+      return 'this is a tie';
+      //human chose paper
+    }
+  }
 }
+
+
+game('Rock', robot)
   
-  
+ 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -170,7 +210,7 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-    return km * 0.621371
+    return km * 0.621371;
   }
 
 
@@ -197,12 +237,12 @@ Using the annoyingSong function below do the following:
   2. At each iteration, it should return this string: 
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 
-      THIS HAS NOT PASSED YET
+      THIS HAS NOT PASSED YET-- let i = 0; i < sequence.length; i++?
 */
 
 function annoyingSong(number){
-  for (let i = number; i > number.length; i--){
-    console.log(`${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`)
+  for (let i = 0; i < number; i++){
+    return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`;
   }
 }
 
@@ -220,18 +260,17 @@ Using the grade function below do the following:
    60-69 =  D 
    below 60 = F
 
-   THIS HAS NOT PASSED YET
 */
   
 function grade(num){
     if(num >= 90){
-      return 'You got an A';
+      return 'you got an A';
     }if (num >= 80){
-      return 'You got a B';
+      return 'you got a B';
     }if(num >= 70){
-      return 'You got a C';
+      return 'you got a C';
     }if(num >= 60){
-      return 'You got a D';
+      return 'you got a D';
     }else{
       return 'try again';
     }
