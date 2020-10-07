@@ -165,9 +165,7 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-
-function game(userChoice){
-   let compChoice = Math.ceil(Math.random() * 3);
+let compChoice = Math.ceil(Math.random() * 3);
    if(compChoice = 1){
      compChoice = `rock`;
    } else if(compChoice = 2){
@@ -175,6 +173,8 @@ function game(userChoice){
    } else{
     compChoice = `scissors`;
    }
+   
+function game(userChoice, compChoice){
    
    if(userChoice === `scissors` && compChoice === `rock`){
    return `you lose!`
