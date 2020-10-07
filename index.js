@@ -141,7 +141,7 @@ function hungryDog(weight, age){
       return weight * 0.05
     } else if(weight < 10){
       return weight * 0.04
-    } else if (weight < 15){
+    } else if (weight <= 15){
       return weight * 0.03
     } else{
       return weight * 0.02
@@ -165,8 +165,9 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
+
 function game(userChoice){
-   const compChoice = Math.ceil(Math.random() * 3);
+   let compChoice = Math.ceil(Math.random() * 3);
    if(compChoice = 1){
      compChoice = `rock`;
    } else if(compChoice = 2){
@@ -174,29 +175,29 @@ function game(userChoice){
    } else{
     compChoice = `scissors`;
    }
-
-   if(userChoice === scissors && compChoice === rock){
+   
+   if(userChoice === `scissors` && compChoice === `rock`){
    return `you lose!`
-   } else if(userChoice === scissors && compChoice === paper){
+   } else if(userChoice === `scissors` && compChoice === `paper`){
     return `you win!`
-   } else if(userChoice === scissors && compChoice === scissors){
+   } else if(userChoice === `scissors` && compChoice === `scissors`){
     return `it's a tie`
-   } else if(userChoice === rock && compChoice === rock){
+   } else if(userChoice === `rock` && compChoice === `rock`){
     return `it's a tie`
-  } else if(userChoice === rock && compChoice === paper){
+  } else if(userChoice === `rock` && compChoice === `paper`){
     return `you lose!`
-  } else if(userChoice === rock && compChoice === scissors){
+  } else if(userChoice === `rock` && compChoice === `scissors`){
     return `you win!`
-  } else if(userChoice === paper && compChoice === rock){
+  } else if(userChoice === `paper` && compChoice === `rock`){
     return `you win!`
-  } else if(userChoice === paper && compChoice === paper){
+  } else if(userChoice === `paper` && compChoice === `paper`){
     return `it's a tie`
   } else{
     return `you lose!`
   }
 
 }
-  game();
+  console.log(game(`scissors`));
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
