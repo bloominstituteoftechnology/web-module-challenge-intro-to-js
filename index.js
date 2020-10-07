@@ -17,6 +17,12 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = (18);
+
+if (votingAge > 18 || votingAge === 18){
+  console.log('True');
+}
+
 
 
 
@@ -31,6 +37,12 @@ Do the following:
    HINT: no function required
 */
 
+var age;
+var one = 17, two = 14;
+
+if (age === 17){
+  console.log('True');
+}
 
 
 
@@ -58,9 +70,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
+
+  console.log(multiply(5,4));
 
 
 
@@ -74,9 +88,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(num1){
+    return num1 * 7;
 }
+
+console.log(multiply(4));
 
 
 
@@ -107,9 +123,47 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if('age < 1' && 'weight < 5'){
+      return 'weight * .05';
+    }else if('age <1' && 'weight > 5' && 'weight > 10'){
+      return 'weight * .04';
+    }else if('age <1' && 'weight > 10' && 'weight > 15'){
+      return 'weight * .03';
+    }else if('age <1' && 'weight < 15'){
+      return 'weight * .02';
+    }else if('age >.33'){
+      return 'weight * .10';
+    }else if('age <.33' && 'age > .58'){
+      return 'weight * .05';
+    }else if('age <.58' && 'age > 1'){
+      return 'weight * .04';
+    }else{
+      console.log('Error')
+    }
   }
+
+  console.log('15', '1');
+
+  // function hungryDog(weight, age){
+  //   if('age < 1' && 'weight < 5'){
+  //     console.log(multiply('weight * .05'));
+  //   }else if('age <1' && 'weight > 5' && 'weight > 10'){
+  //     console.log(multiply('weight * .04'));
+  //   }else if('age <1' && 'weight > 10' && 'weight > 15'){
+  //     console.log(multiply('weight * .03'));
+  //   }else if('age <1' && 'weight < 15'){
+  //     console.log(multiply('weight * .02'));
+  //   }else if('age >.33'){
+  //     console.log(multiply('weight * .10'));
+  //   }else if('age <.33' && 'age > .58'){
+  //     console.log(multiply('weight * .05'));
+  //   }else if('age <.58' && 'age > 1'){
+  //     console.log(multiply('weight * .04'));
+  //   }else{
+  //     console.log('Error')
+  //   }
+  // }
 
 
 
@@ -196,11 +250,21 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(num){
+    if(num >= 90){
+      console.log('you got an A');
+    }else if(num >= 80 && num <= 90){
+      console.log('you got a B');
+    }else if(num >= 70 && num <= 80){
+      console.log('you got a C');
+    }else if(num >= 60 && num <= 70){
+      console.log('you got a D');
+    }else if(num >= 60){
+      console.log('you got an F');
+    }
   }
   
-  
+grade('85');
   
   
 
