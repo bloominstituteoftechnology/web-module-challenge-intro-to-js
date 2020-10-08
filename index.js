@@ -17,7 +17,16 @@ Do the following:
 
    HINT: no function required
 */
+/*let letTest = 'testing my let';
 
+console.log(letTest); */
+
+const votingAge = 18
+
+  if (votingAge > 18 || votingAge === 18) {
+
+    console.log(true);
+  }
 
 
 /*
@@ -31,6 +40,14 @@ Do the following:
    HINT: no function required
 */
 
+let num1 = 5; 
+let num2 = 7;
+
+
+if(num2 > num1){
+  console.log(num1 = num1 + num2);
+}
+  
 
 
 
@@ -45,6 +62,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+let stringYear = "1999";
+const integer = parseInt(stringYear, 10);
+console.log(integer);
 
 
 
@@ -57,10 +77,12 @@ Do the following:
    2. Receive the numbers in the parameters: a and b
    3. Multiply a and b and return the answer
 */
-
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+numA = 5, numB = 6;
+function multiply(numA, numB){
+    console.log(multiply);
+}
+   
+  /*Why won't this print? */
 
 
 
