@@ -184,20 +184,22 @@ function game(user, computer){
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return (km * .62)
   }
 
-
+console.log(miles(4))
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(feet){
+    return (feet * 30.48)
   }
+
+console.log(feet(3))
  
 
 
@@ -207,9 +209,13 @@ function feet(/*add your code here*/){
 // the function should take a starting number as an argument and count down - at each iteration it should return (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+    for (let i = number; i > 0; i--){
+      console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`)
+    }
   }
+
+console.log(annoyingSong(3))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -221,11 +227,25 @@ function annoyingSong(/*add your code here*/){
 //60s should be D 
 //and anything below 60 should be F
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+    if(score >= 90) {
+      return 'You got an A!'
+    }
+    else if(score < 90 && score >= 80) {
+      return 'You got a B!'
+    }
+    else if(score < 80 && score >= 70) {
+      return 'You got a C!'
+    }
+    else if(score < 70 && score >= 60) {
+      return 'You got a D :('
+    }
+    else {
+      return 'You failed RIP'
+    }
   }
   
-  
+console.log(grade(92)) 
   
   
 
