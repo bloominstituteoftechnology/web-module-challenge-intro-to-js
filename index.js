@@ -21,13 +21,11 @@ Do the following:
 
 console.log(letTest); */
 
-const votingAge = 18
+const votingAge = 18;
 
-  if (votingAge > 18 || votingAge === 18) {
-
-    console.log(true);
-  }
-
+if (votingAge > 18 || votingAge === 18) {
+  console.log(true);
+}
 
 /*
 Task 1b - Values
@@ -40,17 +38,12 @@ Do the following:
    HINT: no function required
 */
 
-let num1 = 5; 
+let num1 = 5;
 let num2 = 7;
 
-
-if(num2 > num1){
-  console.log(num1 = num1 + num2);
+if (num2 > num1) {
+  console.log((num1 = num1 + num2));
 }
-  
-
-
-
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -66,9 +59,6 @@ let stringYear = "1999";
 const integer = parseInt(stringYear, 10);
 console.log(integer);
 
-
-
-
 /*
 Task 1d - Multiply
  
@@ -77,14 +67,12 @@ Do the following:
    2. Receive the numbers in the parameters: a and b
    3. Multiply a and b and return the answer
 */
-numA = 5, numB = 6;
-function multiply(numA, numB){
-    console.log(multiply);
+(numA = 5), (numB = 6);
+function multiply(numA, numB) {
+  console.log(multiply);
 }
-   
-  /*Why won't this print? */
 
-
+/*Why won't this print? */
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -96,11 +84,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(/*add your code here*/) {
+  /*add your code here*/
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -127,13 +113,12 @@ Use the hungryDog function and feeding requirements below to do the following:
      7 - 12 months 4% of their body weight
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
+function hungryDog(/*add your code here*/) {
+  /*add your code here*/
+}
+//
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -149,16 +134,14 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(/*add your code here*/) {
+  /*add your code here*/
 }
-  
-  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Metric Converter 
-//Task 5a - KM to Miles 
+//Metric Converter
+//Task 5a - KM to Miles
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
@@ -166,11 +149,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
+function miles(/*add your code here*/) {
+  /*add your code here*/
+}
 
 //Task 5b - Feet to CM
 /*
@@ -180,11 +161,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
-
+function feet(/*add your code here*/) {
+  /*add your code here*/
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -196,10 +175,9 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
-
+function annoyingSong(/*add your code here*/) {
+  /*add your code here*/
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -215,14 +193,10 @@ Using the grade function below do the following:
    60-69 =  D 
    below 60 = F
 */
-  
-function grade(/*add your code here*/){
-    /*add your code here*/
-  }
-  
-  
-  
-  
+
+function grade(/*add your code here*/) {
+  /*add your code here*/
+}
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -236,28 +210,25 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
 function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+  /*add your code here*/
 }
-
-
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-    console.log('its working');
-    return 'bar';
+function foo() {
+  console.log("its working");
+  return "bar";
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+export default {
+  foo,
+  multiply,
+  dogYears,
+  hungryDog,
+  game,
+  miles,
+  feet,
+  annoyingSong,
+  grade,
+};
 //test test test//
