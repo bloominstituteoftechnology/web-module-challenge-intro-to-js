@@ -8,6 +8,13 @@ Task 1a: Do the following:
    HINT: no function required
 */
 
+let age = 20;
+
+  if (age < 18) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 
 
 /*
@@ -19,7 +26,12 @@ Task 1b: Do the following:
 
    HINT: no function required
 */
+let a = 15;
+let b = 10;
 
+if (b < 16) {
+  console.log(a + 5)
+}
 
 
 
