@@ -17,10 +17,9 @@ Do the following:
 
    HINT: no function required
 */
-var votingAge = 18
-if (votingAge => 22) {
-    console.log(true)
-}
+let votingAge = 22
+if (votingAge >= 18)
+    (console.log(true))
 
 
 
@@ -87,9 +86,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears( /*add your code here*/ ) {
-    /*add your code here*/
+function dogYears(myAge) {
+    return myAge * 7
 }
+console.log(dogYears(10))
 
 
 
@@ -120,9 +120,29 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */
 
-function hungryDog( /*add your code here*/ ) {
-    /*add your code here*/
+function hungryDog(weight, age) {
+    if (age >= 1) {
+        if (weight <= 5) {
+            return weight * .05;
+        } else if (weight <= 10) {
+            return weight * .04;
+        } else if (weight <= 15) {
+            return weight * .03;
+        } else {
+            return weight * .02;
+        }
+    }
+    if (age <= 4 / 12) {
+        return weight * .1;
+    } else if (age <= 7 / 12) {
+        return weight * .05;
+    } else {
+        return weight * .04;
+    }
 }
+
+console.log(hungryDog(1, 5))
+
 
 
 
@@ -145,9 +165,43 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer) {
-    /*add your code here*/
+var compChoice = Math.random();
+if (compChoice < .34) {
+    compChoice = 'rock';
+} else if (compChoice < .67) {
+    compChoice = 'paper';
+} else {
+    compChoice = 'scissors';
 }
+
+function game(choice, compChoice) {
+    if (choice === compChoice) {
+        return "it's a tie";
+    }
+    if (choice === 'scissors') {
+        if (compChoice === 'paper') {
+            return 'you win!';
+        } else {
+            return 'you lose!';
+        }
+    }
+    if (choice === 'paper') {
+        if (compChoice === 'rock') {
+            return 'you win!';
+        } else {
+            return 'you lose!';
+        }
+    }
+    if (choice === 'rock') {
+        if (compChoice === 'scissors') {
+            return 'you win!';
+        } else {
+            return 'you lose!';
+        }
+    }
+}
+
+console.log(game('paper'))
 
 
 
@@ -162,9 +216,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles( /*add your code here*/ ) {
-    /*add your code here*/
+function miles(km) {
+    return km * 0.621371
 }
+console.log(miles(10))
 
 
 
@@ -176,10 +231,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet( /*add your code here*/ ) {
-    /*add your code here*/
+function feet(cm) {
+    return (cm * 0.0328084)
 }
-
+console.log(feet(30))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -212,12 +267,21 @@ Using the grade function below do the following:
    below 60 = F
 */
 
-function grade( /*add your code here*/ ) {
-    /*add your code here*/
+function grade(score) {
+    if (score <= 60) {
+        return ("You got F");
+    } else if (score <= 69) {
+        return ('You got D');
+    } else if (score <= 79) {
+        return ('You got C');
+    } else if (score <= 89) {
+        return ('You got B');
+    }
+    if (score <= 90) {
+        return ('You got A');
+    }
 }
-
-
-
+console.log(grade(70));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -232,10 +296,26 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter( /*add your code here*/ ) {
-    /*add your code here*/
+function vowelCounter(string) {
+    let count = 0
+    for (let item = 0; item < string.length; item++) {
+        if (string[item].toLowerCase().includes("a")) {
+            count += 1;
+            // console.log(count);
+        } else if (string[item].toLowerCase().includes("e")) {
+            count += 1;
+            // console.log()
+        } else if (string[item].toLowerCase().includes("i")) {
+            count += 1;
+        } else if (string[item].toLowerCase().includes("o")) {
+            count += 1;
+        } else if (string[item].toLowerCase().includes("u")) {
+            count += 1;
+        }
+    }
+    return count
 }
+console.log(vowelCounter("This is so not easy to figure out on our own"));
 
 
 
