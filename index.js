@@ -240,7 +240,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number){
       for (let i = number; i > 0; i--){
-        return "5 bottles of soda on the wall, 5 bottles of soda, take one down pass it around 4 bottles of soda on the wall"  /* Had questions on ${number} instead of 5 */
+        return ((number) + " bottles of soda on the wall, " + (number) + " bottles of soda, take one down pass it around " + (number - 1) +  " bottles of soda on the wall")  /* Had questions on ${number} instead of 5 not${} just ()*/
       } 
   }
 
