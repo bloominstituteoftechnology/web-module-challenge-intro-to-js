@@ -26,7 +26,7 @@ const votingAge = 18;
 if (votingAge > 18 || votingAge === 18) {
   console.log(true);
 }
-
+console.log("hi");
 /*
 Task 1b - Values
 
@@ -59,7 +59,11 @@ let stringYear = "1999";
 const integer = parseInt(stringYear, 10);
 console.log(integer);
 
-/*
+const int2 = Number(stringYear);
+
+console.log(
+  int2
+); /*
 Task 1d - Multiply
  
 Do the following:   
@@ -67,11 +71,12 @@ Do the following:
    2. Receive the numbers in the parameters: a and b
    3. Multiply a and b and return the answer
 */
-(numA = 5), (numB = 6);
-function multiply(numA, numB) {
-  console.log(multiply);
+let numA = 5;
+let numB = 6;
+function multiply(a, b) {
+  return a * b;
 }
-
+console.log(multiply(numA, numB));
 /*Why won't this print? */
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -220,7 +225,7 @@ function foo() {
   return "bar";
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default {
+/*export default {
   foo,
   multiply,
   dogYears,
@@ -230,5 +235,5 @@ export default {
   feet,
   annoyingSong,
   grade,
-};
+};*/
 //test test test//
