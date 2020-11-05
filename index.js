@@ -17,8 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-var
-
+let votingAge = "Over 18";
+if(votingAge === "Over 18"){
+  console.log("Go out and Vote!");
+}else if( votingAge === "17 and Under"){
+  console.log("Not Ready to Vote")
+}
 
 /*
 Task 1b - Values
@@ -30,10 +34,9 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
-
+var coolio = "was the man";
+var coolio = "is no long the man";
+console.log(coolio);
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -45,11 +48,15 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
-
+function isIt(x){
+  if (Number.isInteger(1999)){
+    return "Its an Integer";
+  }return "It is Not!";
+}
+console.log(isIt(1999));
 
 /*
+
 Task 1d - Multiply
  
 Do the following:   
@@ -107,8 +114,9 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(food){
-    return 
+function hungryDog(lbsOfFood, dogAge){
+  for(let lbsOfFood = 0; 1 >= lbsOfFood <= 5 ; 6 >= lbsOfFood <= 10; 11 >= lbsOfFood <= 15; lbsOfFood >= 15);  
+
   }
 
 
@@ -133,8 +141,12 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
-}
+    user = Math.choice(user);
+    computer = Math.choice(computer);
+    return Math.floor(Math.random() * (computer - user) + user);
+}if(game => .33){console.log("You Win!");
+}else if
+
   
   
 
@@ -149,7 +161,7 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+  ( /*add your code here*/) => {
     /*add your code here*/
   }
 
