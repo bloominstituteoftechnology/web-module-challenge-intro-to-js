@@ -186,7 +186,7 @@ function game(user, computer){
       return "its a tie!"
     }
 
-}
+}  
   
   
 
