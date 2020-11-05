@@ -18,6 +18,11 @@ Do the following:
    HINT: no function required
 */
 
+var votingAge = 18;
+if(votingAge >= 18) {
+ console.log("true");
+}
+
 
 
 /*
@@ -31,7 +36,15 @@ Do the following:
    HINT: no function required
 */
 
+var v1 = 1;
+var v2 = 2;
 
+if (v1 > v2){
+  console.log(true);
+}
+else {
+  console.log(false)
+}
 
 
 
@@ -45,7 +58,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+var string = "1999";
+console.log (Number(string));
 
 
 
@@ -58,11 +72,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b
   }
 
-
+multiply(4,3)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -73,10 +87,12 @@ Do the following:
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
+let humanYears = 25
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears){
+    return humanYears * 7;
 }
+
 
 
 
@@ -107,8 +123,28 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(a, w){
+    if (a >= 1 && w <5) {
+      return w * .44999
+    }
+    if (a >= 1 && w >=6 && w <=10) {
+      return w * .04
+    }
+    if (a >= 1 && w >=11 && w <=15) {
+      return w * .03
+    }
+    if (a >= 1 && w > 15) {
+      return w * .02
+    }
+    if (a < .33) {
+      return w * .1
+    }
+    if (a >= .33 && a <= .58) {
+      return w * .05
+    }
+    if (age >= .58) {
+      return w * .04
+    }
   }
 
 
@@ -128,9 +164,28 @@ Use the game function below to do the following:
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
+let computer = Math.random();
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(user, computer){
+    if (computer < 0.33) {
+      computer = "rock";
+    }
+    else if(computer < 0.66) {
+      computer = "paper";
+    }
+    else if (computer<=1) {
+      computer = "scissors";
+    }
+    if (user === "rock"  && computer === "scissors" || user === "paper" && computer === "rock" || user === "scissors" && computer === "paper") {
+      return "you win!"
+    } else if 
+    (computer === "rock" && user === "scissors" || computer === "scissors" && user === "paper" ||computer === "paper" && user === "rock") {
+      return "you lose!"
+    } else if
+    (user === "rock" && computer === "rock" || user === "paper" && computer === "paper" || user === "scissors" && computer === "scissors") {
+      return "its a tie!"
+    }
+
 }
   
   
@@ -146,9 +201,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km){
+    return km * 0.621371
+}
 
 
 
@@ -160,8 +215,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48
   }
  
 
@@ -176,8 +231,9 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+        for (let i = number; i > 0; i)
+        return i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + (i - 1) + " bottles of soda on the wall"
   }
 
 
