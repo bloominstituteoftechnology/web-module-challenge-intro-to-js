@@ -117,24 +117,22 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(w, a){
-    if(a >= 1 && w <= 5){
-      return w * .05;
-    }
-    if(a >= 1 && 6 <= w <= 10){
-      return w * .04;
-    }
-    if(age >= 1 && weight >= 11 && weight <= 15){
-      return weight * .03
-    } if(age >= 1 && weight >= 15){
-      return weight * .04
-    } if(age <=.99 && age >.583){
-      return weight * .04
-    } if(age <=.582 && age >= .333){
-      return weight * .05
-    } if(age <=.332 && age >= .166){
-      return weight * .1
-    }
+  if(a >= 1 && w <= 5){
+    return w * .05
+  } if(a >= 1 && w >= 6 && w <= 10){
+    return w * .04
+  } if(a >= 1 && w >= 11 && w <= 15){
+    return w * .03
+  } if(a >= 1 && w > 15){
+    return w * .02
+  } if(a <=.99 && a >.583){
+    return w * .04
+  } if(a <=.582 && a >= .333){
+    return w * .05
+  } if(a <=.332 && a >= .166){
+    return w * .1
   }
+}
 
 
 
