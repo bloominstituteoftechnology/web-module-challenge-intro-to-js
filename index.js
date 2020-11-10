@@ -14,11 +14,14 @@ Task 1a - Voting Age
 Do the following:   
    1. Make a variable called votingAge and give it a value
    2. Return true if age is 18 or higher
+   
 
    HINT: no function required
 */
-
-
+let votingAge = prompt("What is your age?");
+if (votingAge >= 18) {
+  alert("True");
+}
 
 /*
 Task 1b - Values
@@ -27,13 +30,17 @@ Do the following:
    1. Declare two variables and assign them values
    2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
    3. Return the new value of the 1st variable
+ 
+
 
    HINT: no function required
 */
-
-
-
-
+let var1 = 1;
+let var2 = 2;
+if (var1 <= var2) {
+  let var1 = 2;
+  console.log(var1);
+}
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -45,9 +52,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
-
+var text = "42px";
+var integer = parseInt(text, 10);
+console.log(text);
 
 /*
 Task 1d - Multiply
@@ -58,11 +65,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
+function multiply(a, b) {
+  console.log(a * b);
+}
+multiply(3, 4);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -74,11 +80,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(dog) {
+  let AGE = dog * 7;
+  console.log(AGE);
 }
-
-
+dogYears(10);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -105,13 +111,45 @@ Use the hungryDog function and feeding requirements below to do the following:
      7 - 12 months 4% of their body weight
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age) {
+  if (age >= 1) {
+    if (weight <= 5)
+      alert(
+        "You should feed your dog " + 0.05 * weight + "lbs of food per day"
+      );
+
+    if (weight >= 6 && weight <= 10)
+      alert(
+        "You should feed your dog " + 0.04 * weight + "lbs of food per day"
+      );
+
+    if (weight >= 11 && weight <= 15)
+      alert(
+        "You should feed your dog " + 0.03 * weight + "ibs of food per day"
+      );
+
+    if (weight > 15) {
+      alert(
+        "You should feed your dog " + 0.02 * weight + "lbs of food per day"
+      );
+    } else if (age <= 11 / 12) {
+      if (age >= 1 / 6 && age < 1 / 3)
+        alert(
+          "You should feed your dog " + 0.1 * weight + "lbs of food per day"
+        );
+      else if (age >= 1 / 3 && age < 7 / 12)
+        alert(
+          "You should feed your dog " + 0.05 * weight + "lbs of food per day"
+        );
+      else age >= 7 / 12 && age < 11 / 12;
+      alert(
+        "You should feed your dog " + 0.04 * weight + "lbs of food per day"
+      );
+    }
   }
-
-
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -132,16 +170,69 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-    /*add your code here*/
+function game(user, computer) {
+  user = prompt("rock paper or scissors?");
+  let scissors = 1;
+  let rock = 2;
+  let paper = 3;
+  let Scissors = 1;
+  let Rock = 2;
+  let Raper = 3;
+  computer = Math.floor(Math.random() * 3) + 1;
+
+  if (
+    (computer === scissors && user === "rock") ||
+    (computer === scissors && user === "Rock")
+  )
+    alert("You chose Rock and the Computer chose Scissors! You Win!");
+  else if (
+    (computer === scissors && user === "paper") ||
+    (computer === scissors && user === "Paper")
+  )
+    alert("You chose paper and the Computer chose scissors! You lose!");
+  else if (
+    (computer === scissors && user === "scissors") ||
+    (computer === scissors && user === "Scissors")
+  )
+    alert("You chose scissors and the Computer chose Scissors! Tie Game!");
+  else if (
+    (computer === rock && user === "rock") ||
+    (computer === rock && user === "Rock")
+  )
+    alert("You chose Rock and the Computer chose rock! Tie Game!");
+  else if (
+    (computer === rock && user === "scissors") ||
+    (computer === rock && user === "Scissors")
+  )
+    alert("You chose scissors and the Computer chose rock! You lose!");
+  else if (
+    (computer === rock && user === "paper") ||
+    (computer === rock && user === "Paper")
+  )
+    alert("You chose paper and the Computer chose rock! You win!");
+  else if (
+    (computer === paper && user === "rock") ||
+    (computer === paper && user === "Rock")
+  )
+    alert("You chose Rock and the Computer chose paper! You lose!");
+  else if (
+    (computer === paper && user === "paper") ||
+    (computer === paper && user === "Paper")
+  )
+    alert("You chose paper and the Computer chose paper! Tie Game!");
+  else if (
+    (computer === paper && user === "scissors") ||
+    (computer === paper && user === "Scissors")
+  )
+    alert("You chose scissors and the Computer chose rock! You lose!");
 }
-  
-  
+game();
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Metric Converter 
-//Task 5a - KM to Miles 
+//Metric Converter
+//Metric Converter
+//Task 5a - KM to Miles
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
@@ -149,11 +240,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
+function miles(kilo) {
+  let answer = kilo * 0.6214;
+  alert(kilo + " kilomters equals " + answer + " miles");
+  /*add your code here*/
+}
+miles();
 
 //Task 5b - Feet to CM
 /*
@@ -163,11 +255,13 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
-
+function feet(CM) {
+  CM2 = CM * 1.000000032;
+  let answer = CM2 * 0.0328084;
+  alert(CM + " centimeters equlas " + answer + " feet");
+  /*add your code here*/
+}
+feet();
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -179,10 +273,22 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(i) {
+  for (let j = i; j > 0; j--) {
+    if (i > 0) {
+      console.log(
+        j +
+          " bottles of beer on the wall, " +
+          j +
+          " bottles of beer, take one down pass it around " +
+          j +
+          " left over bottles of beer on the wall"
+      );
+    } else {
+      console.log("No more bottles of beer on the wall");
+    }
   }
-
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -198,14 +304,14 @@ Using the grade function below do the following:
    60-69 =  D 
    below 60 = F
 */
-  
-function grade(/*add your code here*/){
-    /*add your code here*/
-  }
-  
-  
-  
-  
+
+function grade(score) {
+  if (score <= 100 && score >= 90) alert("Great job smart ass, you got an A");
+  if (score <= 89 && score >= 80) alert("Great job smart ass, you got a B");
+  if (score <= 79 && score >= 70) alert("Great job dumbass, you got a C");
+  if (score <= 69 && score >= 60) alert("Great job dumbass, you got an D");
+  if (score < 60) alert("Drop out, sell drugs. You ain't gonna make it champ");
+}
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -219,27 +325,24 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
 function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+  /*add your code here*/
 }
-
-
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-    console.log('its working');
-    return 'bar';
+function foo() {
+  console.log("its working");
+  return "bar";
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+export default {
+  foo,
+  multiply,
+  dogYears,
+  hungryDog,
+  game,
+  miles,
+  feet,
+  annoyingSong,
+  grade,
+};
