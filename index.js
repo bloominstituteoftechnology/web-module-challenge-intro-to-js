@@ -114,10 +114,8 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(lbsOfFood, dogAge){
-  for(let lbsOfFood = 0; 1 >= lbsOfFood <= 5 ; 6 >= lbsOfFood <= 10; 11 >= lbsOfFood <= 15; lbsOfFood >= 15);  
-
-  }
+//function hungryDog(lbsOfFood, dogAge){
+  //let lbsOfFood()
 
 
 
@@ -139,16 +137,26 @@ Use the game function below to do the following:
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
+  let handThrows = ["rock", "paper", "sissors"];
+  let eachRound = 0;
 
 function game(user, computer){
-    user = Math.choice(user);
-    computer = Math.choice(computer);
-    return Math.floor(Math.random() * (computer - user) + user);
-}if(game => .33){console.log("You Win!");
-}else if
+  if(user === "rock" && computer === "sissors" || user === "sissors" && computer ==="paper" || user === "rock" && computer === "scissors"){
+    return "You Win!";
+  }else if(user === "paper" && computer === "sissors" || user === "sissors" && computer === "rock" || user === "rock" && computer === "paper"){
+    return "You Lose!";
+  } else{ return "Its A Tie";
+} 
 
-  
-  
+function computerTurn(){
+  let randomThrow = Math.floor(Math.random()*handThrows.length);
+  return handThrows[randomThrow]
+}
+const user = prompt("Paper", "Rock", "Sissors");
+const computer = computerTurn;
+console.log(`computer threw "${computer}"`);
+const consoleGame = game(user, computer);
+console.log(consoleGame);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -157,13 +165,13 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
-  2. Convert the number of kiolmeters received to miles
+  2. Convert the number of kilometers received to miles
   3. Return the number of miles
 */
 
-  ( /*add your code here*/) => {
+
     /*add your code here*/
-  }
+
 
 
 
@@ -191,10 +199,13 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(num){
+  let startingNum = num;
+  for(startingNum ; startingNum >= 0; startingNum--){
+    return "string number of bottles";
   }
-
+  }
+console.log(annoyingSong(10));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
