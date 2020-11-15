@@ -17,10 +17,18 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 19 
 
+if (votingAge > 18)  {
+  console.log(true);
 
+}
+else {
 
-/*
+  console.log(false);
+
+}
+ /*
 Task 1b - Values
 
 Do the following:   
@@ -31,6 +39,18 @@ Do the following:
    HINT: no function required
 */
 
+var num1 = 1;
+var num2 = 2;
+
+if (num1 + num2)  {
+  var total = num1 + num2;
+
+}
+else {
+
+  console.log(false);
+
+}
 
 
 
