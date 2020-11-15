@@ -14,11 +14,13 @@ Task 1a - Voting Age
 Do the following:   
    1. Make a variable called votingAge and give it a value
    2. Return true if age is 18 or higher
-
+      
    HINT: no function required
 */
-
-
+const age = 19;
+if (age >= 18) {
+  return true
+}
 
 /*
 Task 1b - Values
@@ -28,9 +30,19 @@ Do the following:
    2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
    3. Return the new value of the 1st variable
 
+    var a = 5;
+
+    var b = 7;
+
+        var
+
    HINT: no function required
 */
+var LMAO = 69;
+var Balls = 420;
 
+
+if (LMAO < BALLS) { LMAO == BALLS }
 
 
 
@@ -46,7 +58,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+var date = '1999';
+Number(date)
+return (date)
 
 
 /*
@@ -58,9 +72,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply(a, b) {
+
+  return (a * b)
+}
 
 
 
@@ -74,8 +89,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age) {
+  return (age * 7)
 }
 
 
@@ -105,13 +120,36 @@ Use the hungryDog function and feeding requirements below to do the following:
      7 - 12 months 4% of their body weight
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(age, weight)
+if (age > 1) {
+  if (age <= .33)
+    return (weight * 0.1)
+}
+else if ((age > .33) && (age < .58)) {
+  return (weight * 0.05)
+}
+else if ((age > .58) && (age < 1)) {
+  return (weight * 0.04)
+}
+if (age > 1) {
+  if (age >= 1) {
+    if (weight <= 5) {
+      return (weight * 0.005)
+    }
+    else if ((wieght >= 5) && (weight <= 10)) {
+      return (weight * 0.04)
+    }
+    else if ((weight > 10) && (weight <= 15)) {
+      return (weight * 0.03)
+
+        else if (weight > 15); {
+        return (weight * 0.02)
+      }
+    }
   }
-
-
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -119,7 +157,7 @@ function hungryDog(/*add your code here*/){
 /*
 Create a global variable that randomly generates the computer's choice
 Use Math.random to determine the computers choice (Math.random gives a random number between 0 and 1)
-
+ 
 Use the game function below to do the following:
   1. Receive 2 parameters the user's choice and the computer's choice
   2. Return whether the user won, lost, or tied based on these rules of the game described below
@@ -132,11 +170,11 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-    /*add your code here*/
+function game(user, computer) {
+  /*add your code here*/
 }
-  
-  
+
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -149,9 +187,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(/*add your code here*/) {
+  /*add your code here*/
+}
 
 
 
@@ -163,10 +201,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
+function feet(/*add your code here*/) {
+  /*add your code here*/
+}
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -179,9 +217,9 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(/*add your code here*/) {
+  /*add your code here*/
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -191,21 +229,21 @@ function annoyingSong(/*add your code here*/){
 Using the grade function below do the following: 
   1. Receive a score out of 100 
   2. Return the corresponding letter grade following this grade scale:
-
+ 
    90-100 = A 
    80-89 = B 
    70-79 = C 
    60-69 =  D 
    below 60 = F
 */
-  
-function grade(/*add your code here*/){
-    /*add your code here*/
-  }
-  
-  
-  
-  
+
+function grade(/*add your code here*/) {
+  /*add your code here*/
+}
+
+
+
+
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -214,32 +252,32 @@ function grade(/*add your code here*/){
 Using the vowelCounter function below do the following:
   1. Receive a string as a parameter
   2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
-
+ 
   HINT - you may need to study tomorrow's content on arrays 
   HINT - try looking up the .includes() method
 */
 
 
 function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+  /*add your code here*/
 }
 
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-    console.log('its working');
-    return 'bar';
+function foo() {
+  console.log('its working');
+  return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
+export default {
+  foo,
+  multiply,
+  dogYears,
+  hungryDog,
+  game,
+  miles,
+  feet,
+  annoyingSong,
+  grade
 }
