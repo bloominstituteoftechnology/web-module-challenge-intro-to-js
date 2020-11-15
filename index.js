@@ -146,9 +146,36 @@ Use the game function below to do the following:
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
+let computer = Math.floor(Math.random()*3);
 
 function game(user, computer){
     /*add your code here*/
+    // 0 = rock, 1 = paper, 2 = scissors
+    let user = string.toLowerCase(user);
+    if(user === "scissors" && computer === 0){
+      return "you lose!";
+    }else if( user === "scissors" && computer === 1){
+      return "you win!";
+
+    }else if(user === "scissors" && computer === 2){
+      return "it's a tie";
+    }else if(user === "paper" && computer === 0){
+      return "you win!";
+    }else if(user === "paper" && computer === 1){
+      return "it's a tie";
+    }else if(user === "paper" && computer === 2){
+      return "you lose!";
+    }else if(user === "rock" && computer === 0){
+      return "it's a tie";
+    }else if(user === "rock" && computer === 1){
+      return "you lose!";
+    }else if(user === "rock" && computer === 2){
+      return "you win!";
+    }else{
+      return "Invalid Entry"
+    }
+
+    
 }
   
   
@@ -164,8 +191,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kilometers){
     /*add your code here*/
+    let kToMiles = kilometers * 0.621371;
+    return kToMiles;
   }
 
 
@@ -178,8 +207,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(centimeters){
     /*add your code here*/
+    let cmToFeet = centimeters * 0.0328084;
+    return cmToFeet;
   }
  
 
@@ -194,8 +225,13 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
+function annoyingSong(bottles){
         /*add your code here*/
+        while(bottles > 0){
+          let songLyric = `${bottles} bottles of soda on the wall, ${bottles}  bottles of soda, take one down pass it around ${bottles--} bottles of soda on the wall`;
+          bottles--;
+          return songLyric;
+        }
   }
 
 
