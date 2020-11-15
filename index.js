@@ -228,7 +228,7 @@ Using the annoyingSong function below do the following:
 function annoyingSong(bottles){
         /*add your code here*/
         while(bottles > 0){
-          let songLyric = `${bottles} bottles of soda on the wall, ${bottles}  bottles of soda, take one down pass it around ${bottles--} bottles of soda on the wall`;
+          let songLyric = `${bottles} bottles of soda on the wall, ${bottles}  bottles of soda, take one down pass it around ${--bottles} bottles of soda on the wall`;
           bottles--;
           return songLyric;
         }
@@ -250,8 +250,20 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
+function grade(grade){
     /*add your code here*/
+    if(grade < 60){
+      return "F";
+    }else if(grade >= 60 && grade <= 69){
+      return "D";
+    }else if(grade >= 70 && grade <= 79){
+      return "C";
+    }else if(grade >= 80 && grade <= 89){
+      return "B";
+    }else if(grade >= 90 && grade <= 100){
+      return "A";
+    }
+      
   }
   
   
