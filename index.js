@@ -20,12 +20,11 @@ Do the following:
 let votingAge = 18;
 
 if (votingAge >= 18) {
-  console.log("true");
+  console.log(true);
 } else {
-  console.log("false");
+  console.log(false);
 }
 
-return votingAge;
 
 
 /*
@@ -38,6 +37,10 @@ Do the following:
 
    HINT: no function required
 */
+let x = 100
+
+let y = 200
+
 
 
 
