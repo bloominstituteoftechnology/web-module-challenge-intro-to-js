@@ -18,11 +18,11 @@ Do the following:
    HINT: no function required
 */
 
-var votingAge = 18;
+let votingAge = 18;
 if (votingAge >= 18){
-  return 'True';
+  console.log( 'True');
 }else{
-  return 'False';
+  console.log('False');
 }
 
 /*
@@ -36,12 +36,12 @@ Do the following:
    HINT: no function required
 */
 
-let num1 = 1;
-let num2 = 2;
-if(num1 < num2){
-  let num1 = num1 + 2;
-  return num1;
-}
+// let num1 = 1;
+// let num2 = 2;
+// if(num1 < num2){
+//   let num1 = num1 + 2;
+//   return num1;
+// }
 
 
 
@@ -122,24 +122,26 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight, years){
-  if (year < 1) {
-    if (years <= .3333) {
+  if (years < 1) {
+    if (years <= .3) {
       return weight * .1;
-    }else if (years <= .6666) {
+    }else if (years <= .6) {
       return weight * .05;
     }else {
       return weight * .04;
     }
   }
-  if (year > 1) {
+  if (years > 1) {
     if (weight <= 5) {
       return weight * .05;
     }else if (weight >= 6) {
       return weight * .04;
-    }else if (weight >= 11 || weight <= 15) {
+    }else if (weight >= 11 ) {
       return weight * .03;
-    }else{
+    }else if (weight > 15){
       return weight * .02;
+    }else{
+      console.log('yay');
     }
   }
 }
@@ -167,38 +169,39 @@ Use the game function below to do the following:
 
 
 
+let computer = Math.random(); 
 function game(user, computer){
-    //Setting computers rolls
-  let computer = Math.random(); 
-  if (computer <= .3333){
+
+  //Setting computers rolls
+  if (computer <= .3){
       computer = 'rock';
-    }else if (computer <= .6666){
-      computer = 'paper'
+    }else if (computer <= .6){
+      computer = 'paper';
     }else (computer = 'scissors')
 
     // checking user input
     if (user === computer){
-      return 'You tied'
+      return "it's a tie";
     }else if (user === 'rock'){
       if (computer === 'paper'){
-        return 'You lost'
+        return 'you lose!';
       }else if (computer === 'scissors'){
-        return 'You won'
+        return 'you win!';
       }
     }else if (user === 'paper'){
       if (computer === 'rock'){
-        return 'You won'
+        return 'you win!';
       }else if (computer === 'scissors'){
-        return 'You lost'
+        return 'you lose!';
       }
     }else if (user === 'scissors'){
       if (computer === 'rock'){
-        return 'You lost'
+        return 'you lose!';
       }else if (computer === 'paper'){
-        return 'You won'
+        return 'you win!';
       }
     }else{
-      return 'please enter rock, paper, or scissors'
+      return 'please enter rock, paper, or scissors';
     }
     console.log(game(user,computer));
 }
@@ -217,7 +220,7 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-    let mile = kilometers % 1.609;
+    let mile = kilometers * 0.621371;
     return `${kilometers} km is ${mile} miles.`;
   }
 
@@ -232,7 +235,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-    let feet = cm % 30.48;
+    let feet = cm / 30.48;
     return `${cm} cm is ${feet} feet.`
   }
  
@@ -250,8 +253,8 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(i){
       let num = prompt('Enter a number',99);
-      for(i = num; num === 0; num--){
-        return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num - 1} bottles of soda on the wall`;
+      for(i = num; i < 1; i--){
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
       }
   }
 
@@ -272,16 +275,16 @@ Using the grade function below do the following:
 */
   
 function grade(score){
-  if (score >= 90 || score <= 100){
-    return 'You got an A :)';
-  }else if (score >= 80 || score <= 89){
-    return 'You got a B :O';
-  }else if (score >= 70 || score <= 79){
-    return 'You got a C :|';
-  }else if (score >= 60 || score <= 69){
-    return 'You got a D :/';
+  if (score >= 90){
+    return 'You got an A';
+  }else if (score >= 80){
+    return 'You got a B';
+  }else if (score >= 70){
+    return 'You got a C';
+  }else if (score >= 60){
+    return 'You got a D';
   }else {
-    return 'You got a F :x';
+    return 'You got a F';
   }
 }
   
