@@ -164,10 +164,10 @@ Use the game function below to do the following:
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
+const compChoice = Math.random();
 
 function game(user, computer) {
   const userChoice = 'Rock' || user = 'Paper' || user = 'Scissors'; 
-  const compChoice = Math.random();
   if (compChoice <= 0.33) {
     return 'Rock';
   } else if (compChoice <= 0.67) {
@@ -211,7 +211,7 @@ function feet(centimeters){
       return(centimeters * 0.0328084);
     }
   }
-console.log(feet(Math.random()*100));
+console.log(feet(Math.random()*1000));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -224,9 +224,10 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(number){
+for (let i = 0; i < 100; i--){
+
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -243,13 +244,21 @@ Using the grade function below do the following:
    60-69 =  D 
    below 60 = F
 */
-  
-function grade(/*add your code here*/){
-    /*add your code here*/
+
+function grade(percentage){
+  if (percentage >= 90) {
+    console.log("A");
+  } else if (percentage >= 80) {
+    console.log("B");
+  } else if (percentage >= 70) {
+    console.log("C");
+  } else if (percentage >= 60) {
+    console.log("D");
+  } else if (percentage < 60)
+    console.log("F");
   }
-  
-  
-  
+
+console.log(grade(Math.random()*100));
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
