@@ -66,8 +66,20 @@ describe('annoyingSongFunction', ()=>{
     })
 });
 describe('gradeFunction', ()=>{
-    it('return letter grade based on number', ()=>{
-        expect(functions.grade(85)).toBe('you got a B');
+    it('expect A', ()=>{
+        expect(functions.grade(90)).toBe('you got an A');
+    })
+    it('expect B', ()=>{
+        expect(functions.grade(80)).toBe('you got a B');
+    })
+    it('expect C', ()=>{
+        expect(functions.grade(70)).toBe('you got a C');
+    })
+    it('expect D', ()=>{
+        expect(functions.grade(60)).toBe('you got a D');
+    })
+    it('expect F', ()=>{
+        expect(functions.grade(59)).toBe('you got an F');
     })
 });
 

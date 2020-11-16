@@ -201,11 +201,21 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(num){
+    if(num < 100 && num >= 90){
+      return 'you got an A';
+    }else if(num <90 && num >= 80){
+      return 'you got a B';
+    }else if(num < 80 && num >= 70){
+      return 'you got a C';
+    }else if(num < 70 && num >= 60){
+      return 'you got a D';
+    }else if(num < 60){
+      return 'you got an F';
+    }
   }
   
-  
+  console.log('grade function', grade(85));
   
   
 
@@ -230,7 +240,7 @@ function vowelCounter(/*add your code here*/) {
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
-    console.log('its working');
+    //console.log('its working');
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
