@@ -215,12 +215,6 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function dogYears(age) {
-  return age * 7;
-}
-
-dogYears(7)
-
 function miles(kilometers){
   if (kilometers > 0) {
     return(kilometers * 0.621371);
@@ -239,7 +233,7 @@ Using the feet function below do the following:
 
 function feet(centimeters){
     if (centimeters > 0) {
-      return(centimeters * 0.0328084);
+      return(centimeters / 30.48);
     }
   }
 console.log(feet(Math.random()*1000));
@@ -256,10 +250,12 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(number){
-// for (let i = 0; i < 100; i--){
-
-// }
+if (number > 0) {
+  return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall`;
+  }
 }
+
+console.log(annoyingSong(5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -279,15 +275,15 @@ Using the grade function below do the following:
 
 function grade(percentage){
   if (percentage >= 90) {
-    console.log("A");
+    return 'you got an A';
   } else if (percentage >= 80) {
-    console.log("B");
+    return 'you got a B';
   } else if (percentage >= 70) {
-    console.log("C");
+    return 'you got a C';
   } else if (percentage >= 60) {
-    console.log("D");
-  } else if (percentage < 60) {
-    console.log("F");
+    return 'you got a D';
+  } else {
+    return 'you got a F';
   }
 }
 
