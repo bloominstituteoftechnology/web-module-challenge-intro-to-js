@@ -37,9 +37,13 @@ Do the following:
 
    HINT: no function required
 */
-let x = 100
+let x = 100;
 
-let y = 200
+let y = 200;
+
+if (x < y) {
+  x = 300;
+} 
 
 
 
@@ -56,7 +60,11 @@ Do the following:
 
    HINT: look up the Number method
 */
+const bornYear = "1999";
 
+const yearBorn = Number(bornYear);
+
+console.log(yearBorn);
 
 
 
@@ -69,9 +77,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    const c = a * b;
+    console.log(c)
   }
+
+  multiply(7, 7);
 
 
 
