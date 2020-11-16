@@ -165,30 +165,18 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(computer, user){
-  const compRandom = Math.random(2);
-  const userRandom = Math.random(2);
-    if (compRandom < 0.3) { console.log("Rock") }
-    if (compRandom > 0.3 && compRandom < 0.6) { console.log("Paper") }
-    if (compRandom > 0.6) { console.log("Scissors") }
-    if (userRandom < 0.3) { console.log("Rock") }
-    if (userRandom > 0.3 && userRandom < 0.6) { console.log("Paper") }
-    if (userRandom > 0.6) { console.log("Scissors") }
-  
-    if (compRandom < 0.3 && userRandom > 0.3 && userRandom < 0.6) { console.log("You win!") }
-    if (compRandom > 0.3 && compRandom < 0.6 && userRandom > 0.6) { console.log("You win!") }
-    if (compRandom > 0.6 && userRandom < 0.3) { console.log("You win!") }
-
-    if (userRandom < 0.3 && compRandom > 0.3 && compRandom < 0.6) { console.log("You lose!") }
-    if (userRandom > 0.3 && userRandom < 0.6 && compRandom > 0.6) { console.log("You lose!") }
-    if (userRandom > 0.6 && compRandom < 0.3) { console.log("You lose!") }
-  
-    if (compRandom === "Rock" && userRandom === "Rock") { console.log("It's a tie!") }
-    if (compRandom === "Paper" && userRandom === "Paper") { console.log("It's a tie!") }
-    if (compRandom === "Scissors" && userRandom === "Scissors") { console.log("It's a tie!") }
+function game(user, computer) {
+  const userChoice = 'Rock' || user = 'Paper' || user = 'Scissors'; 
+  const compChoice = Math.random();
+  if (compChoice <= 0.33) {
+    return 'Rock';
+  } else if (compChoice <= 0.67) {
+    return 'Paper';
+  } else (compChoice > 0.67)
+    return 'Scissors';
 }
 
-console.log(game())
+game();
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -202,11 +190,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(kilometers, miles){
-  if ()
-    /*add your code here*/
+function miles(kilometers){
+  if (kilometers > 0) {
+    return(kilometers * 0.621371);
   }
-
+}
+console.log(miles(Math.random()*100));
 
 
 //Task 5b - Feet to CM
