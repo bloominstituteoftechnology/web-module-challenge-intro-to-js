@@ -133,18 +133,18 @@ function hungryDog(weight, age) {
   } else if (age >= 1 && weight >= 15) {
       console.log(weight * 0.02);
 
-  } else if (age > (0.1667), age <= (0.3333)) {
+  } else if (age > 0.1667, age <= 0.3333) {
       console.log(weight * 0.10);
 
-  } else if (age > (0.3333), age <= (0.5833)) {
+  } else if (age > 0.3333, age <= 0.5833) {
       console.log(weight * 0.05);
       
   } else {
-    (age > (0.5833), age < 1)
+    (age > 0.5833, age < 1)
       console.log(weight * 0.04);
   }
 }
-hungryDog(15, 1)
+console.log(hungryDog(15, 1))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -165,11 +165,31 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-    /*add your code here*/
+function game(computer, user){
+  const compRandom = Math.random(2);
+  const userRandom = Math.random(2);
+    if (compRandom < 0.3) { console.log("Rock") }
+    if (compRandom > 0.3 && compRandom < 0.6) { console.log("Paper") }
+    if (compRandom > 0.6) { console.log("Scissors") }
+    if (userRandom < 0.3) { console.log("Rock") }
+    if (userRandom > 0.3 && userRandom < 0.6) { console.log("Paper") }
+    if (userRandom > 0.6) { console.log("Scissors") }
+  
+    if (compRandom < 0.3 && userRandom > 0.3 && userRandom < 0.6) { console.log("You win!") }
+    if (compRandom > 0.3 && compRandom < 0.6 && userRandom > 0.6) { console.log("You win!") }
+    if (compRandom > 0.6 && userRandom < 0.3) { console.log("You win!") }
+
+    if (userRandom < 0.3 && compRandom > 0.3 && compRandom < 0.6) { console.log("You lose!") }
+    if (userRandom > 0.3 && userRandom < 0.6 && compRandom > 0.6) { console.log("You lose!") }
+    if (userRandom > 0.6 && compRandom < 0.3) { console.log("You lose!") }
+  
+    if (compRandom === "Rock" && userRandom === "Rock") { console.log("It's a tie!") }
+    if (compRandom === "Paper" && userRandom === "Paper") { console.log("It's a tie!") }
+    if (compRandom === "Scissors" && userRandom === "Scissors") { console.log("It's a tie!") }
 }
-  
-  
+
+console.log(game())
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -182,7 +202,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kilometers, miles){
+  if ()
     /*add your code here*/
   }
 
