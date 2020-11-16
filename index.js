@@ -121,31 +121,30 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(weight, years){
-  if (years < 1) {
-    if (years <= .3) {
-      return weight * .1;
-    }else if (years <= .6) {
-      return weight * .05;
-    }else {
-      return weight * .04;
+function hungryDog(age, weight){
+  if (age < 1) {
+    if (age <= .3333){
+      return weight * 0.1
+    }else if (age > .3333 && age <= .5777) {
+      return weight * .05
+    }else if (age > .5777 && age < 1){
+      return weight * .04
+    }
+  }else if (age >= 1) {
+      if (weight <= 5) {
+        return weight * .05
+      }
+      else if (weight >= 5 && weight <= 10) {
+        return weight * .04
+      }
+      else if (weight > 10 && weight <= 15){
+        return weight * .03
+      }
+      else {
+        return weight * .02
+      }
     }
   }
-  if (years > 1) {
-    if (weight <= 5) {
-      return weight * .05;
-    }else if (weight >= 6) {
-      return weight * .04;
-    }else if (weight >= 11 ) {
-      return weight * .03;
-    }else if (weight > 15){
-      return weight * .02;
-    }else{
-      console.log('yay');
-    }
-  }
-}
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -177,11 +176,14 @@ function game(user, computer){
       computer = 'rock';
     }else if (computer <= .6){
       computer = 'paper';
-    }else (computer = 'scissors')
+    }else {
+      computer = 'scissors';
+    }
 
     // checking user input
+  // let user = user.toString();
     if (user === computer){
-      return "it's a tie";
+      return "it's a tie"
     }else if (user === 'rock'){
       if (computer === 'paper'){
         return 'you lose!';
@@ -203,9 +205,9 @@ function game(user, computer){
     }else{
       return 'please enter rock, paper, or scissors';
     }
-    console.log(game(user,computer));
+    // console.log(game(user,computer));
 }
-  
+
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -251,13 +253,15 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(i){
-      let num = prompt('Enter a number',99);
-      for(i = num; i < 1; i--){
-        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
-      }
+function annoyingSong(){
+  for (let i = prompt('Enter bottles to count from', 99); i >= 1; i--){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
   }
+}
 
+
+
+  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
