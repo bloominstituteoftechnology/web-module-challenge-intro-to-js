@@ -206,10 +206,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(centimeters){
+    if (centimeters > 0) {
+      return(centimeters * 0.0328084);
+    }
   }
- 
+console.log(feet(Math.random()*100));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
