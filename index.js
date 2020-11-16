@@ -68,12 +68,12 @@ Do the following:
    2. Receive the numbers in the parameters: a and b
    3. Multiply a and b and return the answer
 */
-const a = 7;
-const b = 14;
 
-function multiply() {
+function multiply(a, b) {
   return a * b;
 }
+
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -85,9 +85,7 @@ Do the following:
    3. Return the newly calculated age
 */
 
-const age = 20;
-
-function dogYears() {
+function dogYears(age) {
   return age * 7;
 }
 
@@ -122,26 +120,26 @@ Use the hungryDog function and feeding requirements below to do the following:
 
 function hungryDog(weight, age) {
   if (age >= 1 && weight <= 5) {
-      console.log(weight * 0.05);
+      return weight * 0.05;
 
   } else if (age >= 1 && weight >= 6, weight <= 10) {
       console.log(weight * 0.04);
 
   } else if (age >= 1 && weight >= 11, weight <= 15) {
-      console.log(weight * 0.03);
+      return weight * 0.03;
 
   } else if (age >= 1 && weight >= 15) {
-      console.log(weight * 0.02);
+      return weight * 0.02;
 
   } else if (age > 0.1667, age <= 0.3333) {
-      console.log(weight * 0.10);
+      return weight * 0.10;
 
   } else if (age > 0.3333, age <= 0.5833) {
-      console.log(weight * 0.05);
+      return weight * 0.05;
       
   } else {
     (age > 0.5833, age < 1)
-      console.log(weight * 0.04);
+      return weight * 0.04;
   }
 }
 console.log(hungryDog(15, 1))
@@ -164,19 +162,46 @@ Use the game function below to do the following:
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
-const compChoice = Math.random();
 
-function game(user, computer) {
-  const userChoice = 'Rock' || user = 'Paper' || user = 'Scissors'; 
-  if (compChoice <= 0.33) {
-    return 'Rock';
-  } else if (compChoice <= 0.67) {
-    return 'Paper';
-  } else (compChoice > 0.67)
-    return 'Scissors';
+/* const compChoice = Math.random();*/
+
+// function game(user, computer) {
+//   const userChoice = 'Rock' || user = 'Paper' || user = 'Scissors'; 
+//   if (compChoice <= 0.33) {
+//     return 'Rock';
+//   } else if (compChoice <= 0.67) {
+//     return 'Paper';
+//   } else (compChoice > 0.67)
+//     return 'Scissors';
+// }
+
+// game();
+
+function game(user, computer){
+  if (user === computer) {
+    return "it's a tie";
+  }
+  if (user === 'rock') {
+    if (computer === 'scissors') {
+      return 'you win!';
+    } else {
+      return 'you lose!';
+    }
+  } else if (user === 'paper') {
+    if (computer === 'rock') {
+      return 'you win!';
+    } else {
+      return 'you lose!';
+    }
+  } else if (user === 'scissors') {
+    if (computer === 'paper') {
+      return 'you win!';
+    } else {
+      return 'you lose!';
+    }
+  }
+
 }
-
-game();
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -189,6 +214,12 @@ Using the miles function below do the following:
   2. Convert the number of kiolmeters received to miles
   3. Return the number of miles
 */
+
+function dogYears(age) {
+  return age * 7;
+}
+
+dogYears(7)
 
 function miles(kilometers){
   if (kilometers > 0) {
@@ -225,8 +256,9 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(number){
-for (let i = 0; i < 100; i--){
+// for (let i = 0; i < 100; i--){
 
+// }
 }
 
 
@@ -254,9 +286,10 @@ function grade(percentage){
     console.log("C");
   } else if (percentage >= 60) {
     console.log("D");
-  } else if (percentage < 60)
+  } else if (percentage < 60) {
     console.log("F");
   }
+}
 
 console.log(grade(Math.random()*100));
   
