@@ -130,11 +130,12 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(pounds, years){
+    let dogFood = (pounds * 3) / 100;
+    console.log(dogFood);
   }
 
-
+hungryDog(12, 1);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -155,9 +156,28 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-    /*add your code here*/
+function game(user) {
+ 
+  let scissors = Math.random();
+  
+  let rock = Math.random();
+  
+  let paper = Math.random();
+  
+   let computersChoice =(scissors, rock, paper) * Math.random();
+  
+  if (user > computersChoice){
+    console.log("you win");
+  } else {
+    console.log("you lose");
+  } if ( user === computersChoice) {
+    console.log("Tie");
+  }
 }
+
+game(Math.random());
+
+
   
   
 
