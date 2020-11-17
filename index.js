@@ -192,11 +192,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(kilometers){
+  const kiloConverter = kilometers / 1.609;
+  console.log(kiloConverter);
+}
 
-
+miles(5);
 
 //Task 5b - Feet to CM
 /*
@@ -206,10 +207,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
+function feet(centimeters){
+  const ftConverter = centimeters * 30.48;
+  console.log(ftConverter);
+}
+
+feet(5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
