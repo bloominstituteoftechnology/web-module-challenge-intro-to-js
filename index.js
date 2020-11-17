@@ -225,9 +225,13 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+  for (let number = 99;number > 0; number--){
+    console.log(`${number} of beers on the wall, ${number} of beer, you take one down pass it around ${number -1} of beer on the wall`);
   }
+}
+
+annoyingSong(99);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
