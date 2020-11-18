@@ -180,9 +180,67 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-    /*add your code here*/
+
+function game(user, computer) {
+user = prompt("rock paper or scissors?");
+let scissors = 1;
+let rock = 2;
+let paper = 3;
+let Scissors = 1;
+let Rock = 2;
+let Raper = 3;
+computer = Math.floor(Math.random() * 3) + 1;
+
+if (
+  (computer === scissors && user === "rock") ||
+  (computer === scissors && user === "Rock")
+)
+  alert("You chose Rock and the Computer chose Scissors! You Win!");
+else if (
+  (computer === scissors && user === "paper") ||
+  (computer === scissors && user === "Paper")
+)
+  alert("You chose paper and the Computer chose scissors! You lose!");
+else if (
+  (computer === scissors && user === "scissors") ||
+  (computer === scissors && user === "Scissors")
+)
+  alert("You chose scissors and the Computer chose Scissors! Tie Game!");
+else if (
+  (computer === rock && user === "rock") ||
+  (computer === rock && user === "Rock")
+)
+  alert("You chose Rock and the Computer chose rock! Tie Game!");
+else if (
+  (computer === rock && user === "scissors") ||
+  (computer === rock && user === "Scissors")
+)
+  alert("You chose scissors and the Computer chose rock! You lose!");
+else if (
+  (computer === rock && user === "paper") ||
+  (computer === rock && user === "Paper")
+)
+  alert("You chose paper and the Computer chose rock! You win!");
+else if (
+  (computer === paper && user === "rock") ||
+  (computer === paper && user === "Rock")
+)
+  alert("You chose Rock and the Computer chose paper! You lose!");
+else if (
+  (computer === paper && user === "paper") ||
+  (computer === paper && user === "Paper")
+)
+  alert("You chose paper and the Computer chose paper! Tie Game!");
+else if (
+  (computer === paper && user === "scissors") ||
+  (computer === paper && user === "Scissors")
+)
+  alert("You chose scissors and the Computer chose rock! You lose!");
 }
+
+
+game();
+
   
   
 
@@ -197,11 +255,14 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
 
 
+function miles(kilo) {
+  let answer = kilo * 0.6214;
+  alert(kilo + " kilomters equals " + answer + " miles");
+  /*add your code here*/
+}
+miles();
 
 //Task 5b - Feet to CM
 /*
@@ -210,12 +271,13 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
-
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
-
+function feet(CM) {
+  CM2 = CM * 1.000000032;
+  let answer = CM2 * 0.0328084;
+  alert(CM + " centimeters equlas " + answer + " feet");
+  /*add your code here*/
+}
+feet();
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -227,11 +289,27 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
+
+
 function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+  /*add your code here*/
+function annoyingSong(i) {
+for (let j = i; j > 0; j--) {
+if (i > 0) {
+console.log(
+  j +
+    " bottles of beer on the wall, " +
+    j +
+    " bottles of beer, take one down pass it around " +
+    j +
+    " left over bottles of beer on the wall"
+);
+} else {
+console.log("No more bottles of beer on the wall");
+}
+}
 
-
+}
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
@@ -247,11 +325,16 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
-  }
+
   
-  
+function grade(score) {
+  if (score <= 100 && score >= 90) alert("A");
+  if (score <= 89 && score >= 80) alert("B");
+  if (score <= 79 && score >= 70) alert("C");
+  if (score <= 69 && score >= 60) alert("D");
+  if (score < 60) alert("F");
+}
+
   
   
 
