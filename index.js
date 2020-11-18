@@ -121,35 +121,45 @@ Use the hungryDog function and feeding requirements below to do the following:
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
+function hungryDog(weight, age) {
+if (age >= 1) {
+  if (weight <= 5)
+    alert(
+      "feed" + 0.05 * weight + "lbs of food per day"
+    );
 
-function hungryDog( weight, age){
-    if (age>=1){
-      if (weight <=5) {
-        return weight * 0.05;
-      } else if (weight <=6 -10){
-        return weight * 0.04;
-      } else if (weight <= 11-15){
-        return weight * 0.05
-      } else {
-        return weight * 0.02;
-      }
-    }
+  if (weight >= 6 && weight <= 10)
+    alert(
+      "feed" + 0.04 * weight + "lbs of food per day"
+    );
+
+  if (weight >= 11 && weight <= 15)
+    alert(
+      "feed" + 0.03 * weight + "ibs of food per day"
+    );
+
+  if (weight > 15) {
+    alert(
+      "feed" + 0.02 * weight + "lbs of food per day"
+    );
+  } else if (age <= 11 / 12) {
+    if (age >= 1 / 6 && age < 1 / 3)
+      alert(
+        "feed" + 0.1 * weight + "lbs of food per day"
+      );
+    else if (age >= 1 / 3 && age < 7 / 12)
+      alert(
+        "feed" + 0.05 * weight + "lbs of food per day"
+      );
+    else age >= 7 / 12 && age < 11 / 12;
+    alert(
+      "feed" + 0.04 * weight + "lbs of food per day"
+    );
   }
+}
 
-      }else {
-        if(age <=1){
-       if (weight <= .16 - .33){
-          return weight * 0.10
-          
-        }else if (age === .33 - .58){
-          food(weight * 0.05
-            
-        }else if(age === .58 -1){
-          food =weight * 0.04
-          
-        }
-      }
 
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
