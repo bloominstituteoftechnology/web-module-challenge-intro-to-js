@@ -19,13 +19,13 @@ Do the following:
 */
 var votingAge = 19 
 
-if (votingAge > 18)  {
-  console.log(true);
+if (votingAge => 18)  {
+  console.log('go on and vote, ya big dummy');
 
 }
 else {
 
-  console.log(false);
+  console.log('noep');
 
 }
  /*
@@ -42,10 +42,8 @@ Do the following:
 var num1 = 4;
 var num2 = 2;
 
-if (num1 * num2)  {
-  var total = num1 * num2;
+console.log(num1 * num2);
 
-}
   
 
 /*
@@ -59,7 +57,7 @@ Do the following:
    HINT: look up the Number method
 */
    var str = "1999";
-   pareseInt(str); 
+   console.log(pareseInt(str)); 
 
 
 
@@ -72,12 +70,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(a ,b){
-  return a * b;
-
-};
-let result = ( 4 * 5);
-console.log(result)
+function multiply(a ,b ){
+let a = 3;
+let b = 3;
+return a * b();
+}
+console.log(multiply());
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -91,8 +89,6 @@ Do the following:
 */
 
 function dogYears(z ,m){
-    return z/m;
-};
 let result = (40 / 7);
 console.log(result); 
 
@@ -126,30 +122,31 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(age, weight){
-    let food =0;
+function hungryDog( weight, age){
     if (age>=1){
       if (weight <=5) {
-        food =weight * 0.05
-        console.log(food);
-      } else if (weight ===6 -10){
-        food = weight * 0.04
-        console.log(food);
-      } else if (weight === 11-15){
-        food = weight * 0.03
-        console.log(food);
+        return weight * 0.05;
+      } else if (weight <=6 -10){
+        return weight * 0.04;
+      } else if (weight <= 11-15){
+        return weight * 0.05
       } else {
+        return weight * 0.02;
+      }
+    }
+  }
 
       }else {
-        if(age === .16 - .33){
-          food = weght * 0.10
-          console.log(food;
+        if(age <=1){
+       if (weight <= .16 - .33){
+          return weight * 0.10
+          
         }else if (age === .33 - .58){
           food(weight * 0.05
-            console.log(food);
+            
         }else if(age === .58 -1){
           food =weight * 0.04
-          console.log(food);
+          
         }
       }
 
