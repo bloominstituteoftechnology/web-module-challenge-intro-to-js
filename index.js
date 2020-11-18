@@ -18,7 +18,12 @@ Do the following:
    HINT: no function required
 */
 
-
+var votingAge = 17;
+if(votingAge >= 18){
+  console.log('true' )
+}else {
+  console.log('no')
+}
 
 /*
 Task 1b - Values
@@ -30,7 +35,12 @@ Do the following:
 
    HINT: no function required
 */
+let a = 1;
+let b = 2;
 
+if (a < b ) {
+   console.log(a = b)
+} 
 
 
 
@@ -46,7 +56,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let year = 1999; 
+let number = parseInt(year)
+console.log(number)
 
 
 /*
@@ -58,10 +70,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+  function multiply(a , b ){
+    return (a * b);
   }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,8 +85,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return dogYears * 7  
 }
 
 
@@ -107,8 +118,16 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, years){
+if (years < 1) {
+  if (years <= .3333) {
+    return weight * .1
+  }else if (years < .6666){
+    return weight * .05
+  } 
+  }
+  
+}
   }
 
 
@@ -132,9 +151,22 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-    /*add your code here*/
-}
+function game( computer){
+    var computer = math.floor(math.random() * 8 + 1);
+    if(computer <=3){
+      computer = 'rock'
+
+    }
+    else if (computer >= 6) {
+      computer = 'paper';
+      
+    }
+    else {
+      computer = 'scissors'
+    }
+};
+
+
   
   
 
@@ -149,8 +181,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+  return km * 0.621371
+    
   }
 
 
@@ -163,8 +196,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+  return cm / 30.48
+    
   }
  
 
@@ -179,8 +213,10 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(bottles){
+        for(bottles>0; bottles --){
+          return  bottles of soda on the wall, bottles of soda on the wall,
+        }
   }
 
 
