@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 21;
+if (votingAge >= 18) {
+  console.log(true);
+}
 
 
 /*
@@ -31,7 +34,13 @@ Do the following:
    HINT: no function required
 */
 
+let var1 = 15;
+let var2 = 30;
 
+if (var2 > var1) {
+  var1 = var1 + var2;
+  console.log(var1);
+}
 
 
 
@@ -46,8 +55,11 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+let str = "1999";
+function stringToNum(string) {
+  return parseInt(string);
+}
+stringToNum(str);
 
 /*
 Task 1d - Multiply
@@ -62,7 +74,10 @@ function multiply(/*add your code here*/){
     /*add your code here*/
   }
 
-
+  function multiply(a,b){
+    console.log(a * b);
+  }
+multiply(1,2);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -78,6 +93,10 @@ function dogYears(/*add your code here*/){
     /*add your code here*/
 }
 
+function dogYears(age){
+  console.log(age * 7);
+}
+dogYears(15)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -110,6 +129,30 @@ Use the hungryDog function and feeding requirements below to do the following:
 function hungryDog(/*add your code here*/){
     /*add your code here*/
   }
+  
+  function hungryDog(weight, age){
+    if (age >= 1) {
+      if (weight <= 5) {
+        console.log(weight*.05);
+      } else if (weight <= 10) {
+        console.log(weight*.04);
+      } else if (weight <= 15) {
+        console.log(weight*.03); 
+      } else if (weight > 15) {
+        console.log(weight*.02);
+      }
+    } else if (age < 1) {
+      if (age >= .1666 && age < .3333) {
+        console.log(weight*.1);
+      } else if (age >= .3333 && age < .5833) {
+        console.log(weight*.05);
+      } else if (age >= .5833 && age <.9999 ) {
+        console.log(weight*.04);
+      }
+    }
+  }
+
+  hungryDog(15, 1);
 
 
 
@@ -137,7 +180,26 @@ Use the game function below to do the following:
 function game(user, computer){
     /*add your code here*/
 }
-  
+let randomNumber = Math.floor(Math.random()*3);
+function computerChoice() {
+  if(randomNumber === 0) {
+    return 'rock';
+  } else if(randomNumber === 1) {
+    return 'paper';
+  } else {
+    return 'scissors';
+  }
+}
+function game(user, computer){
+    if((user === 'rock' && computer === 'scissors') || (user === 'paper' && computer === 'rock') || (user === 'scissors' && computer === 'paper')) {
+      return "you win!";
+    } else if(user === computer) {
+      return "it's a tie";
+    } else {
+      return "you lose!";
+    }
+}
+game('scissors', computerChoice(randomNumber));
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -154,8 +216,10 @@ Using the miles function below do the following:
 function miles(/*add your code here*/){
     /*add your code here*/
   }
-
-
+function miles(km) {
+  return km*0.621371;
+}
+miles(10);
 
 //Task 5b - Feet to CM
 /*
@@ -168,8 +232,10 @@ Using the feet function below do the following:
 function feet(/*add your code here*/){
     /*add your code here*/
   }
- 
-
+ function feet(cm){
+   return cm/30.48;
+ }
+feet(10);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -184,7 +250,14 @@ Using the annoyingSong function below do the following:
 function annoyingSong(/*add your code here*/){
         /*add your code here*/
   }
-
+function annoyingSong(num){
+  for(let i = num; i > 0; i--) {
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;
+  }
+}
+annoyingSong(10);
+  }
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -202,21 +275,19 @@ Using the grade function below do the following:
 */
   
 function grade(num){
-    if(num < 100 && num >= 90){
+    if(num > 89){
       return 'you got an A';
-    }else if(num <90 && num >= 80){
+    }else if(num > 79){
       return 'you got a B';
-    }else if(num < 80 && num >= 70){
+    }else if(num > 69){
       return 'you got a C';
-    }else if(num < 70 && num >= 60){
+    }else if(num > 59 ){
       return 'you got a D';
-    }else if(num < 60){
+    }else {
       return 'you got an F';
     }
   }
-  
-  console.log('grade function', grade(85));
-  
+  grade(80);
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -235,7 +306,22 @@ Using the vowelCounter function below do the following:
 function vowelCounter(/*add your code here*/) {
     /*add your code here*/
 }
+function vowelCounter(str) {
+  var vowels = 'aeiouAEIOU';
+  var numVowels = 0;
 
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.indexOf(str[i]) !== -1)
+    {
+      numVowels += 1;
+    }
+  }
+  return numVowels;
+}
+
+console.log(vowelCounter("hello"));
+
+}
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
