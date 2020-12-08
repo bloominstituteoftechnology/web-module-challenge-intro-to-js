@@ -63,7 +63,7 @@ Do the following:
 */
 
 const stringyVariable='1999' //declare string of 1999
-function stringConversion(insertString){ //set up function with argument
+function stringConversion(insertString){ //set up function with parameter
   return (insertString).toString() ; //return variable.toString
 }
 
@@ -79,11 +79,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){ //setting up function with parameters
+    return a*b ; //return a*b
   }
 
-
+console.log(multiply(2, 4))
+console.log(multiply(8, 9))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -254,7 +255,7 @@ function foo(){
 }
 
 
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/ /*
+/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/ 
 export default{
     foo,
     multiply,
@@ -266,4 +267,3 @@ export default{
     annoyingSong,
     grade
 }
-*/
