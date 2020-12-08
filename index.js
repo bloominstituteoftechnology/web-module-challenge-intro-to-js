@@ -58,8 +58,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
 
@@ -200,24 +200,30 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
+
+function grade(/*Your Code here*/){
+  /*Your Code here */
+}
   
-function grade(num){
-    if(num < 100 && num >= 90){
-      return 'you got an A';
-    }else if(num <90 && num >= 80){
-      return 'you got a B';
-    }else if(num < 80 && num >= 70){
-      return 'you got a C';
-    }else if(num < 70 && num >= 60){
-      return 'you got a D';
-    }else if(num < 60){
-      return 'you got an F';
-    }
-  }
+// Answer that was left in the grade function
+
+// function grade(num){
+//     if(num < 100 && num >= 90){
+//       return 'you got an A';
+//     }else if(num <90 && num >= 80){
+//       return 'you got a B';
+//     }else if(num < 80 && num >= 70){
+//       return 'you got a C';
+//     }else if(num < 70 && num >= 60){
+//       return 'you got a D';
+//     }else if(num < 60){
+//       return 'you got an F';
+//     }
+//   }
   
-  console.log('grade function', grade(85));
+//   console.log('grade function', grade(85));
   
-  
+  // End of the answer that was left in the grade function
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
