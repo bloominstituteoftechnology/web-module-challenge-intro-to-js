@@ -18,6 +18,17 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge=20
+function testFunctionOne(variable){
+  if(variable<=18){
+    return false;
+} else{
+  return true;
+}
+}
+
+console.log(testFunctionOne(votingAge))
+
 
 
 /*
@@ -31,8 +42,13 @@ Do the following:
    HINT: no function required
 */
 
+let valueOne=1
+let valueTwo=2
 
-
+if(valueTwo===2){
+  valueOne=valueOne+valueTwo;
+  console.log(valueOne);
+}
 
 
 /*
@@ -46,7 +62,12 @@ Do the following:
    HINT: look up the Number method
 */
 
+const stringyVariable='1999' //declare string of 1999
+function stringConversion(insertString){ //set up function with argument
+  return (insertString).toString() ; //return variable.toString
+}
 
+console.log(stringConversion(stringyVariable))
 
 
 /*
@@ -231,7 +252,9 @@ function foo(){
     console.log('its working');
     return 'bar';
 }
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
+
+
+/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/ /*
 export default{
     foo,
     multiply,
@@ -243,3 +266,4 @@ export default{
     annoyingSong,
     grade
 }
+*/
