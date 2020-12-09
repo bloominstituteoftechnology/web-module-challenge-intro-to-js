@@ -108,25 +108,36 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight, age){
-    if(weight<=5 &&  age>=1){
-      return weight * .05;
-    } else if (weight>=6){
-      return weight * .04;
-    } else if (weight>=11){
-      return weight * .03;
-    } else if (weight>=15){
-      return weight * .2;
-    } else if (age<=.33){
-      return weight * .1;
-    } else if (age<=.466){
-      return weight * .05;
-    } else if (age<=1){
-      return weight *.04;
+    if(age>=1){
+      if (weight<=5){
+        return weight * .05;
+      }
+      else if (weight>=6 && weight<= 10){
+        return weight * .04;
+      }
+      else if (weight>=11 && weight<= 15){
+        return weight * .03;
+      }
+      else if (weight>=15){
+        return weight * .02;
+      }
+    }
+
+    if (age<1){
+      if(age>=2/12 && age<4/12){
+        return weight * .1;
+      }
+      else if (age>=4/12 && age<7/12){
+        return weight * .05;
+      }
+      else if (age>=7/12 && age>1){
+        return weight * .04;
+      }
     }
   
   }
 
-  console.log(hungryDog(5,1));
+  console.log(hungryDog(7,1));
 
 
 
@@ -148,14 +159,44 @@ Use the game function below to do the following:
   
   RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
   
-  HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
-*/
+  HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters     1 - scissor     2 - rock    3 - paper
+*/ 
+
+let computer = Math.random() * 3;
 
 function game(user, computer){
-    /*add your code here*/
-}
-  
-  
+    
+    if (computer ===1){
+      return "scissor";
+    } else if (computer===2){
+      return "rock";
+    } else if (computer===3){
+      return "paper";
+    }
+
+    if (user===1){
+      return "scissor";
+    } else if (user===2){
+      return "rock";
+    } else if (user===3){
+      return "paper";
+    }
+
+
+    if (user===computer){
+      return "it's a tie";
+    } else if (user>computer){
+      return "you lose!";
+    } else if (user<computer){
+      return "you win!";
+    }
+
+  }
+
+  console.log(game(2,computer));
+
+
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
