@@ -138,7 +138,8 @@ module.exports = {
   testEnvironment: "node",
 
   // Options that will be passed to the testEnvironment
-  // testEnvironmentOptions: {},
+  // testEnvironmentOptions: {node},
+  
 
   // Adds a location field to test results
   // testLocationInResults: false,
