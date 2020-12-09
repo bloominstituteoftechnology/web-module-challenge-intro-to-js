@@ -58,10 +58,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return (a * b);
   }
-
+console.log(multiply(7,5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +74,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(a){
+    return a * 7
 }
-
+console.log(dogYears(3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,9 +107,26 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if(weight<=5 &&  age>=1){
+      return weight * .05;
+    } else if (weight>=6){
+      return weight * .04;
+    } else if (weight>=11){
+      return weight * .03;
+    } else if (weight>=15){
+      return weight * .2;
+    } else if (age<=.33){
+      return weight * .1;
+    } else if (age<=.466){
+      return weight * .05;
+    } else if (age<=1){
+      return weight *.04;
+    }
+  
   }
+
+  console.log(hungryDog(5,1));
 
 
 
@@ -201,22 +218,9 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(num){
-    if(num < 100 && num >= 90){
-      return 'you got an A';
-    }else if(num <90 && num >= 80){
-      return 'you got a B';
-    }else if(num < 80 && num >= 70){
-      return 'you got a C';
-    }else if(num < 70 && num >= 60){
-      return 'you got a D';
-    }else if(num < 60){
-      return 'you got an F';
-    }
+function grade(/*Your Code here */){
+  /*Your Code here */
   }
-  
-  console.log('grade function', grade(85));
-  
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
