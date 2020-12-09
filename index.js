@@ -162,47 +162,14 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters     1 - scissor     2 - rock    3 - paper
 */ 
 
-let computer =(Math.random());
 
-if (computer <.34){
-  computer = "scissor";
-} else if (computer<=.67){
-  computer = "rock";
-} else (){
-  computer = "paper";
-}
 
 function game(user, computer){
-    if(user===computer){
-      return "it's a tie"
-    }
-      
-    if (user==="paper"){
-      if (computer==="rock"){
-      return "you win!";
-    } else if (computer==="scissor"){
-      return "you lose!";
-    } 
-    if (user==="rock"){
-      if (computer==="scissor"){
-      return "you win!";
-    } else if(computer==="paper"){
-      return "you lose!"; 
-    }
-    
-    if (user==="scissor"){
-      if (computer==="paper"){
-      return "you win!";
-    } else if(computer==="rock"){
-      return "you lose!";
-    } 
 
-    
   }
 
 
 
-  console.log(game("paper",computer));
 
 
 
@@ -233,10 +200,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    const feet = cm /30.48;
+    return feet;
   }
- 
+ console.log(feet(3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -249,9 +217,11 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(num1){
+    return `${num1} bottles of soda on the wall, ${num1} bottles of soda, take one down pass it around ${num1-1} bottles of soda on the wall`;
   }
+
+console.log(annoyingSong(5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -269,10 +239,21 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score>=90){
+    return 'you got an A';
+  } else if (score>=80 && score<=89){
+      return 'you got a B';
+  } else if (score>=70 && score<=79){
+      return 'you got a C';
+  } else if (score>=60 && score<=69){
+      return 'you got a D';
+  } else (score>60);{
+      return 'you got an F';
+  }
   }
   
+  console.log(grade(69));
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
