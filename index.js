@@ -12,8 +12,8 @@ returns a value, that value will be logged to the console.  An example of this w
 Task 1a - Voting Age
 
 Do the following:   
-   1. Make a variable called votingAge and give it a value
-   2. Return true if age is 18 or higher
+   1. Create a variable called votingAge and assign it a value
+   2. Console log true if age is 18 or higher
 
    HINT: no function required
 */
@@ -26,7 +26,7 @@ Task 1b - Values
 Do the following:   
    1. Declare two variables and assign them values
    2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
-   3. Return the new value of the 1st variable
+   3. Console log the new value of the 1st variable
 
    HINT: no function required
 */
@@ -41,7 +41,7 @@ Task 1c - Convert Strings to Numbers
 Do the following:   
    1. Declare a string type variable with the value of "1999"
    2. Convert the string value of "1999" to a integer value of 1999
-   3. Return the result
+   3. Console log the result
 
    HINT: look up the Number method
 */
