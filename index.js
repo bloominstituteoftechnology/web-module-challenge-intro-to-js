@@ -17,7 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 31;
+if (votingAge >= 18){
+  console.log("You can Vote!");
+}else{
+  console.log("Not old enough to vote this time.");
+}
 
 
 /*
@@ -30,10 +35,9 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
-
+var DMX = "was the loudest rapper";
+var DMX = "is still a dawg";
+console.log(DMX);
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -45,8 +49,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let stringVar = `1999`;
+stringVar = parseInt(1999);
+return();
 
 
 /*
@@ -58,10 +63,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(a,b){
-    multiply a * b;
+function multiply(a, b){
+    return(a * b);
   }
-
+console.log(multiply(6,4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +79,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  let ageValue = age*7;
+    return ageValue;
 }
-
+console.log(dogYears(5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,11 +113,26 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
+function hungryDog(bodyWeight,dogAge){
+if (dogAge >= 1){
+    if(bodyWeight <= 5){
+      return bodyWeight* .05;
+  }else if(bodyWeight <= 10){
+      return bodyWeight * .04;
+  }else if(bodyWeight <= 15){
+      return bodyWeight * .03;
+  }else(bodyWeight <= 15);
+      return bodyWeight * .02;
+  }else{
+    if(dogAge <= .25){
+      return bodyWeight * .10;
+    }else if(dogAge <= .58){
+      return bodyWeight *.05;
+    }else(dogAge <= 1);
+      return bodyWeight * .04;
+    }
+}
+console.log(hungryDog(15,1));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -133,12 +154,30 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+// let randomThrow = ["rock", "paper", "scissors"] dunno if this like was gonna work
 
 function game(user, computer){
-    /*add your code here*/
-}
-  
-  
+  computer = () => { //global variable to generate comp choice
+    const randomThrow = (Math.floor(math.random()*3)+1);
+    if(randomThrow === 0){
+      return "rock";
+    }else if(randomThrow === 1){
+      return "paper";
+    }else(randomThrow === 2){
+      return "scissors";
+    }
+  }
+  // console.log(computer());
+
+  if(user === "rock" && computer === "sissors" || user === "sissors" && computer ==="paper" || user === "rock" && computer === "scissors"){
+    return "You Win!";
+  }else if(user === "paper" && computer === "sissors" || user === "sissors" && computer === "rock" || user === "rock" && computer === "paper"){
+    return "You Lose!";
+  } else(user === "paper" && computer === "paper" || user === "sissors" && computer === "sissors" || user === "rock" && computer === "rock"){
+    return "Its A Tie";
+  }
+} 
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -151,10 +190,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(distance){
+      let kiloMeter = distance * 1.60934;
+      return kiloMeter;
   }
-
+console.log(miles(10));
 
 
 //Task 5b - Feet to CM
@@ -165,8 +205,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(num){
+    cm = num * 30.48;
+    return cm;
   }
  
 
@@ -181,10 +222,10 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(numofBTLs){
 
+  }
+//return (`${number} bottles of soda on the wall, `${number} `bottles of soda, take one down pass it around` ${number left over}`bottles of soda on the wall`)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -215,7 +256,7 @@ function grade(num){
     }
   }
   
-  console.log('grade function', grade(85));
+  console.log('grade function', grade(60));
   
   
 
