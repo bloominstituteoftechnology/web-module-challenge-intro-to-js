@@ -50,8 +50,8 @@ Do the following:
    HINT: look up the Number method
 */
 let stringVar = `1999`;
-stringVar = parseInt(1999);
-return();
+// parseInt(stringVar);
+
 
 
 /*
@@ -154,29 +154,60 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-// let randomThrow = ["rock", "paper", "scissors"] dunno if this like was gonna work
+const computer = (Math.floor(Math.random()*3)); // use of math.random inside of math.floor should give a int of '0-2.9 repeating'
 
-function game(user, computer){
-  computer = () => { //global variable to generate comp choice
-    const randomThrow = (Math.floor(math.random()*3)+1);
-    if(randomThrow === 0){
+function game(user,computer){
+    if(computer === 0){
       return "rock";
-    }else if(randomThrow === 1){
+    }else if(computer === 1){
       return "paper";
-    }else(randomThrow === 2){
+    }else if(computer === 2){
       return "scissors";
     }
+  
+  if (computer === user){
+      return "it's a tie"
   }
-  // console.log(computer());
+  else if(computer === "scissors"){
+      if(user === "rock"){
+        return "you win!";
+      }else if(user === "paper"){
+        return "you lose!"; 
+      }
+  }
+  else if(computer === "rock"){
+      if (user === "paper"){
+        return "you win!";
+      }else if(user === "scissors"){
+        return "you lose!";
+      }
+  }
+  else if(computer === "paper"){
+      if (user === "scissors"){
+        return "you win!";
+      }else if(user === "rock"){
+        return "you lose!";
+      }
+    }
+}
+ 
 
-  if(user === "rock" && computer === "sissors" || user === "sissors" && computer ==="paper" || user === "rock" && computer === "scissors"){
-    return "You Win!";
-  }else if(user === "paper" && computer === "sissors" || user === "sissors" && computer === "rock" || user === "rock" && computer === "paper"){
-    return "You Lose!";
-  } else(user === "paper" && computer === "paper" || user === "sissors" && computer === "sissors" || user === "rock" && computer === "rock"){
-    return "Its A Tie";
-  }
-} 
+game('rock',computer);
+
+
+
+
+  // if(user === "rock" && computer === "scissors" || user === "scissors" && computer ==="paper" || user === "rock" && computer === "scissors"){
+  //   return "You Win!";
+  // }else if(user === "paper" && computer === "scissors" || user === "scissors" && computer === "rock" || user === "rock" && computer === "paper"){
+  //   return "You Lose!";
+  // } else if(user === "paper" && computer === "paper" || user === "sissors" && computer === "sissors" || user === "rock" && computer === "rock"){
+  //   return "Its A Tie";
+  // }
+
+
+// console.log(game(user, computer); // this is not the proper way to return my info
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -190,9 +221,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(distance){
-      let kiloMeter = distance * 1.60934;
-      return kiloMeter;
+function miles(km){
+      const miles = km * 0.621371;
+      return miles;
   }
 console.log(miles(10));
 
@@ -205,11 +236,15 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(num){
-    cm = num * 30.48;
-    return cm;
+function feet(cm){
+  const feet = cm/30.48;
+  return feet;
   }
  
+
+
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -219,13 +254,15 @@ function feet(num){
 Using the annoyingSong function below do the following:
   1. Receive a starting number and start the count down from the number received 
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
-      "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
+      "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall" 
+      // not a for loops!
 */
 
-function annoyingSong(numofBTLs){
-
-  }
-//return (`${number} bottles of soda on the wall, `${number} `bottles of soda, take one down pass it around` ${number left over}`bottles of soda on the wall`)
+function annoyingSong(bottles){
+  return `${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around ${bottles - 1} bottles of soda on the wall`
+}
+console.log(annoyingSong(10));
+// return annoyingSong(10); no recursive 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
