@@ -169,7 +169,25 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+    if (user==='scissors' && computer==='scissors'){
+      return 'it\'s a tie' ;
+    } else if (user==='scissors' && computer==='paper'){
+      return 'you win!' ;
+    } else if (user==='scissors' && computer==='rock'){
+      return 'you lose!' ;
+    } else if (user==='paper' && computer==='paper'){
+      return 'it\'s a tie' ;
+    } else if (user==='paper' && computer==='rock'){
+      return 'you win!' ;
+    } else if (user==='paper' && computer==='scissors'){
+      return 'you lose!' ;
+    } else if (user==='rock' && computer==='rock'){
+      return 'it\'s a tie' ;
+    } else if (user==='rock' && computer==='scissors'){
+      return 'you win!' ;
+    } else if (user==='rock' && computer==='paper'){
+      return 'you lose!' ;
+    }
 }
   
   
@@ -185,7 +203,7 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(km){
     /*add your code here*/
   }
 
