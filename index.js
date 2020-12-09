@@ -162,38 +162,47 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters     1 - scissor     2 - rock    3 - paper
 */ 
 
-let computer = Math.random() * 3;
+let computer =(Math.random());
+
+if (computer <.34){
+  computer = "scissor";
+} else if (computer<=.67){
+  computer = "rock";
+} else (){
+  computer = "paper";
+}
 
 function game(user, computer){
-    
-    if (computer ===1){
-      return "scissor";
-    } else if (computer===2){
-      return "rock";
-    } else if (computer===3){
-      return "paper";
+    if(user===computer){
+      return "it's a tie"
     }
-
-    if (user===1){
-      return "scissor";
-    } else if (user===2){
-      return "rock";
-    } else if (user===3){
-      return "paper";
-    }
-
-
-    if (user===computer){
-      return "it's a tie";
-    } else if (user>computer){
-      return "you lose!";
-    } else if (user<computer){
+      
+    if (user==="paper"){
+      if (computer==="rock"){
       return "you win!";
+    } else if (computer==="scissor"){
+      return "you lose!";
+    } 
+    if (user==="rock"){
+      if (computer==="scissor"){
+      return "you win!";
+    } else if(computer==="paper"){
+      return "you lose!"; 
     }
+    
+    if (user==="scissor"){
+      if (computer==="paper"){
+      return "you win!";
+    } else if(computer==="rock"){
+      return "you lose!";
+    } 
 
+    
   }
 
-  console.log(game(2,computer));
+
+
+  console.log(game("paper",computer));
 
 
 
@@ -209,11 +218,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    const miles = km *.621371;
+    return miles;
   }
 
-
+console.log(miles(4));
 
 //Task 5b - Feet to CM
 /*
