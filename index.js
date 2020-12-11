@@ -45,6 +45,10 @@ Do the following:
 
    HINT: look up the Number method
 */
+function y2K(){
+const year = '1999';
+return Number(year);
+}
 
 
 
@@ -58,10 +62,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
-
+function multiply(a, b) {
+    return (a * b);
+}
+multiply(9, 5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,15 +78,15 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears){
+   return humanYears * 7;
 }
 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
+//Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!   
 /*
 Use the hungryDog function and feeding requirements below to do the following:
   1. Invoke the hungryDog function below and pass it a weight value in pounds
@@ -107,8 +111,29 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if (age >= 1){
+      if (weight <= 5){
+        return (0.05 * weight);
+
+      } else if (weight >= 6 && weight <= 10){
+        return (0.04 * weight);
+      } else if (weight >= 11 && weight <= 15){
+        return (0.03 * weight);
+      }else {
+        return (0.02 * weight);
+      }
+    }else {
+      if (age >= (2/12) && age < (4/12)) {
+        return (0.1 * weight);
+
+      } else if (age >= (4/12) && age <= 7/12){
+        return (0.05 * weight);
+      } else if (age >= (7/12)){
+        return (0.04 * weight);
+      }
+      
+    }
   }
 
 
@@ -136,6 +161,16 @@ Use the game function below to do the following:
 
 function game(user, computer){
     /*add your code here*/
+    if (user === computer){
+      return "it's a tie";
+    }else {
+      if ((user == 1 && computer == 2) || (user == 2 && computer == 3) || (user == 3 && computer == 1)){
+        return "you lose!";
+      }
+      else if ((user == 1 && computer == 3) || (user == 2 && computer == 1) || (user == 3 && computer == 2)){
+        return "you win!";
+      }
+    }
 }
   
   
@@ -181,8 +216,9 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+const numberLeftOver = number - 1;
+        return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${numberLeftOver} bottles of soda on the wall`;
   }
 
 
@@ -232,8 +268,16 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(str) {
+    let count = 0;
+    const lowerStr = str.toLowerCase();
+    for (let i = 0; i < lowerStr.length; i++) {
+      const character = lowerStr[i];
+      if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u'){
+        count++;
+      }
+    }
+    return count;
 }
 
 
