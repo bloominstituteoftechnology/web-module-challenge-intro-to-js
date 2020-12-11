@@ -29,12 +29,12 @@ Do the following:
    HINT: no function required
 */
 
-const a = "a";
-const b = "b";
+let a = "a";
+let b = "b";
 
 if (b === "b") {
   a = "changed";
-  return b;
+  console.log(a);
 }
 
 /*
@@ -48,6 +48,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+const c = "1999";
+Number(c);
+console.log(c);
+
 /*
 Task 1d - Multiply
  
@@ -56,9 +60,8 @@ Do the following:
    2. Receive the numbers in the parameters: a and b
    3. Multiply a and b and return the answer
 */
-
-function multiply(/*add your code here*/) {
-  /*add your code here*/
+function multiply(a, b) {
+  return a * b;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -71,8 +74,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/) {
-  /*add your code here*/
+function dogYears(age) {
+  return age * 7;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -102,8 +105,26 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */
 
-function hungryDog(/*add your code here*/) {
-  /*add your code here*/
+function hungryDog(weight, age) {
+  if (age > 1) {
+    if (weight < 5) {
+      return weight * 0.05;
+    } else if (weight >= 6 && weight <= 10) {
+      return weight * 0.04;
+    } else if (weight >= 11 && weight <= 15) {
+      return weight * 0.03;
+    } else if (weight > 15) {
+      return weight * 0.02;
+    }
+  } else {
+    if (age <= 0.33) {
+      return weight * 0.1;
+    } else if (age >= 0.33 && age <= 0.7) {
+      return weight * 0.05;
+    } else {
+      return weight * 0.04;
+    }
+  }
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -166,8 +187,17 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/) {
-  /*add your code here*/
+function annoyingSong(number) {
+  if (number != 0) {
+    console.log(
+      `${number} bottles of soda on the wall, (number) bottles of soda, take one down pass it around ${
+        number - 1
+      } bottles of soda on the wall`
+    );
+    annoyingSong(number - 1);
+  } else {
+    console.log("Please use a number higher than 0.");
+  }
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -211,6 +241,7 @@ function foo() {
   return "bar";
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
+
 export default {
   foo,
   multiply,
