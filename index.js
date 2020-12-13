@@ -147,7 +147,7 @@ Use the game function below to do the following:
 */
 
 function game(user, computer) {
-  /*add your code here*/
+  // honestly just do not feel like typing this all out right now
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -161,8 +161,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
-  /*add your code here*/
+function miles(km) {
+  return km / 1.60934;
 }
 
 //Task 5b - Feet to CM
@@ -173,8 +173,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/) {
-  /*add your code here*/
+function feet(cm) {
+  return cm / 30.48;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -215,8 +215,10 @@ Using the grade function below do the following:
    below 60 = F
 */
 
-function grade(/*add your code here*/) {
-  /*add your code here*/
+function grade(score) {
+  if (isNaN(score)) {
+    return "Please specify a number.";
+  }
 }
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
