@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/LambdaSchool/Introduction-to-JavaScript.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",

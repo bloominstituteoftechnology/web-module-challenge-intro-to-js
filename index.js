@@ -218,6 +218,16 @@ Using the grade function below do the following:
 function grade(score) {
   if (isNaN(score)) {
     return "Please specify a number.";
+  } else if (score > 90 && score < 100) {
+    return "A";
+  } else if (score < 90 && score > 80) {
+    return "B";
+  } else if (score < 80 && score > 70) {
+    return "C";
+  } else if (score < 70 && score > 60) {
+    return "D";
+  } else {
+    return "F";
   }
 }
 
@@ -233,10 +243,21 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string) {
+  const vowels = { a: 1, e: 1, i: 1, o: 1, u: 1 };
+  console.log(vowels);
+  let count = 0;
+
+  for (let i = 0; i < string.length; i++) {
+    string[i].toLowerCase() in vowels
+      ? count++
+      : console.log(`${string[i]} is not a vowel, moving on`);
+  }
+
+  console.log(count);
 }
 
+vowelCounter("haer90084EERFSAerpaoeui");
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo() {
   console.log("its working");
