@@ -12,8 +12,8 @@ returns a value, that value will be logged to the console.  An example of this w
 Task 1a - Voting Age
 
 Do the following:   
-   1. Make a variable called votingAge and give it a value
-   2. Return true if age is 18 or higher
+   1. Create a variable called votingAge and assign it a value
+   2. Console log true if age is 18 or higher
 
    HINT: no function required
 */
@@ -24,7 +24,7 @@ Task 1b - Values
 Do the following:   
    1. Declare two variables and assign them values
    2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
-   3. Return the new value of the 1st variable
+   3. Console log the new value of the 1st variable
 
    HINT: no function required
 */
@@ -43,7 +43,7 @@ Task 1c - Convert Strings to Numbers
 Do the following:   
    1. Declare a string type variable with the value of "1999"
    2. Convert the string value of "1999" to a integer value of 1999
-   3. Return the result
+   3. Console log the result
 
    HINT: look up the Number method
 */
@@ -134,16 +134,18 @@ function hungryDog(weight, age) {
 Create a global variable that randomly generates the computer's choice
 Use Math.random to determine the computers choice (Math.random gives a random number between 0 and 1)
 
+HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
+
 Use the game function below to do the following:
   1. Receive 2 parameters the user's choice and the computer's choice
-  2. Return whether the user won, lost, or tied based on these rules of the game described below
+  2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match the strings below exactly.
    - win should return "you win!"
    - lose should return "you lose!"
-   -tie should return "it's a tie"
+   - tie should return "it's a tie"
   
   RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
   
-  HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
+  HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
 function game(user, computer) {
@@ -182,9 +184,9 @@ function feet(cm) {
 // Let's Sing 99 Bottles of Soda on the Wall!
 /*
 Using the annoyingSong function below do the following:
-  1. Receive a starting number and start to count down from the number received 
-  2. At each iteration, it should return this string: 
-      "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
+  1. Receive a starting number and start the count down from the number received 
+  2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
+      "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
 function annoyingSong(number) {
@@ -208,11 +210,11 @@ Using the grade function below do the following:
   1. Receive a score out of 100 
   2. Return the corresponding letter grade following this grade scale:
 
-   90-100 = A 
-   80-89 = B 
-   70-79 = C 
-   60-69 =  D 
-   below 60 = F
+   90-100 should return 'you got an A' 
+   80-89 should return 'you got a B'
+   70-79 should return 'you got a C'
+   60-69 should return 'you got a D'
+   below should return 'you got an F'
 */
 
 function grade(score) {
@@ -259,9 +261,9 @@ function vowelCounter(string) {
 
 vowelCounter("haer90084EERFSAerpaoeui");
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo() {
-  console.log("its working");
-  return "bar";
+function foo(){
+    //console.log('its working');
+    return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 
