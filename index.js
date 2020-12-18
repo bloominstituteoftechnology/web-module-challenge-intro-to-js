@@ -164,14 +164,16 @@ Use the game function below to do the following:
 
 
 let computersChoice = Math.round(Math.random()*2)
-  if (computersChoice === 0) {computersChoice = 'Rock'
-  } else if (computersChoice === 1) {computersChoice = 'Paper'
-    } else {computersChoice = 'Scissors'}
+  if (computersChoice === 0) {computersChoice = 'rock'
+  } else if (computersChoice === 1) {computersChoice = 'paper'
+    } else {computersChoice = 'scissors'}
 
     function game(user, computer) {
-      if (user === 'Rock' && computer === 'Scissors' || user === 'Paper' && computer === 'Rock' || user === 'Scissors' && computer === 'Paper') {return "you win!"
-      } else if (user === computer) {return "it's a tie!"
-        } else {return "you lose!"
+      if (user === 'rock' && computer === 'scissors') {return "you win!"
+        } else if (user === 'paper' && computer === 'rock') {return "you win!"
+          } else if (user === 'scissors' && computer === 'paper') {return "you win!"
+            } else if (user === computer) {return "it's a tie"
+              } else {return "you lose!"
       }
     }
   
@@ -219,9 +221,9 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(num){
-  for (let i = 0; num > i; i--)
-  if (num > i) {return '{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall'}
-
+  for (let i = 0; i < num; num--) {
+    return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${--num} bottles of soda on the wall` 
+  }
 } 
 
 
@@ -257,17 +259,16 @@ function grade(grade){
 
 //Vowel Counter - How many vowels are there?
 /*
-Using the vowelCounter function below do the following:
-  1. Receive a string as a parameter
-  2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
-
-  HINT - you may need to study tomorrow's content on arrays 
-  HINT - try looking up the .includes() method
-*/
+D
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(string) {
+    let vowelCount = 0;
+    for (let i = 0; i < string.length; i++)
+    if (string[i] === includes.[a, e, i, o, u, y]) {
+      return vowelCount + 1
+    } 
+
 }
 
 
