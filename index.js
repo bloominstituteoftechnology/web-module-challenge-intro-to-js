@@ -224,10 +224,7 @@ function annoyingSong(num){
   for (let i = 0; i < num; num--) {
     return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${--num} bottles of soda on the wall` 
   }
-} 
-
-
-annoyingSong()
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -259,16 +256,27 @@ function grade(grade){
 
 //Vowel Counter - How many vowels are there?
 /*
-D
+Using the vowelCounter function below do the following:
+  1. Receive a string as a parameter
+  2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
+
+  HINT - you may need to study tomorrow's content on arrays 
+  HINT - try looking up the .includes() method
+*/
 
 
 function vowelCounter(string) {
-    let vowelCount = 0;
-    for (let i = 0; i < string.length; i++)
-    if (string[i] === includes.[a, e, i, o, u, y]) {
-      return vowelCount + 1
-    } 
-
+  let vowelCount = 0;
+  for (let i = 0; i < string.length; i++)
+  if (string[i] === 'a' ||
+      string[i] === 'e' ||
+      string[i] === 'i' ||
+      string[i] === 'o' ||
+      string[i] === 'u' ||
+      string[i] === 'y') {
+        vowelCount++
+      }
+      return vowelCount
 }
 
 
