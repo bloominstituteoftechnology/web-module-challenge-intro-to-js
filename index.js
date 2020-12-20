@@ -218,7 +218,9 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(num){
-  for (let i = 0; i < num; num--) {
+  let song = [];
+  let cdNum = num;
+  for (let i = 0; i < cdNum; cdNum--) {
     return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${--num} bottles of soda on the wall` 
   }
 }
