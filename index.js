@@ -192,7 +192,6 @@ Using the miles function below do the following:
 function miles(kilometers){
     return kilometers * .621371
 }
-miles ()
 
 //Task 5b - Feet to CM
 /*
@@ -206,8 +205,6 @@ function feet(centimeters){
   return centimeters / 30.48
 }
 
-feet()
- 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -266,19 +263,21 @@ Using the vowelCounter function below do the following:
 
 
 function vowelCounter(string) {
+  let vowelWord = string.toLowerCase();
   let vowelCount = 0;
-  for (let i = 0; i < string.length; i++)
-  if (string[i] === 'a' ||
-      string[i] === 'e' ||
-      string[i] === 'i' ||
-      string[i] === 'o' ||
-      string[i] === 'u' ||
-      string[i] === 'y') {
+  for (let i = 0; i < vowelWord.length; i++)
+  if (vowelWord[i] == 'a' ||
+      vowelWord[i] == 'e' ||
+      vowelWord[i] == 'i' ||
+      vowelWord[i] == 'o' ||
+      vowelWord[i] == 'u' ||
+      vowelWord[i] == 'y') {
         vowelCount++
       }
       return vowelCount
 }
 
+vowelCounter()
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
