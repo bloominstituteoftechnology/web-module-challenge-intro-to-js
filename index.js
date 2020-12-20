@@ -17,9 +17,9 @@ Do the following:
 
    HINT: no function required
 */
-var votingAge = 19 
+let votingAge = 19 
 
-if (votingAge => 18)  {
+if (votingAge >= 18)  {
   console.log('go on and vote, ya big dummy');
 
 }
@@ -28,6 +28,7 @@ else {
   console.log('noep');
 
 }
+
  /*
 Task 1b - Values
 
