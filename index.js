@@ -149,9 +149,31 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+let scissors = 1;
+let paper = 2;
+let rock = 3;
+function game(userChoice, computerChoice){
+  if(userChoice ===1 && computerChoice ===2){
+    return "you win!";
+  }else if(userChoice ===2 && computerChoice ===1){
+    return "you lose!";
+  }else if(userChoice ===2 && computerChoice ===3){
+    return "you win!";
+  }else if(userChoice ===3 && computerChoice ===2){
+    return "you lose!";
+  }else if(userChoice ===3 && computerChoice ===1){
+    return "you win!";
+  }else if(userChoice ===1 && computerChoice ===3){
+    return "you lose!";
+  }else if(userChoice ===1 && computerChoice ==1){
+    return "it's a tie";
+  }else if(userChoice ===2 && computerChoice ===2){
+    return "it's a tie";
+  }else if(userChoice ===3 && computerChoice ===3){
+    return "it's a tie";
+  }
 }
+
   
   
 
@@ -166,9 +188,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km){
+  return km *0.621371;
+ }
 
 
 
@@ -180,10 +202,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
+function feet(cm){
+  return cm *0.0328084;
+}
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
