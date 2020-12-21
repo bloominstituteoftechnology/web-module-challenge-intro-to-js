@@ -18,7 +18,10 @@ Do the following:
    HINT: no function required
 */
 
-
+let votingAge = '18';
+if(votingAge >= '18'){
+  console.log('true');
+}
 
 /*
 Task 1b - Values
@@ -31,8 +34,12 @@ Do the following:
    HINT: no function required
 */
 
-
-
+ let myAge = '23';
+ let myFriendsAge = '24'; 
+ if(myAge < myFriendsAge){
+   myAge = '24'
+   console.log(myAge);
+ }
 
 
 /*
@@ -45,8 +52,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+ let year = "1999";
+ year = Number(year);
+ console.log(year); 
 
 
 /*
@@ -58,10 +66,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
-
+console.log(multiply(10, 20));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -73,6 +81,10 @@ Do the following:
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
+
+ function dogYears(age){
+   return age * 7;
+ }
 
 function dogYears(/*add your code here*/){
     /*add your code here*/
