@@ -8,17 +8,18 @@ This will usually entail console logging the answer directly or console logging 
 returns a value, that value will be logged to the console.  An example of this would be:  console.log(theFunction(value1,value2))
 */
 
-/*
 Task 1a - Voting Age
-
+/*
 Do the following:   
    1. Create a variable called votingAge and assign it a value
    2. Console log true if age is 18 or higher
 
    HINT: no function required
 */
-
-
+   const votingAge = 18;
+   if (votingAge >=18){
+     console.log('true)
+   }
 
 /*
 Task 1b - Values
@@ -31,6 +32,12 @@ Do the following:
    HINT: no function required
 */
 
+let num1 = 5;
+let num2 = 10;
+
+if(num1 < num2){
+  num1 = num2 * num2
+}
 
 
 
@@ -45,7 +52,6 @@ Do the following:
 
    HINT: look up the Number method
 */
-
 
 
 
@@ -148,7 +154,7 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+// use math.random
 let scissors = 1;
 let paper = 2;
 let rock = 3;
@@ -165,7 +171,7 @@ function game(userChoice, computerChoice){
     return "you win!";
   }else if(userChoice ===1 && computerChoice ===3){
     return "you lose!";
-  }else if(userChoice ===1 && computerChoice ==1){
+  }else if(userChoice ===1 && computerChoice ===1){
     return "it's a tie";
   }else if(userChoice ===2 && computerChoice ===2){
     return "it's a tie";
@@ -174,6 +180,7 @@ function game(userChoice, computerChoice){
   }
 }
 
+console.log(game(1,2));
   
   
 
@@ -189,8 +196,8 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-  return km *0.621371;
- }
+  return km*0.621371;
+}
 
 
 
@@ -203,9 +210,8 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  return cm *0.0328084;
+  return cm / 30.48;
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -238,10 +244,18 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
-  }
-  
+function grade(points){
+  if(points >=90  && points <=100){
+    return 'you got an A';
+  }else if(points >=80 && points <=89){
+    return 'you got a B';
+  }else if(points >=70 && points <=79){
+    return 'you got a C';
+  }else if(points >=60 && points <=69){
+    return 'you got a D';
+  }else if(points <=60){
+    return 'you got an F';
+}
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
