@@ -199,7 +199,7 @@ function game(user, computer){
     }
 }
 var computerChoice = Math.floor(Math.random() * Math.floor(3));
-console.log(game(2, computerChoice));
+console.log(game(0, computerChoice));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -283,7 +283,7 @@ function grade(score){
     }
     return message;
   }
-console.log(grade(59));
+console.log(grade(80));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -299,10 +299,18 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
+function vowelCounter(phrase) {
+    const vowels = "aeiouAEIOU";
+    var count = 0;
 
+    for (let i = 0; i < phrase.length; i++) {
+      if (vowels.includes(phrase[i])) {
+        count++;
+      }
+    }
+    return count;
+}
+console.log(vowelCounter("Aidan Jenkins"));
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
