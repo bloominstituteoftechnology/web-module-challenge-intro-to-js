@@ -30,11 +30,20 @@ Task 1b - Values
 
 Do the following:   
    1. Declare two variables and assign them values
-   2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
+   2. Use a conditional to change the value of the 1st variable
+    based on the value assigned to the 2nd variable
    3. Console log the new value of the 1st variable
 
    HINT: no function required
 */
+
+let num1 = 10;
+let num2 = 20;
+
+if (num1 > num2){
+  console.log('hello');
+}
+
 
 
 
@@ -51,7 +60,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let stringTypeVariable = '1999';
+let converted = Number(stringTypeVariable);
+console.log(converted);
 
 
 /*
@@ -74,25 +85,34 @@ console.log(multiply(1,3));
 //Age in Dog years
 /*
 Do the following:
-   1. Invoke the dogYears function below and pass an age value to it
-   2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
+   1. Invoke the dogYears function below and pass
+  an age value to it
+   2. Use the received value to calculate 
+   the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(myAge){
+    const dogYears = 7;
+    let myAgeInDogYears = myAge * dogYears;
+    return myAgeInDogYears;
 }
 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
+//Dog feeder - Depending on
+//their weight and age, we 
+//need to know how many pounds of food to feed our dog each day!
 /*
-Use the hungryDog function and feeding requirements below to do the following:
+Use the hungryDog function and feeding 
+requirements below to do the following:
   1. Invoke the hungryDog function below and pass it a weight value in pounds
-  2. Also, pass to hungryDog an age value in years (note: if the dog is a puppy, the age will be a decimal. For example: three months = 3/12 or .25)
-  3. Do the proper calculations and return the number of pounds of raw food to feed the dog/puppy in a day
+  2. Also, pass to hungryDog an age value in years (note: if the dog is a puppy, 
+      the age will be a decimal. For example: three months = 3/12 or .25)
+  3. Do the proper calculations and return the number of pounds of raw food to feed
+   the dog/puppy in a day
   
   REMEMBER: This program should handle correctly adult AND puppy ages and weights
   
@@ -112,9 +132,41 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weightInPounds, ageInYears){
+  // check if dog is an adult or puppy
+  if (ageInYears >= 1){
+    // check weight of adult
+    // if adult weight less than or equal to 5
+    if (weightInPounds <= 5){
+      let feedingRequirements = weightInPounds * .05;
+      return feedingRequirements;
+      //if adult weight 6 and less than/equal to 10
+    }else if (weightInPounds === 6 && weightInPounds <= 10){
+      let feedingRequirements = weightInPounds * .04;
+      return feedingRequirements;
+      //if adult weight 11 and less than/equal to 15
+    }else if (weightInPounds === 11 && weightInPounds <= 15){
+      let feedingRequirements = weightInPounds * .03;
+      return feedingRequirements;
+    }else {
+      let feedingRequirements = weightInPounds * .03;
+      return feedingRequirements;
+    }
+  }else if (ageInYears >= (2/12) && ageInYears < (4/12)){
+    let feedingRequirements = weightInPounds * .1;
+    return feedingRequirements;
+  }else if (ageInYears >= (4/12) && ageInYears < (7/12)){
+    let feedingRequirements = weightInPounds * .05;
+    return feedingRequirements;
+  }else if (ageInYears >= (7/12) && ageInYears < 1){
+    let feedingRequirements = weightInPounds * .05;
+    return feedingRequirements;
   }
+}
+
+console.log(hungryDog(15, 1));
+
+
 
 
 
@@ -125,11 +177,13 @@ function hungryDog(/*add your code here*/){
 Create a global variable that randomly generates the computer's choice
 Use Math.random to determine the computers choice (Math.random gives a random number between 0 and 1)
 
-HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
+HINT: While you can complete this with only conditionals based on strings, 
+it may help to equate choice to a number when using Math.random()
 
 Use the game function below to do the following:
   1. Receive 2 parameters the user's choice and the computer's choice
-  2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match the strings below exactly.
+  2. Return whether the user won, lost, or tied based on these rules of the
+   game described below - the strings returned need to match the strings below exactly.
    - win should return "you win!"
    - lose should return "you lose!"
    - tie should return "it's a tie"
@@ -138,9 +192,25 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
 
 function game(user, computer){
-    /*add your code here*/
+  // generate computer choice
+  if (computer <= .33){
+    let computerChoice = 'rock';
+  }else if (computer <= .66){
+    let computerChoice = 'paper';
+  }else {
+    let computerChoice = 'scissors';
+  }
+  // determine who one
+  if (user === 'scissors' && computerChoice === 'rock'){
+    return "you lose!"
+  }else if (user === 'rock' && computerChoice === 'scissors'){
+    return "you win!"
+  }else if (user === 'paper' && computerChoice === 'scissors'){
+    return "you lose!"
+  }
 }
   
   
