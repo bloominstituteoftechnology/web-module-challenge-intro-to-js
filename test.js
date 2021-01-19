@@ -126,9 +126,9 @@ function hungryDog(weight, age){
   if(age >= 1)
     if(weight <= 5)
       return weight * .05;
-    else if(5 < weight && weight <= 10)
+    else if(5 < weight <= 10)
       return weight * .04;
-    else if(10 < weight && weight <= 15)
+    else if(10 < weight <= 15)
       return weight * .03; //will have rounding errors because of floating point stuff
     else
       return weight * .02;
@@ -178,6 +178,7 @@ function game(user, computer){
   user = choices.indexOf(user);
   computer = choices.indexOf(computer);
 
+  console.log(computer);
   if(user === computer)
     return 'it\'s a tie';
 
@@ -191,7 +192,10 @@ function game(user, computer){
     return 'you win!';
   
   return 'you lose!';
-}  
+}
+
+console.log('rock vs ', choice, ': ', game('rock', 'scissors'));
+  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -204,10 +208,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(km){
-  // return km * 100000/160934.4; technically this is excact (baring floating point nonsense that could happen)
-  return km * 0.621371;
-}
+function miles(/*add your code here*/){
+    /*add your code here*/
+  }
 
 
 
@@ -219,9 +222,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(cm){
-  return cm / 30.48;
-}
+function feet(/*add your code here*/){
+    /*add your code here*/
+  }
  
 
 
@@ -235,9 +238,9 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(num){
-  return num + ' bottles of soda on the wall, ' + num + ' bottles of soda, take one down pass it around ' + (num-1) + ' bottles of soda on the wall';
-}
+function annoyingSong(/*add your code here*/){
+        /*add your code here*/
+  }
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -255,21 +258,9 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(grade){
-  if(grade >= 90)
-    return 'you got an A';
-
-  if(grade >= 80)
-    return 'you got a B';
-  
-  if(grade >= 70)
-    return 'you got a C';
-  
-  if(grade >= 60)
-    return 'you got a D';
-  
-  return 'you got an F';
-}
+function grade(/*Your Code here */){
+  /*Your Code here */
+  }
   
   
 
@@ -285,31 +276,7 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-const vowels = 'aoeuiyAOEUIY';
-function vowelCounter(string){
-  let numVowels = 0;
-  for(char of string)
-    if(vowels.indexOf(char) != -1)
-      numVowels++;
 
-  return numVowels;
-
-}
-
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-    //console.log('its working');
-    return 'bar';
-}
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
+function vowelCounter(/*add your code here*/) {
+    /*add your code here*/
 }
