@@ -17,7 +17,12 @@ Do the following:
 
    HINT: no function required
 */
--------
+const votingAge = 18;
+if (votingAge > 18){
+  console.log('CANNOT VOTE')
+}else {
+  console.log('CAN VOTE')
+}
 
 
 /*
@@ -58,10 +63,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
-
+console.log(multiply(1,3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
