@@ -202,14 +202,14 @@ function game(user, computer){
     let computerChoice = 'paper';
   }else {
     let computerChoice = 'scissors';
-  }
+  };
   // determine who one
-  if (user === 'scissors' && computerChoice === 'rock'){
+  if (user === 'scissors' && computerChoice === 'rock' || user === 'paper' && computerChoice === 'scissors' || user === 'rock' && computerChoice === 'paper'){
     return "you lose!"
-  }else if (user === 'rock' && computerChoice === 'scissors'){
+  }else if (user === 'rock' && computerChoice === 'scissors' || user === 'paper' && computerChoice === 'rock' || user === 'scissors' && computerChoice === 'paper'){
     return "you win!"
-  }else if (user === 'paper' && computerChoice === 'scissors'){
-    return "you lose!"
+  }else {
+    return "it's a tie"
   }
 }
   
@@ -226,8 +226,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(distanceInKilometers){
+    let distanceInMiles = distanceInKilometers / 1.609;
+    return distanceInMiles;
   }
 
 
@@ -240,8 +241,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(distanceInCentimeters){
     /*add your code here*/
+    let distanceInFeet = distanceInCentimeters / 30.48;
+    return distanceInFeet;
   }
  
 
