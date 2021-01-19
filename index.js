@@ -195,14 +195,15 @@ Use the game function below to do the following:
 let computer = Math.random();
 
 function game(user, computer){
+  let computerChoice;
   // generate computer choice
   if (computer <= .33){
-    let computerChoice = 'rock';
+    computerChoice = 'rock';
   }else if (computer <= .66){
-    let computerChoice = 'paper';
+    computerChoice = 'paper';
   }else {
-    let computerChoice = 'scissors';
-  };
+    computerChoice = 'scissors';
+  }
   // determine who one
   if (user === 'scissors' && computerChoice === 'rock' || user === 'paper' && computerChoice === 'scissors' || user === 'rock' && computerChoice === 'paper'){
     return "you lose!"
@@ -259,9 +260,11 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(startingNumber){
+  for (let i = startingNumber; i > 0; i--){
+    return startingNumber + ' bottles of soda on the wall, ' + startingNumber + ' bottles of soda, take one down pass it around ' + (startingNumber - 1)
   }
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
