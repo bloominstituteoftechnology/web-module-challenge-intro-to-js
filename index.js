@@ -75,10 +75,9 @@ Do the following:
 */
 
 function dogYears(a, b){
-   let humanAge = 1
    return a * b;
 }
-console.log(dogYears(humanAge, 7));
+console.log(dogYears(1, 7));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -167,7 +166,38 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+    let computerTurn = Math.random();
+    let userTurn = prompt("rock", "paper", "scissors");
+
+    if(computerTurn <=.33){
+     computerTurn = "rock";
+
+    }
+    else if(computerTurn <=.66){
+      computerTurn = "paper";
+    }
+    else {
+      computerTurn = "scissors";
+    }
+    if(userTurn === "rock" && computerTurn === "paper") {
+      return("You lose!");
+    }
+    if(userTurn === "paper" && computerTurn === "rock") {
+      return("You Win!");
+    }
+    if(userTurn === "paper" && computerTurn === "scissors") {
+      return("You lose!");
+    }
+    if(userTurn === "scissors" && computerTurn === "paper") {
+      return("You win!");
+    }
+    if(userTurn === "rock" && computerTurn === "scissors") {
+      return("You win!");
+    }
+    if(userTurn === "scissors" && computerTurn === "rock") {
+      return("You lose!");
+    }
+    
 }
   
   
