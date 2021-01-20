@@ -18,8 +18,9 @@ Do the following:
    HINT: no function required
 */
 
-var votingAge = "19"
+var votingAge = "20"
 console.log(Boolean(votingAge >= 18))
+
 
 
 
