@@ -16,9 +16,9 @@ Do the following:
    2. Return true if age is 18 or higher
 
    HINT: no function required
-*/
+*/    
 
-
+  
 
 /*
 Task 1b - Values
