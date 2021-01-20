@@ -228,9 +228,8 @@ Using the miles function below do the following:
 */
 
 function miles(distanceInKilometers){
-    let distanceInMiles = distanceInKilometers / 1.609;
-    return distanceInMiles;
-  }
+    return distanceInKilometers * 0.621371 ;
+}
 
 
 
