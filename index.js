@@ -17,8 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+const votingAge= 24;
+if (votingAge >= 18){
+  console.log(true);
+} else {
+  console.log(false);
+}
 
 /*
 Task 1b - Values
@@ -30,6 +34,13 @@ Do the following:
 
    HINT: no function required
 */
+
+let x = 5
+let y = 3
+
+if(x > y){
+  console.log('This is hard!');
+}
 
 
 
@@ -45,7 +56,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+var text = "1999";
+var integer = parseInt(text, 10);
+console.log ('1999')
 
 
 
@@ -74,10 +87,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  var dogYears = 7 * age;
+  console.log(dogYears);
+  return age * 7;
 }
-
+dogYears(3);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,9 +122,26 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(pounds, age){
+    if(age >= 1 && pounds <= 5){
+      return pounds * 0.05;
+    } else if(age >= 1 && pounds >= 6 && pounds <= 10){
+      return pounds * 0.04;
+    } else if(age >=1 && pounds >= 11 && pounds <= 15){
+      return pounds * 0.03;
+    } else if(age >= 1 && pounds >= 15){
+      return pounds * 0.02;
+    } else if(age < 1 && age >= 0.583){
+      return pounds * 0.04;
+    } else if(age < 0.583 && age >= 0.333){
+      return pounds * 0.05;
+    } else if(age < 0.333){
+      return pounds * 0.10;
+    } else{
+      return "please try agian";
+    }
   }
+  console.log(hungryDog(50,1))
 
 
 
@@ -134,10 +166,48 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+let computerGen = Math.random()
+let computer = 'null'
+
+if(computerGen <= 0.3333){
+  computer = 'rock'
 }
-  
+if(computerGen > 0.3333 && computerGen < 0.6666){
+  computer = 'paper'
+}
+if(computerGen >= 0.6666){
+  computer = 'scissors'
+}
+function game(user, computer){
+    if(user === 'rock' && computer === 'rock'){
+      return "it's a tie"
+    }
+    if(user === 'rock' && computer === 'paper'){
+      return "you lose!"
+    }
+    if(user === 'rock' && computer === 'scissors'){
+      return "you win!"
+    }
+    if(user === 'paper' && computer === 'rock'){
+      return "you win!"
+    }
+    if(user === 'paper' && computer === 'paper'){
+      return "it's a tie"
+    }
+    if(user === 'paper' && computer === 'scissors'){
+      return "you lose!"
+    }
+    if(user === 'scissors' && computer ==='rock'){
+      return "you lose!"
+    }
+    if(user === 'scissors' && computer === 'paper'){
+      return "you win!"
+    }
+    if(user === 'scissors' && computer === 'scissors'){
+      return "it's a tie"
+    }
+}
+  console.log(game('paper',computer))
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -151,10 +221,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(milesFunction){
+    return km * 0.621371;
   }
-
+function miles(10);
 
 
 //Task 5b - Feet to CM
