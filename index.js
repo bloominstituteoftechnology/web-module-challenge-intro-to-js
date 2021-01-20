@@ -18,6 +18,10 @@ Do the following:
    HINT: no function required
 */
 
+var votingAge = "19"
+console.log(Boolean(votingAge >= 18))
+
+
 
 
 /*
@@ -243,5 +247,3 @@ export default{
     annoyingSong,
     grade
 }
-
-homework
