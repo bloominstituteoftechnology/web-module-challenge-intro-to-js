@@ -192,29 +192,63 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+// let computer = Math.random();
+
+// function game(user, computer){
+//   let computerChoice;
+//   // generate computer choice
+//   if (computer <= .33){
+//     computerChoice = 'rock';
+//   }else if (computer <= .66){
+//     computerChoice = 'paper';
+//   }else {
+//     computerChoice = 'scissors';
+//   }
+//   // determine who one
+//   if (user === 'scissors' && computerChoice === 'rock' || user === 'paper' && computerChoice === 'scissors' || user === 'rock' && computerChoice === 'paper'){
+//     return "you lose!"
+//   }else if (user === 'rock' && computerChoice === 'scissors' || user === 'paper' && computerChoice === 'rock' || user === 'scissors' && computerChoice === 'paper'){
+//     return "you win!"
+//   }else {
+//     return "it's a tie"
+//   }
+// }
+
 let computer = Math.random();
 
 function game(user, computer){
-  let computerChoice;
-  // generate computer choice
-  if (computer <= .33){
-    computerChoice = 'rock';
-  }else if (computer <= .66){
-    computerChoice = 'paper';
+  if (computer <= (1/3)){
+    computer = 'paper';
+  }else if (computer <= (2/3)){
+    computer = 'rock';
   }else {
-    computerChoice = 'scissors';
+    computer = 'scissors';
   }
-  // determine who one
-  if (user === 'scissors' && computerChoice === 'rock' || user === 'paper' && computerChoice === 'scissors' || user === 'rock' && computerChoice === 'paper'){
-    return "you lose!"
-  }else if (user === 'rock' && computerChoice === 'scissors' || user === 'paper' && computerChoice === 'rock' || user === 'scissors' && computerChoice === 'paper'){
-    return "you win!"
+
+  // if (user === 'scissors' && computer === 'paper' || user === 'rock' && computer === 'scissors' || user === 'paper' && computer === 'rock') {
+  //   return 'you win!'
+  // }else if (user === 'paper' && computer === 'scissors' || user === 'scissors' && computer === 'rock' || user === 'paper' && computer === 'scissors'){
+  //   return 'you lose!'
+  // }
+  if (user === 'scissors' && computer === 'paper'){
+    return 'you win!'
+  }else if (user === 'rock' && computer === 'scissors'){
+    return 'you win!'
+  }else if (user === 'paper' && computer === 'rock'){
+    return 'you win!'
+  }else if (user === 'paper' && computer === 'scissors'){
+    return 'you lose!'
+  }else if (user === 'scissors' && computer === 'rock'){
+    return 'you lose!'
+  }else if (user === 'paper' && computer === 'scissors'){
+    return 'you lose!'
   }else {
     return "it's a tie"
   }
+
 }
-  
-  
+
+console.log(game('paper', computer))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
