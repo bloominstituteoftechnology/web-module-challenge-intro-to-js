@@ -39,7 +39,7 @@ Do the following:
 var a = 1;
 var b = 2;
 if (a = 1){
-  b = 3;
+  b = 6;
 }
 console.log(a,b)
 
