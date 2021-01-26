@@ -160,14 +160,13 @@ function y2K(){
   */
   
   function game(user, computer){
-      /*add your code here*/
       if (user === computer){
         return "it's a tie";
       }else {
-        if ((user == 1 && computer == 2) || (user == 2 && computer == 3) || (user == 3 && computer == 1)){
+        if ((user === 'rock' && computer === 'paper') || (user === 'paper' && computer === 'scissors') || (user === 'scissors' && computer === 'rock')){
           return "you lose!";
         }
-        else if ((user == 1 && computer == 3) || (user == 2 && computer == 1) || (user == 3 && computer == 2)){
+        else if ((user === 'rock' && computer === 'scissors') || (user === 'paper' && computer === 'rock') || (user === 'scissors' && computer === 'paper')){
           return "you win!";
         }
       }
@@ -182,12 +181,13 @@ function y2K(){
   /*
   Using the miles function below do the following:
     1. Receive a number of kilometers
-    2. Convert the number of kiolmeters received to miles
+    2. Convert the number of kilometers received to miles
     3. Return the number of miles
   */
   
-  function miles(/*add your code here*/){
-      /*add your code here*/
+  function miles(kilometers, convertedToMiles){
+      convertedToMiles = (0.621371 * kilometers);
+      return convertedToMiles;
     }
   
   
@@ -200,8 +200,10 @@ function y2K(){
     3. Return number of feet
   */
   
-  function feet(/*add your code here*/){
-      /*add your code here*/
+  function feet(centimeters, convertedToFeet){
+      convertedToFeet = (centimeters / 30.48);
+      return convertedToFeet;
+
     }
    
   
