@@ -56,7 +56,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-var = "1999"
+var  num = Number("1999");
+
+console.log(num)
 
 
 
