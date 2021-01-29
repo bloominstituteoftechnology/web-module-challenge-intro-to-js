@@ -155,10 +155,10 @@ function game(user, computer) {
     const pick = (val) => val <= .333 ? rock : user >= .666 ? paper : scissors;
     // each player picks
     const userPick = pick(user);
-    console.log(`User picks ${userPick}`)
+    console.log(`User picks ${userPick}`);
     const computerPick = pick(computer);
-    console.log(`Computer picks ${computerPick}`)
-        // evaluate picks
+    console.log(`Computer picks ${computerPick}`);
+    // evaluate picks
     switch (userPick) {
         case rock:
             return computerPick === scissors ? win : computerPick === paper ? lose : tie;
@@ -184,8 +184,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles( /*add your code here*/ ) {
-    /*add your code here*/
+function miles(km) {
+    return km * 0.621371
 }
 
 
@@ -198,8 +198,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet( /*add your code here*/ ) {
-    /*add your code here*/
+function feet(cm) {
+    return cm * .0328084;
 }
 
 
