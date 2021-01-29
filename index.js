@@ -17,8 +17,9 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 27;
 
-
+votingAge >= 18 ? console.log(true) : console.log(false);
 
 /*
 Task 1b - Values
@@ -30,11 +31,10 @@ Do the following:
 
    HINT: no function required
 */
+const x = 5;
+const y = 8;
 
-
-
-
-
+x != y ? console.log(x * y) : console.log(x);
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -45,10 +45,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+const year = "1999";
 
-
-
-
+console.log(Number(year));
 /*
 Task 1d - Multiply
  
@@ -58,11 +57,7 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
+let multiply = (a, b) => a * b;
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -74,11 +69,7 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
-}
-
-
+let dogYears = (a) => a * 7;
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -105,13 +96,28 @@ Use the hungryDog function and feeding requirements below to do the following:
      7 - 12 months 4% of their body weight
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
+function hungryDog(weight, age) {
+  if (age >= 1/6 && age < 1/3) {
+    return weight * 0.1;    // 2 - 4 month puppy
+  } else if (age >= 1/3 && age < 7/12) {
+    return weight * 0.05;   // 4 - 7 month puppy
+  } else if (age >= 7/12 && age < 1) {
+    return weight * 0.04;   // 7 - 12 month puppy
+  } else if (age >= 1) {
+    if (weight < 6) {
+      return weight * 0.05;   // up to 5 lbs
+    } else if (weight >= 6 && weight < 11) {
+      return weight * 0.04;   // 6 - 10 lbs
+    } else if (weight >= 11 && weight <= 15) {
+      return weight * 0.03;   // 11 - 15 lbs
+    } else (weight > 15) {
+      return weight * 0.02;   // 15+ lbs
+    }
+  } else {
+    return "not recommended for puppies under 2 months";  //under 2 months not specified in exercise
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -133,17 +139,22 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+const computer = Math.random()
 
-function game(user, computer){
-    /*add your code here*/
+
+function game(user, computer) {
+
+const rock = 1/3
+const paper = 2/3
+const scissors = 1
+
+	if 
 }
-  
-  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Metric Converter 
-//Task 5a - KM to Miles 
+//Metric Converter
+//Task 5a - KM to Miles
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
@@ -151,11 +162,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
+function miles(/*add your code here*/) {
+	/*add your code here*/
+}
 
 //Task 5b - Feet to CM
 /*
@@ -165,11 +174,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
-
+function feet(/*add your code here*/) {
+	/*add your code here*/
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -181,10 +188,9 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
-
+function annoyingSong(/*add your code here*/) {
+	/*add your code here*/
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -200,12 +206,10 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(/*Your Code here */){
-  /*Your Code here */
-  }
-  
-  
+
+function grade(/*Your Code here */) {
+	/*Your Code here */
+}
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -219,27 +223,24 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
 function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+	/*add your code here*/
 }
-
-
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-    //console.log('its working');
-    return 'bar';
+function foo() {
+	//console.log('its working');
+	return "bar";
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+export default {
+	foo,
+	multiply,
+	dogYears,
+	hungryDog,
+	game,
+	miles,
+	feet,
+	annoyingSong,
+	grade,
+};
