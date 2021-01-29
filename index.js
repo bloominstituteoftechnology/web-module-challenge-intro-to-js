@@ -266,7 +266,7 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
+// eslint-disable-next-line no-unused-vars
 function vowelCounter(str) {
     const strArray = Array.from(str);
     const vowels = strArray.filter((i) => i.match(/[aeiou]/gi));
