@@ -145,9 +145,32 @@ Use the game function below to do the following:
 */
 
 function game(user, computer) {
-    /*add your code here*/
+    const win = "you win!";
+    const lose = "you lose!";
+    const tie = "it's a tie";
+    const rock = "Rock";
+    const paper = "Paper";
+    const scissors = "Scissors";
+    // returns rock paper, or scissors
+    const pick = (val) => val <= .333 ? rock : user >= .666 ? paper : scissors;
+    // each player picks
+    const userPick = pick(user);
+    console.log(`User picks ${userPick}`)
+    const computerPick = pick(computer);
+    console.log(`Computer picks ${computerPick}`)
+        // evaluate picks
+    switch (userPick) {
+        case rock:
+            return computerPick === scissors ? win : computerPick === paper ? lose : tie;
+        case paper:
+            return computerPick === rock ? win : computerPick === scissors ? lose : tie;
+        default:
+            return computerPick === paper ? win : computerPick === rock ? lose : tie;
+    }
 }
-
+const user = Math.random();
+const computer = Math.random();
+game(user, computer);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
