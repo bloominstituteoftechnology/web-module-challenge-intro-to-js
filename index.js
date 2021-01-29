@@ -99,24 +99,25 @@ Use the hungryDog function and feeding requirements below to do the following:
 */
 
 function hungryDog(weight, age) {
-  if (age >= 1/6 && age < 1/3) {
-    return weight * 0.1;    // 2 - 4 month puppy
-  } else if (age >= 1/3 && age < 7/12) {
-    return weight * 0.05;   // 4 - 7 month puppy
-  } else if (age >= 7/12 && age < 1) {
-    return weight * 0.04;   // 7 - 12 month puppy
-  } else if (age >= 1) {
-    if (weight < 6) {
-      return weight * 0.05;   // up to 5 lbs
-    } else if (weight >= 6 && weight < 11) {
-      return weight * 0.04;   // 6 - 10 lbs
-    } else if (weight >= 11 && weight <= 15) {
-      return weight * 0.03;   // 11 - 15 lbs
-    } else (weight > 15) {
-      return weight * 0.02;   // 15+ lbs
-    }
-  } else {
-    return "not recommended for puppies under 2 months";  //under 2 months not specified in exercise
+	if (age >= 1 / 6 && age < 1 / 3) {
+		weight * 0.1; // 2 - 4 month puppy
+	} else if (age >= 1 / 3 && age < 7 / 12) {
+		weight * 0.05; // 4 - 7 month puppy
+	} else if (age >= 7 / 12 && age < 1) {
+		weight * 0.04; // 7 - 12 month puppy
+	} else if (age >= 1 && weight < 6) {
+		weight * 0.05; // up to 5 lbs
+	} else if (age >= 1 && weight >= 6 && weight < 11) {
+		weight * 0.04; // 6 - 10 lbs
+	} else if (age >= 1 && weight >= 11 && weight <= 15) {
+		weight * 0.03; // 11 - 15 lbs
+	} else if (age >= 1 && weight > 15) {
+		weight * 0.02; // +15 lbs
+	} else {
+		return "not recommended for puppies under 2 months"; //under 2 months not specified in exercise
+	}
+
+	return weight;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -139,16 +140,40 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-const computer = Math.random()
-
+const computer = Math.random();
 
 function game(user, computer) {
+	const rock = 1 / 3;
+	const paper = 2 / 3;
+	const scissors = 1;
 
-const rock = 1/3
-const paper = 2/3
-const scissors = 1
-
-	if 
+	if ((user = rock && computer <= 1 / 3)) {
+		("it's a tie");
+	}
+	if (user <= rock && computer <= 2 / 3) {
+		("you lose!");
+	}
+	if (user <= 1 / 3 && computer <= 1) {
+		("you win!");
+	}
+	if (user <= 2 / 3 && computer <= 1 / 3) {
+		("you win!");
+	}
+	if (user <= 2 / 3 && computer <= 2 / 3) {
+		("it's a tie");
+	}
+	if (user <= 2 / 3 && computer <= 1) {
+		("you lose!");
+	}
+	if (user <= 1 && computer <= 1 / 3) {
+		("you lose!");
+	}
+	if (user <= 1 && computer <= 2 / 3) {
+		("you win!");
+	}
+	if (user <= 1 && computer <= 1) {
+		("it's a tie");
+	}
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
