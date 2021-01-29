@@ -237,8 +237,19 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
 
-function grade( /*Your Code here */ ) {
-    /*Your Code here */
+function grade(score) {
+    switch (score) {
+        case score >= 90 && score <= 100:
+            return 'you got an A';
+        case score >= 89 && score < 90:
+            return 'you got a B';
+        case score >= 70 && score < 80:
+            return 'you got a C';
+        case score >= 60 && score < 70:
+            return 'you got a D';
+        default:
+            return 'you got an F';
+    }
 }
 
 
