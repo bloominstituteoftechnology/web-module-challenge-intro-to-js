@@ -216,7 +216,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(num) {
     for (let i = num; i > 0; i--) {
-        console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i--} bottles of soda on the wall`)
+        console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`)
             // a return cannot be used inside of a loop as a function will only return once.
     }
 }
