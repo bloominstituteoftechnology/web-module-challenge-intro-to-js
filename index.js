@@ -267,8 +267,10 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter( /*add your code here*/ ) {
-    /*add your code here*/
+function vowelCounter(str) {
+    const strArray = Array.from(str);
+    const vowels = strArray.filter((i) => i.match(/[aeiou]/gi));
+    return vowels.length;
 }
 
 
