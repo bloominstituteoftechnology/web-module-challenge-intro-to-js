@@ -43,7 +43,12 @@ Do the following:
 var num1 = 4;
 var num2 = 2;
 
-console.log(num1 * num2);
+if (num1 <= num2){
+  console.log("WOAH")
+}
+ else {
+   console.log("AWWW SHOOT")
+ }
 
   
 
@@ -58,7 +63,7 @@ Do the following:
    HINT: look up the Number method
 */
    var str = "1999";
-   console.log(pareseInt(str)); 
+   console.log(parseInt(str)); 
 
 
 
@@ -71,12 +76,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(a ,b ){
-let a = 3;
-let b = 3;
-return a * b();
-}
-console.log(multiply());
+function multiply(num1, num2){
+  
+  console.log(num1 * num2);
+  }
+ multiply(3, 3);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -90,9 +94,10 @@ Do the following:
 */
 
 function dogYears(z ,m){
-let result = (40 / 7);
-console.log(result); 
-
+  console.log(z / m);
+  }
+  
+  dogYears(40,7)
  
 
 
@@ -123,44 +128,47 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 function hungryDog(weight, age) {
-if (age >= 1) {
-  if (weight <= 5)
-    alert(
-      "feed" + 0.05 * weight + "lbs of food per day"
-    );
-
-  if (weight >= 6 && weight <= 10)
-    alert(
-      "feed" + 0.04 * weight + "lbs of food per day"
-    );
-
-  if (weight >= 11 && weight <= 15)
-    alert(
-      "feed" + 0.03 * weight + "ibs of food per day"
-    );
-
-  if (weight > 15) {
-    alert(
-      "feed" + 0.02 * weight + "lbs of food per day"
-    );
-  } else if (age <= 11 / 12) {
-    if (age >= 1 / 6 && age < 1 / 3)
-      alert(
-        "feed" + 0.1 * weight + "lbs of food per day"
-      );
-    else if (age >= 1 / 3 && age < 7 / 12)
-      alert(
+  if (age >= 1) {
+    if (weight <= 5)
+      console.log(
         "feed" + 0.05 * weight + "lbs of food per day"
       );
-    else age >= 7 / 12 && age < 11 / 12;
-    alert(
-      "feed" + 0.04 * weight + "lbs of food per day"
-    );
+  
+    if (weight >= 6 && weight <= 10)
+      console.log(
+        "feed" + 0.04 * weight + "lbs of food per day"
+      );
+  
+    if (weight >= 11 && weight <= 15)
+      console.log(
+        "feed" + 0.03 * weight + "ibs of food per day"
+      );
+  
+    if (weight > 15) {
+      console.log(
+        "feed" + 0.02 * weight + "lbs of food per day"
+      );
+    } else if (age <= 11 / 12) {
+      if (age >= 1 / 6 && age < 1 / 3)
+        console.log(
+          "feed" + 0.1 * weight + "lbs of food per day"
+        );
+      else if (age >= 1 / 3 && age < 7 / 12)
+        console.log(
+          "feed" + 0.05 * weight + "lbs of food per day"
+        );
+      else age >= 7 / 12 && age < 11 / 12;
+      console.log(
+        "feed" + 0.04 * weight + "lbs of food per day"
+      );
+    }
   }
-}
+  
+  
+  }
+  
+  hungryDog(3, 2)
 
-
-}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -183,65 +191,62 @@ Use the game function below to do the following:
 
 
 function game(user, computer) {
-user = prompt("rock paper or scissors?");
-let scissors = 1;
-let rock = 2;
-let paper = 3;
-let Scissors = 1;
-let Rock = 2;
-let Raper = 3;
-computer = Math.floor(Math.random() * 3) + 1;
-
-if (
-  (computer === scissors && user === "rock") ||
-  (computer === scissors && user === "Rock")
-)
-  alert("You chose Rock and the Computer chose Scissors! You Win!");
-else if (
-  (computer === scissors && user === "paper") ||
-  (computer === scissors && user === "Paper")
-)
-  alert("You chose paper and the Computer chose scissors! You lose!");
-else if (
-  (computer === scissors && user === "scissors") ||
-  (computer === scissors && user === "Scissors")
-)
-  alert("You chose scissors and the Computer chose Scissors! Tie Game!");
-else if (
-  (computer === rock && user === "rock") ||
-  (computer === rock && user === "Rock")
-)
-  alert("You chose Rock and the Computer chose rock! Tie Game!");
-else if (
-  (computer === rock && user === "scissors") ||
-  (computer === rock && user === "Scissors")
-)
-  alert("You chose scissors and the Computer chose rock! You lose!");
-else if (
-  (computer === rock && user === "paper") ||
-  (computer === rock && user === "Paper")
-)
-  alert("You chose paper and the Computer chose rock! You win!");
-else if (
-  (computer === paper && user === "rock") ||
-  (computer === paper && user === "Rock")
-)
-  alert("You chose Rock and the Computer chose paper! You lose!");
-else if (
-  (computer === paper && user === "paper") ||
-  (computer === paper && user === "Paper")
-)
-  alert("You chose paper and the Computer chose paper! Tie Game!");
-else if (
-  (computer === paper && user === "scissors") ||
-  (computer === paper && user === "Scissors")
-)
-  alert("You chose scissors and the Computer chose rock! You lose!");
-}
-
-
-game();
-
+  user = prompt("rock paper or scissors?");
+  let scissors = 1;
+  let rock = 2;
+  let paper = 3;
+  
+  computer = Math.floor(Math.random() * 3) + 1;
+  
+  if (
+    (computer === scissors && user === "rock") ||
+    (computer === scissors && user === "rock")
+  )
+    alert("You chose Rock and the Computer chose Scissors! You Win!");
+  else if (
+    (computer === scissors && user === "paper") ||
+    (computer === scissors && user === "paper")
+  )
+    alert("You chose paper and the Computer chose scissors! You lose!");
+  else if (
+    (computer === scissors && user === "scissors") ||
+    (computer === scissors && user === "scissors")
+  )
+    alert("You chose scissors and the Computer chose Scissors! Tie Game!");
+  else if (
+    (computer === rock && user === "rock") ||
+    (computer === rock && user === "rock")
+  )
+    alert("You chose Rock and the Computer chose rock! Tie Game!");
+  else if (
+    (computer === rock && user === "scissors") ||
+    (computer === rock && user === "scissors")
+  )
+    alert("You chose scissors and the Computer chose rock! You lose!");
+  else if (
+    (computer === rock && user === "paper") ||
+    (computer === rock && user === "paper")
+  )
+    alert("You chose paper and the Computer chose rock! You win!");
+  else if (
+    (computer === paper && user === "rock") ||
+    (computer === paper && user === "rock")
+  )
+    alert("You chose Rock and the Computer chose paper! You lose!");
+  else if (
+    (computer === paper && user === "paper") ||
+    (computer === paper && user === "paper")
+  )
+    alert("You chose paper and the Computer chose paper! Tie Game!");
+  else if (
+    (computer === paper && user === "scissors") ||
+    (computer === paper && user === "scissors")
+  )
+    alert("You chose scissors and the Computer chose rock! You lose!");
+  }
+  
+  
+  game();
   
   
 
@@ -256,14 +261,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-
-
 function miles(kilo) {
   let answer = kilo * 0.6214;
-  alert(kilo + " kilomters equals " + answer + " miles");
-  /*add your code here*/
+  console.log(kilo + " kilomters equals " + answer + " miles");
+
 }
-miles();
+miles(4);
 
 //Task 5b - Feet to CM
 /*
@@ -272,13 +275,14 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
+
 function feet(CM) {
   CM2 = CM * 1.000000032;
   let answer = CM2 * 0.0328084;
-  alert(CM + " centimeters equlas " + answer + " feet");
-  /*add your code here*/
+  console.log(CM + " centimeters equals " + answer + " feet");
+  
 }
-feet();
+feet(200);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -292,8 +296,7 @@ Using the annoyingSong function below do the following:
 
 
 
-function annoyingSong(/*add your code here*/){
-  /*add your code here*/
+
 function annoyingSong(i) {
 for (let j = i; j > 0; j--) {
 if (i > 0) {
@@ -311,6 +314,7 @@ console.log("No more bottles of beer on the wall");
 }
 
 }
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
@@ -329,12 +333,19 @@ Using the grade function below do the following:
 
   
 function grade(score) {
-  if (score <= 100 && score >= 90) alert("A");
-  if (score <= 89 && score >= 80) alert("B");
-  if (score <= 79 && score >= 70) alert("C");
-  if (score <= 69 && score >= 60) alert("D");
-  if (score < 60) alert("F");
+  if (score <= 100 && score >= 90) 
+    console.log("A");
+  if (score <= 89 && score >= 80) 
+    console.log("B");
+  if (score <= 79 && score >= 70) 
+    console.log("C");
+  if (score <= 69 && score >= 60) 
+    console.log("D");
+  if (score < 60) 
+    console.log("F");
 }
+
+grade(40)
 
   
   
