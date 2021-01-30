@@ -260,8 +260,9 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-function vowelCounter(/*add your code here*/) {
-	/*add your code here*/
+function vowelCounter(aString) {
+	let vowels = aString.match(/[aeiou]/gi);
+	return vowels === null ? 0 : vowels.length;
 }
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
