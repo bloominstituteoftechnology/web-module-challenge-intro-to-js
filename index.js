@@ -141,28 +141,36 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-computer = Math.random();
+let computer = Math.random();
 
 function game(user, computer) {
-  if (computer < 0.34) {
-    computer = 'rock';
-  } else if (computer < 0.67) {
-    computer = 'paper';
-  } else {
-    computer = 'scissors';
-  }
+	if (computer < 0.34) {
+		computer = 'rock';
+	} else if (computer < 0.67) {
+		computer = 'paper';
+	} else {
+		computer = 'scissors';
+	}
 
-'rock' => 'scissors';
-'scissors' => 'paper';
-'paper' => 'rock';
-
-  if (computer === user) {
-    return "it's a tie";
-  } else if (computer > user) {
-    return 'you lose!';
-  } else {
-    return 'you win!';
-  }
+	if (user === 'rock' && computer === 'rock') {
+		return "it's a tie";
+	} else if (user === 'scissors' && computer === 'rock') {
+		return 'you lose!';
+	} else if (user === 'paper' && computer === 'rock') {
+		return 'you win!';
+	} else if (user === 'paper' && computer === 'paper') {
+		return "it's a tie";
+	} else if (user === 'scissors' && computer === 'paper') {
+		return 'you lose!';
+	} else if (user === 'rock' && computer === 'paper') {
+		return 'you win!';
+	} else if (user === 'scissors' && computer === 'scissors') {
+		return "it's a tie";
+	} else if (user === 'rock' && computer === 'scissors') {
+		return 'you win!';
+	} else {
+		return 'you lose!';
+	}
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -176,8 +184,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
-	/*add your code here*/
+function miles(kilometers) {
+	const miles = 0.621371;
+	return kilometers * miles;
 }
 
 //Task 5b - Feet to CM
@@ -188,8 +197,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/) {
-	/*add your code here*/
+function feet(cm) {
+	const feet = 30.48;
+	return cm / feet;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -202,8 +212,11 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/) {
-	/*add your code here*/
+function annoyingSong(startingNumber) {
+	for (let i = startingNumber; i >= 0; --i) {
+		let newNumber = i - 1;
+		return `${startingNumber} bottles of soda on the wall, ${startingNumber} bottles of soda, take one down pass it around ${newNumber} bottles of soda on the wall`;
+	}
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
