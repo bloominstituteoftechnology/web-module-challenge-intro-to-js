@@ -16,7 +16,14 @@ Do the following:
    2. Console log true if age is 18 or higher
 
    HINT: no function required
-*/
+*
+var votingAge= '18';
+votingAge= '18';
+console.log (votingAge)
+function addTwoNumbers(a,b){
+  return a+b
+}
+console.log(addTwoNumbers(1,2))
 
 
 
