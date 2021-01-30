@@ -71,8 +71,7 @@ Do the following:
 function multiply(a, b) {
   return a * b ;
 }
-let product = multiply(2, 5) ;
-console.log(product)
+let product = multiply(7, 5) ;
 
 
 
@@ -87,9 +86,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age) {
+  return 7 * age;
 }
+let humanYears = dogYears(5);
 
 
 
