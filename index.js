@@ -45,7 +45,7 @@ Do the following:
 
    HINT: look up the Number method
 */
-const year = "1999";
+const year = '1999';
 
 console.log(Number(year));
 /*
@@ -69,7 +69,7 @@ Do the following:
    3. Return the newly calculated age
 */
 
-let dogYears = (a) => a * 7;
+let dogYears = a => a * 7;
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -100,21 +100,21 @@ Use the hungryDog function and feeding requirements below to do the following:
 
 function hungryDog(weight, age) {
 	if (age >= 1 / 6 && age < 1 / 3) {
-		weight * 0.1; // 2 - 4 month puppy
+		return weight * 0.1; // 2 - 4 month puppy
 	} else if (age >= 1 / 3 && age < 7 / 12) {
-		weight * 0.05; // 4 - 7 month puppy
+		return weight * 0.05; // 4 - 7 month puppy
 	} else if (age >= 7 / 12 && age < 1) {
-		weight * 0.04; // 7 - 12 month puppy
+		return weight * 0.04; // 7 - 12 month puppy
 	} else if (age >= 1 && weight < 6) {
-		weight * 0.05; // up to 5 lbs
+		return weight * 0.05; // up to 5 lbs
 	} else if (age >= 1 && weight >= 6 && weight < 11) {
-		weight * 0.04; // 6 - 10 lbs
+		return weight * 0.04; // 6 - 10 lbs
 	} else if (age >= 1 && weight >= 11 && weight <= 15) {
-		weight * 0.03; // 11 - 15 lbs
+		return weight * 0.03; // 11 - 15 lbs
 	} else if (age >= 1 && weight > 15) {
-		weight * 0.02; // +15 lbs
+		return weight * 0.02; // +15 lbs
 	} else {
-		return "not recommended for puppies under 2 months"; //under 2 months not specified in exercise
+		return 'not recommended for puppies under 2 months'; //under 2 months not specified in exercise
 	}
 
 	return weight;
@@ -140,40 +140,29 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-const computer = Math.random();
+
+computer = Math.random();
 
 function game(user, computer) {
-	const rock = 1 / 3;
-	const paper = 2 / 3;
-	const scissors = 1;
+  if (computer < 0.34) {
+    computer = 'rock';
+  } else if (computer < 0.67) {
+    computer = 'paper';
+  } else {
+    computer = 'scissors';
+  }
 
-	if ((user = rock && computer <= 1 / 3)) {
-		("it's a tie");
-	}
-	if (user <= rock && computer <= 2 / 3) {
-		("you lose!");
-	}
-	if (user <= 1 / 3 && computer <= 1) {
-		("you win!");
-	}
-	if (user <= 2 / 3 && computer <= 1 / 3) {
-		("you win!");
-	}
-	if (user <= 2 / 3 && computer <= 2 / 3) {
-		("it's a tie");
-	}
-	if (user <= 2 / 3 && computer <= 1) {
-		("you lose!");
-	}
-	if (user <= 1 && computer <= 1 / 3) {
-		("you lose!");
-	}
-	if (user <= 1 && computer <= 2 / 3) {
-		("you win!");
-	}
-	if (user <= 1 && computer <= 1) {
-		("it's a tie");
-	}
+'rock' => 'scissors';
+'scissors' => 'paper';
+'paper' => 'rock';
+
+  if (computer === user) {
+    return "it's a tie";
+  } else if (computer > user) {
+    return 'you lose!';
+  } else {
+    return 'you win!';
+  }
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -255,7 +244,7 @@ function vowelCounter(/*add your code here*/) {
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo() {
 	//console.log('its working');
-	return "bar";
+	return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 export default {
