@@ -183,8 +183,11 @@ Using the miles function below do the following:
 function miles(/*add your code here*/){
     /*add your code here*/
   }
+function miles(num1){
+  return num1*0.621371;
 
-
+}
+console.log(miles(10));
 
 //Task 5b - Feet to CM
 /*
@@ -197,8 +200,10 @@ Using the feet function below do the following:
 function feet(/*add your code here*/){
     /*add your code here*/
   }
- 
-
+ function centimeters(num2){
+   return num2*30.48;
+ }
+console.log(centimeters(4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
