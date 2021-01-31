@@ -135,13 +135,13 @@ function hungryDog(weight, age) {
   else if (weight > 15 && age >= 1) {
     return 0.02 * weight ;
   }
-  else if (age >1/6 <=1/3 ) {
+  else if (age >1/6 && age <=1/3 ) {
     return 0.10 * weight ;
   }
-  else if (age >1/3 <=7/12 ) {
+  else if (age >1/3 && age <=7/12 ) {
     return 0.05 * weight ;
   }
-  else if (age >7/12 <=1) {
+  else if (age >7/12 && age <=1) {
     return 0.04 * weight ;
   }
 
@@ -194,7 +194,7 @@ function game(user,computer) {
   else if (user === "rock" && computer === "scissors") {
     return win ;
   }
-  else if (user === "paper" && computer === "scissor") {
+  else if (user === "paper" && computer === "scissors") {
     return lose ;
   }
   else if (user === "scissors" && computer === "scissors") {
@@ -234,11 +234,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
+function miles(km) {
+  return km * milesToKm ;
+}
+const milesToKm = 0.621371 ;
+// let distance = miles(3)
+// console.log(distance)
 
 //Task 5b - Feet to CM
 /*
@@ -248,10 +249,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
+function feet(cm){
+  return cm / feetToCm
+}
+const feetToCm = 30.48 ;
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
