@@ -35,10 +35,10 @@ Do the following:
 
    HINT: no function required
 */
-let color = "pink" ;
-let item = "bag" ;
-if (color = "bag") {
-  console.log(color);
+let varOne = "pink" ;
+let varTwo = "bag" ;
+if (varOne = "bag") {
+  console.log(varOne);
 }
 
 
@@ -71,7 +71,8 @@ Do the following:
 function multiply(a, b) {
   return a * b ;
 }
-let product = multiply(7, 5) ;
+// let product = multiply(7, 5) ;
+// console.log(product)
 
 
 
@@ -89,7 +90,8 @@ Do the following:
 function dogYears(age) {
   return 7 * age;
 }
-let humanYears = dogYears(5);
+// let humanYears = dogYears(5);
+// console.log(humanYears)
 
 
 
@@ -120,9 +122,32 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age) {
+  if (weight <= 5 && age >= 1) {
+    return 0.05 * weight ;
   }
+  else if (weight <= 10 && age >= 1) {
+    return 0.04 * weight ;
+  }
+  else if (weight <= 15 && age >= 1) {
+    return 0.03 * weight ;
+  }
+  else if (weight > 15 && age >= 1) {
+    return 0.02 * weight ;
+  }
+  else if (age >1/6 <=1/3 ) {
+    return 0.10 * weight ;
+  }
+  else if (age >1/3 <=7/12 ) {
+    return 0.05 * weight ;
+  }
+  else if (age >7/12 <=1) {
+    return 0.04 * weight ;
+  }
+
+  }
+  // let answer = hungryDog(15,1) ;
+  // console.log(answer)
 
 
 
