@@ -39,7 +39,7 @@ let x = 5
 let y = 3
 
 if(x > y){
-  console.log('This is hard!');
+  console.log('This is the new variable!');
 }
 
 
@@ -56,9 +56,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-var text = "1999";
-var integer = parseInt(text, 10);
-console.log ('1999')
+var string = "1999";
+
+console.log(Number(string));
 
 
 
