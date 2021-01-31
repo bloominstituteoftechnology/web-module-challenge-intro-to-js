@@ -1,3 +1,4 @@
+import t from 't';
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
@@ -17,26 +18,37 @@ Do the following:
 
    HINT: no function required
 *
-var votingAge= '18';
-votingAge= '18';
-console.log (votingAge)
-function addTwoNumbers(a,b){
-  return a+b
+var votingAge=18;
+
+if(votingAge>18){
+  console.log(true)
 }
-console.log(addTwoNumbers(1,2))
+else{
+  console.log(false)
+}
 
 
 
 /*
 Task 1b - Values
-
-Do the following:   
+`
+Do the following:   `
    1. Declare two variables and assign them values
    2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
    3. Console log the new value of the 1st variable
 
    HINT: no function required
 */
+let sweetTreats='candy';
+let randNum= Math.round(Math.random)*10;
+
+if(randNum>7){
+  sweetTreats='spice';
+}
+else{
+  sweetTreats='candy'
+}
+console.log(sweetTreats)
 
 
 
@@ -52,6 +64,10 @@ Do the following:
 
    HINT: look up the Number method
 */
+const int myNum= 1999;
+myNum= 1999;
+console.log(myNum)
+
 
 
 
@@ -65,10 +81,16 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
+
+
 function multiply(/*add your code here*/){
     /*add your code here*/
   }
-
+  function multiply(a,b){
+    let(a*b)= (4*6);
+    console.log(a*b)
+    
+  }
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -141,7 +163,7 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
+function game(){
     /*add your code here*/
 }
   
@@ -227,9 +249,6 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
 
 
 
