@@ -33,7 +33,12 @@ Do the following:
 
    HINT: no function required
 */
+let valueOne = 5
+let valueTwo = 2
 
+if (valueOne =( valueOne + valueTwo) ){
+  console.log(valueOne)
+}
 
 
 
@@ -48,7 +53,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+var year ="1970"
 
+console.log(Number(year))
 
 
 
