@@ -68,10 +68,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply(a,b){
 
+  console.log(a*b);
+}
+
+multiply(2,6)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -84,9 +86,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(x){
+
+  console.log(x*7);
 }
+dogYears(5)
 
 
 
@@ -114,12 +118,30 @@ Use the hungryDog function and feeding requirements below to do the following:
      4 - 7 months 5% of their body weight 
      7 - 12 months 4% of their body weight
     
-  NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+  NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996*/  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+
+function hungryDog(W,y){
+  if (y>1 && W >=0<=5){console.log(5%W)}
+   
+  
+else if (y>1 && W >=6<=10){console.log(4%W)}
+  
+ else if (y>1 && W >=11<=15){console.log(3%W)}
+
+else if (y>1 && W >15)
+{console.log(2%W)}
+  
+ else if (y>=.167<=0.333){console.log(10%W)}
+  
+ else if (y>=.333<=.583){console.log(5%W)} 
+
+
+else (y>=.583<=1)
+{console.log(4%W)}
+
+}
+hungryDog(15,1)
 
 
 
