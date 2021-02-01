@@ -141,33 +141,36 @@ function hungryDog(age,weight){
   while (age >= 1) {
 
     if (weight <= 5)
-      return weight * .05;
+      {return weight * .05;}
 
-     elseif (6<= weight <=10) 
-        return weight * .04;
+    elseif (6<= weight <=10) 
+       { return weight * .04;}
     
-     elseif (11<= weight<=15) 
-       return weight * .03;
+    elseif (11<= weight<=15) 
+      { return weight * .03;}
     
-      elseif (weight > 15) 
-        return weight *.02;
+    elseif (weight > 15) 
+        {return weight *.02;}
+    
+    else ()
+    {return weight *.02}
     }
 }
 
 while (age < 1) {
 
-  if (.16 <= age < .33 )
-    return weight * .1;
+  if (.16 <= weight < .33 )
+    {return weight * .1;}
 
-   elseif (.33 <= age < .58) 
-      return weight * .05;
+  elseif (.33 <= weight < .58) 
+    {return weight * .05;}
   
-   elseif (.58 <= age < 1) 
-     return weight * .04;
+  else (.58 <= weight < 1) 
+    {return weight * .04;}
   
   }
 }
-
+console.log(hungryDog(age,weight));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
