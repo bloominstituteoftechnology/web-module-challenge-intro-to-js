@@ -221,11 +221,14 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+const factor=1.609;
+let Km= 3;
+  function miles(x){
+  x=parseFloat(x)
+  
   }
-
-
+    console.log ('Miles is  '  +Km*factor)
+  
 
 //Task 5b - Feet to CM
 /*
