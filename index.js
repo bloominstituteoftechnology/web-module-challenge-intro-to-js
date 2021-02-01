@@ -17,11 +17,14 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 18
+const age = 18
+if(votingAge => age) 
+  console.log(true)
 
-
-
+ 
 /*
-Task 1b - Values
+Task 1b - Valuesasd
 
 Do the following:   
    1. Declare two variables and assign them values
