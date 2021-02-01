@@ -284,7 +284,7 @@ function grade(score){
  else if (grade < 60){'you got an F'}
     }
 console.log(grade)
-grade(score) 
+grade(score);
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
