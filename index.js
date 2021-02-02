@@ -64,9 +64,11 @@ Do the following:
 
    HINT: look up the Number method
 */
-const int myNum= 1999;
-myNum= 1999;
-console.log(myNum)
+let stringVar = '1999';
+stringVar= parseInt(1999);
+return();
+// parseInt(stringVar);
+
 
 
 
@@ -106,8 +108,10 @@ Do the following:
 function dogYears(/*add your code here*/){
     /*add your code here*/
 }
-
-
+function dogYears(num1){
+  return * 7;
+}
+console.log(dogYears(41));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -200,7 +204,8 @@ Using the feet function below do the following:
 function feet(/*add your code here*/){
     /*add your code here*/
   }
- function centimeters(num2){
+ function centimeters(num2)
+ {
    return num2*30.48;
  }
 console.log(centimeters(4));
