@@ -46,9 +46,8 @@ Use the copy function below to do the following:
 */
 let newArray = [...originalFlavors]
 
-function copy() {
-   
-    console.log(newArray)
+function copy(newArray) {
+ console.log(newArray)
 }
 copy(newArray)
 
@@ -166,13 +165,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(){
-    originalFlavors.splice(30,1)
-  console.log(originalFlavors)
+function removeFlavorByName(removal){
+    originalFlavors.splice(removal)
+  console.log ( originalFlavors)
   
 }
 
-removeFlavorByName(originalFlavors)
+removeFlavorByName(30, 1)
+                      
 
 
 
@@ -195,8 +195,11 @@ Use the filterByWord function below to do the following:
 
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
+function filterByWord(word){
+    console.log(originalFlavors)
+}
+filterByWord('Chocolate')
 
-f
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
