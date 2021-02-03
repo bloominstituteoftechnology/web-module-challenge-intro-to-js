@@ -1,3 +1,4 @@
+
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
@@ -17,6 +18,12 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 18;
+if (votingAge < 18) {
+console.log('not old enough');
+} else {
+    console.log("go vote!");
+                }
 
 
 
@@ -30,7 +37,11 @@ Do the following:
 
    HINT: no function required
 */
-
+let conditionalTask;
+let b = null;
+if (b == null) {    
+conditionalTask = b;
+}
 
 
 
@@ -45,6 +56,8 @@ Do the following:
 
    HINT: look up the Number method
 */
+let dob = parseInt('1999');
+console.log(dob)
 
 
 
@@ -58,9 +71,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply (a, b) {
+  return a * b;
+}
 
 
 
@@ -74,10 +87,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+dogAge = age =>  age * 7;
+function ageChanger (age) {
+  const dogAge =  age / 12;
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,10 +120,24 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
-
+function hungryDog(lbs, dogAge){
+  if (dogAge >= 12 && lbs <= 5){
+      return lbs * .05;
+} else if (dogAge >= 12 && lbs <= 10){
+  return lbs * .04;
+} else if (dogAge>= 12 && lbs <= 15) {
+  return lbs * .03;
+} else if (dogAge >= 12 && lbs > 15) {
+  return lbs * .02;
+} else if (dogAge < 4) {
+return lbs * .10;
+} else if (dogAge <= 7) {
+return lbs * .05;
+} else {
+return lbs * .04;
+}
+};
+console.log(dogFeeder(15, 12)) //0.44999999999999996
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -134,7 +161,62 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
+function game(user, computer){let pChoice = userImput => {
+  if (pChoice === 'rock' || pChoice === 'paper' || pChoice === 'scissor') {
+    return pChoice(); 
+  } else {
+    return 'That is not a Valid Entry';
+  }
+};const cpuChoice =  (Math.floor(Math.random() * 3));
+if (cpuChoice == 0) {let userInput = prompt('choose rock, paper, scissor')
+};
+console.log(`You chose: ${userInput}`)
+function pChoice () {
+  if (userInput == null || userInput == undefined) {
+    return 'error pChoice'
+  } else {
+    return userInput
+  }
+}const cpuLogic =  (Math.floor(Math.random() * 3)) 
+function cpuChoice  () {
+  if (cpuLogic === 0) {
+    return 'rock';
+  } else if (cpuChoice == 1) {
+  } else if (cpuLogic === 1) {
+    return 'paper';
+  } else if (cpuChoice == 2) {
+  } else if (cpuLogic === 2) {
+    return 'scissor';
+  } else {
+    console.log(cpuChoice())
+    return 'Error cpuChoice'
+  };
+}
+console.log(`Computer Chose: ${cpuChoice()}`) 
+function decision() {
+  if (pChoice() == 'rock' && cpuChoice() == 'rock') {
+    return 'You and the Computer Tied'
+  } else if (pChoice() == 'paper' && cpuChoice() == 'paper'){
+    return 'You and the Computer Tied'
+  } else if (pChoice() == 'scissor' && cpuChoice() == 'scissor') {
+    return 'You and the Computer Tied'
+  } else if (pChoice() == 'rock' && cpuChoice() == 'paper') {
+    return 'The computer won'
+  } else if (pChoice() == 'rock' && cpuChoice() == 'scissor') {
+    return 'You Won!'
+  } else if (pChoice() == 'paper' && cpuChoice() == 'scissor') {
+    return 'The computer won!'
+  } else if (pChoice() == 'paper' && cpuChoice() == 'rock') {
+    return 'You Won!'
+  } else if (pChoice() == 'scissor' && cpuChoice() == 'rock') {
+    return 'The computer won!'
+  } else if (pChoice() == 'scissor' && cpuChoice() == 'paper') {
+    return 'You Won!'
+  } else {
+    return `error ${pChoice} ${cpuChoice}`
+  }
+}
+console.log(decision())
     /*add your code here*/
 }
   
@@ -151,9 +233,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+let km = 500;
+const toMiles = km * 0.62;
+console.log(toMiles)
 
 
 
@@ -165,9 +247,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+let feet = 10;
+  const toCent = feet * 30.48;
+  console.log(toCent);
  
 
 
@@ -181,8 +263,11 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+bottles= 99;
+  while (bottles >= 1) {
+    console.log(`${bottles} of soda on the wall, ${bottles} bottles of soda, take one down pass it around`)
+      bottles--;
+    console.log(`${bottles} bottles of soda on the wall.`)
   }
 
 
@@ -201,9 +286,22 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
-  }
+let grade = 89;
+function grader () {
+if (grade >= 90 ) {
+  return 'You got an A'
+}else if (grade >= 80 && grade <=89 ) {
+  return 'You got a B'
+} else if (grade >= 70 && grade <= 79) {
+  return 'You got a C'
+} else if (grade >= 60 && grade <= 69) {
+  return 'You got a D'
+} else {
+  return 'You Failed...Summer School is waiting.'
+}
+}
+console.log(grader())
+
   
   
 
@@ -219,12 +317,19 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+const vowels = ['a', 'e', 'i', 'o', 'u']
+function vowelCounter
+(str) {
+  let counter = 0;
+  for (let letter of str.toLowerCase()) {
+    if (vowels.includes(letter)) {
+      counter++ 
+    }
+  }
+  return counter 
 }
 
-
+console.log(vowelCounter('Euouae')) //should return 6
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
