@@ -210,8 +210,12 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(bottles) {
   /*add your code here*/
-  for (let bottles = 0; i > bottles; bottles-- ) {
-    console.log (`${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around ${number left over} bottles of soda on the wall`);
+  for (let i = bottles; i > 0; i--) {
+    console.log(
+      `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${
+        i - 1
+      } left over bottles of soda on the wall`
+    );
   }
 }
 
@@ -234,17 +238,17 @@ function grade(score) {
   const grade = score / 100;
   return grade;
   /*Your Code here */
-  if (grade >= 90 && grade <= 100) { 
+  if (grade >= 90 && grade <= 100) {
     return "you got an A";
-   } else if (grade >= 80 && grade <= 89) { 
+  } else if (grade >= 80 && grade <= 89) {
     return "you got an B";
-   } else if (grade >= 70 && grade <= 79) { 
+  } else if (grade >= 70 && grade <= 79) {
     return "you got an C";
-   } else if (grade >= 60 && grade <= 69) { 
+  } else if (grade >= 60 && grade <= 69) {
     return "you got an D";
-   } else if (grade < 69) {
-     return "You got an F";
-   }
+  } else if (grade < 69) {
+    return "You got an F";
+  }
 }
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
