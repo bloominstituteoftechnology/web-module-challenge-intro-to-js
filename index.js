@@ -54,7 +54,7 @@ Task 1d - Multiply
  
 Do the following:   
    1. Invoke the multiply function below and pass it two numbers
-   2. Receive the numbers in the parameters: a and b
+   2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
 
