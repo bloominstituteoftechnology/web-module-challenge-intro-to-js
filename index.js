@@ -17,7 +17,13 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 21 {
+  if (age >= 18) {
+    return "You can vote!";
+  } else {
+    return "You can not vote";
+  }
+}
 /*
 Task 1b - Values
 
@@ -28,7 +34,14 @@ Do the following:
 
    HINT: no function required
 */
-
+let child = "Ebony";
+let manners = "terrible";
+if (manners === "nice") {
+  child = "Ebony";
+} else if (manners === "terrible") {
+  child = "Tianna";
+}
+console.log(child);
 /*
 Task 1c - Convert Strings to Numbers
 
