@@ -74,10 +74,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(a, b){
-   return a * b;
+function dogYears(a){
+   return a * 7;
 }
-console.log(dogYears(1, 7));
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -109,38 +109,34 @@ Use the hungryDog function and feeding requirements below to do the following:
 
  function hungryDog(a, b){
 
-
- let fourMonths = .10 
- let sevenMonths = .05
- let twelveMonths = .04
- let fifteenLbs = .03
- let sixteenLbs = .02
-
-
- if (a < 5 && a > 2){
-   return (fourMonths * b);
- }
- if (a > 4 && a < 8){
-   return (sevenMonths * b);
- }
- if (a > 6 && b < 13){
-   return (twelveMonths * b);
- }
- if (a > 12 && b < 6){
-   return (sevenMonths * b);
- }
- if (a > 12 && b < 11){
-   return (twelveMonths * b);
- }
- if (a > 12 && b < 16){
-   return (fifteenLbs * b);
- }
- if (a > 12 && b > 15){
-   return (sixteenLbs * b);
- }
-
+if(b >= 1 && a < 5){
+  return(a * .05);
+}
+if(b >=1 && a < 10){
+  return(a * .04);
+}
+if(b >=1 && a <= 15){
+  return(a * .03);
+}
+if(b >= 1 && a > 15){
+  return(a * .02);
 }
 
+if(b <= .33){
+  return(a * .1);
+}
+if(b <= .58){
+  return(a * .05);
+}
+if(b <=.99){
+  return(a * .04);
+}
+
+ }
+
+
+
+   
 
 
 
@@ -167,37 +163,39 @@ Use the game function below to do the following:
 
 function game(user, computer){
     let computerTurn = Math.random();
-    let userTurn = prompt("rock", "paper", "scissors");
 
-    if(computerTurn <=.33){
-     computerTurn = "rock";
+  if(computerTurn <= .33){
+    computerTurn = "rock";
+  }
+  else if(computerTurn <= .66){
+    computerTurn = "paper";
+  }
+  else if(computerTurn <= 1){
+    computerTurn = "scissors";
+  }
 
-    }
-    else if(computerTurn <=.66){
-      computerTurn = "paper";
-    }
-    else {
-      computerTurn = "scissors";
-    }
-    if(userTurn === "rock" && computerTurn === "paper") {
-      return("You lose!");
-    }
-    if(userTurn === "paper" && computerTurn === "rock") {
-      return("You Win!");
-    }
-    if(userTurn === "paper" && computerTurn === "scissors") {
-      return("You lose!");
-    }
-    if(userTurn === "scissors" && computerTurn === "paper") {
-      return("You win!");
-    }
-    if(userTurn === "rock" && computerTurn === "scissors") {
-      return("You win!");
-    }
-    if(userTurn === "scissors" && computerTurn === "rock") {
-      return("You lose!");
-    }
-    
+  if(computerTurn === "rock" && user === "paper"){
+    return("you win!");
+  }
+  else if(computerTurn === "paper" && user === "scissors"){
+    return("you win!");
+  }
+  else if(computer === "scissors" && user === "rock"){
+    return("you win!");
+  }
+  else if(computerTurn === "rock" && user === "scissors"){
+    return("you lose!");
+  }
+  else if(computerTurn === "paper" && user === "rock"){
+    return("you lose!");
+  }
+  else if(computerTurn === "scissors" && user === "paper"){
+    return("you lose!");
+  }
+  else{
+    return("it's a tie!")
+  }
+ 
 }
   
   
@@ -213,8 +211,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilo){
+    return(kilo * .621371);
   }
 
 
@@ -227,9 +225,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(cm){
+   return(cm / 30.48);
+ }
  
 
 
