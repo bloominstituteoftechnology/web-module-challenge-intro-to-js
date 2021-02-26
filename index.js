@@ -17,9 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+/*
+let votingAge = 18;
+console.log("Is this person old enough to vote?: " + (votingAge >= 18))
+*/
+let votingAge = 35;
+console.log(votingAge >= 18)
 /*
 Task 1b - Values
 
@@ -30,9 +33,16 @@ Do the following:
 
    HINT: no function required
 */
+let my_money = 20;
+let your_money = 1000;
+x = 0
 
-
-
+if (my_money <= your_money) {
+    let x = (your_money * .1)
+    my_money += x;
+    your_money -= x;
+    console.log(my_money);
+}
 
 
 /*
@@ -45,7 +55,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let value = "1999";
+let new_value = parseInt(value, 10);
+console.log(new_value);
 
 
 
@@ -58,9 +70,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
+console.log(multiply(5,6))
 
 
 
@@ -74,9 +87,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
+console.log(dogYears(8))
 
 
 
@@ -107,11 +121,40 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(pounds, age){
+    
+    let amount_of_food = 0
+    if (age >= 1) {
+        if (pounds <= 5) {
+            amount_of_food = .05 * pounds;
+        }
+        else if (pounds <= 10) {
+            amount_of_food = .04 * pounds;
+        }
+        else if (pounds <= 15) {
+            amount_of_food = .03 * pounds;
+        }
+        else {
+            amount_of_food = .02 * pounds;
+        }
+    } else {
+        if (age <= 4) {
+            amount_of_food = .1 * pounds;
+        }
+        if (age <= 7) {
+            amount_of_food = .05 * pounds;
+        }
+        if (age <= 12) {
+            amount_of_food = .04 * pounds;
+        }
+    }
+    /*
+    return ("A pooch that weighs " + pounds + " pounds who is " + age + " years old should eat " + (amount_of_food).toFixed(2) + " pounds of raw food per day.")
+    */
+    return amount_of_food
   }
 
-
+console.log(hungryDog(15, 1))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -135,9 +178,23 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+    if (user === computer) {
+        return "it's a tie";
+    } else if ((user === 'rock') && (computer === 'paper')) {
+        return "you lose!"
+    } else if ((user === 'rock') && (computer === 'scissors')) {
+        return "you win!"
+    } else if ((user === 'paper') && (computer === 'rock')) {
+        return "you win!"
+    } else if ((user === 'paper') && (computer === 'scissors')) {
+        return "you lose!"
+    } else if ((user === 'scissors') && (computer === 'rock')) {
+        return "you lose!"
+    } else if ((user === 'scissors') && (computer === 'paper')) {
+        return "you win!"
+    }
 }
-  
+console.log(game('paper', 'scissors'))
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -151,11 +208,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+
+function miles(km){
+    conversion_factor = 0.62137119;
+    return (km*conversion_factor).toFixed(2)
   }
-
-
+console.log(miles(100))
 
 //Task 5b - Feet to CM
 /*
@@ -165,10 +223,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    feet_conversion = 0.032808
+    return (cm * feet_conversion).toFixed(2);
   }
- 
+ console.log(feet(100))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -181,9 +240,14 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(num){
+    while (num > 0) {
+        console.log(num + " bottles of soda on the wall, " + num + " bottles of soda, take one down pass it around " + (num - 1) + " bottles of soda on the wall")
+        num --;
+    }
+}
+  
+  console.log(annoyingSong(2))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -201,10 +265,22 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
-  }
-  
+function grade(score){
+    if (score <= 100 && score >= 90) {
+        return 'you got an A';
+    } else if (score <= 89 && score >= 80) {
+        return 'you got a B';
+    } else if (score <= 79 && score >= 70) {
+        return 'you got a C';
+    } else if (score <= 69 && score >= 60) {
+        return 'you got a D';
+    } else if (score <= 68 && score >= 0) {
+        return 'you got an F';
+    } else {
+        return "Please input a score between 0 and 100"
+    }
+}
+console.log(grade(95))
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -220,26 +296,15 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(string) {
+    vowels = ['a', 'e', 'i', 'o', 'u'];
+    num_vowels = 0;
+    
+    for (let i = 0; i <= string.length; i++) {
+        if (vowels.includes(string[i])) {
+            num_vowels ++;
+        }
+    }
+    return num_vowels;
 }
-
-
-
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-    //console.log('its working');
-    return 'bar';
-}
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+vowelCounter("I was walking on the beach today!")
