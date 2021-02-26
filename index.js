@@ -21,7 +21,6 @@ let votingAge = 18;
 
 if(votingAge >= 18){
   console.log('true');
-
 }
 
 
@@ -39,7 +38,7 @@ let var1 = 5;
 let var2 = 3; 
 
 if (var2 >= 3){
-  console.log(var1 = 7);
+  console.log(var1 = 9);
 }
 
 
@@ -57,11 +56,9 @@ Do the following:
 */
 let year = "1999";
 
-year.toString();
+let integer = parseInt(year, 10);
 
-console.log(year);
-
-
+console.log(integer);
 
 
 /*
@@ -77,7 +74,7 @@ function multiply(a,b){
     return (a * b);
   }
 
-
+console.log(multiply(2,4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -89,10 +86,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
 
+console.log(dogYears(2))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
