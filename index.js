@@ -245,9 +245,12 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(number){
+function annoyingSong(bottles){
 for (let i = 0; i <= 100; i++){
-  return number + "bottles of soda on the wall," + number + 'bottles of soda, take one down pass it around' + (number) + 'bottles of soda on the wall';
+  let number = bottles;
+  let numbers = bottles - 1; 
+  
+return number + "bottles of soda on the wall," + number + 'bottles of soda, take one down pass it around' + (numbers - 1) + 'bottles of soda on the wall';
   }
 
   annoyingSong(95)
