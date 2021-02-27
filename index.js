@@ -208,11 +208,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    let miles = kilometers * 0.621371;
+    return miles
   }
 
-
+miles(5)
 
 //Task 5b - Feet to CM
 /*
@@ -222,10 +223,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(centimeter){
+    let feet = centimeter / 30.48;
+    return feet;
   }
  
+  feet(5)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
