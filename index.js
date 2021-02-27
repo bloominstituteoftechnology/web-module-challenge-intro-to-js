@@ -38,7 +38,8 @@ let valueOne = 10;
 let valueTwo = 20;
 
 if (valueOne < valueTwo ); {
-
+  valueOne = 25;
+  console.log(valueOne)
 }
 
 
@@ -70,8 +71,9 @@ Do the following:
 */
 
 function multiply(a, b){
-   console.log(a * b)
+   return (a * b)
   }
+multiply(2,2)
 
 
 
@@ -85,10 +87,13 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(age){
     /*add your code here*/
+    return (age * 7);
+
 }
 
+dogYears(2);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -118,8 +123,11 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(weight, age){
     /*add your code here*/
+    if (age >= 1 && weight <= 5) {
+      return weight * .05;
+    }
   }
 
 
@@ -192,8 +200,10 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+for (let i = 100; i < 100; i--){
+  return ${number} "bottles of soda on the wall," ${number} 'bottles of soda, take one down pass it around ${number left over} bottles of soda on the wall'
+}
   }
 
 
@@ -211,10 +221,21 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(letter){
+  if (letter <= 100 && letter >= 90) {
+    return 'you got an A'
+  } else if  (letter <= 89 && letter >= 80) {
+    return 'you got a B'
+  } else if  (letter <= 79 && letter >= 70) {
+    return 'you got a C'
+  } else if  (letter <= 89 && letter >= 60) {
+    return 'you got a D'
+  } else if  (letter <= 59) {
+    return 'you got an F'
   }
+  }
+
+  grade(70);
   
   
 
