@@ -241,11 +241,14 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+      let count = number;
+      while (count > 0){
+        return `${number} bottles of soda on the wall ${number}bottles of soda, take one down pass it around {number left over} bottles of soda on the wall`
+      }count = count -1
   }
 
-
+console.log(annoyingSong(5));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
