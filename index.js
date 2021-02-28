@@ -18,7 +18,14 @@ Do the following:
    HINT: no function required
 */
 
+console.log("running");
 
+let votingAge = 12;
+if (votingAge >= 18) {
+  console.log(true);
+} else {
+  console.log(false + ' you are only ' +  votingAge);
+}
 
 /*
 Task 1b - Values
@@ -31,6 +38,7 @@ Do the following:
    HINT: no function required
 */
 
+let var1 =
 
 
 
@@ -232,14 +240,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+// export default{
+//     foo,
+//     multiply,
+//     dogYears,
+//     hungryDog,
+//     game,
+//     miles,
+//     feet,
+//     annoyingSong,
+//     grade
+// }
