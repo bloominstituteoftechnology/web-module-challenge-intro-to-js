@@ -1,11 +1,10 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
-/*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+/*MAKE SURE TO return ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 /*
 When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.
-This will usually entail console logging the answer directly or console logging the invocation (call) of the function so when it
-returns a value, that value will be logged to the console.  An example of this would be:  console.log(theFunction(value1,value2))
+This will usually entail console logging the answer directly or console logging the invocation (call) of the function so when it returns a value, that value will be logged to the console.  An example of this would be:  console.log(theFunction(value1,value2))
 */
 
 /*
@@ -18,7 +17,8 @@ Do the following:
    HINT: no function required
 */
 
-
+let votingAge = 31;
+console.log(votingAge >= 18);
 
 /*
 Task 1b - Values
@@ -30,11 +30,12 @@ Do the following:
 
    HINT: no function required
 */
+let x = 'daniel', y = 'codes';
+if (x.length > y.length) {
+  [x, y] = [y, x]
+}
 
-
-
-
-
+console.log(x, y);
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -45,9 +46,10 @@ Do the following:
 
    HINT: look up the Number method
 */
+let  year = '1999';
+// console.log(+year);
 
-
-
+console.log(parseInt(year));
 
 /*
 Task 1d - Multiply
@@ -58,10 +60,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+// function multiply(/*add your code here*/){
+//     /*add your code here*/
+//   }
 
+let multiply = (a, b) => a * b;
+console.log(multiply(5,10));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -71,14 +75,14 @@ function multiply(/*add your code here*/){
 Do the following:
    1. Invoke the dogYears function below and pass an age value to it
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
-   3. Return the newly calculated age
+   3. return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
-}
-
-
+// function dogYears(/*add your code here*/){
+//     /*add your code here*/
+// }
+let dogYears = (age) =>  {return age * 7};
+console.log(dogYears(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -107,9 +111,26 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+// function hungryDog(/*add your code here*/){
+//     /*add your code here*/
+//   }
+
+let hungryDog = (age, pounds) => {
+    if (age < 1 && age >= .583) {
+       return age * .04
+    } else if (age >= .333 && age < .583) {
+       return 0.5 * pounds;
+    } else if (age >= .166 && age < .333) {
+       return 0.1 * pounds;
+    } else if (age >= 1 && pounds > 15) {
+     return 0.2 * pounds;
+    } else if (pounds >= 11 && pounds < 15) {
+     return 0.3 * pounds;
+    } else if (pounds >= 6 && pounds <= 10) {
+     return 0.4 * pounds;
+    } else {
+     return 0.5 * pounds;
+    }
 
 
 
@@ -124,7 +145,7 @@ HINT: While you can complete this with only conditionals based on strings, it ma
 
 Use the game function below to do the following:
   1. Receive 2 parameters the user's choice and the computer's choice
-  2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match the strings below exactly.
+  2. return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match the strings below exactly.
    - win should return "you win!"
    - lose should return "you lose!"
    - tie should return "it's a tie"
@@ -148,7 +169,7 @@ function game(user, computer){
 Using the miles function below do the following:
   1. Receive a number of kilometers
   2. Convert the number of kiolmeters received to miles
-  3. Return the number of miles
+  3. return the number of miles
 */
 
 function miles(/*add your code here*/){
@@ -162,7 +183,7 @@ function miles(/*add your code here*/){
 Using the feet function below do the following:
   1. Receive a number of cm
   2. Convert the number of cm to feet
-  3. Return number of feet
+  3. return number of feet
 */
 
 function feet(/*add your code here*/){
@@ -177,7 +198,7 @@ function feet(/*add your code here*/){
 /*
 Using the annoyingSong function below do the following:
   1. Receive a starting number and start the count down from the number received 
-  2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
+  2. At each invocation, it should return this string (note: the tests are expecting the same string as below):
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
@@ -192,7 +213,7 @@ function annoyingSong(/*add your code here*/){
 /*
 Using the grade function below do the following: 
   1. Receive a score out of 100 
-  2. Return the corresponding letter grade following this grade scale:
+  2. return the corresponding letter grade following this grade scale:
 
    90-100 should return 'you got an A' 
    80-89 should return 'you got a B'
@@ -229,8 +250,8 @@ function vowelCounter(/*add your code here*/) {
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
     //console.log('its working');
-    return 'bar';
-}
+   return 'bar';
+};
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 export default{
     foo,
@@ -243,3 +264,4 @@ export default{
     annoyingSong,
     grade
 }
+
