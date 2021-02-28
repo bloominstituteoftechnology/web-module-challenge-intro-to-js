@@ -17,7 +17,13 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge= 18;
 
+if (votingAge >= 18) {
+  console.log('You are old enough to Vote, congratulations')
+} else {
+  console.log('You are not old enough to vote, sorry.')
+}
 
 
 /*
@@ -31,7 +37,16 @@ Do the following:
    HINT: no function required
 */
 
+let playerHealth= 100;
+let deathHealth= 0;
 
+playerHealth= deathHealth;
+
+if (playerHealth === deathHealth) {
+  console.log('You Died')
+} else {
+  console.log('You Survived This Test')
+}
 
 
 
@@ -46,6 +61,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+var text= "1999";
+var number= parseInt(text, 10);
+console.log(number);
 
 
 
@@ -58,10 +76,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply(num1, num2) {
+  return (num1 * num2);
+  
+}
 
+multiply(7, 5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +94,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(newAge){
+  return(newAge * 7)
+    
 }
-
+dogYears(22)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,9 +128,37 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(age, weight){
+  if (age < 1) {
+    if (age >= .583) {
+      return(age * .04)
+      
+    }
+    else if (age >= .333 && age <= .583) {
+      return(age * .05)
+    }
+    else if (age >= .166 && age <= .333) {
+      return(age * .1)
+    }
+  } else (age >= 1)
+  if (weight > 15) {
+    return(weight * .02)
   }
+  else if (weight >= 11 && weight <= 15) {
+    return(weight * .03)
+  }
+  else if (weight >= 6 && weight <= 10) {
+    return(weight * .04)
+  }
+  else if (weight <= 5) {
+    return(weight * .05)
+  }
+}
+
+hungryDog(1, 15)
+
+
+   
 
 
 
@@ -134,10 +183,63 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
-}
-  
+function game(user, computer) {
+  user = prompt("rock, paper or scissors?");
+  let scissors = 0;
+  let rock = 1;
+  let paper = 2;
+
+  computer = Math.floor(Math.random() * 3) + 1;
+
+  if (
+    (computer === scissors && user === "rock") ||
+    (computer === scissors && user === "rock")
+  )
+    alert("You chose Rock and the Computer chose Scissors! Winner!");
+  else if (
+    (computer === scissors && user === "paper") ||
+    (computer === scissors && user === "paper")
+  )
+    alert("You chose paper and the Computer chose scissors! Loser!");
+  else if (
+    (computer === scissors && user === "scissors") ||
+    (computer === scissors && user === "scissors")
+  )
+    alert("You chose scissors and the Computer chose Scissors! Tie!");
+  else if (
+    (computer === rock && user === "rock") ||
+    (computer === rock && user === "rock")
+  )
+    alert("You chose Rock and the Computer chose rock! Tie!");
+  else if (
+    (computer === rock && user === "scissors") ||
+    (computer === rock && user === "scissors")
+  )
+    alert("You chose scissors and the Computer chose rock! Loser!");
+  else if (
+    (computer === rock && user === "paper") || 
+    (computer === rock && user === "paper")
+  )
+    alert("You chose paper and the Computer chose rock! Winner!");
+  else if (
+    (computer === paper && user === "rock") ||
+    (computer === paper && user === "rock")
+  )
+    alert("You chose Rock and the Computer chose paper! Loser!");
+  else if (
+    (computer === paper && user === "paper") ||
+    (computer === paper && user === "paper")
+  )
+    alert("You chose paper and the Computer chose paper! Tie!");
+  else if (
+    (computer === paper && user === "scissors") ||
+    (computer === paper && user === "scissors")
+  )
+    alert("You chose scissors and the Computer chose rock! Loser!");
+  }
+
+
+  game();
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -151,9 +253,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    return(kilometers * 1.609);
   }
+
+  miles(5);
 
 
 
@@ -165,9 +269,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(centimeters){
+    return(centimeters / 30.48)
   }
+
+  feet(65);
  
 
 
@@ -181,9 +287,13 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(bottles){
+  while (bottles <= 99) {
+    return(bottles + " Bottles of soda on the wall. " + bottles + " Bottles of soda. Take one down, pass it around. " + (bottles - 1) + " Bottles of soda on the wall.")
   }
+   }
+ 
+   annoyingSong(99);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -201,9 +311,25 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if (score <= 100 && score >= 90) {
+    console.log("you got an A");
   }
+  else if (score <= 89 && score >= 80) {
+    console.log("you got a B");
+  }
+  else if (score <= 79 && score >=70) {
+    console.log("you got a C");
+  }
+  else if (score <= 69 && score >= 60) {
+    console.log("you got a D");
+  }
+  else if (score <= 59) {
+    console.log("you got an F")
+  }
+  }
+
+  grade(85);
   
   
 
