@@ -203,10 +203,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    let mile = 1.609344
+    return km / mile;
   }
-
+console.log(miles(5));
 
 
 //Task 5b - Feet to CM
