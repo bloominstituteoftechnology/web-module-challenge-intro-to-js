@@ -117,24 +117,24 @@ Use the hungryDog function and feeding requirements below to do the following:
 function hungryDog(weight, age){
     if (age <= 0.33){
         return (weight * 0.1);
-    } else if (age > 0.33 <= 0.58){
+    } else if (age > 0.33 && age <= 0.58){
         return (weight * 0.05);
-    } else if (age > 0.58 <= 0.99){
+    } else if (age > 0.58 && age <= 0.99){
         return (weight * 0.04);
 
     } else if(age >= 1){
       if(weight <= 4){
           return (weight * 0.05);
-      } else if (weight > 5 <= 10){
+      } else if (weight > 5 && weight <= 10){
           return (weight * 0.4);
-      } else if (weight > 10 <= 14){
+      } else if (weight > 10 && weight <= 14){
           return (weight * 0.3);
       } else if (weight >= 15){
-          return (weight * 0.2);
+          return (weight * 0.02);
       }
     }
   }
-console.log(hungryDog(5,0.6));
+console.log(hungryDog(15,1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -159,9 +159,37 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
-}
   
+  computer = Math.random()
+  if (computer <= .33){
+    computer = "rock";
+  } else if(computer > .34 && computer < .66){
+    computer = "paper";
+  } else{
+    computer = "scissors";
+  }
+   
+  if (user = "rock" && computer === "rock" ) {
+    return "it's a tie"
+  } else if(user = "rock" && computer === "paper"){
+    return "you loose!"
+  } else if(user = "rock" && computer === "scissors"){
+    return "you win!"
+  } else if (user = "paper" && computer === "paper" ) {
+    return "it's a tie"
+  } else if(user = "paper" && computer === "scissors"){
+    return "you loose!"
+  } else if(user = "paper" && computer === "rock"){
+    return "you win!"
+  }else if (user = "scissors" && computer === "scissors" ) {
+    return "it's a tie"
+  } else if(user = "scissors" && computer === "rock"){
+    return "you loose!"
+  } else if(user = "scissors" && computer === "paper"){
+    return "you win!"
+  }
+}
+ console.log(game("scissors",Math.random()))
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
