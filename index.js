@@ -242,13 +242,12 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(number){
-      let count = number;
-      while (count > 0){
-        return `${number} bottles of soda on the wall ${number}bottles of soda, take one down pass it around {number left over} bottles of soda on the wall`
-      }count = count -1
+  for(let counter = number; counter >= 1; counter = counter-1){
+    return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number -1} bottles of soda on the wall` 
   }
+}
 
-console.log(annoyingSong(5));
+console.log(annoyingSong(8));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
@@ -264,9 +263,19 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score >=90 && score <= 100){
+    return "you got an A";
+  } else if(score >= 80 && score <= 89){
+    return "you got a B";
+  } else if(score >= 70 && score <= 79){
+    return "you got a C"
+  } else if (score >=60 && score <= 69){
+    return "you got a D";
+  } else{
+    return "you got an F"
   }
+  };
   
   
 
