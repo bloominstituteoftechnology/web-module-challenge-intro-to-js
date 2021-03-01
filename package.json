@@ -4,6 +4,7 @@
   "description": "The module challenge is the afternoon project or assignment that students work through independently. This expands on the guided project completed earlier with the instructor.",
   "main": "index.js",
   "scripts": {
+    "server": "nodemon index.js",
     "test": "jest",
     "test:watch": "jest --verbose --watchAll"
   },
@@ -23,6 +24,7 @@
     "@babel/preset-env": "^7.11.5",
     "babel-jest": "^26.3.0",
     "eslint": "^7.10.0",
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.7"
   }
 }

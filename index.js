@@ -17,8 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let votingAge = 20;
+if (votingAge >= 18) {
+  console.log(true)
+}
 
 /*
 Task 1b - Values
@@ -30,9 +32,11 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+let valueOne= 5;
+let valueTwo= 6;
+if (valueOne && valueTwo){
+  console.log(valueOne = valueTwo);
+}
 
 
 /*
@@ -45,9 +49,11 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
-
+function stringToNumber(){
+let string = "1999"
+console.log(Number(string));
+}
+stringToNumber()
 
 /*
 Task 1d - Multiply
@@ -58,11 +64,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    const mul = a * b
+    return mul
   }
-
-
+// console.log(multiply(2, 3))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -74,11 +80,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanAge){
+    let dogYrs = 7
+    let dogAge = humanAge + dogYrs
+    return dogAge
 }
-
-
+// console.log(dogYears(23))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -232,14 +239,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+// export default{
+//     foo,
+//     multiply,
+//     dogYears,
+//     hungryDog,
+//     game,
+//     miles,
+//     feet,
+//     annoyingSong,
+//     grade
+// }
