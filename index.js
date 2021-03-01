@@ -68,7 +68,7 @@ function multiply(a, b){
     const mul = a * b
     return mul
   }
-// console.log(multiply(2, 3))
+console.log(multiply(2, 3))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -85,7 +85,7 @@ function dogYears(humanAge){
     let dogAge = humanAge + dogYrs
     return dogAge
 }
-// console.log(dogYears(23))
+console.log(dogYears(23))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -114,10 +114,27 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+function hungryDog(weight, age){
+    if (age <= 0.33){
+        return (weight * 0.1);
+    } else if (age > 0.33 <= 0.58){
+        return (weight * 0.05);
+    } else if (age > 0.58 <= 0.99){
+        return (weight * 0.04);
 
+    } else if(age >= 1){
+      if(weight <= 4){
+          return (weight * 0.05);
+      } else if (weight > 5 <= 10){
+          return (weight * 0.4);
+      } else if (weight > 10 <= 14){
+          return (weight * 0.3);
+      } else if (weight >= 15){
+          return (weight * 0.2);
+      }
+    }
+  }
+console.log(hungryDog(5,0.6));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
