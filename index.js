@@ -18,6 +18,10 @@ Do the following:
    HINT: no function required
 */
 
+var votingAge = 21;
+if (votingAge >= 18)
+{console.log('true')}
+else {console.log('false')}
 
 
 /*
@@ -31,8 +35,14 @@ Do the following:
    HINT: no function required
 */
 
+var a = 1;
+var b = 2;
 
-
+var temp;
+temp = a;
+a = b;
+b = temp;
+console.log(a);
 
 
 /*
@@ -46,7 +56,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+var str = "1999";
+var jmp = Number(str);
+console.log(jmp);
 
 
 /*
@@ -58,10 +70,13 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+  function multiply(parm1,parm2){
+    var result = parm1 * parm2;
+    return result;
+    
   }
 
+console.log(multiply(3,4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,9 +89,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(parm1){
+  var result = parm1 * 7;
+  return result;
 }
+
+console.log(dogYears(3));
 
 
 
@@ -107,10 +125,11 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight,age){
+  if (weight <= 5 && age >= 12) {
+    
   }
-
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -135,8 +154,19 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
-}
+  var result;
+    if ((user == "Scissors" && computer == "paper") || (user == "paper" && computer == "rock") || (user == "rock" && computer == "scissors")) {
+      result = "you win";
+    }
+   else if ((computer == "Scissors" && user == "paper") || (computer == "paper" && user == "rock") || (computer == "rock" && users == "scissors")){
+     result = "you lose";
+   }
+   else if ((computer == "Scissors" && user == "Scissors") || (computer == "paper" && user == "paper") || (computer == "rock" && users == "rock")){
+     result = "tie";
+   }
+   return result;
+  }
+  console.log (game("paper", "paper"));
   
   
 
@@ -151,9 +181,13 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+  
+  return km*0.621371;
+    
   }
+
+  console.log(miles(10));
 
 
 
@@ -165,9 +199,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(CM){
+  return CM*0.0328084;
+ }
+ console.log(feet(20));
  
 
 
@@ -181,9 +216,13 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(parm1){
+  parm1 = Number(parm1);
+  var song = parm1 + " bottles of soda on the wall, " + parm1 + " bottles of soda, take one down pass it around " + (parm1 -1) + " bottles of soda on the wall";
+  return song;
+}
+
+console.log(annoyingSong(99));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -201,9 +240,37 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  score = Number(score);
+  var grade;
+  if (score >= 90 && score <= 100) {
+    grade = 'you got an A';
+  
   }
+
+  else if (score >= 80 && score <=89) {
+    grade = 'you got a B';
+  }
+
+  else if (score >= 70 && score <=79) {
+    grade = 'you got a C';
+  }
+
+  else if (score >= 60 && score <= 69){
+    grade = 'you got a D';
+  } 
+  
+
+  else if (score < 60) {
+    grade = 'you got an F';
+    
+  } else {
+    grade = 'invalid number'
+  }
+
+return grade;
+}
+ console.log(grade(90));
   
   
 
@@ -220,9 +287,16 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(vowel) {
+  const countVowels = Array.from(vowel)
+  .filter(letter => 'aeiou'.includes(letter)).length;
+   return countVowels;
+
+     
+    
 }
+
+console.log(vowelCounter("letters"));
 
 
 
