@@ -155,12 +155,23 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
-}
-  
-  
+// function game(user, computer){
+//     /*add your code here*/
+// }
 
+function game(user, computer) {
+  if ([user, computer] == ["rock", "scissors"]) {
+    return "you win!";
+  } else if ([user, computer] == ["scissors", "paper"]) {
+    return "you win!";
+  } else if ([user, computer] == ["paper", "rock"]) {
+    return "you win!";
+  } else if (user == computer) {
+    return "its a tie!";
+  } else {
+    return "you lose!";
+  }
+}
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
@@ -172,11 +183,11 @@ Using the miles function below do the following:
   3. return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+// function miles(/*add your code here*/){
+//     /*add your code here*/
+// }
 
-
+let miles = (kilometers) => {return kilometers / 1.609 };
 
 //Task 5b - Feet to CM
 /*
@@ -186,11 +197,11 @@ Using the feet function below do the following:
   3. return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+// function feet(/*add your code here*/){
+//     /*add your code here*/
+//   }
  
-
+let feet = (cm) => {return cm / 30.48};
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -202,9 +213,15 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+// function annoyingSong(/*add your code here*/){
+//         /*add your code here*/
+//   }
+
+  let annoyingSong = (number) => {
+    let count = number;
+    for (i = 0; i < 100; i++)
+      console.log(`${count} bottles of soda on the wall, ${count} bottles of soda, take one down pass it around, ${count -= 1} bottles of soda on the wall`);
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -251,7 +268,7 @@ function vowelCounter(/*add your code here*/) {
 function foo(){
     //console.log('its working');
    return 'bar';
-};
+
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 export default{
     foo,
