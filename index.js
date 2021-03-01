@@ -239,8 +239,22 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+// function grade(/*Your Code here */){
+//   /*Your Code here */
+//   }
+
+  let grade = (score) => {
+    if (score >= 90){
+      return "you got an A"
+    } else if (score >= 80){
+      return "you got a B"
+    } else if (score >= 70){
+      return "you got a C"
+    } else if (score >= 60){
+      return "you got a D"
+    } else {
+      return "you got an F"
+    }
   }
   
   
@@ -268,7 +282,7 @@ function vowelCounter(/*add your code here*/) {
 function foo(){
     //console.log('its working');
    return 'bar';
-
+}
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 export default{
     foo,
