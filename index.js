@@ -19,6 +19,13 @@ Do the following:
 */
 
 
+const votingAge = 20;
+  if (votingAge >= 18) {
+    console.log(true);
+  } else {
+    console.log(false)
+  };
+
 
 /*
 Task 1b - Values
@@ -31,7 +38,13 @@ Do the following:
    HINT: no function required
 */
 
+let variableOne = 10;
+let variableTwo = 11;
 
+if (variableOne < variableTwo){
+  variableOne = 20
+};
+console.log(variableOne);
 
 
 
@@ -46,7 +59,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let c = "1999";
+let d = Number(c);
+console.log(d);
 
 
 /*
