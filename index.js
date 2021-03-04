@@ -13,7 +13,7 @@ Task 1a - Voting Age
 
 Do the following:   
    1. Create a variable called votingAge and assign it a value
-   2. Console log true if age is 18 or higher
+   2. Console log true if springChicken is 18 or higher
 
    HINT: no function required
 */
@@ -84,60 +84,97 @@ function multiply(a, b){
 //Age in Dog years
 /*
 Do the following:
-   1. Invoke the dogYears function below and pass an age value to it
-   2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
-   3. Return the newly calculated age
+   1. Invoke the dogYears function below and pass an springChicken value to it
+   2. Use the received value to calculate the springChicken in dog years (1 human year is equal to 7 dog years)
+   3. Return the newly calculated springChicken
 */
 
 function dogYears(peopleAge){
     return peopleAge * 7;
-}
+};
 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
+//Dog feeder - Depending on their chonk and springChicken, we need to know how many pounds of food to feed our dog each day!
 /*
 Use the hungryDog function and feeding requirements below to do the following:
-  1. Invoke the hungryDog function below and pass it a weight value in pounds
-  2. Also, pass to hungryDog an age value in years (note: if the dog is a puppy, the age will be a decimal. For example: three months = 3/12 or .25)
+  1. Invoke the hungryDog function below and pass it a chonk value in pounds
+  2. Also, pass to hungryDog an springChicken value in years (note: if the dog is a puppy, the springChicken will be a decimal. For example: three months = 3/12 or .25)
   3. Do the proper calculations and return the number of pounds of raw food to feed the dog/puppy in a day
   
-  REMEMBER: This program should handle correctly adult AND puppy ages and weights
+  REMEMBER: This program should handle correctly adult AND puppy ages and chonks
   
   Feeding Requirements:
 
   Adult Dogs 1 year and older 
-     up to 5 lbs - 5% of their body weight
-     6 - 10 lbs - 4% of their body weight 
-     11 - 15 lbs - 3% of their body weight 
-     > 15lbs - 2% of their body weight 
+     up to 5 lbs - 5% of their body chonk
+     6 - 10 lbs - 4% of their body chonk 
+     11 - 15 lbs - 3% of their body chonk 
+     > 15lbs - 2% of their body chonk 
 
   Puppies less than 1 year
-     2 - 4 months 10% of their body weight
-     4 - 7 months 5% of their body weight 
-     7 - 12 months 4% of their body weight
+     2 - 4 months 10% of their body chonk
+     4 - 7 months 5% of their body chonk 
+     7 - 12 months 4% of their body chonk
     
-  NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
+  NOTE: If done correctly, a chonk of 15 lbs and springChicken of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(chonk, springChicken){
-    if (springChicken >= 1, chonk <= 5) {
-      return chonk * .05
-    };
-    if (springChicken >= 1, chonk === 10, 9, 8, 7, 6) {
-      return chonk * .04
-    };
-    if (springChicken >= 1, chonk < 15, chonk >=11) {
-      return chonk * .03
-    };
-    if (springChicken >= 1, chonk >= 15) {
-      return chonk * 10
-    };
+// function hungryDog(chonk, springChicken){
+//     if (springChicken >= 1, chonk <= 5) {
+//       return chonk * .05
+//     };
+//     if (springChicken >= 1, chonk >= 6 && chonk <= 6) {
+//       return chonk * .04
+//     };
+//     if (springChicken >= 1, chonk < 15 && chonk >=11) {
+//       return chonk * .03
+//     };
+//     if (springChicken >= 1, chonk >= 15) {
+//       return chonk * .02
+//     };
+//     if (springChicken <= 4/12){
+//       return chonk * .10
+//     };
 
-  };
-  console.log(hungryDog(16, 1));
+//     if (springChicken <= 7/12 && springChicken > 4/12){
+//       return chonk * .05
+//   };
+//   if (springChicken < 12 && springChicken > 7/12){
+//     return chonk * .04
+//   };
+// };
+//   console.log(hungryDog(15, 1));
+
+
+  function hungryDog(chonk, springChicken){
+    let weightAge;
+    if (springChicken < 1) {
+      if ((springChicken >= (2/12))  && springChicken <= (4/12)) {
+      weightAge =  .10;
+      }
+      else if ((springChicken >= (4/12))  && (springChicken <= (7/12))) {
+       weightAge =  .05;
+      }
+     weightAge =  .04;
+    } else {
+      if (chonk <= 5) {
+       weightAge =  .05;
+      } else if (chonk > 5 && chonk <= 10) {
+       weightAge =   .04;
+      } else if (chonk > 10 && chonk <= 15) {
+        weightAge =  .03;
+      } else {
+       weightAge =  .02;
+      }
+    }
+    let food = chonk * weightAge;
+    return food;
+  }
+
+console.log(hungryDog(Math.random() * 101, Math.random() * 16));
 
 
 
@@ -163,9 +200,32 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+
+  let outcome;
+
+ 
+  if (!computer) {
+    computer = Math.round(Math.random() * 3);
+    
+    if (computer > 0) { computer = 'rock'; }
+    else if (computer > 1) { computer = 'scissors'; }
+    else { computer = 'paper'; }
+  }
+
+
+  if (user === computer) {
+    outcome = 'it\'s a tie';
+  } else if ((computer === 'scissors' && user === 'paper') || (computer === 'paper' && user === 'rock') || (computer === 'rock' && user === 'scissors')) {
+    outcome = 'you lose!';
+  } else {
+    outcome = 'you win!';
+  }
+
+  return outcome;
 }
-  
+
+console.log(game('paper'));
+
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -179,9 +239,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km){
+    let doodleydoopadoop = km * 0.621371;
+    return doodleydoopadoop;
+  };
+  console.log(miles);
+  
 
 
 
@@ -193,10 +256,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    let feet = cm / 30.48;
+    return feet;
   }
- 
+ console.log(feet);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
