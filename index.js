@@ -273,9 +273,27 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(beginning){
+  
+  for(let i = beginning; i > 0; i--) {
+
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
+  };
+  };
+console.log(annoyingSong(30));
+
+//   function* makeRangeIterator(start = 0, end = 100, step = 1) {
+//     let iterationCount = 0;
+//     for (let i = start; i < end; i += step) {
+//         iterationCount++;
+//         yield i;
+//     }
+//     return iterationCount;
+// }
+
+// lmao I just want to say that the extra crammed syllable in "99 bottles of SODA" made singing along with the song super painful. 
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -284,7 +302,7 @@ function annoyingSong(/*add your code here*/){
 /*
 Using the grade function below do the following: 
   1. Receive a score out of 100 
-  2. Return the corresponding letter grade following this grade scale:
+  2. Return the corresponding letterGrade grade following this grade scale:
 
    90-100 should return 'you got an A' 
    80-89 should return 'you got a B'
@@ -293,12 +311,46 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  let letterGrade;
+  if (score >= 90) {
+    letterGrade= "A";
+  } else if (score >= 80 && score < 90) {
+    letterGrade = "B";
+  } else if (score >= 70 && score < 80) {
+    letterGrade = "C";
+  } else if (score >= 60 && score < 70) {
+  letterGrade = "D";
+  } else if (score < 70) {
+    letterGrade = "F"
   }
   
   
+  // if (letterGrade === "A") {
+  //   return "you got an A";
+  // }
+  // if (letterGrade === "F") {
+  //   return "you got an F";
+  // } 
+  // if (letterGrade === "B") {
+  //   return "you got a B";
+  // }  if (letterGrade === "C") {
+  //   return "you got a C";
+  // }  if (letterGrade === "D") {
+  //   return "you got a D";
+  // } 
 
+  let aOrAn 
+    if (letterGrade === "A" || letterGrade === "F"){
+      aOrAn = "an";
+    } else {
+      aOrAn = "a";
+  }
+let finalGrade = "you got " + aOrAn + " " + letterGrade;
+return finalGrade;
+}
+
+console.log(grade(40));
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
 //Vowel Counter - How many vowels are there?
