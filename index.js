@@ -63,7 +63,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+let str = "1999";
 
+console.log(parseInt(str));
 
 
 
@@ -92,10 +94,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears({
-    /*add your code here*/
+function dogyears(age){
+  dogage = age * 7;
+  return dogage;
 }
 
+console.log(dogyears(5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
