@@ -35,6 +35,10 @@ Do the following:
    HINT: no function required
 */
 
+let fruit = "apple"
+let drink = "soda"
+
+
 
 
 
@@ -126,7 +130,7 @@ function hungryDog(lbs,years){
       return lbs * .10;
     }else if(years >= 0.33 && years <= 0.58){
       return lbs * 0.05;
-    }else if(years >= 7 && years < 1){
+    }else if(years >= 0.58 && years < 1){
       return lbs * 0.04;
     }else{
       return 'input is not a valid number, try again';
@@ -226,9 +230,16 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+
+  for (let i = number; i > 0; i--){
+    return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number -1} bottles of soda on the wall`
   }
+}
+console.log('Task 6:',annoyingSong(99))
+
+
+  
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -246,8 +257,18 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score >= 90 && score <= 100){
+    return 'you got an A';
+  }else if(score >= 80 && score <= 89){
+    return 'you got a B';
+  }else if(score >= 70 && score <= 79){
+    return 'you got a C';
+  }else if(score >= 60 && score <= 69){
+    return 'you got a D';
+  }else{
+    return 'you got an F';
+  }
   }
   
   
