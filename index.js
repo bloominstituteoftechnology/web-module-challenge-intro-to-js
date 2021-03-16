@@ -1,4 +1,4 @@
-/*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
+    /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
@@ -15,9 +15,13 @@ Do the following:
    1. Create a variable called votingAge and assign it a value
    2. Console log true if age is 18 or higher
 
+
    HINT: no function required
 */
-
+const votingAge = 18;
+if (votingAge >= 18) {
+    console.log('true');
+}
 
 
 /*
@@ -30,6 +34,10 @@ Do the following:
 
    HINT: no function required
 */
+const n = 12;
+const m = 13;
+n += m;
+console.log(m);
 
 
 
@@ -45,7 +53,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+const str = "1999";
+const a = parseInt(str);
+console.log(a);
 
 
 
@@ -58,8 +68,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a*b;
   }
 
 
@@ -74,8 +84,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(a){
     /*add your code here*/
+    return a * 7;
 }
 
 
@@ -107,9 +118,19 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(a, b) {
     /*add your code here*/
-  }
+    if (a >= 1 && b >= 0 && b <= 5) {
+        return "5% of their body weight"
+    } else if (a >= 1 && b >= 6 && b <= 10) {
+        return "4% of their body weight"
+    } else if (a >= 1 && b >= 11 && b <= 15) {
+        return "3% of their body weight"
+    } else if (a >= 1 && b >= 16) {
+        return "2% of their body weight"
+    }
+}
+
 
 
 
@@ -151,8 +172,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(km){
     /*add your code here*/
+    return km / 1.609344;
   }
 
 
@@ -165,9 +187,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(cm = window.prompt('enter number in cm')){
     /*add your code here*/
+    console.log(cm/30.48);
   }
+  feet();
  
 
 
@@ -181,10 +205,14 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(num = window.prompt('enter number')){
 
+        while (num != 0) {
+            console.log(num + ' bottles of soda')
+            num-=1;
+        }
+  }
+annoyingSong();
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -201,8 +229,23 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
+function grade(gr){
   /*Your Code here */
+    if (gr>=90 && gr<=100){
+        return'you got an A'
+    }
+    else if (gr>=80 && gr<=89){
+        return 'you got a B'
+    }
+    else if (gr>=70 && gr<=79){
+        return 'you got a C'
+    }
+    else if (gr>=60 && gr<=69){
+        return 'you got a D'
+    }
+    else if (gr<60) {
+        return 'you got an F'
+    }
   }
   
   
