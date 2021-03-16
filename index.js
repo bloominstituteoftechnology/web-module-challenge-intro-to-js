@@ -19,7 +19,7 @@ Do the following:
 */
 const votingAge = 18;
 if(votingAge >= 18){
-  console.log('true')
+  console.log(true)
 }
 
 
@@ -62,11 +62,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b;
   }
 
-
+console.log('Task 1: ', multiply(5,4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -113,10 +113,27 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(lbs,years){
+    if(years >= 1 && lbs <= 5){
+      return lbs * 0.05;
+    }else if(years >=1 && lbs <= 10){
+      return lbs * 0.04;
+    }else if(years >= 1 && lbs <= 15){
+      return lbs * 0.03;
+    }else if(years >= 1 && lbs > 15){
+      return lbs * 0.02;
+    }else if(years >= 0.16 && years <= 0.33){
+      return lbs * .10;
+    }else if(years >= 0.33 && years <= 0.58){
+      return lbs * 0.05;
+    }else if(years >= 7 && years < 1){
+      return lbs * 0.04;
+    }else{
+      return 'input is not a valid number, try again';
+    }
   }
-
+ 
+console.log('task 3:',hungryDog(12,4))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
