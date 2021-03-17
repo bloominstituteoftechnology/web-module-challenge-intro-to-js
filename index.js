@@ -17,7 +17,8 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 18
+votingAge >= 18 ? console.log(true): null;
 
 
 /*
@@ -30,6 +31,9 @@ Do the following:
 
    HINT: no function required
 */
+bananasAvailable=0;
+bananasGiven=10;
+bananasAvailable < 1 ? console.log(bananasAvailable = bananasGiven): null;
 
 
 
@@ -133,7 +137,7 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+random = console.log(Math.random)
 function game(user, computer){
     /*add your code here*/
 }
@@ -201,9 +205,36 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
-  }
+function grade(grading){
+
+ gradingScale()=>
+   (for(grading=90; grading<=100;grading++) ? console.log(A)):
+   (for (grading=80; grading<=89;grading++) ? console.log(B)):
+   (for (grading=70; grading<=79;grading++) ? console.log(C)):
+   (for (grading=60; grading<=69;grading++) ? console.log(D)):
+   grading<=59? console.log(F);
+    
+
+ 
+ function grade(grading){
+
+ let gradingScale = [
+ 
+ ]
+
+//  solution not working
+function grade(grading){
+
+  let gradingScale=[
+    ((let grading=90; grading<=100;grading++) ? console.log(A)):
+    ((let grading=80; grading<=89;grading++) ? console.log(B)):
+    ((let grading=70; grading<=79;grading++) ? console.log(C)):
+    ((let grading=60; grading<=69;grading++) ? console.log(D)):
+    grading<=59? console.log(F);
+     ]
+     return gradingScale
+     }
+     console.log(grade(20));
   
   
 
@@ -219,12 +250,13 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+vowels=["q,w,e,r,t,y,u,i,o,p,as,d,f,g,h,j,k,l,z,x,c,v,b,n,m"];
+function vowelCounter(vowels) {
+    vowels=["q,w,e,r,t,y,u,i,o,p,as,d,f,g,h,j,k,l,z,x,c,v,b,n,m"];
+    return vowels
 }
-
-
+console.log(vowelCounter());
+console.log(vowels.length);
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
