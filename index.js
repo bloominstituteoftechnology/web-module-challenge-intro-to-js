@@ -18,10 +18,16 @@ Do the following:
 
    HINT: no function required
 */
-const votingAge = 18;
+let votingAge = 19;
+
 if (votingAge >= 18) {
-    console.log('true');
+
+    console.log('true')
 }
+
+
+
+
 
 
 /*
@@ -34,10 +40,11 @@ Do the following:
 
    HINT: no function required
 */
-const n = 12;
-const m = 13;
-n += m;
-console.log(m);
+let n = 12;
+let m = 13;
+n = m;
+
+console.log(n);
 
 
 
@@ -71,7 +78,6 @@ Do the following:
 function multiply(a, b){
     return a*b;
   }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -121,15 +127,24 @@ Use the hungryDog function and feeding requirements below to do the following:
 function hungryDog(a, b) {
     /*add your code here*/
     if (a >= 1 && b >= 0 && b <= 5) {
-        return "5% of their body weight"
+        return (a/100)*5;
     } else if (a >= 1 && b >= 6 && b <= 10) {
-        return "4% of their body weight"
+        return (a/100)*4
     } else if (a >= 1 && b >= 11 && b <= 15) {
-        return "3% of their body weight"
+        return (a/100)*3
     } else if (a >= 1 && b >= 16) {
-        return "2% of their body weight"
+        return (a/100)*2
+    } else if (a < 1 && b >= 0 && b <= 5) {
+        return ((a/12)/100)*5;
+    } else if (a < 1 && b >= 6 && b <= 10) {
+        return ((a/12)/100)*4
+    } else if (a < 1 && b >= 11 && b <= 15) {
+        return ((a/12)/100)*3
+    } else if (a < 1 && b >= 16) {
+        return ((a/12)/100)*2
     }
 }
+console.log(hungryDog(15,1));
 
 
 
@@ -154,9 +169,30 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+let computer = Math.random();
+    if (computer <= 0.34) {
+        computer='rock';
+    }else if (computer <= 0.67){
+        computer='paper';
+    }else if (computer > 0.67){
+        computer = 'scissors'
+    }
 function game(user, computer){
     /*add your code here*/
+    if (user === computer){
+        return `it's a tie`
+    }else if (user === 'rock' && computer === 'scissors'){
+        return `you win!`
+    }
+    else if (user === 'paper' && computer === 'rock'){
+        return `you win!`
+    }
+    else if (user === 'scissors' && computer === 'paper') {
+        return `you win!`
+    }
+    else {
+        return `you lose`;
+    }
 }
   
   
@@ -187,12 +223,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(cm = window.prompt('enter number in cm')){
+function feet(cm ){
     /*add your code here*/
-    console.log(cm/30.48);
+    return cm/30.48;
   }
-  feet();
- 
+ console.log(feet(5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -205,14 +240,27 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(num = window.prompt('enter number')){
-
-        while (num != 0) {
-            console.log(num + ' bottles of soda')
-            num-=1;
+    // for (var numberOfBottles = 99; numberOfBottles >= 0; numberOfBottles--) {
+        var bottleWord = "bottle";
+        if (numberOfBottles <= 0) {
+            bottleWord = "bottles";
+            return "No more " + bottleWord + " of soda on the wall.";
+            return "No more " + bottleWord + " of soda,";
+            return "Go to the store and buy some more, 99 bottles of soda on the wall";
         }
-  }
-annoyingSong();
+        else if (numberOfBottles == 1 ) {
+            bottleWord = "bottle";
+            return numberOfBottles + " " + bottleWord + " of soda on the wall";
+            return numberOfBottles + " " + bottleWord + " of soda,";
+            return "Take one down, pass it around,";
+        }
+        else if (numberOfBottles >= 2) {
+            bottleWord = "bottles";
+            return numberOfBottles + " " + bottleWord + " of soda on the wall";
+            return numberOfBottles + " " + bottleWord + " of soda,";
+            return "Take one down, pass it around,";
+
+        }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -261,10 +309,18 @@ Using the vowelCounter function below do the following:
   HINT - you may need to study tomorrow's content on arrays 
   HINT - try looking up the .includes() method
 */
-
-
-function vowelCounter(/*add your code here*/) {
+    const vowels = ["a", "e", "i", "o", "u"]
+function vowelCounter(vovels) {
     /*add your code here*/
+    let count = 0;
+
+    for (let letter of str.toLowerCase()) {
+        if (vowels.includes(letter)) {
+            count++;
+        }
+    }
+
+    return count
 }
 
 
@@ -275,14 +331,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+    export default{
+        foo,
+        multiply,
+        dogYears,
+        hungryDog,
+        game,
+        miles,
+        feet,
+        annoyingSong,
+        grade
+    }
