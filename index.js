@@ -38,6 +38,10 @@ Do the following:
 let fruit = "apple"
 let drink = "soda"
 
+if(drink !== fruit){
+  fruit = drink;
+  console.log(fruit)
+}
 
 
 
