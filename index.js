@@ -58,6 +58,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+let string = "1999";
+string = 1999;
+console.log(string)
 
 
 
