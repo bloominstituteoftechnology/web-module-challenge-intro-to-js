@@ -77,7 +77,7 @@ function multiply(a,b){
     return a * b;
   }
 
-console.log('Task 1: ', multiply(5,4));
+console.log('Task 1d: ', multiply(5,4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -293,9 +293,11 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter() {
+
 }
+
+
 
 
 
