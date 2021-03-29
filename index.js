@@ -18,6 +18,12 @@ Do the following:
    HINT: no function required
 */
 
+var votingAge = 18;
+
+if (votingAge >= 18) {
+  console.log('True')
+};
+
 
 
 /*
@@ -31,6 +37,12 @@ Do the following:
    HINT: no function required
 */
 
+var age = 24
+var yourAge = 20
+
+if (yourAge <= age) {
+  return age - 4;
+}
 
 
 
@@ -46,8 +58,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+var year = '1999'
+var noYear = parseInt(year, 10)
+console.log(noYear)
 
 /*
 Task 1d - Multiply
@@ -58,10 +71,13 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+var a = 192
+var b = 102
 
+function multiply(a,b){
+    return a*b;
+  }
+console.log(multiply)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,7 +90,7 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(/*add your code here*/){wd
     /*add your code here*/
 }
 
@@ -150,12 +166,12 @@ Using the miles function below do the following:
   2. Convert the number of kiolmeters received to miles
   3. Return the number of miles
 */
-
-function miles(/*add your code here*/){
-    /*add your code here*/
+let kilometers = 15
+function miles(kilometers){
+    return kilometers * .6214
   }
 
-
+// should return ,iles 
 
 //Task 5b - Feet to CM
 /*
@@ -178,11 +194,15 @@ function feet(/*add your code here*/){
 Using the annoyingSong function below do the following:
   1. Receive a starting number and start the count down from the number received 
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
-      "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
+      
 */
 
 function annoyingSong(/*add your code here*/){
         /*add your code here*/
+  }
+
+  for (i = 0; i < 100; i++) {
+    console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i} bottles of soda on the wall`)
   }
 
 
@@ -201,10 +221,24 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
+let grade = 90
+
+function grade(){
   /*Your Code here */
   }
-  
+ if (grade > 89 && grade < 101) {
+   cosnsole.log('you got an A')
+ } else if (grade > 79 && grade < 90) {
+    console.log('you got a B')
+} else if (grade > 69 && grade < 80) {
+  console.log('you got a C') 
+} else if (grade > 59 && grade < 70) {
+  console.log(grade > 0 && grade > 59)
+}
+    
+    
+
+
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
