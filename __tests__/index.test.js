@@ -49,6 +49,40 @@ describe('gameFunction', ()=>{
         expect(functions.game('scissors', 'rock')).toBe(`you lose!`);
     })
 });
+
+
+var user = Math.random();
+var computer = Math.random();
+
+if (user >=0 && user <= 0.5) {
+  console.log("test1");
+}
+
+if (user >= 0.51 && user <= 1) {
+  console.log("test2");
+}
+
+if (computer >=0 && user <= 0.5) {
+  console.log("test1");
+}
+
+if (computer >= 0.51 && user <= 1) {
+  console.log("test2");
+}
+
+if (computer > user) {
+  console.log("you lose");
+}
+
+if (computer < user) {
+  console.log("you win");
+}
+
+if (computer === user) {
+  console.log("its a draw");
+
+
+  
 describe('milesFunction', ()=>{
     it('return km * 0.621371', ()=>{
         expect(functions.miles(10)).toBe(6.21371);
