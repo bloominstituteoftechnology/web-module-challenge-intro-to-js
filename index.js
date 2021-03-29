@@ -18,6 +18,14 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18; 
+
+if (votingAge >= 18){
+  console.log(true);
+}else {
+  console.log(false);
+}
+
 
 
 /*
@@ -31,8 +39,12 @@ Do the following:
    HINT: no function required
 */
 
+var alpha = 100; 
+var beta = 50; 
 
-
+if (alpha = 100){
+  console.log(alpha=beta);
+}
 
 
 /*
@@ -46,6 +58,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+let stringA = "1999"; 
+
+console.log(Math.ceil(stringA));
+
 
 
 
@@ -54,14 +70,17 @@ Task 1d - Multiply
  
 Do the following:   
    1. Invoke the multiply function below and pass it two numbers
-   2. Receive the parameters: a and b
+   2. Receive the numbers in the parameters: a and b
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+var a = 2; 
+var b = 3; 
 
+function multiply(a,b){
+    return(a*b);
+  }
+multiply(2,3);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +93,14 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+var dogY = 5;  
+
+function dogYears(/*add your code here*/dogY){
     /*add your code here*/
+    return(dogY*7);
 }
 
+dogYears(5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,9 +130,34 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+
+var dogWeight = 50; 
+var dogAge = 5; 
+
+function hungryDog(dogWeight, dogAge){
     /*add your code here*/
+
+    if(dogAge>=1 && dogWeight<=5 ){
+      return(0.05*dogWeight);
+    } else  if (dogAge>=1 && dogWeight>=6 && dogWeight<=10){
+      return(0.04*dogWeight);
+    } else if (dogAge>=1 && dogWeight>=11 && dogWeight<=15){
+      return(0.03*dogWeight);
+    } else{
+      return(0.02*dogWeight)
+    }
+
+    if(dogAge>=(1/6) && dogAge<=(1/3)){
+      return(0.1*dogWeight);
+    } else  if (dogAge>=(1/3) && dogAge<=(7/12)){
+      return(0.05*dogWeight);
+    } else if (dogAge>=(7/12) && dogAge<=1){
+      return(0.04*dogWeight)
+    }
+      
   }
+
+hungryDog(50,5); 
 
 
 
@@ -151,9 +199,14 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+var km; 
+
+function miles(km){
     /*add your code here*/
+    return (km*0.621)
   }
+
+  miles(5); 
 
 
 
@@ -165,9 +218,14 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+
+var cm; 
+function feet(cm){
     /*add your code here*/
+    return(cm*30.48)
   }
+
+feet(); 
  
 
 
@@ -200,10 +258,27 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(/*Your Code here */){
+
+var score; 
+
+function grade(score){
   /*Your Code here */
-  }
+
+    if (score>=90 && score<=100){
+      console.log('you got an A')
+    } else if (score>=80 && score<=89){
+      console.log('you got a B')
+    } else if (score>=70 && score<=79){
+      console.log('you got a C')
+    } else if (score>=60 && score<=69){
+      console.log('you got a D')
+    } else {
+      console.log('you got an F')
+    }
+
+}
+
+grade();
   
   
 
@@ -220,9 +295,23 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+const str = "aeiou"; 
+
+function vowelCounter(str) {
+  var vowelsCount = 0;
+
+  var string = str.toString();
+
+  for (var i = 0; i <= string.length - 1; i++) {
+
+    if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+      vowelsCount += 1;
+    }
+  }
+  return vowelsCount;
 }
+
+vowelCounter(str); 
 
 
 
