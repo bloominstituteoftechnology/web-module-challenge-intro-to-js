@@ -166,25 +166,27 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-var computer = Math.round(Math.random());
-var user = Math.round(Math.random());
-console.log("computer random number is :", computer)
-console.log("user random number is :", user)
-function game(user, computer){
-  
-   if(user == computer){
-     value ="it's a tie"
-   
-   }else if(user < computer){
-     value = "you win!";       
-   }else{
-     value ="you lose!"
-    
-   }
- return value;
+let computer = Math.random();
+
+if (computer < 0.25) {
+  computer = "scissors";
+} else if (computer > 0.55) {
+  computer = "rock";
+} else computer = "paper";
+
+function game(user, computer) {
+  if (computer === user) {
+    return "it's a tie";
+  } else if (
+    (user === "scissors" && computer === "paper") ||
+    (user === "rock" && computer === "scissors") ||
+    (user === "paper" && computer === "rock")
+  ) {
+    return "you win!";
+  } else return "you lose!";
 }
-  
-  game(user, computer)
+
+game();
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -251,8 +253,7 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(number){
-  let result = "";
+
   // switch(true){
   //   case number >= 90:
   //      result="you got an A";
@@ -278,26 +279,20 @@ function grade(number){
   //   result="you got wrong value"
      
   // }
-  if(number >= 90){
-    result ="you got an A";
-    console.log("you got an A");
-
-  }else if(80<= number <=89){
-    result ="you got a B";
-    console.log("you got a B");
-  }else if(70<= number <=79){
-    result ="you got a C";
-    console.log("you got a C");
-  }else if( 60<=number<=69){
-    result ="you got a D";
-    console.log("you got a d");
-  }else if(0<=number <60){
-    result ="you got an F";
-    console.log("you got an F");
+  function grade(number) {
+    if (number >= 90){
+     return "you got an A";
+    }else if (number >= 80 && number <= 89) {
+      return "you got a B";
+    } else if (number >= 70 && number <= 79) {
+      return "you got a C";
+    } else if (number >= 60 && number <= 69) {
+      return "you got a D";
+    } else if (number < 60) {
+      return "you got an F";
+    }
   }
-  return result;
-  }
-  grade(50);
+grade(89)
   
   
 
