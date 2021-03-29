@@ -175,7 +175,7 @@ function game(user, computer){
    if(user == computer){
      value ="it's a tie"
    
-   }else if(user > computer){
+   }else if(user < computer){
      value = "you win!";       
    }else{
      value ="you lose!"
@@ -284,20 +284,20 @@ function grade(number){
 
   }else if(80<= number <=89){
     result ="you got a B";
-    console.log("you got an B");
+    console.log("you got a B");
   }else if(70<= number <=79){
     result ="you got a C";
-    console.log("you got an C");
+    console.log("you got a C");
   }else if( 60<=number<=69){
-    result ="you got a B";
-    console.log("you got an B");
+    result ="you got a D";
+    console.log("you got a d");
   }else if(0<=number <60){
     result ="you got an F";
     console.log("you got an F");
   }
   return result;
   }
-  grade(70);
+  grade(50);
   
   
 
@@ -338,10 +338,11 @@ export default{
     foo,
     multiply,
     dogYears,
-    hungryDog, 
+    hungryDog,
+    game, 
     miles,
     feet,
     annoyingSong,
-    grade,
-    game
+    grade
+    
 }
