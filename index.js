@@ -76,19 +76,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(num1, num2){
+  return num1 * num2;
   }
 
-  var num1 = 10,
-  num2 = 20,
-  name = 'resolution';
-  
-  function multiply() {
-    return num1 * num2;
-  }
-  
-  multiply();
+  multiply(10, 2);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -101,14 +93,14 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function Pupperage(age) {
-  var dogYears = 7*age;
+function dogYears(age) {
+  return age*7;
   console.log("Your pupper is " + dogYears + " years old in pupper years!");
 }
 
-Pupperage(5);
-Pupperage(10);
-Pupperage(15);
+dogYears(5);
+dogYears(10);
+dogYears(15);
 
 
 
@@ -141,7 +133,7 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungrydog(weight, age) {
+function hungryDog(weight, age) {
   if (age > 0.16 && age < 0.33) {
     return(weight * 0.1);
   }
@@ -171,7 +163,7 @@ function hungrydog(weight, age) {
   }
 }
 
-hungrydog(15,2);
+hungryDog(15,2);
 
 
 
