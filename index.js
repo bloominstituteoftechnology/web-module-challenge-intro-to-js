@@ -18,6 +18,10 @@ Do the following:
    HINT: no function required
 */
 
+ var votingAge = 29;
+if (votingAge >= 18) {
+  console.log(true);
+}
 
 
 /*
@@ -31,7 +35,15 @@ Do the following:
    HINT: no function required
 */
 
+var shirt = 'blouse';
+var shoes = 'boots';
 
+if (shoes === 'boots') {
+  shirt = 'flannel';
+}
+
+console.log(shirt);
+console.log(shoes);
 
 
 
@@ -46,7 +58,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+var birthYear = 1999;
+Number(birthYear);
 
+console.log(birthYear);
 
 
 /*
@@ -61,7 +76,15 @@ Do the following:
 function multiply(/*add your code here*/){
     /*add your code here*/
   }
+var one = 4;
+var two = 6;
 
+function multiply(a,b){
+  var answer = a * b;
+  return answer;
+}
+
+multiply(a,b);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,9 +97,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+var honeyBoy = 4;
+function dogYears(age){
+    var dogYear = age * 7;
+    return dogYear;
 }
+dogYears(honeyBoy);
 
 
 
@@ -107,9 +133,35 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+var dogWeight = 12;
+var dogAge = 4;
+
+function hungryDog(weight,age){
+    var amountRawFood;
+      if (dogAge >= 1) {
+        if (weight < 5) {
+          amountRawFood = weight * .05;
+        }
+        if (weight <= 10 && weight >= 11) {
+          amountRawFood = weight * .05;
+        }
+        if (weight > 15) {
+          amountRawFood = weight * .02;
+        }
+      } else {
+        if (age <= .33 && age >= .17) {
+          amountRawFood = weight * .1;
+        }
+        if (age <= .58 && age >= .33) {
+          amountRawFood = weight * .05;
+        }
+        if (age <= 1 && age >= .58) {
+          amountRawFood = weight * .04;
+        }
+      }
+    }
+
+console.log(hungryDog(15,1));
 
 
 
@@ -133,12 +185,51 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+var computer = Math.random();
+var player = 'Rock';
+
+if (computer > .45) {
+  computer = 'Rock';
+} 
+else if (computer > .25 && computer < .3) {
+  computer = 'Paper';
+} else {
+  computer = 'Scissors';
+}
 
 function game(user, computer){
-    /*add your code here*/
+    if (player === 'Rock') {
+      if (computer === 'Scissors'){
+      return 'You Win!'
+    } else if (computer === 'Rock') {
+      return 'Tie :/'
+    }
+    else {
+      return 'You lose'
+    }
+  }
+  if (player === 'Paper') {
+    if (computer === 'Rock'){
+    return 'You Win!'
+  } else if (computer === 'Paper') {
+    return 'Tie :/'
+  }
+  else {
+  return 'You lose'
+  }
+  }
+  if (player === 'Scissors') {
+    if (computer === 'Paper'){
+    return 'You Win!'
+  } else if (computer === 'Scissors') {
+  return 'Tie :/'
+  }
+  else {
+  return 'You lose'
+  }
+  }
 }
-  
-  
+console.log(game(player,computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -147,7 +238,7 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
-  2. Convert the number of kiolmeters received to miles
+  2. Convert the number of kilometers received to miles
   3. Return the number of miles
 */
 
