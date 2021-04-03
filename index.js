@@ -242,10 +242,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+  return kilometers / 1.609;
   }
 
+    console.log(miles(2));
 
 
 //Task 5b - Feet to CM
@@ -256,11 +257,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48;
   }
- 
 
+console.log(feet(3));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -272,10 +273,25 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(){
+    let bottles;
+    let bottlesLeft;
+      for (i = 99; i >= 1; i--){
+        if (i === 1){
+          bottles = "bottle";
+          bottlesLeft = "no bottles of soda on the wall";
+        } else {
+          bottles = "bottles";
+          bottlesLeft = i - 1 + "bottles of soda on the wall";
+        }
+    console.log(i+ "" + bottles + " of soda on the wall,");
+    console.log(i + "" + bottles + " of soda,");
+    console.log("take one down pass it around");
+    console.log(bottlesLeft)
+      }
   }
 
+console.log(annoyingSong());
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -292,11 +308,25 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if (score < 60){
+    return "you got an F";
   }
+  else if (score >= 60 && <= 69){
+    return "you got a D";
+  }
+  else if (score >= 70 && <= 79){
+    return "you got a C";
+  }
+  else if (score >= 80 && <= 89){
+    return "you got a B";
+  }
+  else if (score >= 90){
+    return "you got an A";
+  }
+}
   
-  
+  console.log(grade(83));
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
