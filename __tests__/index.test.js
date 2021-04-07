@@ -16,11 +16,8 @@ describe('dogYearsFunction', ()=>{
     it('returns humanYears * 7', ()=>{
         expect(functions.dogYears(5)).toBe(35);
     })
-});
-
-describe('dogYearsFunction second check', ()=>{
     it('returns humanYears * 7', ()=>{
-        expect(functions.dogYears(2)).toBe(10);
+        expect(functions.dogYears(2)).toBe(14);
     })
 });
 
@@ -28,9 +25,6 @@ describe('hungryDogFunction', ()=>{
     it('returns weight * x based on age and weight', ()=>{
         expect(functions.hungryDog(15, 1)).toBe(0.44999999999999996);
     })
-});
-
-describe('hungryDogFunction second check', ()=>{
     it('returns weight * x based on age and weight', ()=>{
         expect(functions.hungryDog(10, 0.6)).toBe(0.4);
     })
