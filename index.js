@@ -17,7 +17,13 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 16;
+if(votingAge < 18){
+  console.log("false");
+}
+else{
+  console.log("true");
+}
 
 
 /*
@@ -30,9 +36,17 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+var tankpercentage = 10;
+var tank = 1;
+do{
+  if(tank<10){
+    tank*10 = tankpercentage;
+    tank++;
+  }
+}
+until{
+  tankpercentage = 100;
+}
 
 
 /*
