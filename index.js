@@ -168,15 +168,49 @@ Use the game function below to do the following:
    - lose should return "you lose!"
    - tie should return "it's a tie"
   
-  RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
+  RULES OF THE GAME: Scissors(1) beats Paper | Paper(2) beats Rock | Rock(3) beats Scissors | Or there's a tie
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
 function game(user, computer){
-    /*add your code here*/
+    if (user === 1 && computer ===3){
+      return "you lose!"
+    }
+    else if (user === 1 && computer ===2){
+      return "you win!"
+    }    
+    else if (user === computer){
+      return "it's a tie!"
+    }
+    else  if (user ===3 && computer===1){
+      return "you win!"
+    }
+    else if (user === 3 && computer === 2) {
+      return "you lose!"
+    }
+    else if (user === 2 && computer === 1) {
+      return "you lose!"
+    }
+    else if (user === 2 && computer === 2) {
+      return "you win!"
+    }
 }
-  
+
+var computerChoice = 0
+var randomNumber = Math.random() * 3
+if (randomNumber < 1){
+  computerChoice = 1
+}
+else if (randomNumber < 2){
+  computerChoice = 2
+}
+else if (randomNumber < 3){
+  computerChoice = 3
+}
+
+var userChoice = 1
+console.log(game(userChoice,computerChoice))
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
