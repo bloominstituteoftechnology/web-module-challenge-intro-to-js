@@ -42,7 +42,7 @@ Do the following:
    HINT: no function required
 */
 
-var jacob = 23
+var jacob = 23;
 var jacobBirthYear = 1993;
 
 if(jacobBirthYear === 1993){
@@ -65,6 +65,10 @@ Do the following:
 */
 
 
+var year = "1999";
+var integer = parseInt("1999", 10);
+
+console.log(integer)
 
 
 
@@ -77,10 +81,13 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    var sum = a * b;
+
+    return sum;
   }
 
+console.log(multiply(2,4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
