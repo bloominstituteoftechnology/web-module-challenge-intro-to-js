@@ -19,15 +19,13 @@ Do the following:
 */
 
 var votingAge = 28;
-console.log("true");
 
-
-// if(votingAge <= 18){
-//   console.log("true");
-// }
-// else(votingAge > 18){
-//   console.log("False")
-// }
+if(votingAge >= 18){
+  console.log("true");
+}
+else{
+  console.log("False");
+}
 
 
 
@@ -100,10 +98,13 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(a){
+    var humanYears = a * 7;
+
+    return humanYears
 }
 
+console.log(dogYears(6))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -133,10 +134,31 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+
+function hungryDog(weight, age){
+    if(age >= 1 && weight <= 5){
+      return weight * 0.05;
+    } else if(age >= 1 && weight >= 6 && weight <= 10){
+      return weight * 0.04;
+    } else if(age >= 1 && weight >= 11 && weight <= 15) {
+      return weight * 0.03;
+    } else if(age >= 1 && weight > 15){
+      return weight * 0.02;
+    } else if(age < 1 && age >= 0.583){
+      return weight * 0.04;
+    } else if(age < 0.583 && age >= 0.333){
+      return weight * 0.05;
+    } else if( age < 0.333){
+      return weight * 0.10;
+    } else{
+      return `please try again`;
+    }
   }
 
+console.log('task 3:', hungryDog(43, 4));
+  // 43 is very first argument, so very first parameter, 4 is second argument, so second parameter
+
+  
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
