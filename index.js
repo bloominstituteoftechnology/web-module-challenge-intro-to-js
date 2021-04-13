@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18
+console.log(votingAge>=18)
+// node index.js
+// true
 
 
 /*
@@ -31,9 +34,16 @@ Do the following:
    HINT: no function required
 */
 
+let a =1;
+let b=2;
 
-
-
+if (b > 1){
+  a =100;
+}
+console.log(a);
+// node index.js
+// true
+// 100
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -45,6 +55,15 @@ Do the following:
 
    HINT: look up the Number method
 */
+let str="1999"
+
+let num = parseInt( str);
+console.log( num );
+// 
+// node index.js
+// true
+// 100
+// 1999
 
 
 
@@ -58,11 +77,16 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+  const result = a * b;
+  return result;
   }
-
-
+console.log( multiply( 5, 6 ) );
+// node index.js
+// true
+// 100
+// 1999
+// 30
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -74,11 +98,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humYr){
+  return humYr * 7;
 }
 
-
+console.log( dogYears( 2 ) );
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -107,11 +131,25 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog( weight, age ) {
+  if ( weight < 5 && age >= 1 ) {
+    return weight * .05;
+  } else if ( weight <= 10 && age >= 1 ) {
+    return weight * .04;
+  } else if ( weight <= 15 && age >= 1 ) {
+    return weight * .03;
+  } else if ( weight > 15 && age >= 1 ) {
+    return weight * .02;
+  } else if ( age <= ( 4 / 12 ) ) {
+    return weight * .10;
+  } else if ( age <= ( 7 / 12 ) ) {
+    return weight * .05;
+  } else if ( age < 1 ) {
+    return weight * .04;
   }
-
-
+}
+hungryDog( 15, 1 )
+console.log('hungryDog( 15, 1 ): ', hungryDog( 15, 1 ));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -134,12 +172,46 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+let robot  = Math.random();
+if ( robot  <= .33 ) {
+  robot  = 'rock';
+} else if ( robot  <= .67 ) {
+  robot  = 'paper';
+} else if ( robot  <= 1 ) {
+  robot  = 'scissors';
 }
-  
-  
 
+function game( user, robot  ) {
+  if ( user === 'rock' && robot  === 'scissors' ) {
+    return 'you win!';
+  } else if ( user === 'paper' && robot  === 'rock' ) {
+    return 'you win!';
+  } else if ( user === 'scissors' && robot  === 'paper' ) {
+    return 'you win!'
+  } else if ( user === robot  ) {
+    return "it's a tie"
+  }
+  return 'you lose!'
+}
+   game( 'rock', 'paper' )
+   console.log(` game( 'rock', 'paper' ):`,    game( 'rock', 'paper' ));
+/*
+
+node index.js
+true
+100
+1999
+30
+14
+hungryDog( 15, 1 ): 0.44999999999999996
+game( 'rock', 'paper' ): you lose!
+
+
+*/
+   
+   
+   
+   
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
@@ -151,9 +223,24 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+ return km * 0.621371
   }
+
+miles( 2 )
+console.log('miles( 2 ): ', miles( 2 ));
+/*
+node index.js
+true
+100
+1999
+30
+14
+hungryDog( 15, 1 ): 0.44999999999999996
+game( 'rock', 'paper' ): you lose!
+  miles( 2 ): 1.242742
+
+*/
 
 
 
@@ -165,10 +252,27 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet ( cm ) {
+  let numFeet = cm / 30.48;
+  return numFeet;
+}
  
+feet (10)
+console.log('feet (10): ', feet (10));
+/*
+node index.js
+true
+100
+1999
+30
+14
+hungryDog( 15, 1 ): 0.44999999999999996
+game( 'rock', 'paper' ): you lose!
+  miles( 2 ): 1.242742
+feet( 10 ): 0.32808398950131235
+*/
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -181,9 +285,9 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong( number ) {
+  return number + " bottles of soda on the wall, " + number + " bottles of soda, take one down pass it around " + ( number - 1 ) + " bottles of soda on the wall"
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -201,11 +305,19 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade( score ) {
+  if ( score >= 90 && score <= 100 ) {
+    return 'you got an A';
+  } else if ( score >= 80 && score <= 89 ) {
+    return 'you got a B';
+  } else if ( score >= 70 && score <= 79 ) {
+    return 'you got a C';
+  } else if ( score >= 60 && score <= 69 ) {
+    return 'you got a D';
   }
-  
-  
+  return 'you got an F';
+}
+grade( 99 );
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -218,13 +330,32 @@ Using the vowelCounter function below do the following:
   HINT - you may need to study tomorrow's content on arrays 
   HINT - try looking up the .includes() method
 */
+// 
+// //ONE LINER
+// function vowelCounter( str ) {
+//   return str.match( /[aeiou]/g ).length;
+// }
+// 
+// 
+// 
+// vowelCounter( 'count' );
+// console.log(`vowelCounter( 'count' ): `, vowelCounter( 'count' ));
+// 
 
+/*
+node index.js
+true
+100
+1999
+30
+14
+hungryDog( 15, 1 ): 0.44999999999999996
+game( 'rock', 'paper' ): you lose!
+  miles( 2 ): 1.242742
+feet( 10 ): 0.32808398950131235
+vowelCounter( 'count' ): 2
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
-
-
+*/
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
