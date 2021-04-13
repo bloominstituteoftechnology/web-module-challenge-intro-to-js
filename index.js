@@ -18,6 +18,17 @@ Do the following:
    HINT: no function required
 */
 
+var votingAge = 28;
+console.log("true");
+
+
+// if(votingAge <= 18){
+//   console.log("true");
+// }
+// else(votingAge > 18){
+//   console.log("False")
+// }
+
 
 
 /*
@@ -31,7 +42,14 @@ Do the following:
    HINT: no function required
 */
 
+var jacob = 23
+var jacobBirthYear = 1993;
 
+if(jacobBirthYear === 1993){
+  jacob = 28;
+}
+
+console.log(jacob);
 
 
 
@@ -45,6 +63,7 @@ Do the following:
 
    HINT: look up the Number method
 */
+
 
 
 
