@@ -80,7 +80,7 @@ Do the following:
 */
 
 function multiply(a, b){
-    var sum = a * b;
+    let sum = a * b;
 
     return sum;
   }
@@ -99,7 +99,7 @@ Do the following:
 */
 
 function dogYears(a){
-    var humanYears = a * 7;
+    let humanYears = a * 7;
 
     return humanYears
 }
