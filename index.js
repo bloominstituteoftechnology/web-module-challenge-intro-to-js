@@ -34,12 +34,12 @@ Do the following:
 
    HINT: no function required
 */
-let num1 = 6;
-let num2 = 7;
+let name = "Robert";
+let status = "confused";
 
-if(num1 ===6){
-  num1 += num2;
-  console.log(num1); 
+if(name ===6){
+  status = "understands"; 
+  console.log(status); 
 }
 
 /*
@@ -115,7 +115,6 @@ Use the hungryDog function and feeding requirements below to do the following:
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
-
 function hungryDog( dogWeight , dogAge){
     if (dogAge >= 1){
       if(dogWeight <= 5)
@@ -152,10 +151,6 @@ function hungryDog( dogWeight , dogAge){
     }
 }
 
-
-
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
@@ -178,15 +173,27 @@ Use the game function below to do the following:
 */
 
 let computer = Math.random();
+
 if (computer <= .34){
-  computer = 'rock';
-}else if ( computer<= 0.67){
-computer = 'paper';
+  computer = "rock";
+}else if ( computer <= 0.67){
+computer = "paper";
 }else if(computer > .67){
-computer = 'scissor'
+computer = "scissors";
 }
+
 function game(user, computer){
-    
+  if (user === computer){
+    return "it's a tie";
+  }else if (user === "rock" && computer === "scissors"){
+    return "you win!";
+  }else if (user === "scissors" && computer === "paper"){
+    return "you win!";
+  }else if (user === "paper" && computer === "rock"){
+    return "you win!";
+  }else{
+    return "you lose!";
+  }
 }
   
   
@@ -202,8 +209,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.621371;
   }
 
 
@@ -216,8 +223,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48;
   }
  
 
@@ -234,8 +241,10 @@ Using the annoyingSong function below do the following:
 
 
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(num){
+        for (i = num; i >= 0;i--){
+          return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;
+        }
   }
 
 
