@@ -15,7 +15,7 @@ Do the following:
    1. Create a variable called votingAge and assign it a value
    2. Console log true if age is 18 or higher
 
-   HINT: no function required
+   HINT: no function required 
 */
 
 
