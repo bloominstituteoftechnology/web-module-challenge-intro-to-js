@@ -288,8 +288,6 @@ Using the grade function below do the following:
 // }
 
 
-
-
 function grade(score) {
   if(score < 60) {
     return `you got an F`;
@@ -324,10 +322,12 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(string) {
+    let count = string.match(/[aeiou]/gi).length;
+    return count
 }
 
+console.log(vowelCounter("Hey How are you"));
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
