@@ -17,7 +17,11 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 21;
 
+if (votingAge > 19){
+  console.log('True')
+}
 
 
 /*
@@ -30,10 +34,13 @@ Do the following:
 
    HINT: no function required
 */
+let num1 = 6;
+let num2 = 7;
 
-
-
-
+if(num1 ===6){
+  num1 += num2;
+  console.log(num1); 
+}
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -46,8 +53,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+let year = "1999";
 
-
+console.log(Number(year));
 
 /*
 Task 1d - Multiply
@@ -58,8 +66,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b;
   }
 
 
@@ -74,8 +82,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  let dogyear = age * 7; 
+  return dogyear;
 }
 
 
@@ -107,9 +116,43 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+function hungryDog( dogWeight , dogAge){
+    if (dogAge >= 1){
+      if(dogWeight <= 5)
+      {
+        let dogFood = dogWeight * .05;
+        return dogFood;
+      }
+      else if(dogWeight >= 6 && dogWeight <= 10){
+        let dogFood = dogWeight * .04;
+        return dogFood;
+      }
+      else if(dogWeight >= 11 && dogWeight <= 15){
+        let dogFood = dogWeight * .03;
+        return dogFood;
+      }
+      else if(dogWeight > 15){
+        let dogFood = dogWeight * .02;
+        return dogFood;
+      }
+    }
+    else if (dogAge < 1){
+      if(ageAge >= (2/12) && ageAge <= (4/12)){
+        let dogFood = dogWeight * .1;
+        return dogFood;
+      }
+      else if(ageAge >(4/12) && ageAge <= (7/12)){
+        let dogFood = dogWeight * .05;
+        return dogFood;
+      }
+      else if(ageAge < 1){
+        let dogFood = dogWeight * .04;
+        return dogFood;
+      }
+    }
+}
+
+
 
 
 
@@ -134,8 +177,16 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let computer = Math.random();
+if (computer <= .34){
+  computer = 'rock';
+}else if ( computer<= 0.67){
+computer = 'paper';
+}else if(computer > .67){
+computer = 'scissor'
+}
 function game(user, computer){
-    /*add your code here*/
+    
 }
   
   
@@ -180,6 +231,8 @@ Using the annoyingSong function below do the following:
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
+
+
 
 function annoyingSong(/*add your code here*/){
         /*add your code here*/
