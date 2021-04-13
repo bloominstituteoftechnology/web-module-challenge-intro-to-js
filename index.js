@@ -57,7 +57,7 @@ Do the following:
 */
 let str="1999"
 
-let num = parseInt( str);
+let num = parseInt(str);
 console.log( num );
 // 
 // node index.js
@@ -194,7 +194,7 @@ function game( user, robot  ) {
   return 'you lose!'
 }
    game( 'rock', 'paper' )
-   console.log(` game( 'rock', 'paper' ):`,    game( 'rock', 'paper' ));
+   console.log(` game( 'rock', 'paper' ):`,    game( 'rock', robot ));
 /*
 
 node index.js
@@ -330,6 +330,19 @@ Using the vowelCounter function below do the following:
   HINT - you may need to study tomorrow's content on arrays 
   HINT - try looking up the .includes() method
 */
+
+
+function vowelCounter( inputString ) {
+  // for (let character of inputString){
+  //   if ('aeiou'.includes(character)){
+  //     counter++;
+  //   }
+  // }
+  // return counter;
+  // let counter = 0;
+  // just playing golf
+  return inputString.split( "" ).reduce( ( a, b ) => a + 'aeiou'.includes( b ), 0 );
+}
 // 
 // //ONE LINER
 // function vowelCounter( str ) {
@@ -342,20 +355,7 @@ Using the vowelCounter function below do the following:
 // console.log(`vowelCounter( 'count' ): `, vowelCounter( 'count' ));
 // 
 
-/*
-node index.js
-true
-100
-1999
-30
-14
-hungryDog( 15, 1 ): 0.44999999999999996
-game( 'rock', 'paper' ): you lose!
-  miles( 2 ): 1.242742
-feet( 10 ): 0.32808398950131235
-vowelCounter( 'count' ): 2
 
-*/
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
