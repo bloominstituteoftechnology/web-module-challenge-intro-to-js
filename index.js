@@ -21,8 +21,6 @@ let votingAge = 18;
 if(votingAge >= 18){
   console.log("TRUE")
 }
-
-
 /*
 Task 1b - Values
 
@@ -35,10 +33,10 @@ Do the following:
 */
 let x = 5;
 let y = 5;
-
-
-
-
+if(x-y===0){
+  let z = x-y
+  console.log(z)
+}
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -49,10 +47,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
-
-
+let newYear = "1999";
+newYear = 1999;
+console.log(newYear)
 /*
 Task 1d - Multiply
  
@@ -61,13 +58,9 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
-
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b;
   }
-
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Age in Dog years
@@ -77,12 +70,12 @@ Do the following:
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age) {
+  var calculation = 7*age;
+  return calculation
 }
 
-
+dogYears(1);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -110,13 +103,23 @@ Use the hungryDog function and feeding requirements below to do the following:
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
-
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
-
+function hungryDog(weight, age) {
+	if (age * 12 <= 4) {
+		return weight * 0.1;
+	} else if (age * 12 <= 7) {
+		return weight * 0.05;
+	} else if (age * 12 < 1) {
+		return weight * 0.04;
+	} else if (weight <= 5) {
+		return weight * 0.05;
+	} else if (weight <= 10) {
+		return weight * 0.04;
+	} else if (weight <= 15) {
+		return weight * 0.03;
+	} else {
+		return weight * 0.02;
+	}
+}
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
