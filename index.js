@@ -36,7 +36,6 @@ Do the following:
 
 let a =1;
 let b=2;
-
 if (b > 1){
   a =100;
 }
@@ -194,7 +193,7 @@ function game( user, robot  ) {
   return 'you lose!'
 }
    game( 'rock', 'paper' )
-   console.log(` game( 'rock', 'paper' ):`,    game( 'rock', robot ));
+console.log( ' game( rock,' `${robot} ):`,    game( 'rock', robot ));
 /*
 
 node index.js
@@ -286,10 +285,13 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong( number ) {
-  return number + " bottles of soda on the wall, " + number + " bottles of soda, take one down pass it around " + ( number - 1 ) + " bottles of soda on the wall"
+   for ( number > 0; number--; ) {
+     console.log( `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall` )
+   }
 }
 
-
+annoyingSong(20)
+console.log('annoyingSong(20): ', annoyingSong(20));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
