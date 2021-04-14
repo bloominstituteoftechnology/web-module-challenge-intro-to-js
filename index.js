@@ -17,6 +17,9 @@ Do the following:
 
    HINT: no function required
 */
+ var VotingAge = 17;
+ 
+ console.log(VotingAge > 18)
 
 
 
@@ -31,7 +34,12 @@ Do the following:
    HINT: no function required
 */
 
-
+let firstVariable = 1;
+let secondvariable = 2;
+if (secondvariable === 2){
+  firstVariable = 44;
+  console.log(firstVariable);
+}
 
 
 
@@ -46,7 +54,10 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let a = "1999";
+a = Number(a);
+console.log(a);
+console.log(typeof(a))
 
 
 /*
@@ -58,10 +69,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
-
+function multiply(num1, num2){
+ return num1 * num2;
+}
+multiply(69,420)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +85,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,9 +117,23 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(dogWeight, dogAge){
+ if (dogAge * 12 <= 4){
+  return dogWeight * 0.1;
+}else if (dogAge * 12 <= 7){
+  return dogWeight * 0.05;
+}else if (dogAge * 12 < 1){
+  return dogWeight * 0.04;
+}else if(age >= 1 && weight <= 5){
+  return dogWeight * .05;
+}else if(age >= 1 && weight >= 6 && weight <= 10){
+  return dogWeight * .04;
+}else if(age >= 1 && weight >= 11 && weight <= 15){
+  return dogWeight * .03;
+}else if(age >= 1 && weight >= 15){
+  return dogWeight * .02;
   }
+}
 
 
 
@@ -134,11 +158,22 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+
 }
-  
-  
+  let computer = math.random();
+  if(computer <= .34){
+    computer = 'Rock';
+  }else if(computer <= .67){
+    computer = 'Paper';
+  }else if (.67 < computer){
+    computer = 'Scissor'
+  }
+ 
+  function game(user, computer){
+    if(user === computer){
+      return 'TIE';
+    }else if (user === 'rock')
+  }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
