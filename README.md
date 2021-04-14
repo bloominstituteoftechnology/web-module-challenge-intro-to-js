@@ -29,7 +29,7 @@ Exercises are outlined in the `index.js` file, please read the instructions care
 Using VSCode and Command Line:
 
 
-hi
+hi!
 
 
 1. Fork the repo
