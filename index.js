@@ -17,6 +17,8 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 19;
+votingAge >= 18;
 
 
 
