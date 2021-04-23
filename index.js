@@ -18,7 +18,10 @@ Do the following:
    HINT: no function required
 */
 
-
+const votingAge = 18;
+if(votingAge >= 18) {
+  console.log(true);
+}
 
 /*
 Task 1b - Values
@@ -30,8 +33,14 @@ Do the following:
 
    HINT: no function required
 */
+ 
+let var1 = "x"; // first var
+let var2 = "y"; // second var
 
-
+if (var1 !== var2) {
+  var1 = var2;
+  console.log(var1);
+}
 
 
 
@@ -46,7 +55,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+const numStr = "1999";
+const strNum = parseInt(numStr);
+console.log(strNum);
 
 
 /*
