@@ -69,9 +69,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+
+function multiply(a, b){
+    return a * b;
   }
+  multiply(3,3);
 
 
 
@@ -85,9 +87,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears){
+    return humanYears * 7;
 }
+dogYears(10);
 
 
 
@@ -96,33 +99,57 @@ function dogYears(/*add your code here*/){
 //Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
 /*
 Use the hungryDog function and feeding requirements below to do the following:
-  1. Invoke the hungryDog function below and pass it a weight value in pounds
-  2. Also, pass to hungryDog an age value in years (note: if the dog is a puppy, the age will be a decimal. For example: three months = 3/12 or .25)
-  3. Do the proper calculations and return the number of pounds of raw food to feed the dog/puppy in a day
+  1. Invoke the hungryDog function below and pass it a weight value in pounds - OK
+  2. Also, pass to hungryDog an age value in years (note: if the dog is a puppy, the age will be a decimal. For example: three months = 3/12 or .25) - OK
+  3. Do the proper calculations and return the number of pounds of raw food to feed the dog/puppy in a day - OK
   
   REMEMBER: This program should handle correctly adult AND puppy ages and weights
   
   Feeding Requirements:
 
   Adult Dogs 1 year and older 
-     up to 5 lbs - 5% of their body weight
-     6 - 10 lbs - 4% of their body weight 
-     11 - 15 lbs - 3% of their body weight 
-     > 15lbs - 2% of their body weight 
+    1. up to 5 lbs - 5% of their body weight
+    2. 6 - 10 lbs - 4% of their body weight 
+    3. 11 - 15 lbs - 3% of their body weight 
+    4.  > 15lbs - 2% of their body weight 
 
   Puppies less than 1 year
-     2 - 4 months 10% of their body weight
-     4 - 7 months 5% of their body weight 
-     7 - 12 months 4% of their body weight
+    5. 2 - 4 months 10% of their body weight
+          2/12 = .16
+          4/12 = .33
+    6. 4 - 7 months 5% of their body weight 
+          7/12 = .58
+    7. 7 - 12 months 4% of their body weight
+          12/12 = 1
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
+
+  1. pass age & weight parameters to hD function
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(weight, age){
     /*add your code here*/
+    // adult
+    if (age >= 1 && weight <= 5){
+      return (weight * .05);
+    }else if (age >= 1 && weight >= 6 && weight <= 10) {
+      return (weight * .04);
+    }else if (age >=1 && weight >= 11 && weight <= 15) {
+      return (weight * .03);
+    } else if (age >= 15){
+      return (weight * .02);
+    }
+    // puppy
+    else if (age >= .16 && age <= .33){
+      return (weight * .01)
+    } else if (age >= .33 && age <= .58) {
+      return (weight * .05);
+    } else if (age >= .58 && age >= 1){
+      return (weight * .04);
+    }
   }
 
-
+hungryDog(1, 10);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
