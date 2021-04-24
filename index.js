@@ -140,7 +140,7 @@ function hungryDog(age, weight) {
     }
   }
 }
-hungryDog(1, 15)
+hungryDog(6, 120)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -165,8 +165,20 @@ Use the game function below to do the following:
 */
 
 function game(user, computer) {
-  /*add your code here*/
+  if (computer => .33333) {
+    computer = "rock";
+  } else if (computer => .33334 && computer <= .66666) {
+    computer = "paper";
+  } else if (computer => .66667 && computer <= 1) {
+    computer = "scissors";
+  }
+  if (computer = userChoice) {
+    return console.log(it's a tie);
+  }
 }
+userChoice = "scissors";
+
+game(userChoice, Math.random())
 
 
 
