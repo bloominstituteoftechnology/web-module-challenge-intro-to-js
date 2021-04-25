@@ -271,21 +271,21 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(points){
-    var points = grade;
+function grade(score){
+    var score = grade;
     if(points >= 90) {
       return("You got an A");
       }
-      if(points<=89&&points>=80) {
+      if(score<=89&&points>=80) {
       return("You got a B");
       }
-      if(points<=79&&points>=70) {
+      if(score<=79&&points>=70) {
       return("You got a C");
       }
-      if(points<=69&&points>=60) {
+      if(score<=69&&points>=60) {
       returnt("You got a D");
       }
-      if(points<60) {
+      if(score<60) {
       return("You got an F");
       }
 
