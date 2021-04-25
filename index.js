@@ -166,7 +166,7 @@ function game(userChoice, computerChoice) {
     }
     else (userChoice === "rock") 
     if(computerChoice === "scissors") {
-      return "you wins!";
+      return "you win!";
     }
 
  }
