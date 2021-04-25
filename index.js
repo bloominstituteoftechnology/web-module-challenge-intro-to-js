@@ -17,8 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
+const votingAge = 21;
+if (votingAge >= 18) {
+  console.log(true);
+}
 
 /*
 Task 1b - Values
@@ -31,7 +33,9 @@ Do the following:
    HINT: no function required
 */
 
-
+let year = 2020
+let next = year + 1
+console.log(year + 1)
 
 
 
@@ -46,7 +50,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+const string = '1999'
+const answer = 1999
+console.log(1999)
 
 
 /*
@@ -58,9 +64,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b
   }
+  multiply(3, 5)
 
 
 
@@ -74,9 +81,15 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age) {
+  var dogYears = 7*age;
+  console.log(dogYears);
 }
+
+dogYears(1);
+dogYears(0.5);
+dogYears(12);
+
 
 
 
@@ -107,9 +120,11 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+function hungryDog(age, weight){
+  var weight = pounds;
+  var age = years;
+  console.log(hungryDog)
+}
 
 
 
@@ -135,11 +150,54 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+  var user = "rock, paper or scissors"
+  if (user = rock) {
+    user = "rock";
+} else if(user = paper) {
+    user = "paper";
+} else {
+    user = "scissors";
 }
+if (computer < 0.34) {
+  computer = "rock";
+} else if(computer <= 0.67) {
+  computer = "paper";
+} else {
+  computer = "scissors";
+}
+var compare = function(user, computer) {
+  if (user === computer) {
+      return "It's a tie!";
+  }
+  if (user === "rock") {
+      if (computer === "scissors") {
+          // rock wins
+          return "You win!";
+      } else {
+          // paper wins
+          return "You lose! Try again.";
+      }
+  }
+  if (user === "paper") {
+      if (computer === "rock") {
+          // paper wins
+          return "You win!";
+      } else {
+          // scissors wins
+          return "You lose! Try again.";
+      }
+  }
+  if (user === "scissors") {
+      if (computer === "rock") {
+          // rock wins
+          return "You lose! Try again.";
+      } else {
+          // scissors wins
+          return "You win!";}
+      }
+    }
+  };      
   
-  
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
