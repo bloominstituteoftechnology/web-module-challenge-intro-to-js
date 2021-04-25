@@ -82,7 +82,7 @@ Do the following:
 */
 
 function dogYears(age) {
-  var dogYears = 7*age;
+  var dogYears = age * 7;
   console.log(dogYears);
 }
 
