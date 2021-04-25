@@ -18,7 +18,13 @@ Do the following:
    HINT: no function required
 */
 let votingAge = 19;
-votingAge >= 18;
+if (votingAge >= 18) {
+  console.log(true);
+} else {
+  console.log (false + ' you are only ' + votingAge);
+}
+
+console.log (votingAge >= 18)
 
 
 
@@ -33,7 +39,12 @@ Do the following:
    HINT: no function required
 */
 
-
+let color = 'orange';
+let height = 8;
+if (height >=7) {
+  color = 'blue'
+}
+console.log(color);
 
 
 
@@ -47,6 +58,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+let string = '1999';
+let integer = parseInt('1999');
+console.log(integer)
 
 
 
@@ -60,9 +74,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+   return a * b;
   }
+  console.log(multiply(5,7));
 
 
 
@@ -76,9 +91,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
+console.log(dogYears(5));
 
 
 
@@ -109,11 +125,29 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if (age < 1) {
+      let ageInMonths = age * 12;
+      if  (ageInMonths <= 4 && ageInMonths > 2) {
+        return ageInMonths * .1;
+      } else if (ageInMonths >= 4 && ageInMonths <7 ) {
+        return ageInMonths * .05;
+      } else if (ageInMonths >= 7 && ageInMonths < 12) {
+        return ageInMonths * .04;
+      }
+    } else if  (age >= 1) {
+        let ageInYears = age
+        if  (weight <= 5) {
+         return weight * .05;
+        } else if (weight <= 6 && weight  <= 10) {
+            return weight * .04;
+        } else if (weight >= 11 && weight > 15) {
+          return weight * .02
+        }
+     }
   }
 
-
+console.log(hungryDog(15,1));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
