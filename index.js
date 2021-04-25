@@ -45,8 +45,6 @@ if(a < b) {
 
 
 
-
-
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -57,6 +55,10 @@ Do the following:
 
    HINT: look up the Number method
 */
+
+const constTest = '1999';
+Number('1999');
+console.log(constTest);
 
 
 
