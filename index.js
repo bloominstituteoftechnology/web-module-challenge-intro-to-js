@@ -69,7 +69,7 @@ Do the following:
 */
 
 function multiply(a, b) {
-  return console.log(a * b);
+  return a * b;
 }
 
 multiply(3, 2)
@@ -120,19 +120,19 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */
 
-function hungryDog(age, weight) {
-  if (age >= 12) {
+function hungryDog(weight, age) {
+  if (age >= 1) {
     if (weight <= 5) {
-      let foodAmount = weight * .05
+      let foodAmount = weight * .05;
       return foodAmount;
-    } else if (weight >= 6 && weight <= 10) {
-      let foodAmount = weight * .04
+    } else if (weight > 5 && weight <= 10) {
+      let foodAmount = weight * .04;
       return foodAmount;
-    } else if (weight >= 11 && weight <= 15) {
-      let foodAmount = weight * .03
+    } else if (weight > 10 && weight <= 15) {
+      let foodAmount = weight * .03;
       return foodAmount;
-    } else if (weight >= 16) {
-      let foodAmount = weight * .02
+    } else if (weight > 15) {
+      let foodAmount = weight * .02;
       return foodAmount;
     }
   } else {
@@ -173,33 +173,33 @@ Use the game function below to do the following:
 */
 
 function game(user, computer) {
-  if (computer <= .33333) {
-    computer = "rock";
-  } else if (computer > .33333 && computer <= .66666) {
-    computer = "paper";
-  } else if (computer > .66666 && computer <= 1) {
-    computer = "scissors";
-  }
-  console.log("computer's choice:" + " " + computer);
-  if (computer === userChoice) {
-    return console.log("it's a tie");
-  } else if (computer === "rock" && userChoice == "paper") {
-    return console.log("you win!");
-  } else if (computer === "rock" && userChoice == "scissors") {
-    return console.log("you lose!");
-  } else if (computer === "paper" && userChoice == "rock") {
-    return console.log("you lose!");
-  } else if (computer === "scissors" && userChoice == "rock") {
-    return console.log("you win!");
-  } else if (computer === "scissors" && userChoice == "paper") {
-    return console.log("you lose!");
-  } else if (computer === "paper" && userChoice == "scissors") {
-    return console.log("you win!");
+  if (computer === user) {
+    return `it's a tie`;
+  } else if (computer === "rock" && user == "paper") {
+    return "you win!";
+  } else if (computer === "rock" && user == "scissors") {
+    return "you lose!";
+  } else if (computer === "paper" && user == "rock") {
+    return "you lose!";
+  } else if (computer === "scissors" && user == "rock") {
+    return "you win!";
+  } else if (computer === "scissors" && user == "paper") {
+    return "you lose!";
+  } else if (computer === "paper" && user == "scissors") {
+    return "you win!";
   }
 }
 let userChoice = "scissors";
+let compChoice = Math.random()
+if (compChoice <= .33333) {
+  compChoice = "rock";
+} else if (compChoice > .33333 && compChoice <= .66666) {
+  compChoice = "paper";
+} else if (compChoice > .66666 && compChoice <= 1) {
+  compChoice = "scissors";
+}
 
-game(userChoice, Math.random());
+game(userChoice, compChoice);
 
 
 
@@ -215,7 +215,7 @@ Using the miles function below do the following:
 */
 
 function miles(k) {
-  let amountInMiles = k / 1.609344;
+  let amountInMiles = k * .621371;
   return amountInMiles;
 }
 miles(30)
@@ -246,8 +246,8 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/) {
-  /*add your code here*/
+function annoyingSong(n) {
+  return `${n} bottles of soda on the wall, ${n} bottles of soda, take one down pass it around ${n - 1} bottles of soda on the wall`;
 }
 
 
