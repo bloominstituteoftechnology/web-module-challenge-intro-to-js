@@ -76,7 +76,7 @@ function multiply(a , b){
     return a * b;
   }
 
-  console.log(multiply(1,2));
+
 
 
 
@@ -94,7 +94,7 @@ function dogYears(num1 , num2){
     return num1 * num2;
 }
 
-console.log(dogYears(7,2));
+console.log(dogYears(7,5));
 
 
 
@@ -125,9 +125,11 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight , percentOfWeight){
+    return weight / percentOfWeight;
   }
+
+  console.log(hungryDog(15,0.45));
 
 
 
@@ -152,9 +154,7 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
-}
+  
   
   
 
