@@ -19,9 +19,9 @@ Do the following:
 */
 
 let votingAge = 18
-if (votingAge => 18) {
-  console.log(true)
-};
+if (votingAge >= 18) {
+  console.log(true);
+}
 
 /*
 Task 1b - Values
@@ -69,7 +69,7 @@ Do the following:
 */
 
 function multiply(a, b) {
-  console.log(a * b);
+  return console.log(a * b);
 }
 
 multiply(3, 2)
@@ -85,7 +85,8 @@ Do the following:
 */
 let humanAge = 22
 function dogYears(a) {
-  console.log(a * 7);
+  let dogAge = a * 7
+  return dogAge;
 }
 
 dogYears(humanAge)
@@ -120,23 +121,30 @@ Use the hungryDog function and feeding requirements below to do the following:
 */
 
 function hungryDog(age, weight) {
-  if (age => 12) {
+  if (age >= 12) {
     if (weight <= 5) {
-      return console.log(weight * .05);
-    } else if (weight => 6 && weight <= 10) {
-      return console.log(weight * .04);
-    } else if (weight => 11 && weight <= 15) {
-      return console.log(weight * .03);
-    } else if (weight => 16) {
-      return console.log(weight * .02);
+      let foodAmount = weight * .05
+      return foodAmount;
+    } else if (weight >= 6 && weight <= 10) {
+      let foodAmount = weight * .04
+      return foodAmount;
+    } else if (weight >= 11 && weight <= 15) {
+      let foodAmount = weight * .03
+      return foodAmount;
+    } else if (weight >= 16) {
+      let foodAmount = weight * .02
+      return foodAmount;
     }
   } else {
-    if (age => 2 / 12 && age <= 4 / 12) {
-      return console.log(weight * .1);
-    } else if (age => 5 / 12 && age <= 7 / 12) {
-      return console.log(weight * .05);
-    } else if (age => 8 / 12 && age <= 1) {
-      return console.log(weight * .04);
+    if (age >= 2 / 12 && age <= 4 / 12) {
+      let foodAmount = weight * .1
+      return foodAmount;
+    } else if (age > 4 / 12 && age <= 7 / 12) {
+      let foodAmount = weight * .05
+      return foodAmount;
+    } else if (age > 7 / 12 && age <= 1) {
+      let foodAmount = weight * .04
+      return foodAmount;
     }
   }
 }
@@ -191,7 +199,7 @@ function game(user, computer) {
 }
 let userChoice = "scissors";
 
-game(userChoice, Math.random())
+game(userChoice, Math.random());
 
 
 
@@ -206,10 +214,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
-  /*add your code here*/
+function miles(k) {
+  let amountInMiles = k / 1.609344;
+  return amountInMiles;
 }
-
+miles(30)
 
 
 //Task 5b - Feet to CM
@@ -220,8 +229,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/) {
-  /*add your code here*/
+function feet(c) {
+  let amountinFeet = c / 30.48;
+  return amountinFeet;
 }
 
 
