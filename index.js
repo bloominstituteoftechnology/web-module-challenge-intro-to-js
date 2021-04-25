@@ -149,7 +149,29 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+function game(userChoice, computerChoice) {
+  var userChoice = prompt("Do you choose rock, paper or scissors?");
+  var computerChoice = Math.random(1);
+  if (computerChoice < 0.34) {
+    computerChoice = "rock";
+  } else if(computerChoice <= 0.67) {
+    computerChoice = "paper";
+  } else {
+    computerChoice = "scissors";
+    console.log(userChoice + computerChoice);
+  }
+  var compare = function(userChoice, computerChoice) {
+    if(userChoice===computerChoice) {
+      return "It's a tie!";
+    }
+    else (userChoice === "rock") 
+    if(computerChoice === "scissors") {
+      return "you wins!";
+    }
 
+ }
+}
+userChoice(rock)
 
   
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
