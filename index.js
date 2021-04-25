@@ -230,10 +230,12 @@ Using the feet function below do the following:
 */
 
 function feet(CM){
-    var feet = Math.floor(cm/30.48)
-    var CM = cm%30.48;
-    return feet + "'" + CM + "\"";
-  }
+  var feet = CM * 30.48
+  console.log(feet)
+}
+feet(10)
+feet(20)
+feet(30)
  
 
 
