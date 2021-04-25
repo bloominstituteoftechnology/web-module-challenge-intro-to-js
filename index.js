@@ -276,13 +276,13 @@ function grade(score){
     if(score >= 90) {
       return("You got an A");
       }
-      if(score<=89&&points>=80) {
+      if(score<=89&&score>=80) {
       return("You got a B");
       }
-      if(score<=79&&points>=70) {
+      if(score<=79&&score>=70) {
       return("You got a C");
       }
-      if(score<=69&&points>=60) {
+      if(score<=69&&score>=60) {
       returnt("You got a D");
       }
       if(score<60) {
