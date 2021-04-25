@@ -17,7 +17,7 @@ Do the following:
 
    HINT: no function required
 */
-
+votingAge = 18;
 
 
 /*
@@ -31,7 +31,8 @@ Do the following:
    HINT: no function required
 */
 
-
+var a = 1;
+var b = 2;
 
 
 
@@ -58,10 +59,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a*b;
   }
-
+console.log(multiply(a,b))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,9 +75,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogyears(a,b){
+  return a*b;
 }
+console.log(dogyears(1,7))
+
+
 
 
 
@@ -107,11 +111,11 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog () =>1{
+    return weight * age
   }
-
-
+console.log(15,.02)
+ 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -137,8 +141,33 @@ Use the game function below to do the following:
 function game(user, computer){
     /*add your code here*/
 }
-  
-  
+  if (user === computerchoice) {
+return "it is a tie"
+  }  
+
+else if (user === paper && computerchoice === rock) {
+    return "you win"
+      }  
+else if (user === rock && computerchoice === paper) {
+        return "you lose"
+     }
+     
+     
+else if (user === scissors && computerchoice === rock) {
+  return "you lose"
+}
+else if (user === rock && computerchoice === scissors) {
+  return "you win"
+ }
+            
+ else if (user === scissors && computerchoice === paper) {
+  return "you win"
+   }      
+   else if (user === paper && computerchoice === scissors) {
+    return "you lose"
+     }      
+
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -154,7 +183,10 @@ Using the miles function below do the following:
 function miles(/*add your code here*/){
     /*add your code here*/
   }
-
+  function miles(a,b){
+    return a*b;
+  }
+  console.log(miles(1,0.621371))
 
 
 //Task 5b - Feet to CM
@@ -168,7 +200,10 @@ Using the feet function below do the following:
 function feet(/*add your code here*/){
     /*add your code here*/
   }
- 
+  function miles(a,b){
+    return a*b;
+  }
+  console.log(miles(1,30.48))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -184,7 +219,10 @@ Using the annoyingSong function below do the following:
 function annoyingSong(/*add your code here*/){
         /*add your code here*/
   }
+For (let i - 0 <99; i ++){
+console.log(i);
 
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
