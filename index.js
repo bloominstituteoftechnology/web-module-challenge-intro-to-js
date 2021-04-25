@@ -171,7 +171,7 @@ function game(userChoice, computerChoice) {
 
  }
 }
-userChoice(rock)
+
 
   
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
