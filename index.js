@@ -111,7 +111,7 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog () =>1{
+function hungryDog (= > 1)  {
     return weight * age
   }
 console.log(15,.02)
@@ -242,7 +242,26 @@ Using the grade function below do the following:
 function grade(/*Your Code here */){
   /*Your Code here */
   }
-  
+
+  if (user === 90-100) {
+    return "you got an A"
+  }
+
+  else if (user === 80-89) {
+    return "you got an B"
+  }
+
+  else if (user === 70-79) {
+    return "you got an C"
+  }
+
+  else if (user === 60-69) {
+    return "you got an D"
+  }
+
+  else if (user === 0-59) {
+    return "you got an F"
+  }
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
