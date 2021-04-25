@@ -273,7 +273,7 @@ Using the grade function below do the following:
   
 function grade(score){
     var score = grade;
-    if(points >= 90) {
+    if(score >= 90) {
       return("You got an A");
       }
       if(score<=89&&points>=80) {
