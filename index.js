@@ -20,7 +20,7 @@ Do the following:
 
 let votingAge = 18;
 if (votingAge >= 18) {
-  console.log ('allowed to vote')
+  console.log ('true')
 } 
 
 
