@@ -1,0 +1,38 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+# installed gems (should all be require: false)
+gem "bootsnap", require: false
+gem "byebug", require: false
+gem "minitest", require: false
+gem "nokogiri", require: false
+gem "parallel_tests", require: false
+gem "ronn", require: false
+gem "rspec", require: false
+gem "rspec-github", require: false
+gem "rspec-its", require: false
+gem "rspec-retry", require: false
+gem "rspec-sorbet", require: false
+gem "rspec-wait", require: false
+gem "rubocop", require: false
+gem "rubocop-ast", require: false
+gem "simplecov", require: false
+gem "simplecov-cobertura", require: false
+gem "sorbet", require: false
+gem "sorbet-runtime", require: false
+gem "tapioca", require: false
+gem "warning", require: false
+
+# vendored gems
+gem "activesupport"
+gem "concurrent-ruby"
+gem "mechanize"
+gem "patchelf"
+gem "plist"
+gem "rubocop-performance"
+gem "rubocop-rails"
+gem "rubocop-rspec"
+gem "rubocop-sorbet"
+gem "ruby-macho"
+gem "sorbet-runtime-stub"

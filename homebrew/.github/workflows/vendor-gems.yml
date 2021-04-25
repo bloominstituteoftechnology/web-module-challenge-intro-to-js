@@ -1,0 +1,78 @@
+name: Vendor Gems
+
+on:
+  pull_request_target:
+  workflow_dispatch:
+    inputs:
+      pull_request:
+        description: Pull request number
+        required: true
+
+jobs:
+  vendor-gems:
+    if: >
+      startsWith(github.repository, 'Homebrew/') && (
+        github.event_name == 'workflow_dispatch' || (
+          github.event.pull_request.user.login == 'dependabot[bot]' &&
+          contains(github.event.pull_request.title, '/Library/Homebrew')
+        )
+      )
+    runs-on: macos-latest
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      - name: Set up Xcode
+        run: sudo xcode-select --switch /Applications/Xcode_12.2.app/Contents/Developer
+      - name: Configure Git user
+        uses: Homebrew/actions/git-user-config@master
+        with:
+          username: BrewTestBot
+      - name: Set up commit signing
+        uses: Homebrew/actions/setup-commit-signing@master
+        with:
+          signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
+      - name: Check out pull request
+        id: checkout
+        run: |
+          gh pr checkout '${{ github.event.pull_request.number || github.event.inputs.pull_request }}'
+
+          branch="$(git branch --show-current)"
+          echo "::set-output name=branch::${branch}"
+
+          gem_name="$(echo "${branch}" | sed -E 's|.*/||;s|(.*)-.*$|\1|')"
+          echo "::set-output name=gem_name::${gem_name}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Vendor Gems
+        env:
+          GEM_NAME: ${{ steps.checkout.outputs.gem_name }}
+          HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
+        run: |
+          set -u
+
+          if [[ "${GEM_NAME}" == 'sorbet' ]]; then
+            brew vendor-gems --update sorbet,sorbet-runtime
+          else
+            brew vendor-gems
+          fi
+      - name: Update RBI files
+        env:
+          GEM_NAME: ${{ steps.checkout.outputs.gem_name }}
+          HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
+        run: |
+          set -u
+
+          if brew typecheck --update --fail-if-not-changed; then
+            if git add Library/Homebrew/sorbet; then
+              git commit -m "Update RBI files for ${GEM_NAME}."
+            fi
+
+            git reset --hard
+          fi
+      - name: Push to pull request
+        uses: Homebrew/actions/git-try-push@master
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          branch: ${{ steps.checkout.outputs.branch }}
+          force: true
