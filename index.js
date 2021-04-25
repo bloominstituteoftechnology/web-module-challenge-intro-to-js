@@ -280,27 +280,25 @@ Using the grade function below do the following:
 */
   
 function grade(score){
-    var score = grade;
-    if(score >= 90) {
-      return("You got an A");
-      }
-      if(score<=89&&score>=80) {
-      return("You got a B");
-      }
-      if(score<=79&&score>=70) {
-      return("You got a C");
-      }
-      if(score<=69&&score>=60) {
-      returnt("You got a D");
-      }
-      if(score<60) {
-      return("You got an F");
-      }
-
-
-  }
-  
-  
+  var grade = score;
+  if(score >= 90) {console.log("You got an A")
+  return("You got an A");
+}
+  if(score<=89&&score>=80) {console.log("You got a B")
+  return("You got a B");
+}
+  if(score<=79&&score>=70) {console.log("You got a C")
+  return("You got a C");
+}
+  if(score<=69&&score>=60) {console.log("You got a D")
+  return("You got a D");
+}
+  if(score<60) {console.log("You got an F")
+  return("You got an F");        
+}
+}
+grade(65)
+   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
