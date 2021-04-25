@@ -85,8 +85,7 @@ Do the following:
 */
 let humanAge = 22
 function dogYears(a) {
-  let dogAge = a * 7
-  return dogAge;
+  return a * 7;
 }
 
 dogYears(humanAge)
@@ -195,7 +194,7 @@ if (compChoice <= .33333) {
   compChoice = "rock";
 } else if (compChoice > .33333 && compChoice <= .66666) {
   compChoice = "paper";
-} else if (compChoice > .66666 && compChoice <= 1) {
+} else if (compChoice > .66666) {
   compChoice = "scissors";
 }
 
@@ -215,8 +214,7 @@ Using the miles function below do the following:
 */
 
 function miles(k) {
-  let amountInMiles = k * .621371;
-  return amountInMiles;
+  return k * .621371;
 }
 miles(30)
 
@@ -230,8 +228,7 @@ Using the feet function below do the following:
 */
 
 function feet(c) {
-  let amountinFeet = c / 30.48;
-  return amountinFeet;
+  return c / 30.48;
 }
 
 
@@ -266,8 +263,18 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
 
-function grade(/*Your Code here */) {
-  /*Your Code here */
+function grade(score) {
+  if (score >= 90) {
+    return "you got an A"
+  } else if (score >= 80 && score < 90) {
+    return "you got a B"
+  } else if (score >= 70 && score < 80) {
+    return "you got a C"
+  } else if (score >= 60 && score < 70) {
+    return "you got a D"
+  } else {
+    return "you got an F"
+  }
 }
 
 
