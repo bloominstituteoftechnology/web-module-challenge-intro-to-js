@@ -149,9 +149,11 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  var user = "rock, paper or scissors"
-  if (user = rock) {
+function game(user, computer)
+{console.log( "user"), console.log( "computer")
+                             
+  var user = "rock, paper or scissors" 
+  if (user = rock) {console.log( "rock"), console.log( "paper"), console.log( "scissors")
     user = "rock";
 } else if(user = paper) {
     user = "paper";
@@ -159,27 +161,27 @@ function game(user, computer){
     user = "scissors";
 }
   var computer = Math.random();
-  if (computer < 0.34) {
+  if (computer < 0.34) {console.log( "rock"), console.log( "paper"), console.log( "scissors")
   computer = "rock";
 } else if(computer <= 0.67) {
   computer = "paper";
 } else {
   computer = "scissors";
 }
-var compare = function(user, computer) {
-  if (user === computer) {
+var compare = function(user, computer) {console.log( "user"), console.log( "computer")
+  if (user === computer) {console.log("It's a tie!")
       return "It's a tie!";
   }
-  if (user === "rock") {
+  if (user === "rock") {console.log( "You win!"), console.log( "You lose!")
       if (computer === "scissors") {
           // rock wins
           return "You win!";
-      } else {
+      } else { 
           // paper wins
           return "You lose! Try again.";
       }
   }
-  if (user === "paper") {
+  if (user === "paper") {console.log( "You win!"), console.log( "You lose!")
       if (computer === "rock") {
           // paper wins
           return "You win!";
@@ -189,15 +191,20 @@ var compare = function(user, computer) {
       }
   }
   if (user === "scissors") {
-      if (computer === "rock") {
+      if (computer === "rock") {console.log( "You lose!")
           // rock wins
           return "You lose! Try again.";
-      } else {
+      } else {console.log( "You win!")
           // scissors wins
           return "You win!";}
+     console.log("game")
+   
+        
       }
     }
-  };      
+  }  
+user(scissors)
+
   
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
