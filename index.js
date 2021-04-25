@@ -211,9 +211,13 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-    var miles = 0.621371 * kilometers;
-    return miles
-  }
+  var miles = kilometers * 0.621371 ;
+  console.log(miles);
+}
+
+miles(5);
+miles(10);
+miles(15);
 
 
 
@@ -226,8 +230,9 @@ Using the feet function below do the following:
 */
 
 function feet(CM){
-    var feet = 0.0328 * CM;
-    return feet
+    var feet = Math.floor(cm/30.48)
+    var CM = cm%30.48;
+    return feet + "'" + CM + "\"";
   }
  
 
@@ -242,15 +247,15 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(numofBottles){
-  for (var i = numOfBottles; i >= 0; i--) {
+function annoyingSong(number){
+  for (var i = number; i >= 0; i--) {
     if (i > 1) {
       console.log(i + " bottles of soda on the wall, " + i + " bottles of soda.");
       console.log("Take one down, pass it around, " + (i - 1) + " bottles of soda on the wall...")
     } else if (i === 1) {
       console.log("1 bottle of soda on the wall, 1 bottle of soda.\nTake it down and pass it around, no more bottles of soda on the wall.")
     } else if (i === 0) {
-      console.log("No more bottles of soda on the wall, no more bottles of soda.\nGo to the store and buy some more, " + numOfBottles + " bottles of coke on the wall.");
+      console.log("No more bottles of soda on the wall, no more bottles of soda.\nGo to the store and buy some more, " + number + " bottles of soda on the wall.");
     }
   }
 }
