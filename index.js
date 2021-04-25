@@ -35,6 +35,13 @@ Do the following:
    HINT: no function required
 */
 
+const a = 1;
+const b = 2;
+if(a < b) {
+  console.log(3);
+}
+
+
 
 
 
