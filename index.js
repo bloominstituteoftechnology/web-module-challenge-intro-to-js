@@ -158,8 +158,8 @@ function game(user, computer){
 } else {
     user = "scissors";
 }
-var computer = Math.random();
-if (computer < 0.34) {
+  var computer = Math.random();
+  if (computer < 0.34) {
   computer = "rock";
 } else if(computer <= 0.67) {
   computer = "paper";
@@ -210,8 +210,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    var miles = 0.621371 * kilometers;
+    return miles
   }
 
 
@@ -224,8 +225,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(CM){
+    var feet = 0.0328 * CM;
+    return feet
   }
  
 
@@ -240,9 +242,18 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(numofBottles){
+  for (var i = numOfBottles; i >= 0; i--) {
+    if (i > 1) {
+      console.log(i + " bottles of soda on the wall, " + i + " bottles of soda.");
+      console.log("Take one down, pass it around, " + (i - 1) + " bottles of soda on the wall...")
+    } else if (i === 1) {
+      console.log("1 bottle of soda on the wall, 1 bottle of soda.\nTake it down and pass it around, no more bottles of soda on the wall.")
+    } else if (i === 0) {
+      console.log("No more bottles of soda on the wall, no more bottles of soda.\nGo to the store and buy some more, " + numOfBottles + " bottles of coke on the wall.");
+    }
   }
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -260,8 +271,25 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(points){
+    var points = grade;
+    if(points >= 90) {
+      return("You got an A");
+      }
+      if(points<=89&&points>=80) {
+      return("You got a B");
+      }
+      if(points<=79&&points>=70) {
+      return("You got a C");
+      }
+      if(points<=69&&points>=60) {
+      returnt("You got a D");
+      }
+      if(points<60) {
+      return("You got an F");
+      }
+
+
   }
   
   
