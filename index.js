@@ -17,9 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-var votingAge = 18;
-if (votingAge === 18) {
-  return "true";
+var votingAge = 18; {
+  if (votingAge < 18) {
+    console.log('true');
+  } else if (votingAge > 18); {
+    console.log('false');
+  }
 }
 
 /*
@@ -47,10 +50,13 @@ Do the following:
 
    HINT: look up the Number method
 */
-var one = 1999;
-one -= 1;
-console.log('New Value:', one);
-
+var one = "1999";
+var two = "2000";
+var three = "2001";
+one.toString(two) +
+(two).toString(three); +
+(1999 + 1).toString();
+console.log('New Value:',one)
 
 
 
@@ -62,14 +68,11 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
-let a = 10
-let b = 100
 
-function multiply(c = a * b){
-    /*add your code here*/
+function multiply(a,b){
+  return a * b;
   }
-
-
+console.log(multiply(10, 100));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -81,9 +84,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+
+function dogYears(myAge,dogAge) {
+  return myAge * dogAge;
 }
+var myAge = (Number);
+var dogAge = (myAge*7)
 
 
 
@@ -141,7 +147,7 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
+function game(){
     /*add your code here*/
 }
   
@@ -227,9 +233,6 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
 
 
 
