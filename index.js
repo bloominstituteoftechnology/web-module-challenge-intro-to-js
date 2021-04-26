@@ -33,7 +33,12 @@ Do the following:
 
    HINT: no function required
 */
-
+var pepsi = 300;
+var coke = 200;
+if ((pepsi = !900)) {
+  coke = 500;
+  console.log(coke);
+}
 
 
 
@@ -48,7 +53,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+var newYear = "1999";
+newYear = parseInt(newYear);
+console.log(newYear);
 
 
 
@@ -61,8 +68,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a = 9, b = 6){
+  var answer = a * b;
+  return answer;
   }
 
 
@@ -77,9 +85,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears = 6) {
+  return humanYears * 7;
 }
+
 
 
 
