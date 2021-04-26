@@ -17,8 +17,9 @@ Do the following:
 
    HINT: no function required
 */
-
-
+if (num = 18 || num < 18){
+  console.log(true);
+}
 
 /*
 Task 1b - Values
@@ -30,8 +31,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let var1 = 1;
+for (i= var1; i < 2; i++) {
+  return var1;
+}
 
 
 
@@ -45,10 +48,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
-
-
+let string = "1999";
+let convertString = parseFloat(string);
+console.log(convertString);
 /*
 Task 1d - Multiply
  
@@ -58,8 +60,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    let product = a * b;
+    return product;
   }
 
 
@@ -74,11 +77,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(num){
+    let age = num * 7;
+    return age;
 }
 
-
+ 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -107,8 +111,30 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(lbs,years){
+  if(age >= (2/12) && age <= (4/12)){
+    return weight * .1;
+  }
+  else if( age >= (4/12) && age <= (7/12)){
+    return weight * .05;
+  }
+  else if( age >= (7/12) && age <= 1){
+    return weight * .04;
+  }
+  else if( age >= 1) {
+
+    if(weight <= 5){
+      return weight * .05;
+    }
+    else if(weight >= 6 && weight <=10){
+      return weight * .04;
+    }
+    else if(weight >= 11 && weight <= 15){
+      return weight * .03;
+    }
+    else if(weight > 15) {
+      return weight * .02;
+    }
   }
 
 
@@ -135,7 +161,33 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+  if (computer === "rock" && user === "rock"){
+    return "it's a tie";
+  }
+  else if (computer === "rock" && user === "paper"){
+    return "you win!";
+  }
+  else if (computer === "rock" && user === "scissors"){
+    return "you lose!";
+  }
+  else if (computer === "paper" && user === "paper"){
+    return "it's a tie";
+  }
+  else if (computer === "paper" && user === "scissors"){
+    return "you win!";
+  }
+  else if (computer === "paper" && user === "rock"){
+    return "you lose!";
+  }
+  else if (computer === "scissors" && user === "scissors"){
+    return "it's a tie";
+  }
+  else if (computer === "scissors" && user === "paper"){
+    return "you lose!";
+  }
+  else if (computer === "scissors" && user === "rock"){
+    return "you win!";
+  }   
 }
   
   
@@ -151,8 +203,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(num){
+    let product = num * 1.609344;
+    return product;
   }
 
 
@@ -165,10 +218,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    let result = cm * 30.48;
+    return result;
   }
- 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -201,8 +254,22 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(num){
+  if (num = 90 || num > 90){
+    return "you got an A";
+  }
+  else if(num = 80 || num > 80){
+    return "you got a B";
+  }
+  else if (num = 70 || num > 70){
+    return "you got a C";
+  }
+  else if (num = 60 || num > 60){
+    return "you got a D";
+  }
+  else if (num < 60){
+    return "you got an F";
+  }
   }
   
   
@@ -220,9 +287,6 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
 
 
 
@@ -242,4 +306,4 @@ export default{
     feet,
     annoyingSong,
     grade
-}
+}}
