@@ -17,6 +17,10 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 18;
+if (votingAge === 18) {
+  console.log(true)
+}
 
 
 
@@ -30,6 +34,14 @@ Do the following:
 
    HINT: no function required
 */
+
+const num1 = 1;
+const num2 = 2;
+
+if (num2 > num1) {
+  num1++;
+  console.log(num1)
+}
 
 
 
@@ -46,6 +58,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+const str = '1999'
+const result = parseInt(str);
+console.log(result)
+
 
 
 
@@ -58,9 +74,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply(a, b) {
+  return a * b
+  /*add your code here*/
+}
+
+
 
 
 
@@ -74,11 +93,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age) {
+  return age * 7;
 }
 
-
+dogYears(5)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -105,11 +124,40 @@ Use the hungryDog function and feeding requirements below to do the following:
      7 - 12 months 4% of their body weight
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(age, weight) {
+  if (age <= .25) {
+    const result = weight / .10;
+    return result
   }
+  if (age > .25 || age <= .58) {
+    const result = weight / .05;
+    return result
+  }
+  if (age > .58 || age <= 1) {
+    const result = weight / .04;
+    return result
+  }
+  if (age <= 5) {
+    const result = weight / .05;
+    return result
+  }
+  else if (age >= 6 || age <= 10) {
+    const result = weight / .04;
+    return result
+  }
+  else if (age >= 11 || age <= 15) {
+    const result = weight / .03;
+    return result
+  }
+  else {
+    const result = weight / .02;
+    return result
+  }
+}
+
+
 
 
 
@@ -133,12 +181,44 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
-function game(user, computer){
-    /*add your code here*/
+const rand = Math.floor(Math.random() * 3) + 1;
+if (rand === 1) {
+  computer = 'rock'
 }
-  
-  
+if (rand === 2) {
+  computer = 'paper'
+}
+else {
+  computer = 'scissors'
+}
+function game(user, computer) {
+
+  if (user === 'rock' && rand === 2) {
+    return 'you win!'
+  }
+  if (user === 'rock' && rand === 3) {
+    return 'you lose!'
+  }
+  if (user === 'paper' && rand === 3) {
+    return 'you lose!'
+  }
+  if (user === 'paper' && rand === 1) {
+    return 'you win!'
+  }
+  if (user === 'scissors' && rand === 1) {
+    return 'you lose!'
+  }
+  if (user === 'scissors' && rand === 2) {
+    return 'you win!'
+  }
+  if (user === rand) {
+    return "it's a tie"
+  }
+
+}
+game('rock', 'paper')
+
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -151,9 +231,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km) {
+  return km * 0.621371;
+}
 
 
 
@@ -165,10 +245,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
+function feet(cm) {
+  return cm / 30.48;
+}
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -181,9 +261,9 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(num) {
+  return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down and pass it around ${num - 1} bottles of soda on the wall`
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -200,12 +280,26 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(/*Your Code here */){
-  /*Your Code here */
+
+function grade(num) {
+  if (num >= 90) {
+    return ' you got a A'
   }
-  
-  
+  else if (num > 79 || num <= 89) {
+    return ' you got a B'
+  }
+  else if (num > 69 || num <= 79) {
+    return ' you got a C'
+  }
+  else if (num > 60 || num <= 69) {
+    return ' you got a D'
+  }
+  else if (num < 60) {
+    return ' you got a F'
+  }
+}
+
+
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -219,27 +313,35 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
+const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(str) {
+  let counter = 0;
+  for (let letter of str) {
+    if (vowels.includes(letter)) {
+      counter++;
+    }
+  }
+  return counter
+
 }
 
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-    //console.log('its working');
-    return 'bar';
+function foo() {
+  //console.log('its working');
+  return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
+export default {
+  foo,
+  multiply,
+  dogYears,
+  hungryDog,
+  game,
+  miles,
+  feet,
+  annoyingSong,
+  grade
 }
