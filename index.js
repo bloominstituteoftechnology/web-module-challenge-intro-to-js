@@ -241,7 +241,7 @@ Using the feet function below do the following:
 function feet(CM) {
   var x = CM / 30.48;
   return x;
-}}
+}
  
 
 
