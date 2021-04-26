@@ -17,13 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-const age = 18;
-if (age > 18) {
-  console.log(true)
-} else if (age < 18) {
-  console.log(false)
+var votingAge = 18;
+if (votingAge === 18) {
+  return "true";
 }
-
 
 /*
 Task 1b - Values
@@ -50,6 +47,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+var one = 1999;
+one -= 1;
+console.log('New Value:', one);
 
 
 
@@ -65,7 +65,7 @@ Do the following:
 let a = 10
 let b = 100
 
-function multiply(/*add your code here*/){
+function multiply(c = a * b){
     /*add your code here*/
   }
 
