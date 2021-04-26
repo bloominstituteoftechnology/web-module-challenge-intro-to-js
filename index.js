@@ -17,7 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-
+const age = 18;
+if (age > 18) {
+  console.log(true)
+} else if (age < 18) {
+  console.log(false)
+}
 
 
 /*
@@ -30,10 +35,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
-
+var one = 5
+var two = 10
+one += 5;
+console.log('New value of first variable:', one)
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -57,6 +62,8 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
+let a = 10
+let b = 100
 
 function multiply(/*add your code here*/){
     /*add your code here*/
