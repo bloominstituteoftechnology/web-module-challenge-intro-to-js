@@ -173,6 +173,7 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computerChoice = computer;
 
 function game(user, computer){
     /*add your code here*/
@@ -222,12 +223,10 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(numberOfBeers){
-  for (let number = numberOfBeers; number >=1; number--){
-    console.log(number  + ' bottles of soda on the wall, ' + number +' bottles of soda, take one down and pass it around ' + (number -1) + ' bottles of soda on the wall')
+function annoyingSong(number){
+  for (number=99 ; number<=1; number--){
+    console.log ("{number} bottles of soda on the wall, {number} bottles of soda, take one down and pass it around {number - 1} bottles of soda on the wall")
   }
-
-
 }
 annoyingSong(5)
 
@@ -256,11 +255,11 @@ function grade(number){
    return 'you got a C';
   } else if (number <= 69 && number >= 60) {
     return 'you got a D';
-  } else if (number < 60) {
-    return 'you got a F';
+  } else if (number < 60 && number >= 0) {
+    return 'you got an F';
   } 
 }
- console.log(grade(73));
+console.log(grade(73));
  
   
   
