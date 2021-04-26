@@ -18,6 +18,14 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18;
+
+if(votingAge > 17) {
+  console.log(true);
+} else {
+  console.log(false);
+}
+
 
 
 /*
@@ -31,7 +39,10 @@ Do the following:
    HINT: no function required
 */
 
+const num1 = 2;
+const num2 = 4;
 
+console.log(num1 + num2)
 
 
 
@@ -46,8 +57,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+const birthYear = "1999";
+console.log(birthYear.toString());
 
 /*
 Task 1d - Multiply
@@ -57,10 +68,13 @@ Do the following:
    2. Receive the numbers in the parameters: a and b
    3. Multiply a and b and return the answer
 */
+const x = multiply(4, 3)
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return (a * b)
   }
+
+  multiply();
 
 
 
@@ -74,10 +88,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
-}
+let dogAge = 24;
 
+function dogYears(dogAge){
+    return dogAge * 7;
+}
+dogYears();
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,10 +123,15 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(dogAge, dogWeight){
     /*add your code here*/
   }
 
+
+
+for(i= 0; i< 10; i++) {
+ console.log(i);
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -232,14 +253,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+// export default{
+//     foo,
+//     multiply,
+//     dogYears,
+//     hungryDog,
+//     game,
+//     miles,
+//     feet,
+//     annoyingSong,
+//     grade
+// }
