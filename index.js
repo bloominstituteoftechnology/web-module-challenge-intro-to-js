@@ -118,13 +118,39 @@ Use the hungryDog function and feeding requirements below to do the following:
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
-
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight = 15, age = 1) {
+  var x;
+  if (age >= 2 / 12 && age <= 3 / 12) {
+    x = 0.01;
+    return weight * x;
   }
-
-
-
+  if (age >= 0.33 && age <= 0.58) {
+    x = 0.05;
+    return weight * x;
+  }
+  if (age > 7 / 12 && age < 1) {
+    x = 0.04;
+    return weight * x;
+  }
+  if (age >= 1) {
+    if (weight >= 5 && weight < 6) {
+      x = 0.05;
+      return weight * x;
+    }
+    if (weight >= 6 && weight <= 10) {
+      x = 0.04;
+      return weight * x;
+    }
+    if (weight >= 11 && weight <= 15) {
+      x = 0.03;
+      return weight * x;
+    }
+    if (weight > 15) {
+      x = 0.02;
+      return weight * x;
+    }
+  }
+}
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
@@ -147,7 +173,37 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+//Setting a random variable
+var computerChoice = Math.random();
+//Checking to see if variable is less then 40%
+if (computerChoice < 0.4) {
+  computerChoice = "paper";
+  //Checking to see if variable is greater then or equal to 40% or less then 70%
+} else if (computerChoice >= 0.4 && computerChoice < 0.7) {
+  computerChoice = "rock";
+  //if all fail set below
+} else {
+  computerChoice = "scissors";
+}
+//assigning computer var if null
+function game(user, computer = computerChoice) {
+  //setting variables
+  var winningMsg = "you win!";
+  var losingMsg = "you lose!";
+  //Checking variables against user variables
+  if (user === "paper" && computer === "rock") return winningMsg;
+  if (computer === "paper" && user === "rock") return losingMsg;
+
+  if (user === "rock" && computer === "scissors") return winningMsg;
+  if (computer === "rock" && user === "scissors") return losingMsg;
+
+  if (user === "scissors" && computer === "paper") return winningMsg;
+  if (computer === "scissors" && user === "paper") return losingMsg;
+  //////////////////////////////////////////////////////////////////
+  // if all above is false then return code below/ /
+  return "it's a tie";
+}
+game("paper", "paper");  
 }
   
   
@@ -163,9 +219,14 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(KM) {
+  var x = KM / 1.609344;
+  //change answer to to five decimal places
+  var y = x.toFixed(5);
+  //turns answer to a float
+  x = parseFloat(y);
+  return x;
+} 
 
 
 
@@ -177,9 +238,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(CM) {
+  var x = CM / 30.48;
+  return x;
+}}
  
 
 
@@ -193,12 +255,22 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(startingNumber) {
+  var i;
+  for (i = startingNumber; i >= 0; i--) {
+    var annoyingSong =
+      "{number} bottles of soda on the wall,".replace("{number}", i) +
+      " {number} bottles of soda, take one down pass it around ".replace(
+        "{number}",
+        i
+      ) +
+      "{number left over} bottles of soda on the wall".replace(
+        "{number left over}",
+        i - 1
+      );
 
-
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
+      return annoyingSong;
+    }
 
 //Grade Calculator
 /*
@@ -213,10 +285,13 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
-  }
-  
+function grade(grade) {
+  if (grade >= 90) return "you got an A";
+  if (grade >= 80 && grade < 90) return "you got a B";
+  if (grade >= 70 && grade < 80) return "you got a C";
+  if (grade >= 60 && grade < 70) return "you got a D";
+  return "you got an F";
+}
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -231,12 +306,23 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(word = "") {
+  word = word.toLowerCase;
+  vowelCount = 0;
+  for (var i = 0; i < word.length; i++) {
+    if (
+      word.charAt(i) === "a" ||
+      word.charAt(i) === "e" ||
+      word.charAt(i) === "i" ||
+      word.charAt(i) === "o" ||
+      word.charAt(i) === "u" ||
+      word.charAt(i) === "y"
+    ) {
+      vowelCount++;
+      return vowelCount;
+    }
+  }
 }
-
-
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
