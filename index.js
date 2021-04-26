@@ -17,12 +17,9 @@ Do the following:
 
    HINT: no function required
 */
-var votingAge = 18; {
-  if (votingAge < 18) {
-    console.log('true');
-  } else if (votingAge > 18); {
-    console.log('false');
-  }
+var votingAge = 18;
+if (votingAge >= 18) {
+  console.log(true);
 }
 
 /*
@@ -69,10 +66,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(a,b){
+function multiply(a, b) {
+  console.log(multiply(a, b));
   return a * b;
-  }
-console.log(multiply(10, 100));
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -85,12 +82,10 @@ Do the following:
 */
 
 
-function dogYears(myAge,dogAge) {
+function dogYears(myAge, dogAge) {
+  console.log(myAge * dogAge);
   return myAge * dogAge;
 }
-var myAge = (Number);
-var dogAge = (myAge*7)
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -120,12 +115,37 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age) {
+  /*add your code here*/
+  if (age >= (2 / 12) && age <= (4 / 12)) {
+    return weight * .1;
   }
 
-
-
+  else if (age >= (4 / 12) && age <= (7 / 12)) {
+    return weight * .05;
+  }
+    
+  else if (age >= (7 / 12) && age <= 1) {
+    return weight * .04;
+  }
+    
+  else if (age >= 1) {
+    if (weight <= 5) {
+      return weight * .05;
+    }
+  }
+  else if (weight >= 6 && weight <= 10) {
+    return weight * .04;
+  }
+  else if (weight >= 11 && weight <= 15) {
+    return weight * .03;
+  }
+  else if (weight > 15) {
+    return weight * .02;
+  }
+}
+  
+  
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
@@ -147,10 +167,34 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(){
-    /*add your code here*/
-}
+function game(user, computer){
+  /*add your code here*/
   
+  if (user === computer) {
+    return "it's a tie!";
+  }
+  
+  else if (user === "rock" && computer === "paper") {
+    return "you lose!";
+  } else if (user === "rock" && computer === "scissors") {
+    return "you win!";
+  }
+  
+  else if (user === "paper" && computer === "scissors") {
+    return "you lose!";
+  } else if (user === "paper" && computer === "rock") {
+    return "you win!";
+  }
+
+  else if (user === "scissors" && computer === "rock") {
+    return "you lose!";
+  } else if (user === "scissors" && computer === "paper") {
+    return "you win!";
+  } 
+}
+console.log(game("rock", computer));
+console.log(game("paper", computer));
+console.log(game("scissors", computer));
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
