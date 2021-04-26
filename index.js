@@ -144,6 +144,7 @@ function hungryDog(weight, age) {
     return weight * .02;
   }
 }
+console.log()
   
   
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -258,8 +259,23 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
+function grade(number){
   /*Your Code here */
+  if (number >= 90) {
+    console.log('you got an A');
+  }
+  else if (number >= 80) {
+    console.log('you got an B');
+  }
+  else if (number >= 70) {
+    console.log('you got an C');
+  }
+  else if (number >= 60) {
+    console.log('you got an D');
+  }
+  else if (number <= 59) {
+    console.log('you got an F');
+  }
   }
   
   
