@@ -163,10 +163,42 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+var computer = () => {
+  let number = Math.random();
+  let computerChoice = "";
+  number < 1 / 3
+    ? (computerChoice = "Paper")
+    : number >= 2 / 3
+    ? (computerChoice = "Rock")
+    : (computerChoice = "Scissors");
+  return computerChoice;
+};
 
 function game(user, computer) {
-  /*add your code here*/
+  // [wins, loses, ties]
+  console.log(`user is ${user} and computer is ${computer}`);
+  const paperOutcomes = ["Rock", "Scissors", "Paper"];
+  const scissorsOutcomes = ["Paper", "Rock", "Scissors"];
+  const rockOutcomes = ["Scissors", "Paper", "Rock"];
+  let outcomesArray = [];
+  user == "Paper"
+    ? (outcomesArray = paperOutcomes.slice())
+    : user == "Scissors"
+    ? (outcomesArray = scissorsOutcomes.slice())
+    : (outcomesArray = rockOutcomes.slice());
+
+  let result =
+    computer == outcomesArray[0]
+      ? "you win!"
+      : computer == outcomesArray[1]
+      ? "you lose!"
+      : "it's a tie";
+  return result;
 }
+
+console.log(game("Rock", computer()));
+console.log(game("Scissors", computer()));
+console.log(game("Paper", computer()));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
