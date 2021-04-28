@@ -118,7 +118,7 @@ Use the hungryDog function and feeding requirements below to do the following:
 //   }
 
 
-function hungryDog(age, weight){
+function hungryDog(weight, age){
   if(age >= 1 && weight === 5){
     return weight * .05;
   }else if(age >= 1 && weight <= 10){
@@ -129,7 +129,7 @@ function hungryDog(age, weight){
     return weight * .02;
   }
   if(age < 1 && weight <= 12){
-    return weight * .4;
+    return weight * .04;
   }else if(age < 1 && weight <=7){
     return weight * .05;
   }else if(age < 1 && weight <=4){
@@ -159,11 +159,41 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
-}
   
-  
+  // rock=.67-1
+  // paper=.34-.66
+  // scissors=0-.33
+
+  let computer = Math.random();
+  function game(user, computer){    
+    
+    if (computer >= .67) {
+      computer = 'rock';
+    } else if (computer >= .34){
+      computer = 'paper';
+    } else if(computer < .33) {
+      computer = 'scissors';
+    }
+    if (user === computer){
+      return "it's a tie";
+    } 
+    if (user === 'rock' && computer === 'scissors') {
+      return "you win!";
+    } else if (user === 'rock' && computer === 'paper') {
+      return "you lose!";
+    } 
+    if (user === 'paper' && computer === 'rock') {
+      return "you win!";
+    } else if (user === 'paper' && computer === 'scissors') {
+      return "you lose!";
+    }
+    if (user === 'scissors' && computer === 'paper') {
+      return "you win!";
+    } else if (user === 'scissors' && computer === 'rock') {
+      return "you lose!";
+    }
+  } 
+  console.log(game('scissors',computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -176,9 +206,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km){
+  km = km * 0.621371;
+  return km;
+}
+console.log(miles(10));
 
 
 
@@ -190,9 +222,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(cm){
+  cm = cm / 30.48
+  return cm;
+}
+console.log(feet(160));
  
 
 
