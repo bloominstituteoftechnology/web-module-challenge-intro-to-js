@@ -212,7 +212,7 @@ Using the miles function below do the following:
 */
 
 function miles(km) {
-  return km * 1.609;
+  return km * 0.621371;
   /*add your code here*/
 }
 
@@ -227,7 +227,7 @@ Using the feet function below do the following:
 */
 
 function feet(centimeters) {
-  return centimeters * 0.0328084;
+  return centimeters / 30.48;
 }
 
 console.log(`Task 5b: ${feet(10)}`);
