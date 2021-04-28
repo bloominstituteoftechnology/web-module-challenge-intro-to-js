@@ -167,23 +167,23 @@ var computer = () => {
   let number = Math.random();
   let computerChoice = "";
   number < 1 / 3
-    ? (computerChoice = "Paper")
+    ? (computerChoice = "paper")
     : number >= 2 / 3
-    ? (computerChoice = "Rock")
-    : (computerChoice = "Scissors");
+    ? (computerChoice = "rock")
+    : (computerChoice = "scissors");
   return computerChoice;
 };
 
 function game(user, computer) {
   // [wins, loses, ties]
   console.log(`user is ${user} and computer is ${computer}`);
-  const paperOutcomes = ["Rock", "Scissors", "Paper"];
-  const scissorsOutcomes = ["Paper", "Rock", "Scissors"];
-  const rockOutcomes = ["Scissors", "Paper", "Rock"];
+  const paperOutcomes = ["rock", "scissors", "paper"];
+  const scissorsOutcomes = ["paper", "rock", "scissors"];
+  const rockOutcomes = ["scissors", "paper", "rock"];
   let outcomesArray = [];
-  user == "Paper"
+  user == "paper"
     ? (outcomesArray = paperOutcomes.slice())
-    : user == "Scissors"
+    : user == "scissors"
     ? (outcomesArray = scissorsOutcomes.slice())
     : (outcomesArray = rockOutcomes.slice());
 
@@ -196,9 +196,9 @@ function game(user, computer) {
   return result;
 }
 
-console.log(game("Rock", computer()));
-console.log(game("Scissors", computer()));
-console.log(game("Paper", computer()));
+console.log(game("rock", computer()));
+console.log(game("scissors", computer()));
+console.log(game("paper", computer()));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -211,9 +211,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
+function miles(km) {
+  return km * 1.609;
   /*add your code here*/
 }
+
+console.log(`Task 5a: ${miles(10)}`);
 
 //Task 5b - Feet to CM
 /*
@@ -223,9 +226,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/) {
-  /*add your code here*/
+function feet(centimeters) {
+  return centimeters * 0.0328084;
 }
+
+console.log(`Task 5b: ${feet(10)}`);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
