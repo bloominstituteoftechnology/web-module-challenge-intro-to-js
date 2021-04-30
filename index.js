@@ -241,11 +241,11 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(bottles){
-  for (i = 99; i > 0; i--){
+  for (let i = 0; i >= 0; i--) {
      let bottles = i;
-     let leftover = i-1;
-     return `${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around ${leftover} bottles of soda on the wall`;
   }
+     return `${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around ${bottles - 1} bottles of soda on the wall`;
+
 }
 
 
