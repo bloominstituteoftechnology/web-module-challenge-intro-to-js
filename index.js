@@ -156,6 +156,7 @@ function hungryDog(dogsWeight,dogsAge){
               else if(dogsAge >= 1){
                   if(dogsWeight <= 5){
                   return dogsWeight*0.05;
+                  
               }
                     else if(dogsWeight >= 6 && dogsWeight <= 10){
                     return dogsWeight*0.04;
@@ -168,6 +169,8 @@ function hungryDog(dogsWeight,dogsAge){
                       } 
       }
     }
+  
+    
 
 
 
@@ -191,10 +194,68 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
+
+Math.floor(Math.random()*3);
+
+let user = Math.random();
+
+    if (computer === 0){
+      computer = "rock";
+    }
+      else if (computer === 1){
+      computer = "paper";
+    }
+      else if (computer === 2){
+      computer = "scissors";
+    }
+
+  if (user === 0){
+    user = "rock";
+  }
+    else if (user === 1){
+    user = "paper";
+  }
+    else if (user === 2){
+    user = "scissors";
+  }
+
+
 
 function game(user, computer){
-    /*add your code here*/
+
+  if (user === computer){
+      return "it's a tie";
+  }
+
+    if (user === "rock"){
+        if (computer === "paper"){
+          return "you lose!";
+          }
+          else {
+            return "you win!"
+               }
+    }
+    if (user === "paper"){
+      if (computer === "scissors"){
+        return "you lose!";
+        }
+       else {
+       return "you win!"
+          }
+  }
+  if (user === "scissors"){
+    if (computer === "rock"){
+      return "you lose!";
+      }
+     else {
+     return "you win!"
+        }
 }
+}
+
+  
+
   
   
 
@@ -205,16 +266,19 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
-  2. Convert the number of kiolmeters received to miles
+  2. Convert the number of kilometers received to miles
   3. Return the number of miles
 */
+let km = Math.random();
+Math.floor(Math.random()*3);
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+let mi = "miles";
+
+function miles(km,mi){
+    return mi = 0.621371*km;
   }
 
-
-
+a
 //Task 5b - Feet to CM
 /*
 Using the feet function below do the following:
@@ -222,9 +286,13 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
+let cm = Math.random();
+Math.floor(Math.random()*3);
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+let ft = "feet";
+
+function feet(cm, ft){
+    return cm/30.48;
   }
  
 
@@ -236,12 +304,21 @@ function feet(/*add your code here*/){
 Using the annoyingSong function below do the following:
   1. Receive a starting number and start the count down from the number received 
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
-      "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
+      "{number} bottles of soda on the wall, {number} bottles of soda, take one down
+       pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+let count = 99;
+
+function annoyingSong(count){
+  while (count > 0){
+    return (count + " bottles of soda on the wall, " + count + " bottles of soda, take one down pass it around " 
+    + (count - 1) + " bottles of soda on the wall");
+    count = (count-1);
   }
+}
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -258,9 +335,25 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
+
+let score = "grade";
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score >= 90 && score <= 100){
+  return "you got an A";
+  }
+  else if (score >= 80 && score <= 89){
+    return "you got a B";
+    }
+  else if (score >= 70 && score <= 79){
+  return "you got a C";
+  }
+  else if (score >= 60 && score <= 69){
+  return "you got a D";
+  }
+  else {
+    return "you got an F";
+  }
   }
   
   
