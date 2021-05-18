@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-var votingAge => '18'; { console.log('True'); }
+for (let votingAge = 18; votingAge > 17;) {
+    console.log("true")
+}
+
 
 
 /*
@@ -30,14 +33,12 @@ Do the following:
 
    HINT: no function required
 */
-var firstName = 'John';
-firstName = 'Jane';
-if (John) {
-    console.log("Boy")
-}
-if (Jane) {
-    console.log("Girl")
-}
+let a = 5;
+let b = a * 10;
+console.log(b)
+
+
+
 
 
 
@@ -52,11 +53,11 @@ Do the following:
 
    HINT: look up the Number method
 */
-var a = "1999";
-var b = parseInt(a);
-document.write("value is + b") {
-    console.log(1999)
-}
+let n = "1999"
+parseInt(n)
+console.log(n)
+
+
 
 
 
@@ -69,9 +70,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(2, 4) {
-    var sum = 8
+let multiply = function(a, b) {
+    console.log(a * b)
 }
+multiply(2, 4)
+
 
 
 
@@ -85,9 +88,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears( /*add your code here*/ ) {
-    /*add your code here*/
+function dogYears(age) {
+    return age * 1
 }
+dogYears(7)
 
 
 
@@ -117,10 +121,23 @@ Use the hungryDog function and feeding requirements below to do the following:
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */
-
-function hungryDog( /*add your code here*/ ) {
-    /*add your code here*/
+function hungryDog(pounds, years) {
+    pounds[15];
+    years[1];
 }
+
+hungryDog(.2);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -145,9 +162,45 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer) {
-    /*add your code here*/
+var userChoice = prompt("Do you choose rock, paper, or scissors?");
+var computerChoice = Math.random();
+if (computerChoice < 0.34) {
+    computerChoice = "rock";
+} else if (computerChoice <= 0.67) {
+    computerChoice = "paper";
+} else {
+    computerChoice = "scissors";
 }
+userChoice();
+
+var game = function(userChoice, choice2) {
+    if (userChoice === choice2) {
+        return "It's a tie!";
+    }
+    if (userChoice === "rock") {
+        if (choice2 === "scissors") {
+            return "You win!";
+        }
+    }
+    if (userChoice === "paper") {
+        if (choice2 === "rock") {
+            return "You win!";
+        }
+    }
+    if (userChoice === "scissors") {
+        if (choice2 === "rock") {
+            return "You lose!";
+        }
+    }
+
+}
+game();
+
+
+
+
+
+
 
 
 
@@ -162,95 +215,103 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles( /*add your code here*/ ) {
-    /*add your code here*/
+function miles(kiltomiles) {
+    kiltomiles[10];
+    return kiltomiles / 1.609;
 }
+miles(6.21);
 
 
 
-//Task 5b - Feet to CM
-/*
-Using the feet function below do the following:
-  1. Receive a number of cm
-  2. Convert the number of cm to feet
-  3. Return number of feet
-*/
+// //Task 5b - Feet to CM
+// /*
+// Using the feet function below do the following:
+//   1. Receive a number of cm
+//   2. Convert the number of cm to feet
+//   3. Return number of feet
+// */
 
-function feet( /*add your code here*/ ) {
-    /*add your code here*/
+function feet(cmtofeet) {
+    cmtofeet[10];
+    return cmtofeet / 30.48;
 }
+feet(0.328);
 
 
 
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
+// /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-// Let's Sing 99 Bottles of Soda on the Wall!
-/*
-Using the annoyingSong function below do the following:
-  1. Receive a starting number and start the count down from the number received 
-  2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
-      "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
-*/
+// // Let's Sing 99 Bottles of Soda on the Wall!
+// /*
+// Using the annoyingSong function below do the following:
+//   1. Receive a starting number and start the count down from the number received 
+//   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
+//       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
+// */
 
-function annoyingSong( /*add your code here*/ ) {
-    /*add your code here*/
-}
-
-
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
-//Grade Calculator
-/*
-Using the grade function below do the following: 
-  1. Receive a score out of 100 
-  2. Return the corresponding letter grade following this grade scale:
-
-   90-100 should return 'you got an A' 
-   80-89 should return 'you got a B'
-   70-79 should return 'you got a C'
-   60-69 should return 'you got a D'
-   below should return 'you got an F'
-*/
-
-function grade( /*Your Code here */ ) {
-    /*Your Code here */
-}
+function annoyingSong(num1) {
+    num1[20];
+    for (let i = 20; i > 0; i++) {
+        return i
+    }
+    console.log('${num1} bottles of soda on the wall, ${num1} bottles of soda, take one down pass it around ${i} bottles of soda on the wall')
 
 
+    // /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-/*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
+    // //Grade Calculator
+    // /*
+    // Using the grade function below do the following: 
+    //   1. Receive a score out of 100 
+    //   2. Return the corresponding letter grade following this grade scale:
 
-//Vowel Counter - How many vowels are there?
-/*
-Using the vowelCounter function below do the following:
-  1. Receive a string as a parameter
-  2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
+    //    90-100 should return 'you got an A' 
+    //    80-89 should return 'you got a B'
+    //    70-79 should return 'you got a C'
+    //    60-69 should return 'you got a D'
+    //    below should return 'you got an F'
+    // */
 
-  HINT - you may need to study tomorrow's content on arrays 
-  HINT - try looking up the .includes() method
-*/
-
-
-function vowelCounter( /*add your code here*/ ) {
-    /*add your code here*/
-}
+    function grade(score) {
+        score[70];
+        return 'you got a C'
+    }
+    grade();
 
 
+    // /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo() {
-    //console.log('its working');
-    return 'bar';
-}
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default {
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+    // //Vowel Counter - How many vowels are there?
+    // /*
+    // Using the vowelCounter function below do the following:
+    //   1. Receive a string as a parameter
+    //   2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
+
+    //   HINT - you may need to study tomorrow's content on arrays 
+    //   HINT - try looking up the .includes() method
+    // */
+
+
+    // //function vowelCounter( /*add your code here*/ ) {
+    //     /*add your code here*/
+    // //}
+
+
+
+    // /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
+    // function foo() {
+    //     //console.log('its working');
+    //     return 'bar';
+    // }
+    // /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
+    // //export default {
+    //     //foo,
+    //     //multiply,
+    //     //dogYears,
+    // //     hungryDog,
+    // //     game,
+    // //     miles,
+    // //     feet,
+    // //     annoyingSong,
+    // //     grade
+    // // }
