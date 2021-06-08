@@ -36,7 +36,7 @@ Do the following:
 */
 let pepsi = 300;
 let coke = 200;
-if ((pepsi = !900)) {
+if (pepsi = !900) {
   coke = 500;
   console.log(coke);
 }
