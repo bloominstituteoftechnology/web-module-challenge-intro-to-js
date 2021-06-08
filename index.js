@@ -19,6 +19,11 @@ Do the following:
 */
 
 
+let votingAge = 18;
+if (votingAge === 18)
+
+  console.log(true);
+
 
 /*
 Task 1b - Values
@@ -30,6 +35,14 @@ Do the following:
 
    HINT: no function required
 */
+let A = 3;
+let B = 5;
+if(A > B){
+A = A - B;
+console.log("A is",A);
+
+}
+
 
 
 
@@ -45,6 +58,8 @@ Do the following:
 
    HINT: look up the Number method
 */
+let year = "1999";
+console.log(number(year));
 
 
 
@@ -58,9 +73,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
+function multiply(/*add your code here*/ A, B){
     /*add your code here*/
+    console.log(A*B);
   }
+
 
 
 
@@ -74,12 +91,15 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(/*add your code here*/ humanYears){
+    /*add your code here*/  
+      let dogYears = (1/7)*humanYears
+      
 }
+      console.log(dogYears());
 
 
-
+*
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
@@ -130,7 +150,7 @@ Use the game function below to do the following:
    - tie should return "it's a tie"
   
   RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
-  
+  c
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
