@@ -22,6 +22,7 @@ if (votingAge >= 18) {
 }
 
 
+
 /*
 Task 1b - Values
 
@@ -52,9 +53,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-var newYear = "1999";
-newYear = parseInt(newYear);
-console.log(newYear);
+let str = "1999";
+let str2 = 1;
+str2 = parseInt(str);
 
 
 
