@@ -81,11 +81,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(humanYear){
-  const humanYear = 1;
-  return humanYear * 7
+function dogYears(a){
+  return a * 7
 }
-console.log(dogYears * 7)
+console.log(dogYears(10))
 
 
 
@@ -135,6 +134,7 @@ function hungryDog(age, weight){
     return weight * .1;
   }
 }
+console.log(hungryDog(1, 15))
 
 
 
@@ -210,10 +210,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
-
+  function miles(kilo){
+    return kilo * 0.621371
+    }
+    console.log(miles(10))
 
 
 //Task 5b - Feet to CM
@@ -224,10 +224,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+  function feet(cm){
+    return cm / 30.48
   }
- 
+  console.log(feet(50))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
