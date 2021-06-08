@@ -21,9 +21,6 @@ var votingAge = 18;
 if (votingAge >= 18) {
   console.log("true");
 }
-
-
-
 /*
 Task 1b - Values
 
@@ -40,10 +37,6 @@ if (pepsi = !900) {
   coke = 500;
   console.log(coke);
 }
-
-
-
-
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -57,9 +50,6 @@ Do the following:
 var newYear = "1999";
 newYear = parseInt(newYear);
 console.log(newYear);
-
-
-
 /*
 Task 1d - Multiply
  
@@ -68,13 +58,9 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
-
 function multiply(a, b) {
   return a * b;
 }
-
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Age in Dog years
@@ -84,14 +70,9 @@ Do the following:
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
-
 function dogYears(humanYears) {
   return humanYears * 7;
 }
-
-
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
@@ -171,8 +152,6 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
-
 //Setting a random variable
 var computerChoice = Math.random();
 //Checking to see if variable is less then 40%
@@ -204,11 +183,7 @@ function game(user, computer = computerChoice) {
   return "it's a tie";
 }
 game("paper", "paper");
-  
-  
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
 //Metric Converter 
 //Task 5a - KM to Miles 
 /*
@@ -217,7 +192,6 @@ Using the miles function below do the following:
   2. Convert the number of kiolmeters received to miles
   3. Return the number of miles
 */
-
 function miles(KM) {
   var x = KM / 1.609344;
   //change answer to to five decimal places
@@ -226,9 +200,6 @@ function miles(KM) {
   x = parseFloat(y);
   return x;
 } 
-
-
-
 //Task 5b - Feet to CM
 /*
 Using the feet function below do the following:
@@ -236,16 +207,11 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
-
 function feet(CM) {
   var x = CM / 30.48;
   return x;
 }
- 
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
 // Let's Sing 99 Bottles of Soda on the Wall!
 /*
 Using the annoyingSong function below do the following:
@@ -253,7 +219,6 @@ Using the annoyingSong function below do the following:
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
-
 function annoyingSong(startingNumber) {
   var i;
   for (i = startingNumber; i >= 0; i--) {
@@ -271,7 +236,6 @@ function annoyingSong(startingNumber) {
     return annoyingSong;
   }
 }
-
 //Grade Calculator
 /*
 Using the grade function below do the following: 
@@ -284,7 +248,6 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
 function grade(grade) {
   if (grade >= 90) return "you got an A";
   if (grade >= 80 && grade < 90) return "you got a B";
@@ -292,8 +255,6 @@ function grade(grade) {
   if (grade >= 60 && grade < 70) return "you got a D";
   return "you got an F";
 }
-  
-
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
 //Vowel Counter - How many vowels are there?
