@@ -68,10 +68,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(a = 9, b = 6){
-  var answer = a * b;
-  return answer;
-  }
+function multiply(a, b) {
+  return a * b;
+}
 
 
 
@@ -85,7 +84,7 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(humanYears = 6) {
+function dogYears(humanYears = 1) {
   return humanYears * 7;
 }
 
