@@ -17,6 +17,7 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 18;
 if (votingAge >= 18) {
   console.log("true");
 }
@@ -53,9 +54,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-let str = "1999";
-let str2 = 1;
-str2 = parseInt(str);
+var newYear = "1999";
+newYear = parseInt(newYear);
+console.log(newYear);
 
 
 
@@ -84,7 +85,7 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(humanYears = 1) {
+function dogYears(humanYears) {
   return humanYears * 7;
 }
 
@@ -117,7 +118,7 @@ Use the hungryDog function and feeding requirements below to do the following:
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
-function hungryDog(weight = 15, age = 1) {
+function hungryDog(weight, age) {
   var x;
   if (age >= 2 / 12 && age <= 3 / 12) {
     x = 0.01;
@@ -172,21 +173,22 @@ Use the game function below to do the following:
 */
 
 
-function game(user, computer){
-//Setting a random variable
-var computerChoice = Math.random();
-//Checking to see if variable is less then 40%
-if (computerChoice < 0.4) {
-  computerChoice = "paper";
-  //Checking to see if variable is greater then or equal to 40% or less then 70%
-} else if (computerChoice >= 0.4 && computerChoice < 0.7) {
-  computerChoice = "rock";
-  //if all fail set below
-} else {
-  computerChoice = "scissors";
+function game(user, computer) {
+  //Setting a random variable
+  var computerChoice = Math.random();
+  //Checking to see if variable is less then 40%
+  if (computerChoice < 0.4) {
+    computerChoice = "paper";
+    //Checking to see if variable is greater then or equal to 40% or less then 70%
+  } else if (computerChoice >= 0.4 && computerChoice < 0.7) {
+    computerChoice = "rock";
+    //if all fail set below
+  } else {
+    computerChoice = "scissors";
+  }
 }
 //assigning computer var if null
-function game(user, computer = computerChoice) {
+function games(user, computer) {
   //setting variables
   var winningMsg = "you win!";
   var losingMsg = "you lose!";
@@ -204,7 +206,7 @@ function game(user, computer = computerChoice) {
   return "it's a tie";
 }
 game("paper", "paper");  
-}
+
   
   
 
@@ -269,8 +271,9 @@ function annoyingSong(startingNumber) {
         i - 1
       );
 
-      return annoyingSong;
-    }
+    return annoyingSong;
+  }
+}
 
 //Grade Calculator
 /*
