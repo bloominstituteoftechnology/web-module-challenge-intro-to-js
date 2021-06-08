@@ -19,7 +19,6 @@ Do the following:
 */
 
 
-
 /*
 Task 1b - Values
 
@@ -107,9 +106,24 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+  function hungryDog(weight, age){
+    if (age >= 1 && weight <= 5){
+     return weight * 0.05;
+   }else if(age >= 1 && weight >=6 && weight <=10){
+     return weight * 0.04;
+   }else if(age >= 1 && weight >=11 && weight <=15){
+     return weight * 0.03;
+   }else if (age >= 1 && weight >=15){
+     return weight * 0.02;
+   }else if(age <1 && age >= 0.583){
+     return weight * 0.04;
+   }else if (age <0.583 && age >= 0.333){
+     return weight * 0.05;
+   }else if (age < 0.333){
+     return weight * 0.10;
+   }else{
+     return 'please try again';}
+   }
 
 
 
@@ -201,10 +215,21 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+
+
+function grade(score){
+  if (score == 100 && score >= 90){
+    return "you got an A";
+  }else if (score <= 89 && score >= 80){
+    return "you got a B";
+  }else if (score <= 79 && score >= 70){
+    return "you got a C";
+  }else if (score <= 69 && score >= 60){
+    return "you got a D";
+  }else {
+    return "you got an F";
   }
-  
+}
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
