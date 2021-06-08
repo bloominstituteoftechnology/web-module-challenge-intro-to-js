@@ -173,22 +173,20 @@ Use the game function below to do the following:
 */
 
 
-function game(user, computer) {
-  //Setting a random variable
-  var computerChoice = Math.random();
-  //Checking to see if variable is less then 40%
-  if (computerChoice < 0.4) {
-    computerChoice = "paper";
-    //Checking to see if variable is greater then or equal to 40% or less then 70%
-  } else if (computerChoice >= 0.4 && computerChoice < 0.7) {
-    computerChoice = "rock";
-    //if all fail set below
-  } else {
-    computerChoice = "scissors";
-  }
+//Setting a random variable
+var computerChoice = Math.random();
+//Checking to see if variable is less then 40%
+if (computerChoice < 0.4) {
+  computerChoice = "paper";
+  //Checking to see if variable is greater then or equal to 40% or less then 70%
+} else if (computerChoice >= 0.4 && computerChoice < 0.7) {
+  computerChoice = "rock";
+  //if all fail set below
+} else {
+  computerChoice = "scissors";
 }
 //assigning computer var if null
-function games(user, computer) {
+function game(user, computer = computerChoice) {
   //setting variables
   var winningMsg = "you win!";
   var losingMsg = "you lose!";
@@ -205,8 +203,7 @@ function games(user, computer) {
   // if all above is false then return code below/ /
   return "it's a tie";
 }
-game("paper", "paper");  
-
+game("paper", "paper");
   
   
 
