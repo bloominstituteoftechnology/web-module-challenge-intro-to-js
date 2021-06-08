@@ -17,7 +17,6 @@ Do the following:
 
    HINT: no function required
 */
-var votingAge = 18;
 if (votingAge >= 18) {
   console.log("true");
 }
@@ -33,8 +32,8 @@ Do the following:
 
    HINT: no function required
 */
-var pepsi = 300;
-var coke = 200;
+let pepsi = 300;
+let coke = 200;
 if ((pepsi = !900)) {
   coke = 500;
   console.log(coke);
@@ -171,7 +170,7 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-Blah blah blah
+
 
 function game(user, computer){
 //Setting a random variable
