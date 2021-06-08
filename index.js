@@ -84,7 +84,6 @@ Do the following:
 function dogYears(humanYear){
   const humanYear = 1;
   return humanYear * 7
-    /*add your code here*/
 }
 console.log(dogYears * 7)
 
@@ -127,7 +126,7 @@ function hungryDog(age, weight){
     return weight * .02;
   }
 
-
+function hungryDog(age, weight){
   if(age < 1 && weight <= 12){
     return weight * .4;
   }else if(age < 1 && weight <=7){
@@ -137,9 +136,7 @@ function hungryDog(age, weight){
   }
 }
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+
 
 
 
@@ -164,9 +161,41 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
-}
+  function game(user, computer){    
+    
+    const computer = Math.random();
+
+    if (computer >= .50) {
+      computer = 'rock';
+    } else if(computer < .25) {
+      computer = 'scissors';
+    } else if (computer >= .30){
+      computer = 'paper';
+    } 
+        
+        if (user === 'paper' && computer === 'rock') {
+          return "you win!";
+        } else if (user === 'paper' && computer === 'scissors') {
+          return "you lose!";
+        }
+        
+        if (user === 'rock' && computer === 'scissors') {
+          return "you win!";
+        } else if (user === 'rock' && computer === 'paper') {
+          return "you lose!";
+        }
+
+        if (user === 'scissors' && computer === 'paper') {
+          return "you win!";
+        } else if (user === 'scissors' && computer === 'rock') {
+          return "you lose!";
+        }
+
+        if (user === computer){
+          return "it's a tie";
+        } 
+      } 
+      console.log(game('paper',computer));
   
   
 
