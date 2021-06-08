@@ -22,7 +22,7 @@ Today you'll worth through 7 JavaScript Tasks to practice today's objectives and
 Exercises are outlined in the `index.js` file, please read the instructions carefully for each task and complete it. Note that you may have to use your googling skills to research and look things up if you do not have all the information you need to complete the task.
 
 
-## Instructions
+## Instructions.
 
 ### Task 1: Set up Project
 
