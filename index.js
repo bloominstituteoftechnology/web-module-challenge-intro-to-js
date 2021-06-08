@@ -162,7 +162,19 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+    user = Math.floor(Math.random()*3);
+    computer = Math.floor(Math.random()*3);
+    let Rock = 0;
+    let Paper = 1;
+    let Scissors = 2;
+
+    if(user == Rock && computer == Scissors || user == Paper && computer == Rock || user == Scissors && computer == Paper){
+      return 'you win!'
+    } else if(user == Scissors && computer == Rock || user == Paper && computer == Scissors || user == Rock && computer == Paper){
+      return 'you lose!'
+    } else {
+      return 'its a tie'
+    }
 }
   
   
@@ -178,8 +190,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    let mile = km * 0.621371;
+    return mile;
   }
 
 
@@ -192,8 +205,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+  cm  = cm * 1.000000032;  
+  let feets = cm * .0328084;
+    return feets;
   }
  
 
