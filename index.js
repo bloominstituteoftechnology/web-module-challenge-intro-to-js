@@ -16,7 +16,10 @@ Do the following:
    2. Console log true if age is 18 or higher
 
    HINT: no function required
-*/
+*/ let votingAge = 34;
+    if(votingAge >= 18) {
+      console.log('true')
+    }
 
 
 
@@ -30,7 +33,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let a = 1;
+let b = 2;
+if(b == 2) {
+  a = 3;
+  console.log(a)
+}
 
 
 
@@ -46,6 +54,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+let string = '1999';
+string = Number(string);
+console.log(string)
 
 
 
@@ -58,8 +69,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+   return a * b;
   }
 
 
@@ -74,8 +85,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    let dogYears = age *7;
+    return dogYears;
 }
 
 
