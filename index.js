@@ -171,6 +171,7 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+Blah blah blah
 
 function game(user, computer){
 //Setting a random variable
