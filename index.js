@@ -7,7 +7,7 @@ When doing these tasks, we recommend using console.log to test the output of you
 This will usually entail console logging the answer directly or console logging the invocation (call) of the function so when it
 returns a value, that value will be logged to the console.  An example of this would be:  console.log(theFunction(value1,value2))
 */
-
+Hi hi hi I was sick gonna try to push it and then go back to sleep and finish it before class in earnest.
 /*
 Task 1a - Voting Age
 
