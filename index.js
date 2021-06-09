@@ -58,8 +58,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b;
   }
 
 
@@ -74,8 +74,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(age){
     /*add your code here*/
+    return age * 7;
 }
 
 
@@ -154,8 +155,31 @@ Use the game function below to do the following:
 
 function game(user, computer){
     /*add your code here*/
-   
-   
+   if(user == computer){
+     return "it's a tie"
+   }
+   if(user == 'rock' && computer == 'scissors'){
+     return "you win!"
+   }
+   if(user == 'paper' && computer =='rock'){
+     return "you win!"
+   }
+   if(user == 'scissors' && computer == 'paper'){
+     return"you win!"
+   }
+   if(user == 'paper' && computer == 'paper'){
+    return "it's a tie"
+  }
+  if(user == 'paper' && computer == 'scissors'){
+    return "you lose!"
+  }
+  if(user == 'scissors' && computer == 'rock'){
+    return "you lose!"
+  }
+  if(user == 'rock' && computer == 'paper'){
+    return "you lose!"
+  }
+   return "you lose"
 }
   
   
@@ -228,17 +252,17 @@ Using the grade function below do the following:
 */
 function grade(score){
   /*Your Code here */
-  if(score >= 90 && weight <=100){
+  if(score >= 90 ){
     return `you got an A`;
-  }else if(score >=80 && weight <=89){
+  }else if(score >=80){
     return `you got a B`;
-  }else if(score >=70 && weight <=79){
+  }else if(score >=70){
     return `you got a C`;
-  }else if(score >=60 && weight <=69){
+  }else if(score >=60 ){
     return `you got a D`;
-  }else if(score <=68 ){
-    return `you got an F`;}
   }
+    return `you got an F`;}
+  
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
 //Vowel Counter - How many vowels are there?
