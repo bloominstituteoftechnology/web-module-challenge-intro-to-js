@@ -17,7 +17,13 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge= 18;
 
+if (votingAge >= 18){
+  console.log("task 1a",true);
+} else{
+  console.log("task 1a",false);
+}
 
 /*
 Task 1b - Values
@@ -30,8 +36,15 @@ Do the following:
    HINT: no function required
 */
 
+let cat="Tequila";
+let behavior="crazy";
 
-
+if (behavior=== "crazy"){
+cat= "Bad Tequila";
+}else{
+  cat="Tequila";
+}
+console.log("task 1b", cat);
 
 
 /*
@@ -44,7 +57,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+const party="1999";
+console.log("task 1c", Number(party));
 
 
 
@@ -57,10 +71,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b
   }
-
+ console.log("task 1d", multiply(45,63));
+ console.log("task 1d", multiply(2,1000));
+ console.log("task 1d", multiply(2356,9999));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -73,10 +89,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age* 7;
 }
-
+console.log("task 2", dogYears(11));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
