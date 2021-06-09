@@ -174,13 +174,13 @@ computer= 'rock';
 }
 function game(user, computer){
     if( user=== computer){
-      return 'it`s a tie'; 
+      return "it's a tie"; 
     }else if(user==='rock' && computer === 'scissors'){
-    return 'it`s a win!';
+    return "you win!";
     }else if(user==='paper' && computer ==='rock'){
-      return 'you win!';
+      return "you win!";
     }else if (user==='scissors' && computer==='paper'){
-      return 'it`s a win!';
+      return "you win!";
     }else{
       return 'you lose!';
     }
@@ -231,7 +231,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number){
         for(let i = number; i>0; i--){
-          return `${i} bottles of soda on the wall, ${i} bottles of soda on the wall, take one down, pass it around, ${i-1} bottles of soda on the wall`;
+          return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;
         }
   }
 console.log("task 6", annoyingSong(9));
@@ -256,7 +256,7 @@ Using the grade function below do the following:
 
 
 function grade(score){
-  if (score == 100 && score >= 90){
+  if (score >= 90){
     return "you got an A";
   }else if (score <= 89 && score >= 80){
     return "you got a B";
@@ -268,7 +268,7 @@ function grade(score){
     return "you got an F";
   }
 }
-  
+console.log ("task 7", grade(86)); 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
