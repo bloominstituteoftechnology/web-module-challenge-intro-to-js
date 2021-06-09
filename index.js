@@ -277,9 +277,17 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(str) {
+  let letters = [];
+  let vowels = [];
+ letters = [...str];
+for(let i=0; i < str.length; i++){
+  if(str[i] == 'a' || 'e' || 'i' || 'o' || 'u'){
+    return vowels.push(str[i]);
+  }
+  
 }
+} 
 
 
 
