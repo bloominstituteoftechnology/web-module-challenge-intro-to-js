@@ -64,8 +64,6 @@ function multiply(a, b){
 
   console.log(multiply(1,3));
 
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Age in Dog years
@@ -109,10 +107,27 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if(age >= 1 && weight <= 5){
+      return weight * 0.05;
+    }else if(age >=1 && weight >=6 && weight <= 10){
+      return weight * 0.04;
+    }else if (age >= 1 && weight >= 11 && weight <= 15){
+      return weight * 0.03;
+    }else if (age >= 1 && weight >15){
+       return weight * 0.02;
+    }else if (age < 1 && age >= 0.583){
+      return weight * 0.04;
+    }else if (age < 0.583 && age >= 0.333){
+      return weight * 0.05;
+    }else if (age < 0.333){
+      return weight * 0.10;
+    }else{
+      return 'please try again'; 
+    }
   }
 
+console.log('task 3', hungryDog(15, 1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
