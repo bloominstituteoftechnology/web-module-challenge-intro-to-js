@@ -218,8 +218,7 @@ Using the feet function below do the following:
 
 function feet(cm){
   let ft = cm / 30.48;
-  return ft;  
-}
+  return ft;  }
 console.log(feet(3));
  
 
