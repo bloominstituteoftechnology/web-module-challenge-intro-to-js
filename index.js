@@ -18,7 +18,10 @@ Do the following:
    HINT: no function required
 */
 
-
+const votingAge = 18;
+if(votingAge >= 18) {
+  console.log(`true`)
+}
 
 /*
 Task 1b - Values
@@ -30,9 +33,21 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+const hours = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+const currentTime = 3;
+const a = "Morning";
+const b = "Afternoon";
+const c = "Evening";
+const d = "Night"
+if (currentTime >= hours[3]) {
+    console.log(a);
+} else if (currentTime >= hours[11]) {
+  console.log(b)
+} else if (currentTime >= hours[16]) {
+  console.log(c)
+} else if (currentTime >= hours[21]) {
+  console.log(d)
+}
 
 
 /*
@@ -46,7 +61,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+let year = "1999";
 
+console.log(parseFloat(year));
 
 
 /*
@@ -58,8 +75,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
 
@@ -74,8 +91,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(a){
+    return a * 7;
 }
 
 
@@ -150,9 +167,19 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
 function game(user, computer){
-    /*add your code here*/
+  const weapons = ["Rock", "Paper", "Scissors"];
+  const r = weapons[0];
+  const p = weapons[1];
+  const s = weapons[2];
+  
+  if (user == s && computer == p || user == p && computer == r || user == r && computer == s) {
+      return "you win!"
+    } else if (user == computer) {
+      return "it's a tie"
+    } else {
+      return "you lose!"
+    }
 }
   
   
@@ -168,10 +195,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.62137119223733;
   }
-
 
 
 //Task 5b - Feet to CM
@@ -182,8 +208,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm *  0.0328084;
   }
  
 
@@ -198,10 +224,12 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(start){
+      for(let i = start; i > 0; i--)
+      return(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`);
   }
 
+  annoyingSong(68)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -218,8 +246,18 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+    if (score > 89) {
+      return 'you got an A';
+    } else if (score > 79) {
+      return 'you got a B';
+    } else if (score > 69) {
+      return 'you got a C';
+    } else if (score >= 60) {
+      return 'you got a D';
+    } else {
+      return 'you got an F';
+    }
   }
   
   
@@ -237,10 +275,10 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(string) {
+    let totalVowels = string.match(/[aeiou]/gi);
+    return totalVowels === null ? 0 : totalVowels.length;
 }
-
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
