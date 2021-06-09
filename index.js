@@ -154,6 +154,8 @@ Use the game function below to do the following:
 
 function game(user, computer){
     /*add your code here*/
+   
+   
 }
   
   
@@ -168,9 +170,12 @@ Using the miles function below do the following:
   2. Convert the number of kiolmeters received to miles
   3. Return the number of miles
 */
-
-function miles(/*add your code here*/){
+/*m = miles*/
+/*k = kilometers*/
+function miles(k, m){
     /*add your code here*/
+     m = k * 0.621371
+    return m;
   }
 
 
@@ -182,9 +187,11 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
-
-function feet(/*add your code here*/){
+/*f =feet*/
+function feet(cm){
     /*add your code here*/
+    feet = cm /30.48
+    return feet
   }
  
 
@@ -197,10 +204,11 @@ Using the annoyingSong function below do the following:
   1. Receive a starting number and start the count down from the number received 
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
-*/
-
-function annoyingSong(/*add your code here*/){
+n= number left over*/
+function annoyingSong(number){
         /*add your code here*/
+       
+        return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`;
   }
 
 
@@ -218,13 +226,19 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(/*Your Code here */){
+function grade(score){
   /*Your Code here */
+  if(score >= 90 && weight <=100){
+    return `you got an A`;
+  }else if(score >=80 && weight <=89){
+    return `you got a B`;
+  }else if(score >=70 && weight <=79){
+    return `you got a C`;
+  }else if(score >=60 && weight <=69){
+    return `you got a D`;
+  }else if(score <=68 ){
+    return `you got an F`;}
   }
-  
-  
-
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
 //Vowel Counter - How many vowels are there?
