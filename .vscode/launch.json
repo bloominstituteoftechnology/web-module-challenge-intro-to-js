@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "c:\\Users\\Mongo\\desktop\\web45\\Introduction-to-JavaScript",
+      "environment": [],
+      "program": "c:\\Users\\Mongo\\desktop\\web45\\Introduction-to-JavaScript\\build\\Debug\\outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "externalConsole": true
+    }
+  ]
+}
