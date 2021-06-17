@@ -42,7 +42,11 @@ multiply(2,2);
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function dogYears (myAge) {
+    console.log(myAge * 7);
+}
 
+dogYears(30);
 
 
 
