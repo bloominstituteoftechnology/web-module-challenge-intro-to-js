@@ -194,9 +194,21 @@ bottles(5);
 //60s should be D 
 //and anything below 60 should be F
   
-
+function gradeCalc (grade) {
+    if (grade >= 90) {
+        console.log('You made an A.');
+    }else if (grade >= 80 && grade < 90) {
+        console.log('You made a B.');
+    }else if (grade >= 70 && grade < 80) {
+        console.log('You made a C.');
+    }else if (grade >= 60 && grade < 70) {
+        console.log('You made a D.');
+    }else if (grade < 60) {
+        console.log('You made a F.');
+    }
+}
   
-  
+gradeCalc(40);
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
