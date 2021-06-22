@@ -1,4 +1,4 @@
-import functions from '../index';
+import functions from './index';
 
 describe('fooFunction', ()=>{
     it('foo returns foo', ()=>{
@@ -19,9 +19,27 @@ describe('dogYearsFunction', ()=>{
 });
 
 describe('hungryDogFunction', ()=>{
-    it('returns weight * x based on age and weight', ()=>{
-        expect(functions.hungryDog(15, 1)).toBe(0.44999999999999996);
-    })
+  it('Dog is 1 year and is 5lbs or less', ()=>{
+    expect(functions.hungryDog(4, 1)).toBe(0.2);
+  })
+  it('Dog is 1 year and 6 - 10lbs', ()=>{
+    expect(functions.hungryDog(7, 1)).toBe(0.28);
+  })
+  it('Dog is 1 year and 11 - 15lbs', ()=>{
+    expect(functions.hungryDog(14, 1)).toBe(0.42);
+  })
+    it('Dog is 1 year and weighs more than 15lbs', ()=>{
+      expect(functions.hungryDog(16, 1)).toBe(0.32);
+  })
+    it('Dog is 2-4 months', ()=>{
+    expect(functions.hungryDog(20, 0.2)).toBe(2);
+  })
+    it('Dog is 4-7 months', ()=>{
+    expect(functions.hungryDog(16, 0.33)).toBe(1.6);
+  })
+    it('Dog is +7 months', ()=>{
+    expect(functions.hungryDog(4, 0.583)).toBe(0.16);
+  })
 });
 describe('gameFunction', ()=>{
     it('return win, lose or tie', ()=>{
@@ -69,18 +87,31 @@ describe('gradeFunction', ()=>{
     it('expect A', ()=>{
         expect(functions.grade(90)).toBe('you got an A');
     })
+    it('expect A', ()=>{
+      expect(functions.grade(95)).toBe('you got an A');
+  })
     it('expect B', ()=>{
         expect(functions.grade(80)).toBe('you got a B');
     })
+    it('expect B', ()=>{
+      expect(functions.grade(85)).toBe('you got a B');
+  })
     it('expect C', ()=>{
         expect(functions.grade(70)).toBe('you got a C');
     })
+    it('expect C', ()=>{
+      expect(functions.grade(75)).toBe('you got a C');
+  })
     it('expect D', ()=>{
         expect(functions.grade(60)).toBe('you got a D');
     })
+    it('expect D', ()=>{
+      expect(functions.grade(65)).toBe('you got a D');
+  })
     it('expect F', ()=>{
         expect(functions.grade(59)).toBe('you got an F');
     })
+    it('expect F', ()=>{
+      expect(functions.grade(20)).toBe('you got an F');
+  })
 });
-
-
