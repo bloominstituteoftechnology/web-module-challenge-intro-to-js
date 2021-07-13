@@ -1,5 +1,7 @@
 # Introduction To JavaScript
 
+TEST
+
 The module challenge is the afternoon project or assignment that students work through independently. This expands on the guided project completed earlier with the instructor.
 
 ## Advanced CSS and JavaScript
