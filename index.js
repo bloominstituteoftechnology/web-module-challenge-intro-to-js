@@ -20,6 +20,13 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge = 20;
+if (votingAge >= 18) {
+  console.log(true)
+}
+else {
+  console.log(false)
+}
 
 
 /*
@@ -32,8 +39,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let str1 = "dog"
+let str2 = "cat"
+if (str2 === "cat") {
+  str1 = "Nori"
+}
+console.log(str1)
 
 
 
@@ -48,6 +59,11 @@ Do the following:
    HINT: look up the Number method
 */
 
+let numstr = "1999";
+console.log(typeof numstr)
+numstr = Number(numstr);
+console.log(typeof numstr)
+console.log(numstr)
 
 
 
@@ -60,10 +76,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
-
+console.log(multiply(1, 3))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -76,10 +92,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
-
+console.log(dogYears(7))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -109,8 +125,35 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  //age greater or equal to 1 (dog)
+  if (age >= 1) {
+    if (weight <= 5) {
+      return weight * 0.05
+    }
+    else if (weight >= 6 && weight <= 10) {
+      return weight * 0.04
+    }
+    else if (weight >= 11 && weight <= 15) {
+      return weight * 0.03
+    }
+    //weight > 15lbs
+    else {
+      return weight * 0.02
+    }
+  }
+  //age less than 1 (puppy)
+  else {
+    if (age >= 0.167 && age < 0.3) {
+      return weight * .10
+    }
+    else if (age >= 0.3 && age < 0.58) {
+      return weight * .05
+    }
+    else {
+      return weight * .04
+    }
+  }
 }
 
 
@@ -137,10 +180,18 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 function game(user, computer){
-  /*add your code here*/
+  if((user === 2 && computer === 1)|| (user === 1 && computer === 0) || (user === 0 && computer === 2)){
+    return "you win!"
+  }
+  else if ((user === 2 && computer === 0 || user === 1 && computer === 2 || user === 0 && computer === 1)){
+    return "you lose!"
+  }
+  else{
+    return "it's a tie"
+  }
 }
 
-
+console.log(game(0, computer)); 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -153,8 +204,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return kilometers * 0.621371
 }
 
 
@@ -167,8 +218,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
 }
 
 
@@ -183,10 +234,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
+function annoyingSong(number){
+  for(let i = number; i > 0; i--){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;}
+  }
 
+console.log(annoyingSong(95))
+ 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -203,10 +257,27 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  let grade = ""
+  switch(true){
+    case score >= 90: 
+      grade = 'you got an A'
+      break
+    case score >= 80:
+      grade = 'you got a B'
+      break
+    case score >= 70:
+      grade ='you got a C'
+      break
+    case score >= 60:
+      grade = 'you got a D'
+      break
+    default:
+      grade = 'you got an F'
+      break
 }
 
+console.log(grade(99));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
