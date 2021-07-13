@@ -280,7 +280,7 @@ else if (grade < 80)
 } else if (grade < 100) {
   return "you got an A";
 }
-console.log(grade 80);
+console.log(grade 90);
 
 
 
