@@ -76,8 +76,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(dogAge)
+{
+  const humanYears = 7; 
+  return  dogAge * humanYears;
 }
 
 
@@ -149,7 +151,7 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
@@ -183,8 +185,11 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+    if (number > 0)
+      return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall`
+    else
+      return "No more bottles of soda on the wall, no more bottles of soda. Go to the store and buy some more, 99 bottles of soda on the wall.";
 }
 
 
