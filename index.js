@@ -20,7 +20,10 @@ Do the following:
    HINT: no function required
 */
 
-
+let votingAge= 18;
+if(votingAge >= 18){
+  console.log(true)
+}
 
 /*
 Task 1b - Values
@@ -32,7 +35,11 @@ Do the following:
 
    HINT: no function required
 */
-
+var firstnames = 'Jessica';
+var firstnames = 'Adam';
+{
+console.log(firstnames);
+}
 
 
 
@@ -47,6 +54,10 @@ Do the following:
 
    HINT: look up the Number method
 */
+var x ="1999";
+var z =parseInt(x);
+console.log(z);
+
 
 
 
@@ -60,9 +71,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(number1, number2){
+  return number1*number2;
 }
+var totalnumber= multiply(4,5);
+
+console.log(totalnumber)
 
 
 
@@ -76,9 +90,14 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanyear,dogyears){
+  return humanyear*dogyears;
 }
+let calculatedage= dogYears(1,7);
+
+console.log(calculatedage)
+
+
 
 
 
@@ -145,18 +164,20 @@ if(computer <= 0.34){
 }
 
 function game(user, computer){
-  if(user === computer)
-  return `it's a tie`;
-}else if(user === `rock` && computer === `scissors`){
-  return `you win!`
-}else if(user ===`paper` && computer === `rock`){
-  return `you win!`;
-}else if(user === `scissors` && computer === `paper`){
-  return `you lose!`;
-}else{
-  return `you lose!`;
+  if(user === computer){
+  return `its a tie`;
+} else if(user ===`rock` && computer === 'scissors'){
+  return 'you win!';
+} else if(user ===`paper` && computer === 'rock'){
+  return 'you win!';
+} else if(user === 'scissors' && computer === 'paper'){
+  return 'you lose!';
+} else{
+  return 'you lose!';
+}
 }
 
+console.log(`task 4`, game(`rock`, computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
