@@ -60,10 +60,10 @@ Do the following:
 */
 
 let numstr = "1999";
-console.log(typeof numstr)
+console.log(typeof numstr);
 numstr = Number(numstr);
-console.log(typeof numstr)
-console.log(numstr)
+console.log(typeof numstr);
+console.log(numstr);
 
 
 
@@ -79,7 +79,7 @@ Do the following:
 function multiply(a, b){
   return a * b;
 }
-console.log(multiply(1, 3))
+console.log(multiply(1, 3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -95,7 +95,7 @@ Do the following:
 function dogYears(age){
   return age * 7;
 }
-console.log(dogYears(7))
+console.log(dogYears(7));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -129,29 +129,29 @@ function hungryDog(weight, age){
   //age greater or equal to 1 (dog)
   if (age >= 1) {
     if (weight <= 5) {
-      return weight * 0.05
+      return weight * 0.05;
     }
     else if (weight >= 6 && weight <= 10) {
-      return weight * 0.04
+      return weight * 0.04;
     }
     else if (weight >= 11 && weight <= 15) {
-      return weight * 0.03
+      return weight * 0.03;
     }
     //weight > 15lbs
     else {
-      return weight * 0.02
+      return weight * 0.02;
     }
   }
   //age less than 1 (puppy)
   else {
-    if (age >= 0.167 && age < 0.3) {
-      return weight * .10
+    if (age >= 0.167 && age < 0.3333) {
+      return weight * .10;
     }
-    else if (age >= 0.3 && age < 0.58) {
-      return weight * .05
+    else if (age >= 0.3333 && age < 0.583) {
+      return weight * .05;
     }
     else {
-      return weight * .04
+      return weight * .04;
     }
   }
 }
@@ -179,11 +179,21 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let computer = Math.random();
+if (computer <= 0.34){
+  computer ="rock";
+ }else if(computer <= 0.67){
+   computer ="paper";
+ }else if(computer > 0.67){
+   computer ="scissors";
+ }
+
+
 function game(user, computer){
-  if((user === 2 && computer === 1)|| (user === 1 && computer === 0) || (user === 0 && computer === 2)){
+  if((user === "rock" && computer === "scissors")|| (user === "scissors" && computer === "paper") || (user === "paper" && computer === "rock")){
     return "you win!"
   }
-  else if ((user === 2 && computer === 0 || user === 1 && computer === 2 || user === 0 && computer === 1)){
+  else if ((user === "rock" && computer === "paper" || user === "scissors" && computer === "rock" || user === "paper" && computer === "scissors")){
     return "you lose!"
   }
   else{
@@ -191,7 +201,7 @@ function game(user, computer){
   }
 }
 
-console.log(game(0, computer)); 
+console.log(game("rock", computer)); 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -258,23 +268,18 @@ Using the grade function below do the following:
 */
 
 function grade(score){
-  let grade = ""
-  switch(true){
-    case score >= 90: 
-      grade = 'you got an A'
-      break
-    case score >= 80:
-      grade = 'you got a B'
-      break
-    case score >= 70:
-      grade ='you got a C'
-      break
-    case score >= 60:
-      grade = 'you got a D'
-      break
-    default:
-      grade = 'you got an F'
-      break
+   if(score >= 90){
+     return 'you got an A';
+   } else if(score < 90 && score >= 80){
+     return 'you got a B';
+   } else if(score < 80 && score >= 70){
+     return 'you got a C';
+   } else if(score < 70 && score >= 60){
+     return 'you got a D';
+   }else{
+     return 'you got an F'
+   }
+
 }
 
 console.log(grade(99));
