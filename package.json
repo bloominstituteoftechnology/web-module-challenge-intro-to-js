@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "NODE_ENV=testing jest --watchAll --verbose --forceExit --silent"
+    "test": "jest --watchAll --verbose --forceExit --silent"
   },
   "repository": {
     "type": "git",
