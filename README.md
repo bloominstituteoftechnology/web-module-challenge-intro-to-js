@@ -1,6 +1,6 @@
 # Introduction To JavaScript
 
-TEST...my Canvas can't find a new Git submission :-(
+TEST...my Canvas can't find a new Git submission :-( TESTING TESTING
 
 The module challenge is the afternoon project or assignment that students work through independently. This expands on the guided project completed earlier with the instructor.
 
