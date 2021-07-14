@@ -196,10 +196,12 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(kilometers){
-  var kilometers = 1609.344
-  return miles * 0.621371;
+
+
+function miles(kms){
+  return kms / 0.621371;
 }
+console.log(miles (1.6));
 
 
 
