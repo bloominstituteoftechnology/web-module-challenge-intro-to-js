@@ -42,8 +42,6 @@ if(bush ===4){
 console.log(tree);
 
 
-
-
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -56,7 +54,6 @@ Do the following:
 */
 let Number =(1999);
 console.log(Number);
-
 
 
 /*
