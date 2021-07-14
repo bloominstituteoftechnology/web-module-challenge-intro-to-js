@@ -19,7 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 18;
+if (votingAge < 18) {
+  console.log("false")
+} else if (votingAge >= 18) {
+  console.log("true")
+}
 
 
 /*
@@ -174,9 +179,12 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/) {
-  /*add your code here*/
+function feet(cm) {
+  let feet = 30.8 * cm;
+  return feet;
 }
+console.log(feet(4))
+
 
 
 
