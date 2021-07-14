@@ -62,10 +62,8 @@ Do the following:
 
 function multiply(a, b) {
   return a * b;
-
 }
-console.log(multiply(2, 2));
-
+console.log(multiply(8, 8));
 
 
 
@@ -164,7 +162,7 @@ function miles(kilo) {
   let miles = kilo / 1.61;
   return miles;
 }
-console.log
+console.log(miles(8))
 
 
 
@@ -213,7 +211,7 @@ Using the grade function below do the following:
 */
 
 function grade(num) {
-  if (grade >)
+
 }
 
 
