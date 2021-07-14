@@ -60,9 +60,13 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/) {
-  /*add your code here*/
+function multiply(a, b) {
+  return a * b;
+
 }
+console.log(multiply(2, 2));
+
+
 
 
 
@@ -76,10 +80,13 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/) {
-  /*add your code here*/
+function dogYears(humanYears) {
+  dogYears = humanYears * 7;
+  return dogYears;
 }
-console.log('hello world')
+console.log(dogYears(7));
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -153,9 +160,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
-  /*add your code here*/
+function miles(kilo) {
+  let miles = kilo / 1.61;
+  return miles;
 }
+console.log
 
 
 
@@ -203,8 +212,8 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */) {
-  /*Your Code here */
+function grade(num) {
+  if (grade >)
 }
 
 
