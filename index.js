@@ -20,7 +20,17 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18;
 
+function oldEnoughToVote(age)
+{
+  if (age >= votingAge)
+    return true;
+  else 
+    return false;
+}
+
+console.log(oldEnoughToVote(12));
 
 /*
 Task 1b - Values
@@ -81,7 +91,6 @@ function dogYears(dogAge)
   const humanYears = 7; 
   return  dogAge * humanYears;
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -155,10 +164,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return kilometers * 0.621371;
 }
-
 
 
 //Task 5b - Feet to CM
@@ -169,11 +177,9 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -208,11 +214,18 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(number){
+  if (90 <= number >= 100) 
+    return 'you got an A';
+  else if (90 <= number >= 89)
+    return 'you got a B';
+  else if (70 <= number >= 79)
+    return 'you got a C';
+  else if (60 <= number >= 69)
+    return 'you got a D';
+  else
+    return 'you got an F';
 }
-
-
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
