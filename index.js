@@ -136,10 +136,6 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 
 function hungryDog(weight, years)
 {
-  // if (weight < 5 && years > 1)
-  //   return weight * 0.05;
-  // else if (weight < 10 && years
-
   let percentage = 0;
 
   //If dog is adult (1 year and older)
@@ -188,6 +184,7 @@ console.log('task 3', hungryDog(14, 1));
 console.log('task 3', hungryDog(16, 1));
 console.log('task 3', hungryDog(20, 0.2));
 console.log('task 3', hungryDog(16, 0.33));
+console.log('task 3', hungryDog(4, 0.667));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -210,11 +207,77 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+function game(user, computer)
+{
+  let result = "";
+
+  if (user == "rock")
+  {
+    if (computer =="rock")
+    {
+      result = "it's a tie";
+    }
+    else if (computer == "paper")
+    {
+      result = "you lose!";
+    }
+    else if (computer == "scissors")
+    {
+      result = "you win!";
+    }
+  }
+  else if (user == "paper")
+  {
+    if (computer =="rock")
+    {
+      result = "you win!";
+    }
+    else if (computer == "paper")
+    {
+      result = "it's a tie";
+    }
+    else if (computer == "scissors")
+    {
+      result = "you lose!";
+    }
+  }
+  else if (user == "scissors")
+  {
+    if (computer =="rock")
+    {
+      result = "you lose!";
+    }
+    else if (computer == "paper")
+    {
+      result = "you win!";
+    }
+    else if (computer == "scissors")
+    {
+      result = "it's a tie";
+    }
+  }
+
+  return result;
 }
 
+const randomNumber = Math.floor(Math.random()*3) + 1;
+let computer = "";
+if (randomNumber == 1)
+{
+  computer = "paper";
+}
+else if (randomNumber == 2)
+{
+  computer = "scissors";
+}
+else if (randomNumber ==3)
+{
+  computer = "rock";
+}
 
+console.log(`task 4 - (user: paper, computer: ${computer})`, game("paper", computer));
+console.log(`task 4 - (user: rock, computer: ${computer})`, game("rock", computer));
+console.log(`task 4 - (user: scissors, computer: ${computer})`, game("scissors", computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 

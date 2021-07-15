@@ -38,7 +38,7 @@ describe('hungryDogFunction', ()=>{
     expect(functions.hungryDog(16, 0.33)).toBe(1.6);
   })
     it('Dog is +7 months', ()=>{
-    expect(functions.hungryDog(4, 0.583)).toBe(0.16);
+    expect(functions.hungryDog(4, 0.583)).toBe(0.2);
   })
 });
 describe('gameFunction', ()=>{
