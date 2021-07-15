@@ -1,8 +1,8 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
-/*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+/*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTO-GRADER WILL NOT WORK*/
 
-// task 1a, 1b, and 1c are not autograded
+// task 1a, 1b, and 1c are not auto-graded
 
 /*
 When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.
@@ -19,18 +19,22 @@ Do the following:
 
    HINT: no function required
 */
-
-const votingAge = 18;
+// function oldEnoughToVote(age)
+// {
+//   const votingAge = 18;
+//   if (age >= votingAge)
+//     return true;
+//   else 
+//     return false;
+// }
 
 function oldEnoughToVote(age)
 {
-  if (age >= votingAge)
-    return true;
-  else 
-    return false;
+  const votingAge = 18;
+  return (age >= votingAge);
 }
 
-console.log(oldEnoughToVote(12));
+console.log('task 1a', oldEnoughToVote(12));
 
 /*
 Task 1b - Values
@@ -43,9 +47,15 @@ Do the following:
    HINT: no function required
 */
 
+let firstVariable = 25;
+const secondVariable = 50;
 
+if (secondVariable > firstVariable)
+{
+  firstVariable = secondVariable;
+}
 
-
+console.log('task 1b', firstVariable);
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -58,8 +68,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+const yearString = "1999";
+const yearInt = parseInt(yearString);
 
-
+console.log('task 1c', yearInt);
 
 /*
 Task 1d - Multiply
@@ -70,11 +82,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b)
+{
+  return a * b;
 }
 
-
+console.log('task 1d', multiply(2, 4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -92,6 +105,7 @@ function dogYears(dogAge)
   return  dogAge * humanYears;
 }
 
+console.log('task 2', dogYears(3));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -168,6 +182,7 @@ function miles(kilometers){
   return kilometers * 0.621371;
 }
 
+console.log('task 5a', miles(22));
 
 //Task 5b - Feet to CM
 /*
@@ -180,6 +195,8 @@ Using the feet function below do the following:
 function feet(cm){
   return cm / 30.48;
 }
+
+console.log('task 5b', feet(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -198,6 +215,7 @@ function annoyingSong(number){
       return "No more bottles of soda on the wall, no more bottles of soda. Go to the store and buy some more, 99 bottles of soda on the wall.";
 }
 
+console.log('task 6', annoyingSong(3));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -215,17 +233,19 @@ Using the grade function below do the following:
 */
 
 function grade(number){
-  if (90 <= number >= 100) 
+  if (number >= 90)
     return 'you got an A';
-  else if (90 <= number >= 89)
+  else if (number >= 80)
     return 'you got a B';
-  else if (70 <= number >= 79)
+  else if (number >= 70)
     return 'you got a C';
-  else if (60 <= number >= 69)
+  else if (number >= 60)
     return 'you got a D';
   else
     return 'you got an F';
 }
+
+console.log('task 7', grade(52));
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
