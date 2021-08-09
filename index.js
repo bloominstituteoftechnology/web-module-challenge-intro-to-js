@@ -11,7 +11,7 @@ returns a value, that value will be logged to the console.  An example of this w
 */
 
 /*
-Task 1a - Voting Age
+Task 1a - Voting Ageasd
 
 Do the following:   
    1. Create a variable called votingAge and assign it a value
