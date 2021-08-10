@@ -175,7 +175,7 @@ function feet(/*add your code here*/){
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-// Let's Sing 99 Bottles of Soda on the Wall!
+// Let's Sing 99   Bottles of Soda on the Wall!
 /*
 Using the annoyingSong function below do the following:
 1. Receive a starting number and start the count down from the number received 
