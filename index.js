@@ -68,7 +68,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(a, b) => a * b;
+function multiply(a, b){
+ return a * b;
+}
 console.log(multiply(11, 5));
 
 
@@ -82,7 +84,9 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(age) => age * 7;
+function dogYears(age){ 
+ return age * 7;
+}
 console.log(dogYears(27))
 
 
@@ -154,13 +158,13 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let computer = (Math.random())
+var computer = (Math.random())
   if(computer <= 0.33){
-    return computer = 'Scissors';
+    computer = 'Scissors';
   }else if(computer <= 0.66 && computer >= 0.34){
-    return computer = 'Rock';
+    computer = 'Rock';
   }else if(computer >= 0.67){
-    return computer = 'Paper';
+    computer = 'Paper';
   }
 function game(user, computer){
   'Rock' > 'Scissors';
@@ -174,7 +178,7 @@ function game(user, computer){
     return "it's a tie";
   }
 }
-console.log(game(Scissors, computer))
+console.log(game('Scissors', computer))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
