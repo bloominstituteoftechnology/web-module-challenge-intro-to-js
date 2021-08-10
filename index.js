@@ -130,6 +130,7 @@ if (age >=1 && weight <= 5){
   return weight * 0.1;
   }
 
+  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -175,6 +176,7 @@ function game (user, computer){
 
 
 
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
@@ -186,9 +188,13 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  var convert = 0.6214*miles
+  console.log ("That would be" + miles + "in kilometers");
 }
+
+miles(4);
+miles(6);
 
 
 
@@ -200,11 +206,13 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  var convert = 30.48*feet
+  console.log ("That would be" + feet + "in kilometers");
 }
 
-
+feet(4);
+feet (5);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
