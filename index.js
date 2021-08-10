@@ -61,7 +61,7 @@ Do the following:
 */
 
 function multiply(/*add your code here*/){
-  /*add your code here*/
+  let a = (3+5) * (5+1)
 }
 
 
@@ -76,9 +76,13 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(findDogAge){
+  var dog = 7*age;
+  console.log ("Your puppers is" + dogYears + "years old in dog years");
 }
+
+findDogAge(3);
+findDogAge(6);
 
 
 
@@ -110,11 +114,11 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 */  
 
 function hungryDog(weight, age){
-  if (age >=1 && weight <= 5){
+if (age >=1 && weight <= 5){
     return weight * 0.05;
   }else if (age >= 1 && weight >=6 && wieght <= 10){
      return weight * 0.04;
-  }else if (age >= 1 && weight >= 11 && weight <= 15) { 
+  }else if (age >= 1 && weight >= 11 && weight <= 15){ 
     return wieght * 0.03;
   }else if (age >= 1 && eight > 15){
     return weight * 0.02;
@@ -148,9 +152,26 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
-}
+let computer = rock 
+
+Math.ceil(Math.random()*3); 
+
+function game (user, computer){
+  if (computer === paper && user === rock)  {
+    return "you win!";
+  } else if (computer === scissors && user === paper) {
+    return "you win!";
+  } else if (computer === rock && user === scissors) {
+    return "you win!";
+  } else if (computer === user) {
+    return "it's a tie"
+  } else if (computer === rock && user === paper) {
+    return "you lose!"; }
+   else if (computer === paper && user === scissors) {
+    return "you lose!"; }
+   else if (computer === scissors && user === rock) {
+  return "you lose!"; }
+} 
 
 
 
@@ -195,8 +216,8 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+  return bottles - 1
 }
 
 
@@ -257,3 +278,4 @@ module.exports = {
   feet,
   annoyingSong,
   grade
+}
