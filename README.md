@@ -1,5 +1,6 @@
 # Introduction To JavaScript
-kkkkk
+
+
 The module challenge is the afternoon project or assignment that students work through independently. This expands on the guided project completed earlier with the instructor.
 
 ## Advanced CSS and JavaScript
@@ -17,7 +18,7 @@ functions and describe their differences
   
 ## Introduction
 
-Today you'll worth through 7 JavaScript Tasks to practice today's objectives and get familiar and comfortable with the foundations of JavaScript. 
+Today you'll work through 7 JavaScript Tasks to practice today's objectives and get familiar and comfortable with the foundations of JavaScript. 
 
 Exercises are outlined in the `index.js` file, please read the instructions carefully for each task and complete it. Note that you may have to use your googling skills to research and look things up if you do not have all the information you need to complete the task.
 

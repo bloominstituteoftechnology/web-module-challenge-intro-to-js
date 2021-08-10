@@ -109,10 +109,22 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
-
+function hungryDog(weight, age){
+  if (age >=1 && weight <= 5){
+    return weight * 0.05;
+  }else if (age >= 1 && weight >=6 && wieght <= 10){
+     return weight * 0.04;
+  }else if (age >= 1 && weight >= 11 && weight <= 15) { 
+    return wieght * 0.03;
+  }else if (age >= 1 && eight > 15){
+    return weight * 0.02;
+  }else if (age <1 && age >= 0.583){
+    return weight * 0.04;
+  }else if (age < 0.583 && age >= 0.3333){  
+     return weight * 0.004;  
+  }else if (age <0.333){
+  return weight * 0.1;
+  }
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -245,4 +257,3 @@ module.exports = {
   feet,
   annoyingSong,
   grade
-}
