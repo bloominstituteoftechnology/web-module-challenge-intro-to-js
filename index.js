@@ -19,6 +19,13 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge=18;
+
+if(votingAge >=18);
+  console.log('task 1 a:', true);
+else
+  console.log('task 1 a:', false);
+ 
 
 
 
@@ -32,7 +39,13 @@ Do the following:
 
    HINT: no function required
 */
+let child = "Frank";
+let swimming = "fun";
 
+if (swimming === "fun");
+  child = "Bob"
+
+console.log('task 1 b:', Frank); 
 
 
 
@@ -47,7 +60,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+const graduation = '1999';
+console.log('task 1 c:', Number (graduation));
 
 
 
@@ -60,10 +74,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  let a = (3+5) * (5+1)
+function multiply(a,b){
+ return a * b;
 }
 
+console.log('task 1 d:', multiply (5,5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -113,10 +128,11 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(weight, age){
+function hungryDog(weight, age)
 if (age >=1 && weight <= 5){
     return weight * 0.05;
-  }else if (age >= 1 && weight >=6 && wieght <= 10){
+  }else 
+  if (age >= 1 && weight >=6 && wieght <= 10){
      return weight * 0.04;
   }else if (age >= 1 && weight >= 11 && weight <= 15){ 
     return wieght * 0.03;
@@ -125,12 +141,14 @@ if (age >=1 && weight <= 5){
   }else if (age <1 && age >= 0.583){
     return weight * 0.04;
   }else if (age < 0.583 && age >= 0.3333){  
-     return weight * 0.004;  
+     return weight * 0.005;  
   }else if (age <0.333){
   return weight * 0.1;
   }
 
-  
+  console.log('task 3', hungryDog(15,1));
+
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -153,9 +171,7 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-let computer = rock 
-
-Math.ceil(Math.random()*3); 
+var computer = math.random();
 
 function game (user, computer){
   if (computer === paper && user === rock)  {
@@ -174,7 +190,7 @@ function game (user, computer){
   return "you lose!"; }
 } 
 
-
+console.log('task 4', game('paper', computer)); 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
