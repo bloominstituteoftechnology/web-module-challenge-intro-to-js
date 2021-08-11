@@ -1,70 +1,24 @@
-/*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
-
-/*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
-
-// task 1a, 1b, and 1c are not autograded
-
-/*
-When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.
-This will usually entail console logging the answer directly or console logging the invocation (call) of the function so when it
-returns a value, that value will be logged to the console.  An example of this would be:  console.log(theFunction(value1,value2))
-*/
-
-/*
-Task 1a - Voting Age
-
-Do the following:   
-   1. Create a variable called votingAge and assign it a value
-   2. Console log true if age is 18 or higher
-
-   HINT: no function required
-*/
-
-
-
-/*
-Task 1b - Values
-
-Do the following:   
-   1. Declare two variables and assign them values
-   2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
-   3. Console log the new value of the 1st variable
-
-   HINT: no function required
-*/
-
-
-
-
-
-/*
-Task 1c - Convert Strings to Numbers
-
-Do the following:   
-   1. Declare a string type variable with the value of "1999"
-   2. Convert the string value of "1999" to a integer value of 1999
-   3. Console log the result
-
-   HINT: look up the Number method
-*/
-
-
-
-
-/*
-Task 1d - Multiply
- 
-Do the following:   
-   1. Invoke the multiply function below and pass it two numbers
-   2. Receive the parameters: a and b
-   3. Multiply a and b and return the answer
-*/
-
-function multiply(/*add your code here*/){
-  /*add your code here*/
+var votingAge = 18;
+if (votingAge >= 18) {
+  console.log("true");
 }
 
+let num1 = 1;
+let num2 = 2;
+if (num1 !== num2) {
+  num1 = 2;
+}
+console.log(num1);
 
+var i = "1999";
+if ("1999" === i) {
+  i = 1999;
+}
+console.log(i);
+
+function multiply(a, b) {
+  return (a = 5) * (b = 9);
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -75,12 +29,11 @@ Do the following:
  2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
  3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+var age = 11;
+function Dogyears(age, ups) {
+  return;
+  var ups = age * 7;
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -107,13 +60,25 @@ Puppies less than 1 year
    7 - 12 months 4% of their body weight
   
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(age, weight) {
+  if (age >= 1 && weight <= 5) {
+    return weight * 0.05;
+  } else if (age >= 1 && weight >= 6 && weight <= 10) {
+    return weight * 0.04;
+  } else if (age >= 1 && weight >= 11 && weight <= 15) {
+    return weight * 0.03;
+  } else if (age >= 1 && weight > 15) {
+    return weight * 0.02;
+  } else if (age < 1 && age >= 0.583) {
+    return weight * 0.04;
+  } else if (age < 0.583 && age >= 0.333) {
+    return weight * 0.05;
+  } else if (age < 0.333) {
+    return weight * 0.1;
+  }
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -136,16 +101,35 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+function game(user, computer) {
+  let computer = Math.ceil(Math.random() * 3);
+  let rock = 1;
+  let paper = 2;
+  let scissors = 3;
+
+  function game(user, computer) {
+    if (computer === rock && user === paper) {
+      return "you win!";
+    } else if (computer === paper && user === scissors) {
+      return "you win!";
+    } else if (computer === scissors && user === rock) {
+      return "you win!";
+    } else if (computer === user) {
+      return "it's a tie";
+    } else if (computer === rock && user === scissors) {
+      return "you lose!";
+    } else if (computer === paper && user === rock) {
+      return "you lose!";
+    } else if (computer === scissors && user === paper) {
+      return "you lose!";
+    }
+  }
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Metric Converter 
-//Task 5a - KM to Miles 
+//Metric Converter
+//Task 5a - KM to Miles
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
@@ -153,11 +137,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(klm) {
+  return klm / 1.6;
 }
-
-
+console.log(miles(5));
 
 //Task 5b - Feet to CM
 /*
@@ -167,11 +150,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm) {
+  return cm / 0.0328084;
 }
-
-
+console.log(miles(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -183,15 +165,27 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
+function annoyingSong() {
+  var bottles;
+  var bottlesLeft;
+  for (i = 6; i >= 1; i--) {
+    if (i == 1) {
+      bottles = "bottle";
+      bottlesLeft = "No bottles of beer on the wall!";
+    } else {
+      bottles = "bottles";
+      bottlesLeft = i - 1 + " bottles of beer on the wall!";
+    }
+    console.log(i + " " + bottles + " of beer on the wall,");
+    console.log(i + " " + bottles + " of beer,");
+    console.log("Take one down, pass it around,");
+    console.log(bottlesLeft);
+  }
 
+  /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
-//Grade Calculator
-/*
+  //Grade Calculator
+  /*
 Using the grade function below do the following: 
 1. Receive a score out of 100 
 2. Return the corresponding letter grade following this grade scale:
@@ -202,17 +196,25 @@ Using the grade function below do the following:
  60-69 should return 'you got a D'
  below should return 'you got an F'
 */
+  function grade(score) {
+    if (score >= 90) {
+      return;
+      ("you got an A");
+    } else if (marks >= 80) {
+      return "you got a B";
+    } else if (marks >= 70) {
+      return "you got a C";
+    } else if (marks >= 60) {
+      return "you got a D";
+    } else if (marks < 60) {
+      return "you got an F";
+    }
+  }
 
-function grade(/*Your Code here */){
-/*Your Code here */
-}
+  /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
-
-
-/*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
-
-//Vowel Counter - How many vowels are there?
-/*
+  //Vowel Counter - How many vowels are there?
+  /*
 Using the vowelCounter function below do the following:
 1. Receive a string as a parameter
 2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
@@ -221,28 +223,26 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
+  function vowelCounter(/*add your code here*/) {
+    /*add your code here*/
+  }
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
-}
-
-
-
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-  console.log('its working');
-  return 'bar';
-}
-foo();
-/*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-module.exports = {
-  foo,
-  multiply,
-  dogYears,
-  hungryDog,
-  game,
-  miles,
-  feet,
-  annoyingSong,
-  grade
+  /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
+  function foo() {
+    console.log("its working");
+    return "bar";
+  }
+  foo();
+  /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
+  module.exports = {
+    foo,
+    multiply,
+    dogYears,
+    hungryDog,
+    game,
+    miles,
+    feet,
+    annoyingSong,
+    grade,
+  };
 }
