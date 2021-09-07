@@ -198,7 +198,7 @@ function game(user, computer){
 
   function game(user, computer) {
     if(user === computer) {
-      console.log("It's a tie"); 
+      return `It's a tie`; 
 
     } else if (user === 'rock' && computer === 'scissors') {
       console.log("You Win!");
@@ -211,14 +211,11 @@ function game(user, computer){
 
     } else {
       console.log("You Lose!")
-    }
-
-    
+    } 
   }
 }
 
-
-
+console.log('task 4', game('rock', computer));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -232,9 +229,13 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+let km = 10; 
+
+function miles(km){
+  return km * 1.60934;
 }
+
+console.log(miles());
 
 
 
@@ -246,8 +247,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
 }
 
 
@@ -262,9 +263,14 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+      return (number) +
+      "{number} bottles of soda on the wall, " +
+      "{number} bottles of soda, take one down pass it around " +
+      "{number left over} bottles of soda on the wall"
 }
+
+console.log(annoyingSong(99));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -282,9 +288,27 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+let score = '100';
+
+function grade(score){
+  if(score >= 90) {
+    return "You Got an A";
+
+  } else if (score >= 80 && score < 90) {
+    console.log("You got a B");
+
+  } else if (score >= 70 && score < 80) {
+    console.log("You got a C");
+
+  } else if (score >= 60 && score < 70) {
+    console.log("You got a D");
+
+  } else if (score < 60) {
+    console.log("You got an F");
+  } 
 }
+
+console.log(score(90));
 
 
 
@@ -300,9 +324,17 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
+const vowels = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u'];
+function vowelCounter(vowels) {
+  let vowelsNum = 0;
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+  for(let letter of text) {
+    if(vowels .includes(letter)) {
+      vowelsNum++;
+    }
+  }
+
+  console.log(vowels);
 }
 
 
