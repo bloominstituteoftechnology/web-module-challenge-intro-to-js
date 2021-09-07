@@ -281,9 +281,17 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
-}
+const vowels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"]
+
+ function vowelCounter(text){
+   let numVowels = 0;
+   for (let letter of text){
+     if(vowels .includes(letter)){
+       numVowels++;
+     }
+   }
+   return numVowels
+ }
 
 
 
