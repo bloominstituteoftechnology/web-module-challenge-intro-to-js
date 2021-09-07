@@ -20,6 +20,9 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18
+console.log(votingAge >= 18 ? true : false)
+
 
 
 /*
