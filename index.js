@@ -19,12 +19,6 @@ Do the following:
 
    HINT: no function required
 */
-var votingAge = 18;
-if ( votingAge >= 18) {
-  console.log(true)
-}
-
-
 
 
 
@@ -40,7 +34,7 @@ Do the following:
 */
 
 
-
+krystle - here
 
 
 /*
