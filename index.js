@@ -19,8 +19,13 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let votingAge = 18
+if (votingAge >= 18) {
+  console.log('True');
+}
+else {
+  console.log('False')
+}
 
 /*
 Task 1b - Values
@@ -32,9 +37,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+let a = 4;
+let b = 5
+a = a + b;
+console.log(a);
 
 
 /*
@@ -47,8 +53,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let year = "1999";
+console.log(Number(year));
 
 
 /*
@@ -60,9 +66,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  console.log(a * b);
 }
+
+multiply(2,4);
 
 
 
@@ -76,8 +84,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  console.log(age * 7);
 }
 
 
@@ -109,9 +117,36 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(age, weight){
+  if (age < 1){
+    if (1/6 <= age && age < 1/3) {
+      console.log(weight * .1);
+    }
+    else if (1/3 <= age && age < 7/12) {
+      console.log(weight * .05);
+    }
+    else {
+      console.log(weight * .04);
+    }
+  }
+  else {
+    if (0 <= weight && weight < 6) {
+      console.log(weight * .05);
+    }
+    else if (6 <= weight && weight < 11) {
+      console.log(weight * .04);
+    }
+    else if (11 <= weight && weight < 16) {
+      console.log(weight * .03);
+    }
+    else {
+      console.log(weight * .02);
+    }
+  }
+  return hungryDog;
+} 
+
+hungryDog(1,15)
 
 
 
@@ -136,9 +171,9 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
-}
+
+
+
 
 
 
