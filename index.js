@@ -116,9 +116,29 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(x,y){
+  if(y>=1){
+    if(x>15){
+      console.log(x*.02)
+    }else if(x>10){
+      console.log(x*.03)
+    }else if(x>5){
+      console.log(x*.04)
+    }else{console.log(x*.05)
+         }
+  }else{
+    if(x>.66){
+      console.log(x*.1)
+    }else if(x>.33){
+      console.log(x*.05)
+    }else if(x>.16){
+      console.log(x*.04)
+    }else{
+      console.log("Too young to be weaned.")
+    }
+  }
 }
+hungryDog(15,1);
 
 
 
