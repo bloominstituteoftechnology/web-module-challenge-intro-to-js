@@ -157,10 +157,30 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random() * 3;
+if(computer <= 1){
+  computer = 'rock';
+}else if(computer <= 2){
+  computer = 'paper';
+}else if(computer > 3){
+  computer = 'scissors';
+}
 
 function game(user, computer){
-  /*add your code here*/
+  if(user === computer){
+    return "it's a tie";
+  }else if(user === 'rock' && computer === 'scissors'){
+    return "you win!";
+  }else if(user === 'scissors' && computer === 'paper'){
+    return "you win!";
+  }else if(user === 'paper' && computer === 'rock'){
+    return "you win!";
+  }else{
+    return "you lose!";
+  }
 }
+
+console.log(game('rock', computer));
 
 
 
@@ -175,8 +195,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilo){
+  return kilo * .621371;
 }
 
 
@@ -189,8 +209,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm * .0328084;
 }
 
 
@@ -205,8 +225,9 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(num1){
+      var num2 = num1 - 1;
+      for(let i = num1; i > n)
 }
 
 
