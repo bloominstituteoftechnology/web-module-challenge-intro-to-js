@@ -181,14 +181,14 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 // 0 -> rock ; 1 -> paper ; 2 -> scissors
 function game(user, computer){
   if(user===computer){
-    return("it's a tie")
+    return("it's a tie!")
   }
   else if(user===0 && computer===2){
     return("you win!")
   } else if(user>computer){
     return("you win!")
   } else{
-    return("you lose")
+    return("you lose!")
   }
 }
 
@@ -210,7 +210,7 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-  const mileCount = km/1.60934
+  const mileCount = km*0.621371
   return mileCount
 }
 
@@ -270,13 +270,13 @@ function grade(grade){
    return("you got an A")
  }
  else if(grade>=80 && grade<=89){
-  return("you got an B")
+  return("you got a B")
 }
 else if(grade>=70 && grade<=79){
-  return("you got an C")
+  return("you got a C")
 }
 else if(grade>=60 && grade<=69){
-  return("you got an D")
+  return("you got a D")
 }
 else if(grade<60){
   return("you got an F")
