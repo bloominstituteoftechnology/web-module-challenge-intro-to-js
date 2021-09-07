@@ -19,8 +19,11 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 19;
 
-
+if (votingAge > 18) {
+  console.log(true);
+}
 
 /*
 Task 1b - Values
@@ -33,8 +36,13 @@ Do the following:
    HINT: no function required
 */
 
+var a = 8
+var b = 9
 
-
+if (b > 5) {
+  a = 6
+  console.log(a)
+}
 
 
 /*
@@ -48,7 +56,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+var word = "1999";
 
+var number = parseInt(word);
+console.log(number);
 
 
 /*
@@ -60,11 +71,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
+function multiply(a, b){
   /*add your code here*/
+    return (a * b)
 }
 
-
+console.log (multiply(3, 4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -76,11 +88,12 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(number){
   /*add your code here*/
+  return number * 7
 }
 
-
+console.log (dogYears(4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -109,11 +122,30 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(weight, age){
   /*add your code here*/
+  if (age < 1 ) {
+    if (age >= (0.167) && age < (0.333)) {
+      return 0.1 * weight;
+    } else if (age >= (0.333) && age < (0.583)) {
+      return 0.05 * weight;
+    } else {
+      return 0.04 * weight;
+    }
+  } else {
+    if (weight <= 5) {
+      return 0.05 * weight;
+    } else if (weight >=6 && weight <= 10) {
+      return 0.04 * weight;
+    } else if (weight >=11 && weight <= 15 ) {
+      return 0.03 * weight; 
+    } else if (weight > 15) {
+      return 0.02 * weight;
+    }
+  }
 }
 
-
+console.log(hungryDog(4, 0.583));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -136,10 +168,40 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+var choice = Math.random();
+if ( choice <= (1/3)) {
+  choice = 'rock';
+} else if (choice > (1/3) && choice <= (2/3)) {
+  choice = 'paper'
+} else {
+  choice = 'scissors'
 }
 
+console.log (choice); 
+function game(user, computer){
+  /*add your code here*/
+  if (user === computer) {
+    return "it's a tie"
+  } else if (user === 'rock')  {
+    if (computer === 'scissors') {
+      return 'you win!'
+    } else {
+      return 'you lose!'
+    }
+  }  else if (user === 'scissors') {
+    if (computer === 'paper') {
+      return 'you win!'
+    } else {
+      return 'you lose!'
+    }
+  } else if (user === 'paper') {
+    if (computer === 'rock') {
+      return 'you win!'
+    } else {
+      return 'you lose!'
+    }
+  }
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -153,10 +215,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kilometers){
   /*add your code here*/
+  return kilometers * 0.621371;
 }
-
 
 
 //Task 5b - Feet to CM
@@ -167,10 +229,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(centimeters){
   /*add your code here*/
+  return centimeters / 30.48;
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -183,10 +245,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
+function annoyingSong(passedNumber){
       /*add your code here*/
+      var verse = `${passedNumber} bottles of soda on the wall, ${passedNumber} bottles of soda, take one down pass it around ${passedNumber - 1} bottles of soda on the wall`;
+      return verse;
 }
 
+console.log (annoyingSong(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -203,10 +268,25 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
+function grade(number){
 /*Your Code here */
+if (number >= 90) {
+  let string = "you got an A"
+  return string;
+} else if (number >= 80) {
+  let string = "you got a B"
+  return string;
+} else if (number >= 70) {
+  let string = "you got a C";
+  return string;
+} else if (number >= 60) {
+  let string = "you got a D";
+  return string;
+} else {
+  let string = "you got an F"
+  return string;
 }
-
+}
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -221,11 +301,19 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
+function vowelCounter(word) {
   /*add your code here*/
+  var array = Array.from(word);
+  var count = 0;
+  for (let i = 0; i < word.length; i++ ) {
+    if (array[i] == 'a'|| array[i] == 'e' || array[i] == 'i' || array[i] == 'o' || array[i] == 'u' || array[i] == 'A' || array[i] == 'E' || array[i] == 'I' || array[i] == 'O' || array[i] == 'U') {
+      count++;
+    }
+  }
+  return count;
 }
 
+console.log(vowelCounter("how many are there?"));
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
@@ -246,3 +334,5 @@ module.exports = {
   annoyingSong,
   grade
 }
+
+
