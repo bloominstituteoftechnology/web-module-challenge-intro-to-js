@@ -227,7 +227,13 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(num1){
       var num2 = num1 - 1;
-      for(let i = num1; i > n)
+      if(num2 > 1){
+          return `${num1} bottles of soda on the wall, ${num1} bottles of soda, take one down pass it around ${num2} bottles of soda on the wall`
+        }else if(num2 === 1){
+          return `${num1} bottles of soda on the wall, ${num1} bottles of soda, take one down pass it around ${num2} bottle of soda on the wall`
+        }else{
+          return `${num1} bottle of soda on the wall, ${num1} bottle of soda, take one down pass it around no more bottles of soda on the wall`
+        }
 }
 
 
