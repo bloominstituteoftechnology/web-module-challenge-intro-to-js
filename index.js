@@ -26,6 +26,7 @@ if (votingAge >= 18) {
   console.log("Is a Voter");
 
 } else {
+
   if (votingAge < 18) {
     console.log("Not a Voter") 
   }
@@ -45,13 +46,13 @@ Do the following:
 */
 
 let sport = 'badminton';
-const sport2 = 'volleyball'
+const sport2 = 'volleyball';
 
 if (sport2 === "volleyball") {
   sport = 'tennis';
 }
 
-console.log(sport)
+console.log(sport);
 
 
 
@@ -65,6 +66,8 @@ Do the following:
 
    HINT: look up the Number method
 */
+
+let val;
 
 val = Number("1999");
 
@@ -81,6 +84,9 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
+
+let a = 2;
+let b = 4; 
 
 function multiply(a, b){
   return a * b;
@@ -152,8 +158,8 @@ function hungryDog(weight, age){
   } else if (age <= 0.583 && age >= 0.333) {
     return weight * 0.05;
 
-  } else if (age < 0.333) {
-    return weight * 0.1;
+  } else if (age < 1) {
+    return weight * 2;
   }
 }
 
