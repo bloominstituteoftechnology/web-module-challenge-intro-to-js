@@ -38,10 +38,11 @@ Do the following:
 */
 let varA=10
 const varB="myString"
-if(varB="myString"){
+if(varB=="myString"){
   varA=99;
 }
 console.log(varA)
+
 
 
 
@@ -56,8 +57,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-let varA = "1999"
-let convertedVar = Number(varA)
+let varZ = "1999"
+let convertedVar = Number(varZ)
 console.log(convertedVar)
 
 
@@ -76,6 +77,7 @@ function multiply(a,b){
 }
 
 multiply(8,7)
+//console.log(multiply(8,7))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -93,6 +95,7 @@ function dogYears(humanYears){
 }
 
 dogYears(8)
+// console.log(dogYears(9))
 
 
 
@@ -150,6 +153,7 @@ function hungryDog(pounds,years){
 }
 
 hungryDog(50, 0.5)
+//console.log(hungryDog(15, 1))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -191,6 +195,8 @@ function game(user, computer){
 const computerNumber = Math.floor(Math.random()*3)
 game(1,computerNumber)
 
+// console.log(computerNumber)
+// console.log(game(1,computerNumber))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -208,6 +214,7 @@ function miles(km){
   return mileCount
 }
 
+// console.log(miles(5))
 
 
 //Task 5b - Feet to CM
@@ -223,6 +230,7 @@ function feet(cm){
   return ft
 }
 
+// console.log(feet(30))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -235,10 +243,12 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(startingNumber){
+      const endingNumber = startingNumber-1
+      return(startingNumber + " bottles of soda on the wall, " + startingNumber + " bottles of soda, take one down pass it around " + endingNumber +" bottles of soda on the wall")
 }
 
+// console.log(annoyingSong(99))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -255,11 +265,25 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(grade){
+ if(grade>=90 && grade<=100){
+   return("you got an A")
+ }
+ else if(grade>=80 && grade<=89){
+  return("you got an B")
+}
+else if(grade>=70 && grade<=79){
+  return("you got an C")
+}
+else if(grade>=60 && grade<=69){
+  return("you got an D")
+}
+else if(grade<60){
+  return("you got an F")
+}
 }
 
-
+// console.log(grade(88))
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
