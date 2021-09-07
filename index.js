@@ -30,7 +30,7 @@ Do the following:
  3. Return the newly calculated age
 */
 var age = 11;
-function Dogyears(age, ups) {
+function dogyears(age, ups) {
   return;
   var ups = age * 7;
 }
@@ -54,7 +54,7 @@ Adult Dogs 1 year and older
    11 - 15 lbs - 3% of their body weight 
    > 15lbs - 2% of their body weight 
 
-Puppies less than 1 year
+Puppies less than 1 year a
    2 - 4 months 10% of their body weight
    4 - 7 months 5% of their body weight 
    7 - 12 months 4% of their body weight
