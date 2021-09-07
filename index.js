@@ -19,6 +19,10 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 25
+if(votingAge>=18){
+  console.log("true")
+}
 
 
 
@@ -32,7 +36,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let varA=10
+const varB="myString"
+if(varB="myString"){
+  varA=99;
+}
+console.log(varA)
 
 
 
@@ -47,7 +56,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let varA = "1999"
+let convertedVar = Number(varA)
+console.log(convertedVar)
 
 
 
@@ -60,10 +71,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a*b
 }
 
+multiply(8,7)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -76,9 +88,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanYears){
+  return humanYears*7
 }
+
+dogYears(8)
 
 
 
@@ -109,10 +123,33 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(pounds,years){
+  if(years>=1){
+    if(pounds<=5){
+      return pounds*0.05
+    }
+    else if((pounds>6) && (pounds<=10)){
+      return pounds*0.04
+    }
+    else if((pounds>11) && (pounds<=15)){
+      return pounds*0.03
+    }
+    else if(pounds>=15){
+      return pounds*0.02
+    }
+  }
+  else if((years>=(2/12)) && (years<(4/12))){
+    return pounds*.1
+  }
+  else if((years>=(4/12)) && (years<(7/12))){
+    return pounds*.05
+  }
+  else if((years>=(4712)) && (years<1)){
+    return pounds*.04
+  }
 }
 
+hungryDog(50, 0.5)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -136,10 +173,23 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+
+// 0 -> rock ; 1 -> paper ; 2 -> scissors
 function game(user, computer){
-  /*add your code here*/
+  if(user===computer){
+    return("it's a tie")
+  }
+  else if(user===0 && computer===2){
+    return("you win!")
+  } else if(user>computer){
+    return("you win!")
+  } else{
+    return("you lose")
+  }
 }
 
+const computerNumber = Math.floor(Math.random()*3)
+game(1,computerNumber)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -153,8 +203,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  const mileCount = km/1.60934
+  return mileCount
 }
 
 
@@ -167,8 +218,9 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  const ft = cm/30.48
+  return ft
 }
 
 
