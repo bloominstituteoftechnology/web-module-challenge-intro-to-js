@@ -20,7 +20,13 @@ Do the following:
    HINT: no function required
 */
 
-
+let votingage = '16';
+  if (votingage >= '18') {
+    console.log(true)
+  }
+  else {
+    console.log()
+  };
 
 /*
 Task 1b - Values
@@ -246,3 +252,4 @@ module.exports = {
   annoyingSong,
   grade
 }
+
