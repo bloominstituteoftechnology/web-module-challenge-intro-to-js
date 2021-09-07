@@ -67,12 +67,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-const multiply = function multiply(a,b){
+function multiply(a,b){
   console.log(a*b)
 };
 multiply(3,4);
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -84,9 +82,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(x){
+  console.log(x*7)
 }
+dogYears(4);
 
 
 
