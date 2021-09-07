@@ -19,6 +19,7 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 18;
 
 
 
