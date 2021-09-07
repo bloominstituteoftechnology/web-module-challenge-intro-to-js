@@ -20,12 +20,9 @@ Do the following:
    HINT: no function required
 */
 
-let votingage = '16';
-  if (votingage >= '18') {
+let votingage = 20;
+  if (votingage >= 18) {
     console.log(true)
-  }
-  else {
-    console.log()
   };
 
 /*
@@ -39,7 +36,12 @@ Do the following:
    HINT: no function required
 */
 
-
+let x = 1;
+let y = 2;
+if (y > x) {
+  x = y + 1
+};
+console.log(x);
 
 
 
