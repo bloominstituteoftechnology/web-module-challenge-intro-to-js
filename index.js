@@ -43,8 +43,6 @@ if (y > x) {
 };
 console.log(x);
 
-
-
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -56,8 +54,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+let variable = '1999';
+variable = 1999;
+console.log(variable);
 
 /*
 Task 1d - Multiply
