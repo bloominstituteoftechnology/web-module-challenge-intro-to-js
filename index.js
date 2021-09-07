@@ -67,9 +67,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
-}
+const multiply = function multiply(a,b){
+  console.log(a*b)
+};
+multiply(3,4);
 
 
 
