@@ -20,6 +20,17 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge = 18;
+
+if (votingAge >= 18) {
+  console.log("Is a Voter");
+
+} else {
+  if (votingAge < 18) {
+    console.log("Not a Voter") 
+  }
+}
+
 
 
 /*
@@ -33,7 +44,14 @@ Do the following:
    HINT: no function required
 */
 
+let sport = 'badminton';
+const sport2 = 'volleyball'
 
+if (sport2 === "volleyball") {
+  sport = 'tennis';
+}
+
+console.log(sport)
 
 
 
@@ -48,6 +66,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+val = Number("1999");
+
+console.log(val)
+
 
 
 
@@ -60,8 +82,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+let a = 2;
+let b = 2;
+function multiply(a, b){
+  return a * b;
 }
 
 
@@ -76,9 +100,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
+
+console.log(dogYears(10));
 
 
 
