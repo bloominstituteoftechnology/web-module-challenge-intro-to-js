@@ -21,7 +21,7 @@ Do the following:
 */
 var votingAge = 20;
 if (votingAge>=18){
-  console.log('true');
+  console.log(true);
 }
 
 
@@ -37,13 +37,13 @@ Do the following:
 */
 let num = 5;
 let num1 = 10;
-if (num1>=10){
-  let num = 0;
-  console.log("num1>=10");
+if (num1>=num){
+   num = 0;
+  console.log(0);
 }
 else {
   num=1;
-  console.log("num1<10");
+  console.log(1);
 }
 
 
@@ -96,8 +96,7 @@ function dogYears(a){
   return(a*7);
 }
 
-let age = dogYears(10);
-console.log(age);
+console.log(dogYears(10));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -130,22 +129,22 @@ function hungryDog(w,age){
   if(w<=5 && age>=1) { 
   return(w*.05);  }  
   else if( (w>=6 && w<=10) && (age>=1)){
-    return(w*0.04);
+    return(w*.04);
   }
   else if ((w>=11 && w<=15) && (age>=1)){
-    return(w*0.03);
+    return(w*.03);
   }
   else if (( w>15) && (age>=1)){
     return(w*.02);
   }
-  else if ((age>=0.166 && age<0.33) && (age<1)){
-    return(w*0.1);
+  else if (age>=0.166 && age<0.33){
+    return(w*.1);
   }
-  else if ((age>=0.33 && age<0.58) && (age<1)){
-    return(w*0.05);
+  else if (age>=0.33 && age<0.58) {
+    return(w*.05);
   }
-  else if ((age>=0.58 && age<1) && (age<1)){
-    return(w*0.04);
+  else if (age>=0.58 && age<1){
+    return(w*.04);
   }
 }
 
@@ -176,10 +175,10 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 
 function game(user, computer){
 const str=  Math.random(0, 1);
-if(str=0){ 
+if(str===0){ 
   console.log("you win!");
 }
-else if(str=1){ 
+else if(str===1){ 
   console.log("you lose!");
 }
 else { 
@@ -206,9 +205,7 @@ function miles(kilo){
   return(kilo/1.609);
 }
 const m=miles(5);
-
-
-
+console.log(m)
 
 //Task 5b - Feet to CM
 /*
@@ -222,7 +219,7 @@ function feet(cm){
   return(cm/30.48);
 }
 const cm=feet(5);
-
+console.log(cm)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -240,7 +237,7 @@ function annoyingSong(start){
   console.log('${i} bottles of soda on the wall');
   }
 }
-annoyingSong(3);
+annoyingSong(99);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -260,22 +257,22 @@ Using the grade function below do the following:
 
 function grade(score){
 if (score>=90 && score<=100){
-  console.log('you got an A' )
+  return('you got an A' )
 }
 else if (score>=80 && score<=89){
-  console.log('you got a B')
+  return('you got a B')
 }
 else if (score>=70 && score<=79){
-  console.log(' you got a C')
+  return(' you got a C')
 }
 else if (score>=60 && score<=69){
-  console.log('you got a D')
+  return('you got a D')
 }
 else{
-  console.log('you got a F')
+  return('you got a F')
 }
 }
-grade(90);
+console.log(grade(90));
 
 
 
