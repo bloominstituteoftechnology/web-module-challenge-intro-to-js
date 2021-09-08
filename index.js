@@ -1,5 +1,7 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
+const { switchCase } = require("@babel/types");
+
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 // task 1a, 1b, and 1c are not autograded
@@ -121,9 +123,10 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(dogAge, dogWeight){
+function hungryDog(dogWeight, dogAge){
   if(dogAge >=1 ) {
     if(dogWeight <= 5) {
+      console.log("A ran")
       return dogWeight * .05
     } else if(dogWeight >= 6 && dogWeight <= 10){
       return dogWeight * .04;
@@ -132,19 +135,23 @@ function hungryDog(dogAge, dogWeight){
   }else {
     return dogWeight*.02;
   }
-}else if(dogAge > 1){
-  if(dogAge > .25){
-    return dogWeight*.01;
-  }else if(dogWeight < .60){
+}else if(dogAge < 1){
+  if(dogAge <= .334){
+    console.log("1 ran")
+    return dogWeight*.1;
+  }else if(dogAge < .583){
+    console.log("2 ran")
     return dogWeight*.05;
+    
   }else {
+    console.log("3 ran")
     return dogWeight*.04;
   }
 }
 return "Please enter valid data"
 }
-console.log(hungryDog(1,15));
-
+console.log(hungryDog(16, 0.33));
+console.log(hungryDog(4, 0.583))
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
@@ -165,33 +172,14 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-const computer = Math.round(Math.random()*3)
 
-console.log(computer)
+const num = Math.round(Math.random()*3)
+
+
+
 function game(user, computer){
-  let scorePlayer=0;
-  let scoreComp = 0;
-  let Playerwins = false;
-  if(user.toLowerCase() === "paper"){
-    score =1;
-    Playerwins = true;
-  }else if(user.toLowerCase() === "scissors"){
-    score = 2;
-  }else if(user.toLowerCase() === "rock"){
-    score =3;
-  }else {
-    return "Please enter: Rock, Paper, or Scissors"
-  }
-  if(computer.toLowerCase() === "paper"){
-    scoreComp =1;
-  }else if(computer.toLowerCase() === "scissors"){
-    scoreComp =2;
-  }else if(computer.toLowerCase() === "rock"){
-    scoreComp =3;
-  }else {
-    return "Please enter: Rock, Paper, or Scissors"
-  }
-  
+
+
   
 }
 
@@ -247,7 +235,7 @@ function annoyingSong(number){
         }
       }
 }
-console.log(annoyingSong(45))
+console.log(annoyingSong(4))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -264,10 +252,22 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(grade){
+  let comment = "you got an F";
+if(grade >=90 && grade <=100){
+  comment = "you got an A";
+}else if(grade >= 80 && grade <=89){
+  comment = "you got a B";
+}else if (grade >=70 && grade <=79){
+  comment = "you got a C";
+}else if(grade >=60 && grade <=69){
+  comment = "you got a D"
+}else {
+  return comment;
 }
-
+return comment;
+}
+console.log(grade(99))
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -281,11 +281,28 @@ Using the vowelCounter function below do the following:
 HINT - you may need to study tomorrow's content on arrays 
 HINT - try looking up the .includes() method
 */
+const vowels = ["a", "e", "i", "o", "u"]
 
+function vowelCounter(str) {
+ // initialize count
+ let count = 0;
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+ // loop through string to test if each character is a vowel
+ for (let char of str.toLowerCase()) {
+     if (vowels.includes(char)) {
+         count++;
+     }
+ }
+
+ // return number of vowels
+ return count
+  // const count = str.match(/[aeiou]/gi).length;
+
+  //   // return number of vowels
+  //   return count;
+
 }
+console.log(vowelCounter("How many vowels are in this sentence"))
 
 
 
