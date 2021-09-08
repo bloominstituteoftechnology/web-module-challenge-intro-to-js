@@ -70,7 +70,6 @@ Do the following:
 function multiply(a,b){
   console.log(a*b)
 };
-multiply(3,4);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -85,9 +84,6 @@ Do the following:
 function dogYears(x){
   console.log(x*7)
 }
-dogYears(4);
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -138,9 +134,6 @@ function hungryDog(x,y){
     }
   }
 }
-hungryDog(15,1);
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -163,11 +156,34 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
-}
-
-
+function game(user){
+  var computer = Math.floor(Math.random()*3);
+  if(user="rock"){
+    if(computer=0){
+      console.log("it's a tie")
+    }else if(computer=1){
+      console.log("you lose!")
+    }else{
+      console.log("you win!")
+    }
+  }else if(user="paper"){
+    if(computer=0){
+      console.log("you win!")
+    }else if(computer=1){
+      console.log("it's a tie")
+    }else{
+      console.log("you lose!")
+    }
+  }else{
+    if(computer=0){
+      console.log("you lose!")
+    }else if(computer=1){
+      console.log("you win!")
+    }else{
+      console.log("it's a tie")
+    }
+  }
+};
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -180,11 +196,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(KM){
+  return KM*0.6214
 }
-
-
 
 //Task 5b - Feet to CM
 /*
@@ -194,11 +208,9 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm*0.3937007874
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -210,10 +222,11 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+  for(let i=number; i=0; i--){
+    console.log(i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + (i-1) + "bottles of soda on the wall.");
+  }
 }
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -230,11 +243,19 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if (score <60){
+    console.log('you got an F')
+  }else if (score <70){
+    console.log('you got a D')
+  }else if (score <80){
+    console.log('you got a C')
+  }else if (score <90){
+    console.log('you got a B')
+  }else {
+    console.log('you got an A')
+  }
 }
-
-
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
