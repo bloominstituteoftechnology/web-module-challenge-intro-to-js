@@ -52,7 +52,7 @@ Do the following:
    HINT: look up the Number method
 */
 var numberString = "1999";
-number(numberString);
+Number(numberString);
 console.log(numberString);
 
 
@@ -210,7 +210,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  return cm * .0328084;
+  return cm / 30.48;
 }
 
 
@@ -262,7 +262,7 @@ function grade(num){
   }else if(num >= 60){
     return 'you got a D'
   }else{
-    return 'you got a F'
+    return 'you got an F'
   }
 }
 
