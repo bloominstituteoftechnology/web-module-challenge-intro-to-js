@@ -20,7 +20,10 @@ Do the following:
    HINT: no function required
 */
 
-
+let votingage = 20;
+  if (votingage >= 18) {
+    console.log(true)
+  };
 
 /*
 Task 1b - Values
@@ -33,9 +36,12 @@ Do the following:
    HINT: no function required
 */
 
-
-
-
+let x = 1;
+let y = 2;
+if (y > x) {
+  x = y + 1
+};
+console.log(x);
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -48,8 +54,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+let variable = '1999';
+variable = 1999;
+console.log(variable);
 
 /*
 Task 1d - Multiply
@@ -60,11 +67,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
-}
-
-
+function multiply(a,b){
+  console.log(a*b)
+};
+multiply(3,4);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -76,9 +82,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(x){
+  console.log(x*7)
 }
+dogYears(4);
 
 
 
@@ -109,9 +116,29 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(x,y){
+  if(y>=1){
+    if(x>15){
+      console.log(x*.02)
+    }else if(x>10){
+      console.log(x*.03)
+    }else if(x>5){
+      console.log(x*.04)
+    }else{console.log(x*.05)
+         }
+  }else{
+    if(x>.66){
+      console.log(x*.1)
+    }else if(x>.33){
+      console.log(x*.05)
+    }else if(x>.16){
+      console.log(x*.04)
+    }else{
+      console.log("Too young to be weaned.")
+    }
+  }
 }
+hungryDog(15,1);
 
 
 
@@ -246,3 +273,4 @@ module.exports = {
   annoyingSong,
   grade
 }
+
