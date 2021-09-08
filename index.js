@@ -19,7 +19,10 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 19;
+if(votingAge >= 18){
+  console.log("true");
+} 
 
 
 /*
@@ -32,7 +35,13 @@ Do the following:
 
    HINT: no function required
 */
+let value1 = "Hello, My name is ";
+let value2 = "Robert Von Der Becke";
 
+if(value2) {
+  value1 += value2;
+  console.log(value1)
+}
 
 
 
@@ -47,7 +56,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let myString = "1999";
+console.log(parseInt(myString))
 
 
 
@@ -60,10 +70,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
-
+let result = multiply(2, 2);
+console.log(result);
+console.log(multiply(5, 10));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -76,10 +88,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
-
+console.log(dogYears(3))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -109,11 +121,29 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(dogAge, dogWeight){
+  if(dogAge >=1 ) {
+    if(dogWeight <= 5) {
+      return dogWeight * .05
+    } else if(dogWeight >= 6 && dogWeight <= 10){
+      return dogWeight * .04;
+    }else if(dogWeight <= 15){
+      return dogWeight*.03;
+  }else {
+    return dogWeight*.02;
+  }
+}else if(dogAge > 1){
+  if(dogAge > .25){
+    return dogWeight*.01;
+  }else if(dogWeight < .60){
+    return dogWeight*.05;
+  }else {
+    return dogWeight*.04;
+  }
 }
-
-
+return "Please enter valid data"
+}
+console.log(hungryDog(1,15));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -135,9 +165,34 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+const computer = Math.round(Math.random()*3)
 
+console.log(computer)
 function game(user, computer){
-  /*add your code here*/
+  let scorePlayer=0;
+  let scoreComp = 0;
+  let Playerwins = false;
+  if(user.toLowerCase() === "paper"){
+    score =1;
+    Playerwins = true;
+  }else if(user.toLowerCase() === "scissors"){
+    score = 2;
+  }else if(user.toLowerCase() === "rock"){
+    score =3;
+  }else {
+    return "Please enter: Rock, Paper, or Scissors"
+  }
+  if(computer.toLowerCase() === "paper"){
+    scoreComp =1;
+  }else if(computer.toLowerCase() === "scissors"){
+    scoreComp =2;
+  }else if(computer.toLowerCase() === "rock"){
+    scoreComp =3;
+  }else {
+    return "Please enter: Rock, Paper, or Scissors"
+  }
+  
+  
 }
 
 
@@ -153,8 +208,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+ return kilometers* 0.621371;
 }
 
 
@@ -167,8 +222,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm/30.48;
 }
 
 
@@ -183,10 +238,16 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+      for(let i = number-1; i>0;i--){
+        console.log(`${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${i} bottles of soda on the wall`)
+        number--;
+        if(i===1){
+          return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`
+        }
+      }
 }
-
+console.log(annoyingSong(45))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
