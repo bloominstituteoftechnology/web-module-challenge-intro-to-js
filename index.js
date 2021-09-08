@@ -203,7 +203,7 @@ Using the miles function below do the following:
 
 function miles(kilo){
  
-  return(kilo/1.609);
+  return(kilo*0.621371);
 }
 const m=miles(5);
 console.log(m)
