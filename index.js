@@ -176,16 +176,17 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 function game(user, computer){
 const str=  Math.random(0, 1);
 if(str===0){ 
-  console.log("you win!");
+  return("you win!");
 }
 else if(str===1){ 
-  console.log("you lose!");
+  return("you lose!");
 }
 else { 
-    console.log("it's a tie");
+    return("it's a tie");
 }
+
 }
-game(0,1);
+console.log(game(0,1));
 /*  */
 
 
