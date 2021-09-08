@@ -60,10 +60,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(a  *  b){
-  return multiply
+function multiply(a, b){
+  return a * b;
 }
-
+multiply(4832, 8931);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -143,8 +143,10 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+var randomNumber = Math.random()
+
   function game(user, computer){
-    if (user === computer)
+    if (user === computer){
     return "it's a tie!"
   }
   else if (user === "rock" && computer === "scissors"){
@@ -156,7 +158,8 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
   else if (user === "scissors" && computer === "paper"){
     return "you win!"
   }
-else {return "you lose!"};
+  return "you lose!"
+  }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
