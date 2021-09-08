@@ -137,10 +137,10 @@ function hungryDog(w,age){
   else if (( w>15) && (age>=1)){
     return(w*.02);
   }
-  else if (age>=0.166 && age<0.33){
+  else if (age>=0.166 && age<=0.33){
     return(w*.1);
   }
-  else if (age>=0.33 && age<0.58) {
+  else if (age>0.3333 && age<0.58) {
     return(w*.05);
   }
   else if (age>=0.58 && age<1){
@@ -182,7 +182,7 @@ else if(str===1){
   return("you lose!");
 }
 else { 
-    return("it's a tie");
+    return("you lose!");
 }
 
 }
