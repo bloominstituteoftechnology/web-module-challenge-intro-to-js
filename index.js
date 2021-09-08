@@ -63,8 +63,7 @@ Do the following:
 function multiply(a, b){
   return a * b;
 }
-multiply(4832, 8931);
-
+multiply(5, 7);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -76,9 +75,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(){
+  return dogYears;
 }
+divide(1, 7)
 
 
 
@@ -109,8 +109,8 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(age, weight) {
-  if (age >= 1 && weight <= 5) {
+function hungryDog(age, weight){
+  if (age >= 1 && weight <= 5){
       return weight * 10;
   } else if (age < 1) {
       return weight * 15;
@@ -144,6 +144,15 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 var randomNumber = Math.random()
+  if(randomNumber > .66){
+    randomNumber = "scissors"
+  }
+  else if (randomNumber > .33){
+    randomNumber = "rock"
+  }
+  else {
+    randomNumber = "paper"
+  }
 
   function game(user, computer){
     if (user === computer){
