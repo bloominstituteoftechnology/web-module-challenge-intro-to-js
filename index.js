@@ -1,8 +1,8 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
-/*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+/*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTO-GRADED WILL NOT WORK*/
 
-// task 1a, 1b, and 1c are not autograded
+// task 1a, 1b, and 1c are not auto-graded
 
 /*
 When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.
@@ -67,12 +67,17 @@ Do the following:
    HINT: look up the Number method
 */
 
-let val;
+// let val;
 
-val = Number("1999");
+// val = Number("1999");
 
-console.log(val)
+// console.log(val)
 
+let go = "1999";
+
+go = Number("1999"); 
+
+console.log(go);
 
 
 
@@ -231,7 +236,7 @@ console.log('task 4', game('rock', computer));
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
