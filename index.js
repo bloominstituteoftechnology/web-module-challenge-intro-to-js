@@ -173,16 +173,24 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-const num = Math.round(Math.random()*3)
 
 
 
 function game(user, computer){
-
-
+  user = user.toLowerCase();
+  computer = computer.toLowerCase();
+  let result = user + computer;
+  console.log(result)
+  if(result === "scissorspaper"|| result === "paperrock" || result ==="rockscissors"){
+    return "you win!";
+  }else if(user === computer){
+    return "it's a tie";
+  }else {
+    return "you lose!"
+  }
   
 }
-
+game("Scissors", "Paper")
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -227,15 +235,15 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(number){
-      for(let i = number-1; i>0;i--){
-        console.log(`${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${i} bottles of soda on the wall`)
-        number--;
-        if(i===1){
-          return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`
-        }
+      for(number-1; number>0;number--){
+        return (`${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`)
+        // number--;
+        // if(number===1){
+        //   return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`
+        // }
       }
 }
-console.log(annoyingSong(4))
+console.log(annoyingSong(10))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
