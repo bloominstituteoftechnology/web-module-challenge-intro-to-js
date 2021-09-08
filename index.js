@@ -78,9 +78,7 @@ Do the following:
 function dogYears(){
   return dogYears;
 }
-divide(1, 7)
-
-
+divide(1, 7);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -181,11 +179,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km, miles){
+  return km = miles;
 }
-
-
+console.log(km, miles);
 
 //Task 5b - Feet to CM
 /*
@@ -195,11 +192,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(feet, CM){
+  return feet();
 }
-
-
+console.log(feet, CM);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -231,11 +227,28 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  return score(a, b, c, d, f)
 }
-
-
+if score (100 > 90){
+  return "you got an A"
+}
+if score(89 > 80){
+  return "you got a B"
+}
+if score(79 > 70){
+  return "you got a C"
+}
+if score(69 > 60){
+  return "you got a C"
+}
+if score(59 > 50){
+  return "you got a D"
+}
+if score(49 > 40){
+  return "you got an F"
+}
+console.log(grade();
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
