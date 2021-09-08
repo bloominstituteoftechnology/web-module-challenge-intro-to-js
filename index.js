@@ -185,6 +185,7 @@ else if(str=1){
 else { 
     console.log("it's a tie");
 }
+}
 game(0,1);
 
 
