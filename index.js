@@ -18,7 +18,7 @@ Do the following:
    2. Console log true if age is 18 or higher
 
    HINT: no function required
-*/
+*
 
 
 
@@ -60,8 +60,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a  *  b){
+  return multiply
 }
 
 
@@ -109,11 +109,18 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(age, weight) {
+  if (age >= 1 && weight <= 5) {
+      return weight * 10;
+  } else if (age < 1) {
+      return weight * 15;
+  } else if (age >= 1 && weight > 15) {
+      return weight * 15;
+  } else {
+      return age, weight;
+  }
 }
-
-
+console.log(hungryDog);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -136,11 +143,20 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
-}
-
-
+  function game(user, computer){
+    if (user === computer)
+    return "it's a tie!"
+  }
+  else if (user === "rock" && computer === "scissors"){
+    return "you win!"
+  }
+  else if (user === "paper" && computer === "rock"){
+    return "you win!"
+  }
+  else if (user === "scissors" && computer === "paper"){
+    return "you win!"
+  }
+else {return "you lose!"};
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
