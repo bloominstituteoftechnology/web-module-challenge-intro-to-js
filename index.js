@@ -129,14 +129,14 @@ function hungryDog(weight,age){
       return weight*.05
       }
   }else{
-    if(weight>.66){
-      return weight*.1
+    if(age>.66){
+      return weight*.04
     }
-    else if(weight>.33){
+    else if(age>.33){
       return weight*.05
     }
-    else if(weight>.16){
-      return weight*.04
+    else if(age>.16){
+      return weight*.1
     }
     else{
       return "Too young to be weaned."
@@ -204,7 +204,7 @@ Using the miles function below do the following:
 */
 
 function miles(KM){
-  let MI = KM*0.6214;
+  let MI = KM*0.621371;
   return MI
 }
 // console.log(miles(1))
@@ -270,7 +270,7 @@ function grade(score){
     return 'you got an A'
   }
 }
-console.log(grade(89))
+// console.log(grade(89))
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
