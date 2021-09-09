@@ -168,28 +168,29 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 
 function game(user){
   var computer = Math.floor(Math.random()*3)
-  if(user=="rock"){
-    user = 0
+  let input = user
+  if(user=="Rock"){
+    input = 0
   }
-  else if(user=="paper"){
-    user = 1
+  else if (user=="Paper"){
+    input = 1
   }
-  else{
-    user = 2
+  else {
+    input = 2
   }
-  if(user==computer){
+  if(input==computer){
       return "it's a tie"
     }
-  else if(user>computer){
+  else if((input==0&&computer==2)||(input==1&&computer==0)||(input==2&&computer==1)){
     if(computer!=0){
       return "you win!"
     }
-    else{
-      return "you lose!"
-    }
+  }
+  else{
+    return "you lose!"
   }
 }
-// console.log(game("rock"))
+// console.log(game("Rock"))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
