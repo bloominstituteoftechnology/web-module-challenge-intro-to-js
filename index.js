@@ -21,9 +21,11 @@ Do the following:
 */
 let votingAge = 18;
 
-if (votingAge > = 18){
+if (votingAge >18){
   console.log('task 1 a:', "Vote Now")
-} else {
+}
+
+{
   if (votingAge < 18){
     console.log('task 1 a:', "Denied")
   }
