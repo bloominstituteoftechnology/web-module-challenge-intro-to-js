@@ -167,32 +167,32 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 let computer = Math.random();
 if(computer<=.34){
-  computer = "Rock";
+  computer = "rock";
 }
 else if(computer<=.67){
-  computer = "Paper";
+  computer = "paper";
 }
 else if (computer>0.67){
-  computer = "Scissors";
+  computer = "scissors";
 }
 function game(user,computer){
   if(user===computer){
       return `it's a tie`;
-    }
-  else if(user==="Rock"&&computer==="Scissors"){
+  }
+  else if(user==="rock" && computer==="scissors"){
     return `you win!`;
   }
-  else if (user==="Paper"&&computer==="Rock"){
+  else if (user==="paper" && computer==="rock"){
     return `you win!`;
   }
-  else if (user==="Scissors"&&computer==="Paper"){
+  else if (user==="scissors"&&computer==="paper"){
       return `you win!`;
   }
   else{
     return `you lose!`;
   }
 }
-// console.log(game("Rock"))
+// console.log(game("rock"))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
