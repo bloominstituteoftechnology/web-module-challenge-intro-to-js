@@ -179,14 +179,20 @@ function game(user,computer){
   if(user==computer){
       return `it's a tie`
     }
-  else if((user=="Rock"&&computer=="Scissors")||(user=="Paper"&&computer=="Rock")||(user=="Scissors"&&computer=="Paper")){
+  else if(user=="Rock"&&computer=="Scissors"){
+    return `you win!`
+  }
+  else if (user=="Paper"&&computer=="Rock"){
+    return `you win!`
+  }
+  else if (user=="Scissors"&&computer=="Paper"){
       return `you win!`
   }
   else{
     return `you lose!`
   }
 }
-console.log(game("Rock"))
+// console.log(game("Rock"))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
