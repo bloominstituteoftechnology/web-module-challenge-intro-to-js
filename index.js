@@ -165,31 +165,31 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let computer = Math.random()
-if(computer<=.33){
-  computer = "Rock"
+let computer = Math.random();
+if(computer<=.34){
+  computer = "Rock";
 }
-else if(computer<=.66){
-  computer = "Paper"
+else if(computer<=.67){
+  computer = "Paper";
 }
-else{
-  computer = "Scissors"
+else if (computer>0.67){
+  computer = "Scissors";
 }
 function game(user,computer){
-  if(user==computer){
-      return `it's a tie`
+  if(user===computer){
+      return `it's a tie`;
     }
-  else if(user=="Rock"&&computer=="Scissors"){
-    return `you win!`
+  else if(user==="Rock"&&computer==="Scissors"){
+    return `you win!`;
   }
-  else if (user=="Paper"&&computer=="Rock"){
-    return `you win!`
+  else if (user==="Paper"&&computer==="Rock"){
+    return `you win!`;
   }
-  else if (user=="Scissors"&&computer=="Paper"){
-      return `you win!`
+  else if (user==="Scissors"&&computer==="Paper"){
+      return `you win!`;
   }
   else{
-    return `you lose!`
+    return `you lose!`;
   }
 }
 // console.log(game("Rock"))
