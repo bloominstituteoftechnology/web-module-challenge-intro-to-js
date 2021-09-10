@@ -165,11 +165,11 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let computer = Math.floor(Math.random()*3)
-if(computer==0){
+let computer = Math.random()
+if(computer<=.33){
   computer = "Rock"
 }
-else if(computer==1){
+else if(computer<=.66){
   computer = "Paper"
 }
 else{
