@@ -19,15 +19,15 @@ Do the following:
 
    HINT: no function required
 */
-let votingAge = 18;
+const votingAge = 18;
 
-if (votingAge >18){
-  console.log('task 1 a:', "Vote Now")
+if (votingAge >= 18){
+  console.log(true)
 }
 
 {
   if (votingAge < 18){
-    console.log('task 1 a:', "Denied")
+    console.log(false)
   }
 }
 
@@ -48,8 +48,6 @@ if (season === "fall") {
   IcecreamFlavor = 'OrangeSherbet';
 }
 console.log('task 1 b:',IcecreamFlavor)
-
-
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -80,7 +78,6 @@ function multiply(a, b){
 }
 console.log('task 1 d:', multiply(10,7))
 
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Age in Dog years
@@ -91,11 +88,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
 
-
+console.log('task 2', dogYears(18))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -124,8 +121,24 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if(age >= 1 && weight <=5){
+    return weight * 0.05;
+  } else if(age >= 1 && weight >= 6 && weight <= 10){
+    return weight * 0.04;
+  }else if(age >= 1){
+    return weight * 0.03;
+  }else if(age >= 1 & weight > 15){
+    return weight * 0.02;
+  }else if(age < 1 && age >= 0.583){
+    return weight * 0.04;
+  }else if(age > 0.583 && age >= 0.333){
+    return weight * 0.05;
+  }else if(age < 0.333){
+    return weight * 0.10;
+  }else{
+    return 'please try again';
+  }
 }
 
 
@@ -150,11 +163,28 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
 
-function game(user, computer){
-  /*add your code here*/
+if(computer <= 0.34){
+  computer = 'rock';
+}else if(computer <= 0.67){
+  computer = 'paper';
+}else if(computer > 0.67){
+  computer = 'sissors'
 }
-
+function game(user, computer){
+  if(user === computer){
+    return `it's a tie`;
+  }else if(user === 'rock' && computer === 'sissors'){
+    return 'you win!';
+  }else if(user === 'paper' && computer === 'rock'){
+    return 'you win!';
+  }else if(user === 'sissors' && computer === 'papper'){
+      return 'you win!';
+}else{
+  return `you lose!`;
+}
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
