@@ -109,10 +109,25 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if(age>= 1 && weight <= 5){
+    return weight * 0.05;
+  }else if(age >= 1 && weight >= 6 && weight <= 10){
+    return weight * 0.04;
+  }else if(age >=1 && weight>=11 &&weight<=15){
+    return weight * 0.03;
+  }else if(age >= 1 && weight > 15){
+    return weight * 0.02;
+  }else if(age < 0.583 && age>= 0.583){
+    return weight * 0.04;
+  }else if(age < 0.583 && age >= 0.333){
+    return weight * 0.05;
+  }else if(age < 0.333){
+    return weight * 0.01;
+  }
 }
 
+console.log(hungryDog(15,1))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -135,11 +150,7 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
-function game(user, computer){
-  /*add your code here*/
-}
-
+function game(0)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -183,9 +194,28 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+
+function annoyingSong()  {
+    if (counter == 1) {
+        bottles = 'bottle';
+    } else {
+        bottles = 'bottles';
+    }
+    console.log(counter+" "+bottles+" of beer on the wall.");
+    if (counter < 99) {
+        console.log("");
+        console.log(counter+" "+bottles+" of beer on the wall.");
+    }
+    console.log(counter+" "+bottles+" of beer.");
+    console.log("Take one down.");
+    console.log("Pass it around.");
+    if (counter == 1) {
+        console.log("No bottles of beer on the wall.");
+    }
 }
+
+console.log(annoyingSong)
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -203,9 +233,46 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(grade){
+  
+  if(grade = 100 && grade >=90 )
+
+  {
+    return 'you got an A';
+    
+  }
+
+  if(grade >= 80 && grade <= 89 )
+  
+  {
+    return 'you got a B';
+  }
+
+  if(grade >= 70 && grade <= 79 )
+
+  {
+    return 'you got a C';
+  }
+
+  if(grade >= 60 && grade <= 69 )
+
+  {
+    return 'You got a D';
+  }
+
+  if(grade <= 60 )
+
+  {
+    return 'you got a F';
+  }
+  
 }
+console.log(grade(100))
+
+
+
+
+
 
 
 
