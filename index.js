@@ -76,9 +76,14 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function calculateDogAge(age) {
+  var dogYears = 7*age;
+  console.log("Your doggie is " + dogYears + " years old in dog years!");
 }
+
+calculateDogAge(1);
+calculateDogAge(0.5);
+calculateDogAge(12);
 
 
 
@@ -150,7 +155,7 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-function game(0)
+function game()
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
