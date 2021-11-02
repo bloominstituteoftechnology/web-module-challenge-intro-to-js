@@ -20,7 +20,13 @@ Do the following:
    HINT: no function required
 */
 
-
+let votingAge = 21
+if (votingAge>=18) {
+  console.log(true)
+}
+else {
+  console.log(false)
+}
 
 /*
 Task 1b - Values
@@ -221,9 +227,16 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+word = 'pOop'
+vowel = ['a','e','i','o','u']
+function vowelCounter(word) {
+  word = word.tolowercase()
+  let count = 0
+  for (let words in word)
+    if (vowel.includes(words)) {
+      count += 1
+    }
+  return count
 }
 
 
