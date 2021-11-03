@@ -131,6 +131,8 @@ function hungryDog(weight, age){
     return weight * 0.04;
   } else if (age < 0.583 && age >= 0.333) {
     return weight * 0.05;
+  } else if (age < 0.333 && age >= 0.167) {
+    return weight *.1;
   } else if (age < 0.333) {
     return weight * 0.01;
   }
@@ -163,7 +165,7 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
    2 = scissocrs
 */
 
-let compChoice = Math.floor(Math.random()* 3) 
+let computer = Math.floor(Math.random()* 3) 
 function game(user, computer){
   if (user === 'rock' && computer === 0) {
     return "It's a tie";
@@ -184,7 +186,7 @@ function game(user, computer){
   } else if (user === 'scissors' && computer === 1) {
     return "you win!";
   } else {
-    console.log("Something went wrong")
+    console.log("Something went wrong");
   }  
 }
 
@@ -201,8 +203,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371;
 }
 
 
@@ -215,8 +217,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
 
@@ -231,8 +233,10 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(startNum){
+  for (i = startNum; i > 0; i--) {
+    return startNum + " bottles of soda on the wall, " + startNum + " bottles of soda, take one down pass it around " + (startNum - 1) + "bottles of soda on the wall";
+  }
 }
 
 
@@ -251,8 +255,22 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(grade){
+  if (grade > 100) {
+    return 'invalid input';
+  } else if (grade >= 90 && grade <= 100) {
+    return 'you got an A'
+  } else if (grade >= 80 && grade <= 89) {
+    return 'you got a B'
+  } else if (grade >= 70 && grade <= 79) {
+    return 'you got a C'
+  } else if (grade >= 60 && grade <= 69) {
+    return 'you got a D'
+  } else if (grade < 60) {
+    return 'you got an F'
+  } else {
+    console.log('Something Went Wrong')
+  }
 }
 
 
@@ -268,11 +286,6 @@ Using the vowelCounter function below do the following:
 HINT - you may need to study tomorrow's content on arrays 
 HINT - try looking up the .includes() method
 */
-
-
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
-}
 
 
 
