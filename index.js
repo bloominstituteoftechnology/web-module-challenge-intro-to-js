@@ -121,9 +121,9 @@ function hungryDog(weight, age){
     }
   } else if(age >= (2/12) && age <= (4/12) ){
     return weight * .1;
-  } else if(age > (4/12) && age < (7/12)){
-    return weight * .06;
-  } else if(age >= (7/12) && age < 1){
+  } else if(age > (4/12) && age < (.583)){
+    return weight * .05;
+  } else if(age >= (.583) && age < 1){
     return weight * .04;
   }
 }
@@ -146,9 +146,41 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+let randNum = Math.floor(Math.random() * 3);
+let computerChoice;
+if(randNum === 1){
+  computerChoice = 'rock';
+}else if(randNum === 2){
+  computerChoice = 'paper';
+}else if(randNum === 3){
+  computerChoice = 'scissors';
+}
 function game(user, computer){
-
+  if(user === 'rock'){
+    if(computer === 'rock'){
+      return "it's a tie";
+    }else if(computer === 'paper'){
+      return 'you lose!';
+    }else if(computer === 'scissors'){
+      return 'you win!';
+    }
+  }else if(user === 'paper'){
+    if(computer === 'rock'){
+      return 'you win!';
+    }else if(computer === 'paper'){
+      return "it's a tie";
+    }else if(computer === 'scissors'){
+      return 'you lose!';
+    }
+  }else if(user === 'scissors'){
+    if(computer === 'rock'){
+      return 'you lose!';
+    }else if(computer === 'paper'){
+      return "you win!";
+    }else if(computer === 'scissors'){
+      return "it's a tie";
+    }
+  }
 }
 
 
@@ -241,8 +273,18 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string) {
+  let stringCount = 0;
+  for(i = 0; i < string.length; i++){
+    if(string[i] === 'a' || 
+    string[i] === 'e' || 
+    string[i] === 'i' || 
+    string[i] === 'o' || 
+    string[i] === 'u'){
+      stringCount++;
+    }
+  }
+  return stringCount;
 }
 
 
