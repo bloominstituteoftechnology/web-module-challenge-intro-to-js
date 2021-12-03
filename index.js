@@ -122,6 +122,8 @@ function hungryDog(/*add your code here*/){
 Create a global variable that randomly generates the computer's choice
 Use Math.random to determine the computers choice (Math.random gives a random number between 0 and 1)
 
+NOTE: Computer must be a global variable. It will be passed into the function as an argument when the function is invoked. 
+
 HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 
 Use the game function below to do the following:
