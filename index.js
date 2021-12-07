@@ -19,7 +19,8 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge= 19;
+console.log(true);
 
 
 /*
@@ -32,7 +33,13 @@ Do the following:
 
    HINT: no function required
 */
+let goDaddy= domain;
+let lambda= bloomTech;
 
+let goDaddy= 'False';
+if (true) {
+  bloomTech = 'True';
+}
 
 
 
