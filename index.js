@@ -33,13 +33,15 @@ Do the following:
 
    HINT: no function required
 */
-let goDaddy= domain;
-let lambda= bloomTech;
+let bloomTech= true;
+let lambda= false;
 
-let goDaddy= 'False';
+
 if (true) {
   bloomTech = 'True';
+  
 }
+console.log(bloomTech);
 
 
 
