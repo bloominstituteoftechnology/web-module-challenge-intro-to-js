@@ -20,7 +20,13 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18;
 
+if(votingAge >= 18){
+  console.log(true);
+}else{
+  console.log(false);
+}
 
 /*
 Task 1b - Values
@@ -32,6 +38,14 @@ Do the following:
 
    HINT: no function required
 */
+
+// var age = 'num1'
+// var year = 'num2'
+// console.log(num1,num2);
+var age = 'num1';
+var year = 'num2';
+
+console.log(num1,num2);
 
 
 
@@ -48,7 +62,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+const party = '1999'
+console.log('task 1 c:', Number(party));
 
 
 /*
@@ -60,9 +75,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
+console.log('task 1 d:', multiply(5,5));
 
 
 
