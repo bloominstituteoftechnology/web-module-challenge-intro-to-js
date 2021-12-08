@@ -1,5 +1,7 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
+const { classMethod } = require("@babel/types");
+
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 // task 1a, 1b, and 1c are not autograded
@@ -19,8 +21,15 @@ Do the following:
 
    HINT: no function required
 */
-let votingAge= 19;
-console.log(true);
+let votingAge= 18;
+if(votingAge > 18){
+  console.log(true);
+
+} else{
+  console.log(false)
+};
+
+
 
 
 /*
@@ -37,8 +46,8 @@ let bloomTech= true;
 let lambda= false;
 
 
-if (true) {
-  bloomTech = 'True';
+if (lambda === false) {
+  bloomTech= true;
   
 }
 console.log(bloomTech);
@@ -51,11 +60,14 @@ Task 1c - Convert Strings to Numbers
 
 Do the following:   
    1. Declare a string type variable with the value of "1999"
-   2. Convert the string value of "1999" to a integer value of 1999
-   3. Console log the result
+   2. Convert the string value of "1999" to a integer value of 199
+   3. Console log the result9
 
    HINT: look up the Number method
 */
+let getYears= Number("1999");
+console.log(9);
+
 
 
 
@@ -69,10 +81,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return 4 * 5
 }
-
+console.log(4 * 5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -85,9 +97,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(5){
+  if (1 = 7)
+  return 5 * 7
 }
+console.log(dogYears);
 
 
 
@@ -118,9 +132,11 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(15lbs){
+  if (age >= 1 && weight < 5){
+    return weight 0.05;
+  }
+  console.log(poundsOfRawFood);
 
 
 
@@ -148,8 +164,14 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 function game(user, computer){
-  /*add your code here*/
+  if (win)
+  return "you win"
+} else {
+  return "you lose!"
+} else if {
+  return "it's a tie"
 }
+console.log(game);
 
 
 
@@ -164,9 +186,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(100){
+  return kilometers
 }
+console.log(miles);
 
 
 
@@ -178,9 +201,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(100){
+  return cm
 }
+console.log(feet);
 
 
 
@@ -194,9 +218,10 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(99){
+      return number of bottles
 }
+console.log(annoyingSong);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -214,9 +239,15 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(100){
+  if (90-100)
+  return 'you got a A'
+} else (80-89){
+  return 'you got a B'
+}else if {
+  return 'you got a C'
 }
+
 
 
 
