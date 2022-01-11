@@ -175,9 +175,38 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.floor(Math.random()*4)
+let user= 'rock'
+function computerChoice(computer){
+if (computer>=0 && computer<1) {
+  return'rock'; //if computer is between 0-1 it chose rock
+} else if (computer>=1 && computer<2){
+  return 'paper'; //if computer is between 1-2 it chose paper
+} else if (computer>=2 && computer<3){
+  return'scissors'; //if computer is between 2-3 it chose scissors
+}
+}
 
 function game(user, computer){
-  /*add your code here*/
+  if (computerChoice === 'rock' && user === 'rock'){
+    return "it's a tie!"; //if computer chooses rock and user chooses rock its a tie
+  } else if (computerChoice === 'rock' && user === 'paper'){
+    return "you lose!"; //if computer chooses rock and you choose scissor you lose
+  } else if (computerChoice === 'rock' && user === 'scissors'){
+    return "you win!"; //if cmoputer chooses rock and you choose paper you win
+  } else if (computerChoice === 'paper' && user === 'rock'){
+    return "you lose!"; //if computer chooses paper and user chooses you lose
+  } else if (computerChoice === 'paper' && user === 'paper'){
+    return "it's a tie!"; //if computer chooses paper and you choose scissor you win
+  } else if (computerChoice === 'paper' && user === 'scissors'){
+    return "you lose!"; //if cmoputer chooses paper and you choose paper you tie
+  }if (computerChoice === 'scissors' && user === 'rock'){
+    return "it's a tie!"; //if computer chooses scissors and user chooses rock you win
+  } else if (computerChoice === 'scissors' && user === 'paper'){
+    return "you lose!"; //if computer chooses scissors and you choose scissor you win
+  } else if (computerChoice === 'scissors' && user === 'scissors'){
+    return "it's a tie!"; //if cmoputer chooses scissors and you choose paper you tie
+  }
 }
 
 
