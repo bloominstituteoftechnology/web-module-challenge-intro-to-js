@@ -274,9 +274,18 @@ Using the grade function below do the following:
  60-69 should return 'you got a D'
  below should return 'you got an F'
 */
-
-function grade(/*Your Code here */){
-/*Your Code here */
+const score = 100;
+function grade(score){
+  if (score<=100 && score>=90)
+  return 'you got an A'; //if you score between 90-100 its an A
+  else if (score<=89 && score>=80)
+  return 'you got an B'; //if you score between 80-89 its an B
+  else if (score<=79 && score>=70)
+  return 'you got an C'; //if you score between 70-79 its an C
+  else if (score<=69 && score>=60)
+  return 'you got an D'; //if you score between 60-69 its an D
+  else if (score<60)
+  return 'you got an F'; //if you score between below 60 its an F
 }
 
 
