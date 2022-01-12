@@ -19,12 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-const votingAge = 21
+const votingAge = 18
 
-if (votingAge > 21) {
-  console.log('true');
+if (votingAge >= 18) {
+  console.log(true);
 } else {
-  console.log('false');
+  console.log(false);
 }
 
 
@@ -43,10 +43,10 @@ let num1 = 3;
 let num2 = 10;
 
 if (num2 > 5) {
-  console.log(num1 + 2);
+  num2 = (num1 + 2);
 }
 
-
+comsole.log(num2);
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -59,8 +59,8 @@ Do the following:
    HINT: look up the Number method
 */
 const dateOfBirth = "1999";
-parseInt(dateOfBirth);
-console.log(dateOfBirth);
+
+console.log(Number(dateOfBirth));
 
 
 /*
@@ -72,12 +72,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-const a = 2;
-const b = 4;
+
 function multiply(a,b){
- const result = a * b;
- return result;
+  return a * b  ;
 }
+
+console.log(multiply(8, 9));
 
 
 
@@ -91,12 +91,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-const age = 5 ;
-function dogYears(age){
-  const result = age * 7;
-  return result;
-}
 
+function dogYears(age){
+  return age * 7;
+}
+console.log(dogYears(57));
 
 
 
@@ -130,16 +129,16 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 const weight = 15;
 const age = 1;
 function hungryDog(weight, age){
-  if (weight<=5 && age>1){
+  if (weight<=5 && age>=1){
     return weight * .05;  //if weight is less than or equal to 5 and older than 1, return the 5% of the dogs weight
   }
-  else if (weight>5 && weight<=10 && age>1) {
+  else if (weight>5 && weight<=10 && age>=1) {
     return weight * .04;  //if the weight is inbetween 6-10 and older than 1 return 4% of the weight
   }
-  else if (weight>10 && weight<=15 && age>1) {
+  else if (weight>10 && weight<=15 && age>=1) {
     return weight *.03; //if the weight is inbwetween 11-15 return 3% of the body weight
   }
-  else if (weight>15 && age>1){
+  else if (weight>15 && age>=1){
     return weight *.02; //if weight is greater than 15 return 2% of body weight
   }
   else if (age>=0.16667 && age<0.33333) {
@@ -151,9 +150,12 @@ function hungryDog(weight, age){
   else if(age>=0.58333 && age<1){
     return weight *.04; //if between 7-12 months old return 4% weight
   }
+  else{
+    return 'please try again';
+  }
 }
 
-
+console.log(hungryDog(15, 1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -178,40 +180,32 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let computer = Math.floor(Math.random()*4)
-let user= 'rock'
-function computerChoice(computer){
-if (computer>=0 && computer<1) {
-  return'rock'; //if computer is between 0-1 it chose rock
-} else if (computer>=1 && computer<2){
-  return 'paper'; //if computer is between 1-2 it chose paper
-} else if (computer>=2 && computer<3){
-  return'scissors'; //if computer is between 2-3 it chose scissors
+let computer = Math.floor(Math.random());
+
+
+if (computer<= 0.34) {
+  computer = 'rock';
+}else if(computer <= .67 && computer > .34){
+  computer = 'paper';
+}else if(compuer > .67){
+  computer = 'scissors';
 }
-}
+
 
 function game(user, computer){
-  if (computerChoice === 'rock' && user === 'rock'){
-    return "it's a tie!"; //if computer chooses rock and user chooses rock its a tie
-  } else if (computerChoice === 'rock' && user === 'paper'){
-    return "you lose!"; //if computer chooses rock and you choose scissor you lose
-  } else if (computerChoice === 'rock' && user === 'scissors'){
-    return "you win!"; //if cmoputer chooses rock and you choose paper you win
-  } else if (computerChoice === 'paper' && user === 'rock'){
-    return "you lose!"; //if computer chooses paper and user chooses you lose
-  } else if (computerChoice === 'paper' && user === 'paper'){
-    return "it's a tie!"; //if computer chooses paper and you choose scissor you win
-  } else if (computerChoice === 'paper' && user === 'scissors'){
-    return "you lose!"; //if cmoputer chooses paper and you choose paper you tie
-  }if (computerChoice === 'scissors' && user === 'rock'){
-    return "it's a tie!"; //if computer chooses scissors and user chooses rock you win
-  } else if (computerChoice === 'scissors' && user === 'paper'){
-    return "you lose!"; //if computer chooses scissors and you choose scissor you win
-  } else if (computerChoice === 'scissors' && user === 'scissors'){
-    return "it's a tie!"; //if cmoputer chooses scissors and you choose paper you tie
+  if(user === computer){
+    return `it's a tie!`;
+  }else if (user === 'rock' && computer === 'scissors') {
+    return 'you win!';
+  }else if (user === 'paper' && computer === 'rock') {
+    return 'you win!';
+  }else if (user === 'scissors' && computer === 'paper'){
+    return 'you win!';
+  } else {
+    return 'you lose!';
   }
 }
-
+console.log(game('rock', computer));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -263,7 +257,7 @@ function annoyingSong(){
       console.log("No bottles of soda on the wall!");
       else 
     { let sodaLeft = i-1;
-      return `${soda} bottles of soda on the wall, ${soda} bottles of soda, take one down pass it around ${sodasLeft} bottles of soda on the wall`;}
+      return `${soda} bottles of soda on the wall, ${soda} bottles of soda, take one down pass it around ${sodasLeft} bottles of soda on the wall`;code}
     }
     
 
