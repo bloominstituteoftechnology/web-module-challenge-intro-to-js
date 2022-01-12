@@ -19,8 +19,8 @@ Do the following:
 
    HINT: no function required
 */
-
-
+var votingAge = 46;
+console.log(votingAge >=18);
 
 /*
 Task 1b - Values
@@ -32,8 +32,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+var middleName = "Jason";
+var firstName = "Daniel";
+if (middleName === true){alert('Yes');
+}
+{console.log(middleName);
+}
 
 
 
@@ -47,7 +51,7 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+var year = "1999";
 
 
 
@@ -60,9 +64,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(a,b){
-  return a * b;
+
   /*add your code here*/
+  function multiply(a,b){
+    return a * b; 
 }
 console.log('task 1d', multiply(5,4));
 
@@ -140,10 +145,50 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 function game(user, computer){
-  /*add your code here*/
-}
+  user=user();
+  if (user === 'rock' || user === 'scissors' || user === 'paper'){
+    return user;
+  }else {
+    console.log(rock, paper, scissors);
+  }
+  }
+  const computer = ()=> {
+    const randomNumber = Math.floor(Math.random() *3);
+    switch (randomNumber){
+      case 0:
+        return 'rock';
+        case 1:
+          return 'paper';
+          case 2:
+            return 'scissors';
+    }
+  };
+  const determineWinner = (user, computer)=> {
+    if (user === computer){
+      return 'it's a tie';
+    }
+    if (user === 'rock'){
+      if (computer === 'paper'){
+return "you lose!";
+      }else{
+        return "you win!";
+      }
+    }
+    if (user === 'scissors') {
+      if (computer === 'rock') {
+return "you lose!";
+      }else {
+        return "you win!";
+      }
+    }
+  };
 
-
+const playGame = () => {
+  const user=user('paper');
+  const computer=computer();
+  console.log(determineWinner(user, computer));
+};
+playGame()
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
