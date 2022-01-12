@@ -218,12 +218,12 @@ Using the miles function below do the following:
 2. Convert the number of kiolmeters received to miles
 3. Return the number of miles
 */
-const kilometers = 5;
+
 function miles(kilometers){
   return kilometers * 0.6213711; 
 }
 
-
+console.log(miles(2));
 
 //Task 5b - Feet to CM
 /*
@@ -232,11 +232,11 @@ Using the feet function below do the following:
 2. Convert the number of cm to feet
 3. Return number of feet
 */
-const centimeters =5;
+
 function feet(centimeters){
   return centimeters * 0.03280839895;
 }
-
+console.log(feet(3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -249,22 +249,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
  
-function annoyingSong(){
-  let soda;
-  let sodaLeft;
-  for (let i = 99; i >= 1; i--) {
-    if (i === 1) {
-      console.log("No bottles of soda on the wall!");
-      else 
-    { let sodaLeft = i-1;
-      return `${soda} bottles of soda on the wall, ${soda} bottles of soda, take one down pass it around ${sodasLeft} bottles of soda on the wall`;code}
-    }
-    
-
+function annoyingSong(number){
+  for (let i = number; i > 0; i--){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;
   }
     
 }
-
+console.log(annoyingSong(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -280,9 +271,9 @@ Using the grade function below do the following:
  60-69 should return 'you got a D'
  below should return 'you got an F'
 */
-const score = 100;
+
 function grade(score){
-  if (score<=100 && score>=90)
+  if (score>=90)
   return 'you got an A'; //if you score between 90-100 its an A
   else if (score<=89 && score>=80)
   return 'you got an B'; //if you score between 80-89 its an B
@@ -294,7 +285,7 @@ function grade(score){
   return 'you got an F'; //if you score between below 60 its an F
 }
 
-
+console.log(grade(75));
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
