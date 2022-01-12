@@ -254,9 +254,21 @@ Using the annoyingSong function below do the following:
 2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
+ 
+function annoyingSong(){
+  let soda;
+  let sodaLeft;
+  for (let i = 99; i >= 1; i--) {
+    if (i === 1) {
+      console.log("No bottles of soda on the wall!");
+      else 
+    { let sodaLeft = i-1;
+      return `${soda} bottles of soda on the wall, ${soda} bottles of soda, take one down pass it around ${sodasLeft} bottles of soda on the wall`;}
+    }
+    
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+  }
+    
 }
 
 
