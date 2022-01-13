@@ -86,10 +86,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/) {   // this is going to be just like the multiply one from above
-  // except get rid of b and replace it with 7
-const dogYears = 7;
+function dogYears(multiply("1", "7");
+  return 1 * 7;
 }
+console.log('task 1d', multiply(5, 4));
+  
 
 
 
