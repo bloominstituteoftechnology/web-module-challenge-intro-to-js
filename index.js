@@ -85,8 +85,10 @@ Do the following:
 */
 
 function dogYears(/*add your code here*/) {   // this is going to be just like the multiply one from above
-  /*add your code here*/                      // except get rid of b and replace it with 7
+  // except get rid of b and replace it with 7
+const dogYears = 7;
 }
+
 
 
 
@@ -150,7 +152,7 @@ function game(user, computer) {
   if (user === 'rock' || user === 'scissors' || user === 'paper') {
     return user;
   } else {
-    console.log(rock, paper, scissors);
+    console.log();
   }
 }
 const computer = () => {
@@ -216,11 +218,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/) {
-  /*add your code here*/
+function feet(cm) {
+  return cm * 0.0328084;
 }
 
-
+feet(14)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
