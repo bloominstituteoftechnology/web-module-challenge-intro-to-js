@@ -207,8 +207,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
-  /*add your code here*/
+function miles(km) {
+var kilometers = 1.609344;
+var miles = kilometers * 1;
+console.log(miles);
+
 }
 
 
