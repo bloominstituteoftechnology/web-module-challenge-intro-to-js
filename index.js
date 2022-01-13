@@ -20,7 +20,7 @@ Do the following:
    HINT: no function required
 */
 var votingAge = 46;
-console.log(votingAge >=18);
+console.log(votingAge >= 18);
 
 /*
 Task 1b - Values
@@ -34,10 +34,12 @@ Do the following:
 */
 var middleName = "Jason";
 var firstName = "Daniel";
-if (middleName === true){alert('Yes');
+if (firstName === "Daniel") {
+  middleName = "Stacy";
+  alert('Yes');
 }
-{console.log(middleName);
-}
+console.log(middleName);
+
 
 
 
@@ -65,11 +67,11 @@ Do the following:
 */
 
 
-  /*add your code here*/
-  function multiply(a,b){
-    return a * b; 
+/*add your code here*/
+function multiply(a, b) {
+  return a * b;
 }
-console.log('task 1d', multiply(5,4));
+console.log('task 1d', multiply(5, 4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -82,7 +84,7 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(/*add your code here*/) {
   /*add your code here*/
 }
 
@@ -113,9 +115,9 @@ Puppies less than 1 year
    7 - 12 months 4% of their body weight
   
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/
 
-function hungryDog(/*add your code here*/){
+function hungryDog(/*add your code here*/) {
   /*add your code here*/
 }
 
@@ -144,48 +146,48 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  user=user();
-  if (user === 'rock' || user === 'scissors' || user === 'paper'){
+function game(user, computer) {
+  user = user();
+  if (user === 'rock' || user === 'scissors' || user === 'paper') {
     return user;
-  }else {
+  } else {
     console.log(rock, paper, scissors);
   }
+}
+const computer = () => {
+  const randomNumber = Math.floor(Math.random() * 3);
+  switch (randomNumber) {
+    case 0:
+      return 'rock';
+    case 1:
+      return 'paper';
+    case 2:
+      return 'scissors';
   }
-  const computer = ()=> {
-    const randomNumber = Math.floor(Math.random() *3);
-    switch (randomNumber){
-      case 0:
-        return 'rock';
-        case 1:
-          return 'paper';
-          case 2:
-            return 'scissors';
+};
+const determineWinner = (user, computer) => {
+  if (user === computer) {
+    return "it's a tie";
+  }
+  if (user === 'rock') {
+    if (computer === 'paper') {
+      return "you lose!";
+    } else {
+      return "you win!";
     }
-  };
-  const determineWinner = (user, computer)=> {
-    if (user === computer){
-      return 'it's a tie';
+  }
+  if (user === 'scissors') {
+    if (computer === 'rock') {
+      return "you lose!";
+    } else {
+      return "you win!";
     }
-    if (user === 'rock'){
-      if (computer === 'paper'){
-return "you lose!";
-      }else{
-        return "you win!";
-      }
-    }
-    if (user === 'scissors') {
-      if (computer === 'rock') {
-return "you lose!";
-      }else {
-        return "you win!";
-      }
-    }
-  };
+  }
+};
 
 const playGame = () => {
-  const user=user('paper');
-  const computer=computer();
+  const user = user('paper');
+  const computer = computer();
   console.log(determineWinner(user, computer));
 };
 playGame()
@@ -201,7 +203,7 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(/*add your code here*/) {
   /*add your code here*/
 }
 
@@ -215,7 +217,7 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(/*add your code here*/) {
   /*add your code here*/
 }
 
@@ -231,8 +233,8 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(/*add your code here*/) {
+  /*add your code here*/
 }
 
 
@@ -251,8 +253,8 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(/*Your Code here */) {
+  /*Your Code here */
 }
 
 
@@ -277,7 +279,7 @@ function vowelCounter(/*add your code here*/) {
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
+function foo() {
   console.log('its working');
   return 'bar';
 }
