@@ -54,7 +54,7 @@ Do the following:
    HINT: look up the Number method
 */
 var year = "1999";
-console.log(parseInt));
+console.log(parseInt);
 
 
 
@@ -88,7 +88,6 @@ Do the following:
 
 function dogYears(multiply("1", "7");
   return 1 * 7;
-}
 console.log('task 1d', multiply(5, 4));
   
 
