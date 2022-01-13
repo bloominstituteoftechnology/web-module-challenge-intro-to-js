@@ -226,6 +226,8 @@ Using the feet function below do the following:
 
 function feet(cm) {
   return cm * 0.0328084;
+  var feet = cm * 1;
+  console.log(feet);
 }
 
 feet(14)
