@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
@@ -36,7 +37,6 @@ var middleName = "Jason";
 var firstName = "Daniel";
 if (firstName === "Daniel") {
   middleName = "Stacy";
-  alert('Yes');
 }
 console.log(middleName);
 
@@ -84,8 +84,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/) {
-  /*add your code here*/
+function dogYears(/*add your code here*/) {   // this is going to be just like the multiply one from above
+  /*add your code here*/                      // except get rid of b and replace it with 7
 }
 
 
@@ -147,7 +147,6 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 function game(user, computer) {
-  user = user();
   if (user === 'rock' || user === 'scissors' || user === 'paper') {
     return user;
   } else {
@@ -155,10 +154,10 @@ function game(user, computer) {
   }
 }
 const computer = () => {
-  const randomNumber = Math.floor(Math.random() * 3);
+  const randomNumber = Math.floor(Math.random() * 3); 
   switch (randomNumber) {
-    case 0:
-      return 'rock';
+    case 0:                                           
+      return 'rock';                                  
     case 1:
       return 'paper';
     case 2:
@@ -185,12 +184,12 @@ const determineWinner = (user, computer) => {
   }
 };
 
-const playGame = () => {
-  const user = user('paper');
-  const computer = computer();
-  console.log(determineWinner(user, computer));
-};
-playGame()
+// const playGame = () => {
+//   const user = user('paper');
+//   const computer = computer();
+//   console.log(determineWinner(user, computer));
+// };
+// playGame()
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
