@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
@@ -19,8 +20,13 @@ Do the following:
 
    HINT: no function required
 */
-var votingAge = 46;
-console.log(votingAge >=18);
+const votingAge = 18;
+
+if(votingAge >= 18){
+  console.log(true);
+}else{
+  console.log(false);
+}
 
 /*
 Task 1b - Values
@@ -32,12 +38,18 @@ Do the following:
 
    HINT: no function required
 */
-var middleName = "Jason";
-var firstName = "Daniel";
-if (middleName === true){alert('Yes');
+let dog = 'Harpo';
+let behaviour = 'bad';
+
+if(behaviour === 'bad'){
+  dog = 'Honey';
+}else{
+  dog = 'Harpo';
 }
-{console.log(middleName);
-}
+
+console.log('task 1 b:', dog);
+
+
 
 
 
@@ -50,8 +62,11 @@ Do the following:
    3. Console log the result
 
    HINT: look up the Number method
-*/
-var year = "1999";
+/*
+
+const party = '1999';
+console.log('task 1 c:', Number(party));
+
 
 
 
@@ -65,11 +80,13 @@ Do the following:
 */
 
 
-  /*add your code here*/
-  function multiply(a,b){
-    return a * b; 
+function multiply(a, b) {
+  return a * b;
 }
-console.log('task 1d', multiply(5,4));
+console.log('task 1 d:', multiply(9, 9));
+
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -82,9 +99,14 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
+
+console.log('task 2', dogYears(31));
+
+  
+
 
 
 
@@ -113,11 +135,29 @@ Puppies less than 1 year
    7 - 12 months 4% of their body weight
   
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(weight, age){
+  if(age >= 1 && weight <=5){
+    return weight * 0.05;
+  }else if(age >= 1 && weight >= 6 && weight <= 10){
+    return weight * 0.04;
+  }else if(age >= 1 && weight >= 11 && weight <= 15){
+      return weight * 0.03;
+    }else if(age >= 1 && weight > 15){
+      return weight * 0.02;
+    }else if(age < 1 && age >= 0.583){
+      return weight * 0.04;
+    }else if (age <0.583 && age >= 0.333){
+      return weight * 0.05;
+    }else if (age < 0.333){
+      return weight * 0.10;
+    }else{
+      return 'please try again';
+    }
+  }
+
+console.log('task 3', hungryDog(15, 1));
 
 
 
@@ -144,51 +184,50 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  user=user();
-  if (user === 'rock' || user === 'scissors' || user === 'paper'){
+function game(user, computer) {
+  if (user === 'rock' || user === 'scissors' || user === 'paper') {
     return user;
-  }else {
-    console.log(rock, paper, scissors);
+  } else {
+    console.log();
   }
+}
+const computer = () => {
+  const randomNumber = Math.floor(Math.random() * 3); 
+  switch (randomNumber) {
+    case 0:                                           
+      return 'rock';                                  
+    case 1:
+      return 'paper';
+    case 2:
+      return 'scissors';
   }
-  const computer = ()=> {
-    const randomNumber = Math.floor(Math.random() *3);
-    switch (randomNumber){
-      case 0:
-        return 'rock';
-        case 1:
-          return 'paper';
-          case 2:
-            return 'scissors';
-    }
-  };
-  const determineWinner = (user, computer)=> {
-    if (user === computer){
-      return 'it's a tie';
-    }
-    if (user === 'rock'){
-      if (computer === 'paper'){
-return "you lose!";
-      }else{
-        return "you win!";
-      }
-    }
-    if (user === 'scissors') {
-      if (computer === 'rock') {
-return "you lose!";
-      }else {
-        return "you win!";
-      }
-    }
-  };
-
-const playGame = () => {
-  const user=user('paper');
-  const computer=computer();
-  console.log(determineWinner(user, computer));
 };
-playGame()
+const determineWinner = (user, computer) => {
+  if (user === computer) {
+    return "it's a tie";
+  }
+  if (user === 'rock') {
+    if (computer === 'paper') {
+      return "you lose!";
+    } else {
+      return "you win!";
+    }
+  }
+  if (user === 'scissors') {
+    if (computer === 'rock') {
+      return "you lose!";
+    } else {
+      return "you win!";
+    }
+  }
+};
+
+// const playGame = () => {
+//   const user = user('paper');
+//   const computer = computer();
+//   console.log(determineWinner(user, computer));
+// };
+// playGame()
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -201,8 +240,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km) {
+var kilometers = 1.609344;
+var miles = kilometers * 1;
+console.log(miles);
+
 }
 
 
@@ -215,11 +257,13 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm) {
+  return cm * 0.0328084;
+  var feet = cm * 1;
+  console.log(feet);
 }
 
-
+feet(14)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -231,8 +275,8 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(/*add your code here*/) {
+  /*add your code here*/
 }
 
 
@@ -251,8 +295,8 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(/*Your Code here */) {
+  /*Your Code here */
 }
 
 
@@ -277,7 +321,7 @@ function vowelCounter(/*add your code here*/) {
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
+function foo() {
   console.log('its working');
   return 'bar';
 }
