@@ -120,14 +120,14 @@ function hungryDog(/*add your code here*/){
 // Rock, Paper, Scissors - Let's play against the computer!
 /*
 Create a global variable that randomly generates the computer's choice
-Use Math.random to determine the computers choice (Math.random gives a random number between 0 and 1)
+Use Math.random to determine the computer's choice (Math.random gives a random number between 0 and 1)
 
 NOTE: Computer must be a global variable. It will be passed into the function as an argument when the function is invoked. 
 
 HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 
 Use the game function below to do the following:
-1. Receive 2 parameters the user's choice and the computer's choice
+1. Receive 2 parameters: the user's choice and the computer's choice
 2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match the strings below exactly.
  - win should return "you win!"
  - lose should return "you lose!"
@@ -180,9 +180,9 @@ function feet(/*add your code here*/){
 // Let's Sing 99 Bottles of Soda on the Wall!
 /*
 Using the annoyingSong function below do the following:
-1. Receive a starting number and start the count down from the number received 
-2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
-    "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
+1. Receive a starting number and start the song from the number received 
+2. When invoked, it should console.log() the song for each iteration, then at the end RETURN the initial value (NOTE: the tests are expecting the same string as below):
+    "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
 */
 
 function annoyingSong(/*add your code here*/){
