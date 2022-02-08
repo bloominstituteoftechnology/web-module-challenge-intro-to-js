@@ -180,14 +180,14 @@ if (computer<= 0.34) {
   computer = 'rock';
 }else if(computer <= .67 && computer > .34){
   computer = 'paper';
-}else if(compuer > .67){
+}else if(computer > .67){
   computer = 'scissors';
 }
 
 
 function game(user, computer){
   if(user === computer){
-    return `it's a tie!`;
+    return `it's a tie`;
   }else if (user === 'rock' && computer === 'scissors') {
     return 'you win!';
   }else if (user === 'paper' && computer === 'rock') {
@@ -212,8 +212,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(kilos){
-  return kilometers * 0.6213711;
+function miles(km){
+  return km * 0.6213711;
 }
 
 
@@ -227,7 +227,7 @@ Using the feet function below do the following:
 */
 
 function feet(centimeters){
-  return centimeters * 0.03280839895;
+  return cm / 32.80839895;
 }
 
 
@@ -269,11 +269,11 @@ function grade(score){
   if (score>=90)
   return 'you got an A'; //if you score between 90-100 its an A
   else if (score<=89 && score>=80)
-  return 'you got an B'; //if you score between 80-89 its an B
+  return 'you got a B'; //if you score between 80-89 its an B
   else if (score<=79 && score>=70)
-  return 'you got an C'; //if you score between 70-79 its an C
+  return 'you got a C'; //if you score between 70-79 its an C
   else if (score<=69 && score>=60)
-  return 'you got an D'; //if you score between 60-69 its an D
+  return 'you got a D'; //if you score between 60-69 its an D
   else if (score<60)
   return 'you got an F'; //if you score between below 60 its an F
 }
@@ -291,12 +291,16 @@ Using the vowelCounter function below do the following:
 HINT - you may need to study tomorrow's content on arrays 
 HINT - try looking up the .includes() method
 */
+const word = "Hello";
 
-
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string) {
+  let vowels = ['a','e','i','o','u'];
+  let result = string.includes(vowels);
+  let count = result.length;
+  console.log(count);
 }
 
+console.log(vowelCounter(word));
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
