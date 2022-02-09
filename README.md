@@ -12,8 +12,7 @@ The module challenge is the afternoon project or assignment that students work t
 - understand and be able to use different operators.
 - write a basic for loop / while loop.
 - write control flow using if/else statements.
-- use function declarations, expressions, and arrow
-functions and describe their differences
+- use function declarations, expressions, parameters, and arguments and describe their differences
   
 ## Introduction
 
@@ -30,7 +29,7 @@ Using VSCode, Codegrade and Command Line:
 
 
 1. Fork the repo
-2. Go into canvas and connect your reop to codegrade
+2. Go into canvas and connect your repo to codegrade
 3. Clone your forked version of the repo
 4. DO NOT CREATE A BRANCH. You will be pushing your changes to the main/master today
 5. cd into your repo

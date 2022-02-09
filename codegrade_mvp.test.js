@@ -32,13 +32,13 @@ describe('hungryDogFunction', ()=>{
       expect(functions.hungryDog(16, 1)).toBe(0.32);
   })
     it('Dog is 2-4 months', ()=>{
-    expect(functions.hungryDog(20, 0.2)).toBe(2);
+    expect(functions.hungryDog(20, 2/12)).toBe(2);
   })
     it('Dog is 4-7 months', ()=>{
-    expect(functions.hungryDog(16, 0.33)).toBe(1.6);
+    expect(functions.hungryDog(16, 4/12)).toBe(1.6);
   })
     it('Dog is +7 months', ()=>{
-    expect(functions.hungryDog(4, 0.583)).toBe(0.16);
+    expect(functions.hungryDog(4, 7/12)).toBe(0.16);
   })
 });
 describe('gameFunction', ()=>{
