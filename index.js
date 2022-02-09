@@ -47,7 +47,6 @@ let var2 = 'var2'
 if (var2 === 'var2'){
  var1 = 'var1 has changed'
 }
-
 //console.log(var1)
 
 
@@ -135,10 +134,10 @@ function hungryDog(weight, age){
   if (age >= (2/12) && age < (4/12)){ 
     poundsOfFood = weight * .10
     return poundsOfFood
-} else if (age >= (4/12) && age < (7/12)){
+} else if (age >= (4/12) && age < (.583)){
     poundsOfFood = weight * .05
     return poundsOfFood
-} else if (age >= (7/12) && age < 1){
+} else if (age >= (.583) && age < 1){
     poundsOfFood = weight * .04
     return poundsOfFood
 } else if (age >= 1){
