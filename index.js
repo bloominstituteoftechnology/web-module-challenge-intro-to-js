@@ -181,6 +181,7 @@ function miles(km) {
   return miles;
 }
 console.log(miles(100));
+git;
 //Task 5b - Feet to CM
 /*
 Using the feet function below do the following:
@@ -188,7 +189,11 @@ Using the feet function below do the following:
 2. Convert the number of cm to feet
 3. Return number of feet
 */
-
+function feet(cm) {
+  let feet = cm / 30.48;
+  return feet;
+}
+console.log(feet(100));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Let's Sing 99 Bottles of Soda on the Wall!
@@ -198,6 +203,16 @@ Using the annoyingSong function below do the following:
 2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
+function annoyingSong(num) {
+  for (let i = num; i >= 1; i--) {
+    console.log(
+      `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${
+        num - 1
+      } bottles of soda on the wall`
+    );
+  }
+}
+console.log(annoyingSong(10));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -227,7 +242,18 @@ HINT - try looking up the .includes() method
 */
 
 function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+  function vowelCounter(string) {
+    const vowels = ["a", "e", "i", "o", "u"];
+    let counter = 0;
+    const stringArray = string.split("");
+    for (let i = 0; i < stringArray.length; i++) {
+      if (vowels.includes(stringArray[i])) {
+        counter += 1;
+      }
+
+      return counter;
+    }
+  }
 }
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
