@@ -65,5 +65,5 @@ Please submit your project via codegrade by following [these instructions](https
 
 ## Resources
 
-🧮 [Polya's 4 Step Approach to Problem Solving](http://web.mnstate.edu/peil/M110/Worksheet/PolyaProblemSolve.pdf)
+🧮 [Polya's 4 Step Approach to Problem Solving](https://math.berkeley.edu/~gmelvin/polya.pdf)
 
