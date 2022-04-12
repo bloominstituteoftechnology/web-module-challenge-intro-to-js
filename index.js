@@ -19,6 +19,15 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 20;
+if (votingAge >= 18){
+console.log ('true');
+}else if (votingAge <= 18){
+console.log ('false');
+} else {
+  console.log ('error')
+};
+
 
 
 
@@ -33,6 +42,15 @@ Do the following:
 
    HINT: no function required
 */
+let firstThing = 'lucky';
+const secondThing = 'lucky';
+if (firstThing == secondThing){
+firstThing = 'Unlucky'
+console.log(`firstThing is ${firstThing} and secondThing is ${secondThing}`);
+}else {
+console.log ('All Good Here Cheif')
+}
+
 
 
 
@@ -48,8 +66,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+const newVar = '1999';
+parseInt(newVar);
+console.log (newVar);
 
 
 /*
@@ -60,10 +79,12 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
-
-function multiply(/*add your code here*/){
-  /*add your code here*/
+const firstNum = 2
+const secNum = 10
+function multiply(numA, numB){
+  return (numA * numB);
 }
+console.log (multiply(firstNum, secNum));
 
 
 
@@ -77,9 +98,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(goodBoy){
+  const newAge = (goodBoy * 7);
+  return newAge;
 }
+console.log(dogYears(2));
 
 
 
@@ -128,11 +151,48 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         Notice the expected and received, expected is what the test is looking for, and received is what was actually returned from this function. You can also see it's passing in two values, the number 4 and the number 1. 
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
+//function hungryDog(){ }
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(yearsOld, heccinChonk){
+  let feed = 0
+  if (yearsOld <0.3) {feed = (heccinChonk*10/100);
+  return feed;
+    //10%?
+  }else if (yearsOld >0.33 && yearsOld <= 0.58){
+    feed = (heccinChonk*5/100);
+  return feed;
+  //5%?
+  } else if (yearsOld >0.58 && yearsOld <= 1){
+    feed = (heccinChonk*4/100);
+  return feed;
+    //4%?
+  } else if (yearsOld >1){
+    if(heccinChonk <= 5){ 
+     feed = (heccinChonk*5/100);
+  return feed;
+      //5%
+    }else if(heccinChonk >5 && heccinChonk< 10){ 
+      feed = (heccinChonk*4/100);
+  return feed;
+      //4%
+    }else if (heccinChonk >10 && heccinChonk<=15){ 
+      feed = (heccinChonk*3/100);
+  return feed;
+      //3%
+    } else if (heccinChonk >15){
+      feed = (heccinChonk*2/100);
+  return feed;
+      //2%
+    }else {
+      console.log ("what in the heccers?");
+    }
+  }else {
+    console.log ('heccin bamboosle');
+  }
+
 }
-
+let feedHim = hungryDog(12, 8);
+console.log(feedHim);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -157,8 +217,24 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 */
 
 function game(user, computer){
-  /*add your code here*/
+  if (computer <= 3) {
+    let comp = "rock";
+    console.log(comp);
+  } else if (computer > 3 && rand < 7) {
+    let comp = "paper";
+    console.log(comp);
+  } else if (computer > 7) {
+    let comp = "scissors";
+    console.log(comp);
+  } else {
+    console.log("what? no");
+  }
 }
+let choice = ['rock', 'paper', 'scissors'];
+let rand =(Math.random()*10);
+console.log (rand);
+game ('rock', rand);
+
 
 
 
