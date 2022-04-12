@@ -35,8 +35,9 @@ Using VSCode, Codegrade and Command Line:
 4. DO NOT CREATE A BRANCH. You will be pushing your changes to the main/master today
 5. cd into your repo
 6. open the terminal in your vs code and type `npm install`
-7. next type `npm run test` in your terminal
-8. Complete your work making regular commits to main/ master your codegrade score will update each time you make a push.
+7. open a split screen terminal with the window button on your terminal
+8. next type `npm run test` in one side of your terminal and `npm run start` in the other side
+9. Complete your work making regular commits to main/ master your codegrade score will update each time you make a push.
 
 ### Task 2: MVP
 
