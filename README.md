@@ -68,3 +68,6 @@ Please submit your project via codegrade by following [these instructions](https
 
 🧮 [Polya's 4 Step Approach to Problem Solving](https://math.berkeley.edu/~gmelvin/polya.pdf)
 
+`npm install`
+`npm run test`
+`npm run start`
