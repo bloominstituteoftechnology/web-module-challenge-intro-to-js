@@ -153,45 +153,43 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 */  
 //function hungryDog(){ }
 
-function hungryDog(yearsOld, heccinChonk){
-  let feed = 0
-  if (yearsOld <0.3) {feed = (heccinChonk*10/100);
+function hungryDog(age, chonk){
+if (age <1){
+if(0.1666 < age && age < 0.333){
+  let feed = chonk * 0.1;
   return feed;
-    //10%?
-  }else if (yearsOld >0.33 && yearsOld <= 0.58){
-    feed = (heccinChonk*5/100);
+}else if (0.333 < age && age < 0.5833){
+  let feed = chonk * 0.04;
   return feed;
-  //5%?
-  } else if (yearsOld >0.58 && yearsOld <= 1){
-    feed = (heccinChonk*4/100);
+}else if (0.5833 < age) {
+  let feed = chonk * 0.04;
   return feed;
-    //4%?
-  } else if (yearsOld >1){
-    if(heccinChonk <= 5){ 
-     feed = (heccinChonk*5/100);
-  return feed;
-      //5%
-    }else if(heccinChonk >5 && heccinChonk< 10){ 
-      feed = (heccinChonk*4/100);
-  return feed;
-      //4%
-    }else if (heccinChonk >10 && heccinChonk<=15){ 
-      feed = (heccinChonk*3/100);
-  return feed;
-      //3%
-    } else if (heccinChonk >15){
-      feed = (heccinChonk*2/100);
-  return feed;
-      //2%
-    }else {
-      console.log ("what in the heccers?");
-    }
-  }else {
-    console.log ('heccin bamboosle');
-  }
-
+} else {
+  console.log('no');
 }
-let feedHim = hungryDog(12, 8);
+}else if (age >= 1){
+  if (chonk <= 5) {
+    let feed = chonk * 0.05;
+    return feed;
+  } else if (6 <= chonk && chonk <= 10) {
+    let feed = chonk * 0.04;
+    return feed;
+  } else if (11 <= chonk && chonk <= 15) {
+    let feed = chonk * 0.03;
+    return feed;
+  } else if (15 < chonk) {
+    let feed = chonk * 0.02;
+    return feed;
+  } else {
+    console.log("no");
+  }
+  return feed;
+}
+return feed;
+}
+let dogWeight = 7;
+let dogAge = 1;
+let feedHim = hungryDog(dogAge, dogWeight);
 console.log(feedHim);
 
 
@@ -229,7 +227,14 @@ function game(user, computer){
   } else {
     console.log("what? no");
   }
+//if(user == comp){
+  console.log ('tie')
 }
+
+
+
+
+
 let choice = ['rock', 'paper', 'scissors'];
 let rand =(Math.random()*10);
 console.log (rand);
