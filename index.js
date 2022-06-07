@@ -19,7 +19,8 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 34;
+console.log(votingAge);
 
 
 /*
@@ -61,9 +62,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
-}
+  ( /*add your code here*/) => {
+    /*add your code here*/
+  }
 
 
 

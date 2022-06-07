@@ -9,12 +9,76 @@ The module challenge is the afternoon project or assignment that students work t
 ## Objectives
 
 - use let, const, var and demonstrate their differences.
+
+The variable declared with 'let' can only be accessed inside a block of code. For example,
+function greet(){
+  let a ='hello';
+  if(a == 'hello'){
+    let b ='world';
+    console.log(a + '' +b);
+  }
+}
+greet();
+
+The variable declared inside a function with var can be used anywhere within a function. For example,
+function greet(){
+  var a = 'hello';
+  console.log(a);
+}
+greet();
+
+Variables declared with the const maintain constant values. const declarations share some similarities with let declarations.
+for example,
+const name = ('john doe');
+console.log(name);
+
 - understand and be able to use different operators.
+
 - write a basic for loop / while loop.
+an example of a basic for loop,
+for (let i= 14; i >= 0 ; i = i - 2){
+  console.log(i);
+
 - write control flow using if/else statements.
+const weather= (forecast) => {
+  if( forecast === 'snow'){
+    console.log('dont forget your touque');
+  }else if(forecast === 'rain'){
+    console.log('dont forget your umbrella');
+  }else if(forecast === 'sunshine'){
+    console.log('wear sunscreen');
+  } else{
+    console.log('be anything');
+  }
+
+}
+weather('snow');
+weather('rain');
+weather('sunshine');
+
+
 - use function declarations, expressions, and arrow
 functions and describe their differences
-  
+
+function declaration - tell the javascript engine about a function's name, return type, and parameters
+example
+function add (num1, num2){
+  return num1 + num2;
+}
+console.log(add(1, 2));
+console.log(add('javaScript is ', 'so fun!'));
+
+function expression - allows us to create an anonymous function which doesn't have any function name
+example
+const add = function(num1, num2){
+  return num1 + num2;
+}
+console.log(add(5,4));
+
+arrow functions - allow you to create functions in a cleaner way compared to regular funtions
+example
+const add =(num1, num2) => num1 + num2
+console.log(add(3,4));
 ## Introduction
 
 Today you'll worth through 7 JavaScript Tasks to practice today's objectives and get familiar and comfortable with the foundations of JavaScript. 
