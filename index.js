@@ -398,9 +398,17 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+// User input
+const string = prompt('Enter a string: ');
+
+function vowelCounter(str) { 
+
+    const count = str.match(/[aeiou]/gi).length;
+    return count;
 }
+
+const result = vowelCounter(string);
+console.log(result);
 
 
 
