@@ -132,9 +132,34 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */
 
-function hungryDog(/*add your code here*/) {
-  /*add your code here*/
+function hungryDog(weight,age) {
+  let food = ""
+   food = parseInt(food)
+if(age > 2/12 && age <= 4/12){
+ food = (weight * 10)/100
+  return food
+}else if (age <= 7/12){
+   food = (weight * 5)/100
+  return food;
+}else if (age < 1){
+  food = (weight * 4)/ 100 
+  return food
+}else if (age >= 1 && weight <= 5){
+  food = (weight * 5)/100
+  return food
+}else if (weight <= 10){
+  food = (weight * 4)/100
+  return food
+}else if (weight <= 15){
+  food = (weight * 3)/100
+  return food
+}else 
+  food = (weight * 2)/100
+return food
 }
+hungryDog(16, 0.5)
+
+
 
 
 
@@ -159,9 +184,30 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer) {
-  /*add your code here*/
+let computer = Math.floor(Math.random()* 3) + 1
+if(computer === 1){
+  computer = "rock"
+}else if(computer === 2){
+  computer = "paper"
+}else if(computer === 3){
+  computer = "scissors"
 }
+
+
+function game(user, computer) {
+  if(user === computer){
+    return `it's a tie`
+  }else if (user === "rock" && computer === "scissors"){
+    return `you win!`
+  }else if (user === "paper" && computer === "rock"){
+    return `you win!`
+  }else if(user === "scissors" && computer === "paper"){
+   return `you win!`
+  }else 
+  return `you lose!`
+}
+
+game("rock",computer)
 
 
 
@@ -176,10 +222,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
-  /*add your code here*/
-}
-
+function miles(km){
+  return km * 0.621371
+  }
+  console.log(miles(10))
 
 
 //Task 5b - Feet to CM
@@ -190,8 +236,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(ft) {
-  return ft / 12
+function feet(cm) {
+  return cm / 30.48
 }
 feet(1)
 
@@ -230,9 +276,14 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */) {
-  /*Your Code here */
+function grade(score) {
+  if(score < 60) return "you got an F"
+else if (score < 70) return "you got a D"
+else if (score < 79) return "you got a C"
+else if (score < 89) return "you got a B"
+else if (score < 100) return "you got an A"
 }
+console.log(grade(100))
 
 
 
@@ -273,3 +324,11 @@ module.exports = {
   annoyingSong,
   grade
 }
+
+
+
+
+
+     
+          
+     
