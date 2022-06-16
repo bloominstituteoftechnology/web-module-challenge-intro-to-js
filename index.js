@@ -308,9 +308,26 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(str) {
+  str = str.toLowerCase()
+ let vowCount = 0;
+  let vowels = ["a", "e", "i", "o", "u"];
+  // I could use "for of" loop here but miss Brit wants us to use for loop(for ch of str)
+  
+  for (let i = 0; i < str.length; i++){
+  if(vowels.includes(str[i])){
+      vowCount += 1
+  }
+  
 }
+return vowCount;
+}
+
+let word = "The quickbrown fox jumped over the lazy dog"
+
+     
+
+console.log(vowelCounter(word))
 
 
 
