@@ -207,7 +207,7 @@ function game(user, computer){
     return 'you lose!';
   }
 }
-console.log('task 1 g', game('paper', computer))
+console.log('task 4', game('paper', computer))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
