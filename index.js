@@ -89,10 +89,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanYears){
+  return humanYears * 7;
 }
-
+console.log(dogYears(7));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -141,10 +141,24 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(age, weight){
+  if(age >= 1 && weight <= 5){
+    return weight * 0.05;
+  }else if(age >= 1 && weight > 5 && weight <= 10){
+    return weight * 0.04;
+  }else if(age >= 1 && weight > 10 && weight <= 15){
+    return weight * 0.03;
+  }else if(age >= 1 && weight > 15){
+    return weight * 0.02;
+  }else if(age <=1 && age > 0.583){
+    return weight * 0.04;
+  }else if(age <= 0.583 && age > 0.333){
+    return weight * 0.05;
+  }else if(age < 0.333){
+    return weight * 0.1
+  }
 }
-
+console.log(hungryDog(1, 4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -168,9 +182,31 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+let computer = Math.random();
+if(computer <= 0.34){
+  computer = 'rock';
+}else if(computer <= 0.67){
+  computer = 'paper';
+}else if(computer > 0.67){
+  computer = 'scissors';
 }
+
+
+function game(user, computer){
+  if(user === computer){
+    return 'it is a tie';
+  }else if(user === 'rock' && computer === 'scissors'){
+    return 'you win!';
+  }else if(user === ' scissors' && computer === 'paper'){
+    return 'you win!';
+  }else if(user === 'paper' && computer === 'rock'){
+    return 'you win!';
+  }else{
+    return 'you lose!';
+  }
+}
+
+console.log(game('paper', computer));
 
 
 
