@@ -194,7 +194,7 @@ if(computer <= 0.34){
 
 function game(user, computer){
   if(user === computer){
-    return 'it is a tie';
+    return `it's a tie`;
   }else if(user === 'rock' && computer === 'scissors'){
     return 'you win!';
   }else if(user === ' scissors' && computer === 'paper'){
@@ -222,7 +222,7 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-  return km * 0.62;
+  return km * 0.621371;
 }
 console.log(miles(200));
 
@@ -236,7 +236,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  return cm * 0.0328;
+  return cm / 30.48;
 }
 
 console.log(feet(600));
