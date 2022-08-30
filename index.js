@@ -196,13 +196,13 @@ function game(user, computer){
   if(user === computer){
     return `it's a tie`;
   }else if(user === 'rock' && computer === 'scissors'){
-    return 'you win!';
-  }else if(user === ' scissors' && computer === 'paper'){
-    return 'you win!';
+    return `you win!`;
   }else if(user === 'paper' && computer === 'rock'){
-    return 'you win!';
+    return `you win!`;
+  }else if(user === 'scissors' && computer === 'paper'){
+    return `you win!`;
   }else{
-    return 'you lose!';
+    return `you lose!`;
   }
 }
 
