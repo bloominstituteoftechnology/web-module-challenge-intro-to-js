@@ -61,8 +61,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(num1, num2){
+  return num1 * num2;
 }
 
 
@@ -165,7 +165,7 @@ function game(user, computer){
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
-//Task 5a - KM to Miles 
+//Task 5a - Kilometers to Miles 
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
@@ -179,7 +179,7 @@ function miles(/*add your code here*/){
 
 
 
-//Task 5b - Feet to CM
+//Task 5b - Centimeters to Feet
 /*
 Using the feet function below do the following:
 1. Receive a number of cm

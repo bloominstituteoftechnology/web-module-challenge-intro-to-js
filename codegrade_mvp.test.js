@@ -67,6 +67,7 @@ describe('gameFunction', ()=>{
         expect(functions.game('scissors', 'rock')).toBe(`you lose!`);
     })
 });
+
 describe('milesFunction', ()=>{
     it('return km * 0.621371', ()=>{
         expect(functions.miles(10)).toBe(6.21371);
@@ -78,6 +79,7 @@ describe('feetFunction', ()=>{
         expect(functions.feet(160)).toBe(5.2493438320209975);
     })
 });
+
 describe('annoyingSongFunction', ()=>{
     it('a string that counts down based on the number imputted', ()=>{
         expect(functions.annoyingSong(5)).toBe(`${5} bottles of soda on the wall, ${5} bottles of soda, take one down pass it around ${5 - 1} bottles of soda on the wall`);
