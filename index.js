@@ -39,7 +39,13 @@ Do the following:
 
    HINT: no function required
 */
-
+let thingOne= 12;
+let thingTwo=3;
+if (thingOne===thingTwo){
+  console.log("True");
+} else {
+  console.log("False")
+}
 
 
 
