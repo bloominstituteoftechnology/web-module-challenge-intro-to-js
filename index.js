@@ -19,11 +19,11 @@ Do the following:
 
    HINT: no function required
 */
-let votingAge=17
-if (votingAge=>18){
-  console.log("True");
-} else{
+let votingAge=23;
+if (votingAge<18){
   console.log("False");
+} else{
+  console.log("True");
 }
 
 
