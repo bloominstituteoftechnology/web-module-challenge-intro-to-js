@@ -61,7 +61,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let numberC= "1999";
+numberC=== +1999;
+console.log(numberC);
 
 
 /*
