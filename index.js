@@ -78,7 +78,7 @@ Do the following:
 function multiply(num1, num2){
   return num1 * num2;
 }
-
+console.log(multiply(12,3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -91,10 +91,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanYear){
+  return humanYear*7;
 }
-
+console.log(dogYears(33));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -111,6 +111,43 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 
 Feeding Requirements:
 
+
+*/   
+function hungryDog(dogAge, dogWeight){
+  if (dogAge===1 || dogAge===2 || dogAge===3){
+  let DFA= dogWeight*.1;
+  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food.");
+  }
+  else if (dogAge===4 || dogAge===5 || dogAge===6 || dogAge===7){
+  let DFA= dogWeight*.5;
+  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food.");
+  }
+  else if (dogAge===8 || dogAge===9 || dogAge===10 || dogAge===11){
+    let DFA= dogWeight*.04;
+  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food.");
+  }
+  else if (dogAge===12, dogWeight===1 || dogWeight===2 || dogWeight===3 || dogWeight===4 || dogWeight===5){
+    let DFA= dogWeight*.05;
+  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food."); 
+  }
+  else if (dogAge===12, dogWeight===6 || dogWeight===7 || dogWeight===8 || dogWeight===9 || dogWeight===10){
+    let DFA= dogWeight*.04;
+  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food."); 
+  }
+ else if (dogAge===12, dogWeight===11 || dogWeight===12 || dogWeight===13 || dogWeight===14 || dogWeight===15){
+    let DFA= dogWeight*.03;
+  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food."); 
+  }
+  else if (dogAge===12){
+    let DFA= dogWeight*.02;
+  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food."); 
+  }
+  else {
+    console.log("Keep trying Beckon");
+  }
+}
+hungryDog(12,16);
+/*
 Adult Dogs 1 year and older 
    up to 5 lbs - 5% of their body weight
    6 - 10 lbs - 4% of their body weight 
@@ -121,8 +158,17 @@ Puppies less than 1 year
    2 - 4 months 10% of their body weight
    4 - 7 months 5% of their body weight 
    7 - 12 months 4% of their body weight
-  
-NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
+const conditionsArray = [
+  condition1, 
+  condition2,
+  condition3,
+]
+
+if (conditionsArray.indexOf(false) === -1) {
+  "do somthing"
+}
+
+/*NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 NOTE 2: This is a great time to check the tests to see what it expects, versus what is actually 
         returned from your function. This is an example of the output to look for on each test point. 
           ● hungryDogFunction › Dog is 1 year and is 5lbs or less
@@ -143,9 +189,7 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+
 
 
 
