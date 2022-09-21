@@ -112,41 +112,40 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 Feeding Requirements:
 
 
-*/   
-function hungryDog(dogAge, dogWeight){
-  if (dogAge===1 || dogAge===2 || dogAge===3){
-  let DFA= dogWeight*.1;
-  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food.");
+*/
+function hungryDog(weight, age){
+  if (age<0.34){
+    let percent=0.1;
+    let DFA= weight*percent;
+    console.log(weight, age, percent, DFA);
+    return;
   }
-  else if (dogAge===4 || dogAge===5 || dogAge===6 || dogAge===7){
-  let DFA= dogWeight*.5;
-  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food.");
+  else if (age <=.6 || age===1 && weight<=5){
+    let percent=0.05;
+    let DFA= weight*percent;
+    console.log(weight, age, percent, DFA);
+    return;
+    }
+  else if (age <=.92 || age===1 && weight<=10){
+    let percent=0.04;
+    let DFA= weight*percent;
+    console.log(weight, age, percent, DFA);
+    return;
   }
-  else if (dogAge===8 || dogAge===9 || dogAge===10 || dogAge===11){
-    let DFA= dogWeight*.04;
-  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food.");
-  }
-  else if (dogAge===12, dogWeight===1 || dogWeight===2 || dogWeight===3 || dogWeight===4 || dogWeight===5){
-    let DFA= dogWeight*.05;
-  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food."); 
-  }
-  else if (dogAge===12, dogWeight===6 || dogWeight===7 || dogWeight===8 || dogWeight===9 || dogWeight===10){
-    let DFA= dogWeight*.04;
-  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food."); 
-  }
- else if (dogAge===12, dogWeight===11 || dogWeight===12 || dogWeight===13 || dogWeight===14 || dogWeight===15){
-    let DFA= dogWeight*.03;
-  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food."); 
-  }
-  else if (dogAge===12){
-    let DFA= dogWeight*.02;
-  console.log("At "+dogAge+" months and "+dogWeight+" pounds, give "+DFA+" pounds of food."); 
+  else if (age===1 && weight<=15){
+    let percent=0.03;
+    let DFA= weight*percent;
+    console.log(weight, age, percent, DFA);
+    return;
   }
   else {
-    console.log("Keep trying Beckon");
+    let percent= 0.02;
+    let DFA= weight*percent;
+    console.log(weight, age, percent, DFA);
+    return;
   }
 }
-hungryDog(12,16);
+hungryDog(7,1);
 /*
 Adult Dogs 1 year and older 
    up to 5 lbs - 5% of their body weight
@@ -158,15 +157,6 @@ Puppies less than 1 year
    2 - 4 months 10% of their body weight
    4 - 7 months 5% of their body weight 
    7 - 12 months 4% of their body weight
-const conditionsArray = [
-  condition1, 
-  condition2,
-  condition3,
-]
-
-if (conditionsArray.indexOf(false) === -1) {
-  "do somthing"
-}
 
 /*NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 NOTE 2: This is a great time to check the tests to see what it expects, versus what is actually 
@@ -211,12 +201,33 @@ Use the game function below to do the following:
  - lose should return "you lose!"
  - tie should return "it's a tie"
 
-RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
-*/
+RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie*/
 
-function game(user, computer){
-  /*add your code here*/
+let cInput=Math.floor((Math.random()*3));
+console.log(cInput);
+if (cInput===0){
+  cInput= "scissors";
+  console.log(cInput);
+}else if (cInput===1){
+  cInput= "paper";
+  console.log(cInput);
+}else{
+  cInput= "rock";
+  console.log(cInput);
 }
+function game(pInput,cInput){
+  if (pInput==="rock" && cInput==="scissors" || pInput==="scissors" && cInput==="paper" || pInput==="paper" && cInput==="rock"){
+    console.log("you win!");
+    return;
+  }else if (cInput===pInput){
+    console.log("it's a tie");
+    return;
+  }else {
+    console.log("you lose!");
+    return;
+  }
+}
+game("scissors",cInput);
 
 
 
@@ -231,9 +242,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  console.log(kilometers*.621371);
+  return;
 }
+miles(45);
 
 
 
@@ -245,9 +258,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  console.log(cm*0.028084);
+  return;
 }
+feet(10);
 
 
 
@@ -265,9 +280,13 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(bottles){
+  for (var i=bottles; i>0; i--){
+    console.log(bottles+" bottles of soda on the wall, "+bottles+" bottles of soda, take one down pass it around, "+(bottles-1)+" of soda on the wall.");
+    var bottles=bottles-1;
+  }
 }
+annoyingSong(15);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
