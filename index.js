@@ -20,10 +20,10 @@ Do the following:
    HINT: no function required
 */
 let votingAge=23;
-if (votingAge<18){
-  console.log("False");
+if (votingAge<=18){
+  console.log('Task 1:a=', false);
 } else{
-  console.log("True");
+  console.log("Task 1:a=", true);
 }
 
 
@@ -42,9 +42,9 @@ Do the following:
 let thingOne= 12;
 let thingTwo=3;
 if (thingOne===thingTwo){
-  console.log("True");
+  console.log('task 1b=', true);
 } else {
-  console.log("False")
+  console.log("task 1b=", false)
 }
 
 
@@ -61,10 +61,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-let numberC= "1999";
-numberC=== +1999;
-console.log(numberC);
-
+const party= '1999';
+console.log('task 1c done the right way=', Number(party));
 
 /*
 Task 1d - Multiply
@@ -78,7 +76,7 @@ Do the following:
 function multiply(num1, num2){
   return num1 * num2;
 }
-console.log(multiply(12,3));
+console.log('task 1d=', multiply(12,3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -94,7 +92,7 @@ Do the following:
 function dogYears(humanYear){
   return humanYear*7;
 }
-console.log(dogYears(33));
+console.log('task 2=', dogYears(Math.floor(Math.random()*100)));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -110,43 +108,6 @@ REMEMBER: This program should handle correctly adult AND puppy ages and weights
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 
 Feeding Requirements:
-
-
-*/
-function hungryDog(weight, age){
-  if (age<0.34){
-    let percent=0.1;
-    let DFA= weight*percent;
-    console.log(weight, age, percent, DFA);
-    return;
-  }
-  else if (age <=.6 || age===1 && weight<=5){
-    let percent=0.05;
-    let DFA= weight*percent;
-    console.log(weight, age, percent, DFA);
-    return;
-    }
-  else if (age <=.92 || age===1 && weight<=10){
-    let percent=0.04;
-    let DFA= weight*percent;
-    console.log(weight, age, percent, DFA);
-    return;
-  }
-  else if (age===1 && weight<=15){
-    let percent=0.03;
-    let DFA= weight*percent;
-    console.log(weight, age, percent, DFA);
-    return;
-  }
-  else {
-    let percent= 0.02;
-    let DFA= weight*percent;
-    console.log(weight, age, percent, DFA);
-    return;
-  }
-}
-hungryDog(7,1);
-/*
 Adult Dogs 1 year and older 
    up to 5 lbs - 5% of their body weight
    6 - 10 lbs - 4% of their body weight 
@@ -177,7 +138,55 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
       
         Notice the expected and received, expected is what the test is looking for, and received is what was actually returned from this function. You can also see it's passing in two values, the number 4 and the number 1. 
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
-*/  
+*/
+function hungryDog(weight, age){
+  if (age<0.33){
+    let percent=0.1;
+    let DFA= weight*percent;
+    console.log ('task 3=', 
+    "Weight=", weight,
+    "Age=", age,
+    "Percent of weight=", percent,
+    "Lbs of food per day=", DFA);
+  }
+  else if (age <=0.58 || age===1 && weight<=5){
+    let percent=0.05;
+    let DFA= weight*percent;
+    console.log ('task 3=', 
+    "Weight=", weight,
+    "Age=", age,
+    "Percent of weight=", percent,
+    "Lbs of food per day=", DFA);
+    }
+  else if (age <=1 || age===1 && weight<=10){
+    let percent=0.04;
+    let DFA= weight*percent;
+    console.log ('task 3=', 
+    "Weight=", weight,
+    "Age=", age,
+    "Percent of weight=", percent,
+    "Lbs of food per day=", DFA);
+  }
+  else if (age===1 && weight<=15){
+    let percent=0.03;
+    let DFA= weight*percent;
+    console.log ('task 3=', 
+    "Weight=", weight,
+    "Age=", age,
+    "Percent of weight=", percent,
+    "Lbs of food per day=", DFA);
+  }
+  else {
+    let percent= 0.02;
+    let DFA= weight*percent;
+    console.log ('task 3=', 
+    "Weight=", weight,
+    "Age=", age,
+    "Percent of weight=", percent,
+    "Lbs of food per day=", DFA);
+  }
+}
+hungryDog(Math.ceil(Math.random()*10),(Math.random()*10)); 
 
 
 
@@ -207,23 +216,23 @@ let cInput=Math.floor((Math.random()*3));
 console.log(cInput);
 if (cInput===0){
   cInput= "scissors";
-  console.log(cInput);
+  console.log('task 4= computer chooses', cInput);
 }else if (cInput===1){
   cInput= "paper";
-  console.log(cInput);
+  console.log('task 4= computer chooses', cInput);
 }else{
   cInput= "rock";
-  console.log(cInput);
+  console.log('task 4= computer chooses', cInput);
 }
 function game(pInput,cInput){
   if (pInput==="rock" && cInput==="scissors" || pInput==="scissors" && cInput==="paper" || pInput==="paper" && cInput==="rock"){
-    console.log("you win!");
+    console.log("task 4= you win!");
     return;
   }else if (cInput===pInput){
-    console.log("it's a tie");
+    console.log("task 4= its a tie");
     return;
   }else {
-    console.log("you lose!");
+    console.log("task 4= you lose!");
     return;
   }
 }
@@ -243,10 +252,10 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-  console.log(kilometers*.621371);
+  console.log('task 5a= '+ kilometers*.621371);
   return;
 }
-miles(45);
+miles(Math.ceil(Math.random()*10));
 
 
 
@@ -259,10 +268,10 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  console.log(cm*0.028084);
+  console.log('task 5b= '+cm*0.028084);
   return;
 }
-feet(10);
+feet(Math.ceil(Math.random()*10));
 
 
 
@@ -286,7 +295,7 @@ function annoyingSong(bottles){
     var bottles=bottles-1;
   }
 }
-annoyingSong(15);
+annoyingSong(Math.ceil(Math.random()*10));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -304,9 +313,26 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(gradeNumber){
+  if (gradeNumber>89){
+    console.log('task 7= ', gradeNumber, "You got an A!");
+    return;
+  } else if (gradeNumber>79){
+    console.log('task 7= ', gradeNumber, "You got a B!");
+    return;
+  } else if (gradeNumber>69){
+    console.log('task 7= ', gradeNumber, "You got a C!");
+    return;
+  } else if (gradeNumber>59){
+    console.log('task 7= ', gradeNumber, "You got a D!");
+    return;
+  } else {
+    console.log('task 7= ', gradeNumber, "You got a F!");
+    return;
+  }
 }
+  grade(Math.floor(Math.random()*100));
+
 
 
 
@@ -322,16 +348,23 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(str){
+  let getCount=0;
+  const vowels= ['a','e','i','o','u'];
+  for (let char of str){
+    if (vowels.includes(char)){
+      getCount++;
+    }
+  }
+  return getCount;
 }
+console.log("There are",vowelCounter("its working"), "vowels in this sentence.");
 
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
-  console.log('its working');
+  console.log('final check= its working');
   return 'bar';
 }
 foo();
