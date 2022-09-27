@@ -175,7 +175,7 @@ console.log(hungryDog(15, 1));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-// Rock, Paper, Scissors - Let's play against the computer!
+// Rock, Paper, Scissors - Let's play against the computerr!
 /*
 Do the following:
 1. Create a new variable that randomly generates the computer's choice, this must not be done inside the function
