@@ -276,11 +276,11 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number){
       for(let i = number; i > 0; i --){
-        return `${i}} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i -1} bottles of soda on the wall`;
+        return `${i}} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i -1 } bottles of soda on the wall`;
       }
   }
 console.log('task 6', annoyingSong(5));
-console.log('task 6', annoyingSong(5));
+console.log('task 6', annoyingSong(3));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
