@@ -19,7 +19,11 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 23;
 
+if (votingAge >= 18){
+  console.log ("True");
+}
 
 
 /*
