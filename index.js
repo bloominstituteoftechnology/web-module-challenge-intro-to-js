@@ -19,6 +19,14 @@ Do the following:
 
    HINT: no function required
 */
+                // let votingAge = 'dog';
+                // if(votingAge > 26) {
+                //   console.log(true);
+                // } else if( votingAge < 25){
+                //   console.log('you should not vote')
+                // }else {
+                //   console.log('you are a dog')
+                // }
 
 
 
@@ -34,9 +42,13 @@ Do the following:
    HINT: no function required
 */
 
+                  // let firstThing = 'zach'
+                  // let secondThing = 25 
+                  // let thirdThing = 'falsey'
+                  // if (secondThing === 25){console.log("this is " +firstThing +' and he is '+ secondThing + 'and this is working and finished')}
+                  // else{console.log(thirdThing)}
 
-
-
+// let conditional = (true secondThing) ? "true" : "false"
 
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
@@ -49,6 +61,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+                  // let stringType = "1999"
+                  // let integerType = parseInt(stringType)
+                  // console.log(integerType)
 
 
 
@@ -61,12 +76,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
-  return num1 * num2;
-}
+          function multiply(num1, num2){
+            return num1 * num2;
+          }
 
-
-
+          multiply(1,2)
+          console.log(multiply(1,2))
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Age in Dog years
@@ -77,10 +92,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7
 }
-
+dogYears(50)
+console.log(dogYears(50))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
