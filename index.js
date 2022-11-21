@@ -19,6 +19,14 @@ Do the following:
 
    HINT: no function required
 */
+                // let votingAge = 'dog';
+                // if(votingAge > 26) {
+                //   console.log(true);
+                // } else if( votingAge < 25){
+                //   console.log('you should not vote')
+                // }else {
+                //   console.log('you are a dog')
+                // }
 
 
 
@@ -34,9 +42,13 @@ Do the following:
    HINT: no function required
 */
 
+                  // let firstThing = 'zach'
+                  // let secondThing = 25 
+                  // let thirdThing = 'falsey'
+                  // if (secondThing === 25){console.log("this is " +firstThing +' and he is '+ secondThing + 'and this is working and finished')}
+                  // else{console.log(thirdThing)}
 
-
-
+// let conditional = (true secondThing) ? "true" : "false"
 
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
@@ -49,6 +61,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+                  // let stringType = "1999"
+                  // let integerType = parseInt(stringType)
+                  // console.log(integerType)
 
 
 
@@ -61,12 +76,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
-  return num1 * num2;
-}
+          function multiply(num1, num2){
+            return num1 * num2;
+          }
 
-
-
+          multiply(1,2)
+          console.log(multiply(1,2))
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Age in Dog years
@@ -77,10 +92,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7
 }
-
+dogYears(50)
+console.log(dogYears(50))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -129,9 +145,29 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
+let weight = 22
+let age  = 1
+function hungryDog(weight, age){
+  if( age < .33 || weight * .10){
+    console.log("your dog is "+ age + "and should eat" + weight + "this much food.")
+  }else if( age < .66 || weight * .05){
+    console.log("your dog is "+ age + "and should eat" + weight + "this much food.")
+  }else if( age < .99 || weight * .04){
+    console.log("your dog is "+ age + "and should eat" + weight + "this much food.")
+  }else if( age >= 1 && weight <= 5 || weight * .05 ) {
+    console.log("your dog is "+ age + "and should eat" + weight + "this much food.")}
+  else if( age >= 1 && weight > 5 || weight * .04 ) {
+    console.log("your dog is "+ age + "and should eat" + weight + "this much food.")}
+  else if( age >= 1 && weight > 10 || weight * .03 ) {
+    console.log("your dog is "+ age + "and should eat" + weight + "this much food.")}
+  else if( age >= 1 && weight > 15 ) {
+    console.log(`your dog is ${age}and should eat ${weight * .02} this much food.`)}
+  else {console.log(" this may not be a dog")}
   /*add your code here*/
+  
 }
+console.log(hungryDog(22, 2))
+console.log(22, 2)
 
 
 
