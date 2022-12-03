@@ -315,7 +315,7 @@ function grade(grade){
   }
 }
 
-console.log('task 7:', grade(75));
+console.log('task 7:', grade(50));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -331,11 +331,19 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(str) {
+  let low = str.toLowerCase();
+  let vowelCount = 0;
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  for (let char of low) {
+    if (vowels.includes(char)) {
+      vowelCount ++
+    }
+  }
+  return vowelCount;
 }
 
-
+console.log('strech:', vowelCounter('counter'));
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
