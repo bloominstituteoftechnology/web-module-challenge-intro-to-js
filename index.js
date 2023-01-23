@@ -47,7 +47,7 @@ let secondThing = 4
 if (firstThing > secondThing) {
   console.log ('true')
 }
-}
+
 console.log (firstThing)
 
 
@@ -94,11 +94,9 @@ Do the following:
 */
 
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
-function dogYears(age)
+function dogYears(age) {}
 return age * 7
-}
+
 
 console.log(dogYears(10))
 
@@ -151,16 +149,15 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 
 function hungryDog(/*add your code here*/){
   /*add your code here*/
-function hungryDog(weight, age)
-if (age <1){
-  if age<=.33){
-    return weight *.10
+
+  if age<=.33{
+    return weight *.10}
     else if (age<=.58){
       return weight * .05
     } else {
       return weight *.04
     }
-  } else {
+  } else 
     if (weight <=5){
       return weight *.05
     } else if (weight <=10) {
@@ -172,8 +169,7 @@ if (age <1){
       return weight *.02
     }
   }
-}
-}
+
 
 
 
@@ -222,9 +218,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+
   /*add your code here*/
-}
+
 function miles(kilometers){
   return (kilometers * .621371)
 }
@@ -242,9 +238,8 @@ Using the feet function below do the following:
 function feet(/*add your code here*/){
   /*add your code here*/
 
-  function feet (Centimeters){
-    return Centimeters / 30.48
-  }
+
+  
 }
 console.log(feet(156))
 
@@ -267,6 +262,7 @@ function annoyingSong(/*add your code here*/){
       /*add your code here*/
 }
 // x = x+1
+
 return `${x} bottles of soda on the wall, ${x} bottles of soda, take one down pass it around ${x-1} bottles of soda on the wall`
 // console.log (annoyingSong(i))
 
@@ -289,8 +285,7 @@ function grade(/*Your Code here */){
 /*Your Code here */
 function greate(grade){
   if (grade >=90) {
-    return 'you got an A'
-  } else if (grade >= 80) {
+
     return "you got an B"
   } else if (grade >= 70) {
     return 'you got an C'
