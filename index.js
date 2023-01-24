@@ -62,7 +62,7 @@ Do the following:
    HINT: look up the Number method
 */
 
-const year = 1999"
+const year = "1999"
 const numYear = Number(year)
 console.log (numYear)
 
@@ -94,8 +94,9 @@ Do the following:
 */
 
 
-function dogYears(age) {}
-return age * 7
+function dogYears(age) {
+
+} return age * 7
 
 
 console.log(dogYears(10))
@@ -146,8 +147,7 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         Notice the expected and received, expected is what the test is looking for, and received is what was actually returned from this function. You can also see it's passing in two values, the number 4 and the number 1. 
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
-
-function hungryDog(/*add your code here*/){
+function hungryDog(weight,age){}
   /*add your code here*/
 
   if age<=.33{
@@ -157,8 +157,7 @@ function hungryDog(/*add your code here*/){
     } else {
       return weight *.04
     }
-  } else 
-    if (weight <=5){
+   else if (weight <=5){
       return weight *.05
     } else if (weight <=10) {
       return weight *.04
@@ -194,6 +193,15 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
+let cp =Math.cell(Math.random() * 3)
+if (cp ===1) {
+  cp ='rock';
+} else if(cp === 2) {
+  cp ='paper'
+} else {
+  cp = 'scissors'
+}
+
 function game(user, computer){
   /*add your code here*/
 }
@@ -212,6 +220,7 @@ if (cp ===1) {
 //Metric Converter 
 //Task 5a - Kilometers to Miles 
 /*
+
 Using the miles function below do the following:
 1. Receive a number of kilometers
 2. Convert the number of kiolmeters received to miles
@@ -219,7 +228,7 @@ Using the miles function below do the following:
 */
 
 
-  /*add your code here*/
+  
 
 function miles(kilometers){
   return (kilometers * .621371)
