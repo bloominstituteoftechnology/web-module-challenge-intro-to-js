@@ -2,7 +2,7 @@
 
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
-// task 1a, 1b, and 1c are not autograded
+/* task 1a, 1b, and 1c are not autograded*/
 
 /*
 When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.
@@ -20,6 +20,14 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18;
+
+if (votingAge >= 18){
+  console.log(true)
+} else {
+  console.log( false)
+}
+
 
 
 /*
@@ -34,6 +42,13 @@ Do the following:
    HINT: no function required
 */
 
+let legalAge = 18;
+
+let personAge = 17;
+
+if( legalAge > personAge){
+  console.log(legalAge--)
+}
 
 
 
@@ -48,7 +63,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+ let newYear = '1999';
 
+ console.log(Number(newYear));
 
 
 
@@ -65,6 +82,8 @@ function multiply(num1, num2){
   return num1 * num2;
 }
 
+multiply(5,5);
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -77,9 +96,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
+
+dogYears(7);
 
 
 
@@ -129,8 +150,8 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  
 }
 
 
