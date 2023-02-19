@@ -151,8 +151,28 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 */  
 
 function hungryDog(weight, age){
-  
+  if(weight <= 5 ){
+    return weight * 0.05
+  } 
+  else if (weight >= 6 && weight <= 10){
+    return weight * 0.04
+  } 
+  else if ( weight >= 11 && weight <= 15) {
+    return weight * 0.03
+  } else if ( weight > 15){
+    return weight * 0.02
+  } else if ( age * 12 >= 2 && age * 12 <= 4){
+    return weight * 0.10
+  } else if ( age * 12 >= 4 && age * 12 <=7 ) {
+    return weight * 0.05
+  } else if ( age * 12 >= 7 && age * 12 <=12 ){
+    return weight * 0.04
+  }
 }
+
+console.log(hungryDog(15, 1))
+console.log(hungryDog(4,1))
+console.log(hungryDog(16, 0.5))
 
 
 
