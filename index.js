@@ -198,8 +198,41 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 */
 
 function game(user, computer){
-  /*add your code here*/
+  if(computer === 'scissors' && user === 'rock' ){
+    return "YOU WIN!"
+  } else if ( computer === 'rock' && user === 'scissors'){
+    return "YOU LOSE!"
+  } else if ( computer === 'paper' && user === 'scissors'){
+    return 'YOU WIN!'
+  } else if ( computer === 'scissors' && user === 'paper'){
+    return 'YOU LOSE!'
+  } else if ( computer === 'paper' && user === 'rock'){
+    return "YOU LOSE!"
+  } else if ( computer === 'rock' && user === 'paper'){
+     return "YOU WIN!"
+  } else {
+    return "ITS A DRAW"
+  }
+    
+} 
+
+let randomNumber = Math.floor(Math.random() * 3);
+
+
+if(randomNumber === 0){
+  randomNumber = "rock";
+} 
+else if(randomNumber === 1){
+ randomNumber = "paper"
 }
+else if( randomNumber === 2){
+randomNumber = "scissors"
+}
+else{
+  randomNumber = 'error'
+}
+
+console.log(game('rock', randomNumber))
 
 
 
