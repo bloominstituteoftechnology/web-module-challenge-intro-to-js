@@ -82,7 +82,7 @@ function multiply(num1, num2){
   return num1 * num2;
 }
 
-multiply(5,5);
+console.log(multiply(5,5));
 
 
 
@@ -267,7 +267,7 @@ function feet(cm){
   return cm * 0.0328084
 }
 
-console.log(feet(100))
+console.log(feet(160))
 
 
 
@@ -286,7 +286,7 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(num){
-      return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num} bottles of soda on the wall`
+      return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num -1} bottles of soda on the wall`
 }
 
 let number = 10;
