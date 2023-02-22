@@ -266,7 +266,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(numBottles){
       for (let i = numBottles; i > 0; i--){
-        console.log((i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + (i-1) + " bottles of soda on the wall"));
+        return ((i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + (i-1) + " bottles of soda on the wall"));
       }
 }
 console.log(annoyingSong(8));
