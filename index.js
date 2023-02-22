@@ -142,7 +142,7 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(age,weight){
+function hungryDog(weight,age){
   let foodNeeded = 0;
   if (age >=1){
     if(weight <=5){
@@ -165,7 +165,7 @@ foodNeeded = weight * 0.04;
   }
   return foodNeeded;
 }
-console.log(hungryDog(1,15));
+console.log(hungryDog(1,4));
 
 
 
