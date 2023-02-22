@@ -207,9 +207,9 @@ function game(user, computer){
   if (user == computer){
     result =  "it's a tie";
   } else if ((user == "rock" && computer == "paper") || (user == "paper" && computer == "scissors") || (user == "scissors" && computer == "rock")){
-   result = "you lose";
+   result = "you lose!";
   } else {
-    result = "you win";
+    result = "you win!";
   }
   return result;
 }
@@ -229,7 +229,7 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-  return kilometers * 0.6214;
+  return kilometers * 0.621371;
 }
 console.log(miles(10));
 
@@ -266,7 +266,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(numBottles){
       for (let i = numBottles; i > 0; i--){
-        console.log((i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + i + " bottles of soda on the wall"));
+        console.log((i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + (i-1) + " bottles of soda on the wall"));
       }
 }
 console.log(annoyingSong(8));
