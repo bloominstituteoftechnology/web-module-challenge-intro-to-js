@@ -19,8 +19,14 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 19
 
-
+if (votingAge > 18) {
+  console.log('You are of voting age')
+}
+else {
+  console.log('Sorry you are not old enough')
+}
 
 /*
 Task 1b - Values (not auto tested)
@@ -33,10 +39,14 @@ Do the following:
 
    HINT: no function required
 */
+let firstThing = 15;
+let secondThing = 23;
 
-
-
-
+if (firstThing > secondThing) {
+  console.log('first things is first');
+} else {
+  console.log('second thing is first')
+}
 
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
@@ -65,7 +75,8 @@ function multiply(num1, num2){
   return num1 * num2;
 }
 
-
+console.log(multiply(4,14));
+console.log(multiply(8,26));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -77,10 +88,13 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(num1) {
+  return num1 * 7;
 }
 
+console.log(dogYears(6));
+console.log(dogYears(3));
+console.log(dogYears(9));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -129,10 +143,27 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(dogAge, dogWeight) {
+  if (dogAge > 1 && dogWeight < 5) {
+    return ('5% of their weight');
+  } else if (dogAge > 1 && dogWeight < 10 ) {
+    return ('4% of their weight');
+  } else if (dogAge > 1 && dogWeight < 15 ) {
+    return ('3% of their weight');
+  } else if (dogAge > 1 && dogWeight > 15 ) {
+    return ('2% of their weight');
+  } else if (dogAge < 1 && dogWeight < 4) {
+    return ('10% of their weight');
+  } else if (dogAge < 1 && dogWeight < 7) {
+    return ('5% of their weight');
+  } else {
+    return ('4% of their weight');
+  }
 }
 
+console.log(hungryDog(3, 17));
+console.log(hungryDog(.75, 5));
+console.log(hungryDog(5, 10));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -156,11 +187,42 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
-}
+function game(user){
 
-
+  const randomIndex = Math.floor(Math.random() * 3)
+  
+  let computerChoice
+    if (randomIndex === 0) {
+      ('rock');
+    } else if (randomIndex === 1) {
+      ('paper');
+    } else if (randomIndex === 2) {
+      ('scissors');
+    }
+  
+    let user
+     if (3 === 'rock') {
+     } else if (4 === 'paper') {
+     } else (5 === 'scissors')
+    
+    if (user === 'paper' && computerChoice === 'paper') {
+      return (' It is a tie')
+    } else if (user === 'rock' && computerChoice === 'rock') {
+      return (' It is a tie')
+    } else if (user === 'scissors' && computerChoice === 'scissors') {
+      return (' It is a tie')
+    } else if (user === 'rock' && computerChoice === 'scissors') {
+      return (' You Win')
+    } else if (user === 'paper' && computerChoice === 'rock') {
+      return (' You Win')
+    } else if (user === 'scissors' && computerChoice === 'paper') {
+      return (' You Win')
+    } else {
+      return (' You Lose')
+    }
+  }
+  
+  console.log(game(4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -169,14 +231,16 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(num1){
+  return num1 * 0.621371;
 }
 
+console.log(miles(15));
+console.log(miles(26));
 
 
 //Task 5b - Centimeters to Feet
@@ -187,9 +251,12 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(num1){
+  return num1 / 30.48
 }
+
+console.log(feet(250));
+console.log(feet(145));
 
 
 
