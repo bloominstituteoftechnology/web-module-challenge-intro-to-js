@@ -19,13 +19,13 @@ Do the following:
 
    HINT: no function required
 */
-var votingAge = 19
+const votingAge = 19
 
-if (votingAge > 18) {
-  console.log('You are of voting age')
+if (votingAge >= 18) {
+  console.log(true)
 }
 else {
-  console.log('Sorry you are not old enough')
+  console.log(false)
 }
 
 /*
@@ -59,7 +59,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+const year = '1999';
+console.log(Number(year))
 
 
 /*
@@ -88,13 +89,12 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(num1) {
-  return num1 * 7;
+function dogYears(age) {
+  return age * 7;
 }
 
-console.log(dogYears(6));
-console.log(dogYears(3));
-console.log(dogYears(9));
+console.log(dogYears(38));
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -144,26 +144,28 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 */  
 
 function hungryDog(dogAge, dogWeight) {
-  if (dogAge > 1 && dogWeight < 5) {
-    return ('5% of their weight');
-  } else if (dogAge > 1 && dogWeight < 10 ) {
-    return ('4% of their weight');
-  } else if (dogAge > 1 && dogWeight < 15 ) {
-    return ('3% of their weight');
-  } else if (dogAge > 1 && dogWeight > 15 ) {
-    return ('2% of their weight');
-  } else if (dogAge < 1 && dogWeight < 4) {
-    return ('10% of their weight');
-  } else if (dogAge < 1 && dogWeight < 7) {
-    return ('5% of their weight');
+  if (dogAge >= 1 && dogWeight <= 5 ) {
+    return dogWeight * 0.05;
+  } else if (dogAge >= 1 && dogWeight >=6 && dogWeight <= 10 ) {
+    return dogWeight * 0.04;
+  } else if (dogAge >= 1 && dogWeight >=11 && dogWeight <= 15 ) {
+    return dogWeight * 0.03;
+  } else if (dogAge >= 1 && dogWeight > 15 ) {
+    return dogWeight * 0.02;
+  } else if (dogAge < 1 && dogAge >= 0.583 ) {
+    return dogWeight * 0.04;
+  } else if (dogAge < 0.583 && dogAge >= 0.333 ) {
+    return dogWeight * 0.05;
+  } else if (dogAge < 0.333 ) {
+    return dogWeight * 0.10;
   } else {
-    return ('4% of their weight');
+    return 'Sorry invalid input try again'
   }
 }
 
 console.log(hungryDog(3, 17));
 console.log(hungryDog(.75, 5));
-console.log(hungryDog(5, 10));
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
