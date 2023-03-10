@@ -189,42 +189,31 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user){
+let computer = Math.random();
 
-  const randomIndex = Math.floor(Math.random() * 3)
-  
-  let computerChoice
-    if (randomIndex === 0) {
-      ('rock');
-    } else if (randomIndex === 1) {
-      ('paper');
-    } else if (randomIndex === 2) {
-      ('scissors');
-    }
-  
-    let user
-     if (3 === 'rock') {
-     } else if (4 === 'paper') {
-     } else (5 === 'scissors')
-    
-    if (user === 'paper' && computerChoice === 'paper') {
-      return (' It is a tie')
-    } else if (user === 'rock' && computerChoice === 'rock') {
-      return (' It is a tie')
-    } else if (user === 'scissors' && computerChoice === 'scissors') {
-      return (' It is a tie')
-    } else if (user === 'rock' && computerChoice === 'scissors') {
-      return (' You Win')
-    } else if (user === 'paper' && computerChoice === 'rock') {
-      return (' You Win')
-    } else if (user === 'scissors' && computerChoice === 'paper') {
-      return (' You Win')
-    } else {
-      return (' You Lose')
-    }
+if (computer <= 0.34) {
+  computer = 'rock';
+} else if (computer <= 0.67) {
+  computer = 'paper';
+} else if (computer > 0.67) {
+  computer = 'scissors';
+}
+
+function game(user, computer){
+  if (user === computer) {
+     return `It's a tie`;
+  } else if (user === 'rock' && computer === 'scissors') {
+    return `You win!`;
+  } else if (user === 'paper' && computer === 'rock') {
+    return `You win!`;
+  } else if (user === 'scissors' && computer === 'paper') {
+    return `You win!`;
+  } else {
+    return `You lose!`;
   }
-  
-  console.log(game(4));
+}
+
+console.log(game('rock', computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -237,8 +226,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(num1){
-  return num1 * 0.621371;
+function miles(km){
+  return km * 0.621371;
 }
 
 console.log(miles(15));
@@ -253,8 +242,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(num1){
-  return num1 / 30.48
+function feet(cm){
+  return cm / 30.48
 }
 
 console.log(feet(250));
@@ -276,10 +265,14 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+  for(let i = number; i > 0; i --){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i -1} bottles of soda on the wall`
+  }
 }
 
+console.log(annoyingSong(9));
+console.log(annoyingSong(16));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -296,11 +289,22 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(number){
+  if (number >= 90){
+    return `You got an A`;
+  } else if (number < 90 && number >= 80){
+    return `You got a B`;
+  } else if (number < 80 && number >= 70){
+    return `You got a C`;
+  } else if (number < 70 && number >= 60){
+    return `You got a D`;
+  } else if (number < 60){
+    return `You got a F`;
+  }
 }
 
-
+console.log(grade(75));
+console.log(grade(82))
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
