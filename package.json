@@ -3,7 +3,8 @@
   "version": "0.0.9",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "jest --watchAll --verbose --forceExit --silent"
+    "test": "jest --watchAll --verbose --forceExit --silent",
+    "test:watch": "jest --watchAll --verbose --forceExit --silent"
   },
   "repository": {
     "type": "git",
