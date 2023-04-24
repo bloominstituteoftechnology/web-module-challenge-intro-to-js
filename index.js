@@ -103,7 +103,7 @@ Adult Dogs 1 year and older
    up to 5 lbs - 5% of their body weight
    6 - 10 lbs - 4% of their body weight 
    11 - 15 lbs - 3% of their body weight 
-   > 15lbs - 2% of their body weight 
+   > 15 lbs - 2% of their body weight 
 
 Puppies less than 1 year
    2 - 4 months 10% of their body weight
@@ -131,9 +131,12 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */
 
-function hungryDog(/*add your code here*/) {
-  /*add your code here*/
+function hungryDog(age, dogWeight) {
+  if ((age >= 1, weight <= 5)) {
+    let foodWeight = dogWeight / 0.05;
+  }
 }
+hungryDog();
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
