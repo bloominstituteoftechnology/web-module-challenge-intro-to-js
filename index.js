@@ -19,8 +19,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
+const votingAge = 18;
+if (votingAge >= 18) {
+  console.log("true");
+}
 
 /*
 Task 1b - Values (not auto tested)
@@ -33,11 +35,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
-
-
+let firstThing = 25;
+const secondThing = 2;
+if (firstThing !== secondThing) {
+  firstThing *= secondThing;
+}
+console.log(firstThing);
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
 
@@ -48,10 +51,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
-
-
+let year = "1999";
+let intYear = Number(year);
+console.log(intYear);
 /*
 Task 1d - Multiply
  
@@ -61,11 +63,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
+function multiply(num1, num2) {
   return num1 * num2;
 }
-
-
+console.log(multiply(2, 6));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -77,11 +78,12 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanYears) {
+  return humanYears * 7;
 }
 
-
+dogYears(10);
+//console.log(dogYears(10));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -101,7 +103,7 @@ Adult Dogs 1 year and older
    up to 5 lbs - 5% of their body weight
    6 - 10 lbs - 4% of their body weight 
    11 - 15 lbs - 3% of their body weight 
-   > 15lbs - 2% of their body weight 
+   > 15 lbs - 2% of their body weight 
 
 Puppies less than 1 year
    2 - 4 months 10% of their body weight
@@ -127,13 +129,28 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
       
         Notice the expected and received, expected is what the test is looking for, and received is what was actually returned from this function. You can also see it's passing in two values, the number 4 and the number 1. 
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
-*/  
+*/
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age) {
+  if (age >= 1) {
+    if (weight <= 5) {
+      return weight * 0.05;
+    } else if (weight <= 10) {
+      return weight * 0.04;
+    } else if (weight <= 15) {
+      return weight * 0.03;
+    } else if (weight > 15) return weight * 0.02;
+  } else if (age < 1) {
+    if (age >= 0.17 && age < 0.33) {
+      return weight * 0.1;
+    } else if (age >= 0.33 && age < 0.58) {
+      return weight * 0.05;
+    } else if (age >= 0.58 && age < 1) {
+      return weight * 0.04;
+    }
+  }
 }
-
-
+hungryDog(4, 1);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -156,16 +173,24 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+const randomNum = Math.random();
+function game(user, computer) {
+  if (computer === user) {
+    return "it's a tie";
+  } else if (computer === "rock" && user === "scissors") {
+    return "you lose!";
+  } else if (computer === "paper" && user === "rock") {
+    return "you lose!";
+  } else if (computer === "scissors" && user === "paper") {
+    return "you lose!";
+  } else {
+    return "you win!";
+  }
 }
-
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Metric Converter 
-//Task 5a - Kilometers to Miles 
+//Metric Converter
+//Task 5a - Kilometers to Miles
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
@@ -173,11 +198,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers) {
+  return kilometers * 0.621371;
 }
-
-
+miles(1);
 
 //Task 5b - Centimeters to Feet
 /*
@@ -187,11 +211,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm) {
+  return cm / 30.48;
 }
-
-
+feet(160);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -206,11 +229,15 @@ Using the annoyingSong function below do the following:
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
-
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(bottles) {
+  let string = `${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around ${
+    bottles - 1
+  } bottles of soda on the wall`;
+  return string;
 }
-
+for (let i = 99; i > 1; i--) {
+  console.log(annoyingSong(i));
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -227,11 +254,19 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(percentage) {
+  if (percentage >= 90 && percentage <= 100) {
+    return "you got an A";
+  } else if (percentage >= 80 && percentage <= 89) {
+    return "you got a B";
+  } else if (percentage >= 70 && percentage <= 79) {
+    return "you got a C";
+  } else if (percentage >= 60 && percentage <= 69) {
+    return "you got a D";
+  } else if (percentage < 60) {
+    return "you got an F";
+  }
 }
-
-
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -245,17 +280,14 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
-
 function vowelCounter(/*add your code here*/) {
   /*add your code here*/
 }
 
-
-
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-  console.log('its working');
-  return 'bar';
+function foo() {
+  console.log("its working");
+  return "bar";
 }
 foo();
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
@@ -268,5 +300,5 @@ module.exports = {
   miles,
   feet,
   annoyingSong,
-  grade
-}
+  grade,
+};
